@@ -1,0 +1,81 @@
+@import "mixin";
+@import "base";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+$color-blue: #0a64bf;
+$color-sky: #4ea6ff;
+
+.kcraedu {
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 2px);
+
+	//common
+	.text {
+		&-primary {
+			color: #4f80ff !important;
+		}
+	}
+	.inner {
+		width: 1240px;
+		margin: 0 auto;
+	}
+
+	//layout
+	header {
+		border-bottom: 1px solid #d9d9d9;
+		.header {
+			padding: 20px 0 44px;
+			.inner {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			&__gnb {
+				&-item {
+					margin-left: 40px;
+					font-weight: 500;
+					font-size: 22px;
+					line-height: 33px;
+					color: #222222;
+				}
+			}
+			&__menu {
+				&-item {
+					margin-left: 30px;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 24px;
+					color: #666666;
+				}
+			}
+		}
+	}
+
+	footer {
+		margin-top: auto;
+		padding: 0 0 96px 0;
+		background: #f8f8f8;
+		border-top: 1px solid #e5e5e5;
+		.footer {
+			&__menu {
+				margin-bottom: 40px;
+				padding: 20px 0;
+				border-bottom: 1px solid #e5e5e5;
+				&-item {
+					margin-right: 30px;
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 27px;
+					color: #222222;
+				}
+			}
+			address {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 24px;
+				color: #999999;
+			}
+		}
+	}
+}

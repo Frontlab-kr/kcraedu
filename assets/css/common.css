@@ -31,7 +31,7 @@
 
 html,
 body {
-  min-width: 1280px;
+  min-width: 1222px;
   width: 100%;
   height: 100%;
   -webkit-text-size-adjust: none;
@@ -303,7 +303,7 @@ time {
 }
 
 .kcraedu .inner {
-  width: 1240px;
+  width: 1222px;
   margin: 0 auto;
 }
 
@@ -335,12 +335,20 @@ time {
   color: #222222;
 }
 
+.kcraedu header .header__menu {
+  margin-bottom: 20px;
+}
+
 .kcraedu header .header__menu-item {
   margin-left: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #666666;
+}
+
+.kcraedu main {
+  padding-bottom: 160px;
 }
 
 .kcraedu footer {
@@ -369,4 +377,128 @@ time {
   font-size: 16px;
   line-height: 24px;
   color: #999999;
+}
+
+.kcraedu--main header {
+  padding-top: 24px;
+  background-color: #e2edfa;
+  border-bottom: none;
+}
+
+.kcraedu--main main {
+  padding-bottom: 70px;
+}
+
+.kcraedu .main__head {
+  padding: 30px 0 50px 0;
+  background-color: #e2edfa;
+}
+
+.kcraedu .main__contents {
+  padding: 50px 0 0 0;
+}
+
+.kcraedu .main-board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.kcraedu .main-board .board:first-child {
+  margin-right: 122px;
+}
+
+.kcraedu .main-customer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 90px;
+}
+
+.kcraedu .main-customer__video {
+  margin-right: 122px;
+}
+
+.kcraedu .main-customer__video iframe {
+  border-radius: 30px;
+}
+
+.kcraedu .board__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #222;
+}
+
+.kcraedu .board__title-item {
+  margin-right: 35px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(34, 34, 34, 0.5);
+}
+
+.kcraedu .board__title-item--active {
+  color: #222222;
+}
+
+.kcraedu .board__title-more {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url(../images/ico-board-more.svg) no-repeat 50% 50%;
+  font-size: 0;
+}
+
+.kcraedu .board__list ul li {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.kcraedu .board__list ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.kcraedu .board__list-text {
+  margin-right: 60px;
+}
+
+.kcraedu .board__list-text strong {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #222222;
+}
+
+.kcraedu .board__list-text p {
+  margin-top: 17px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222222;
+  display: -webkit-box;
+  overflow: hidden;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-height: 48px;
+}
+
+.kcraedu .board__list-date {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222222;
 }

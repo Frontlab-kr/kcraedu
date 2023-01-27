@@ -1234,6 +1234,34 @@ html {
 				}
 			}
 		}
+
+		&-caution {
+			font-size: 1rem;
+			line-height: 1.5rem;
+			color: #666666;
+			p {
+				font-size: 1rem;
+				line-height: 1.5rem;
+				color: #666666;
+			}
+			&__box {
+				padding: 1.875rem;
+				background: #f8f8f8;
+				border-radius: 0.625rem;
+				font-weight: 700;
+				color: #222;
+			}
+			strong {
+				color: #222;
+			}
+			.line {
+				position: relative;
+				text-decoration: underline;
+				text-decoration-color: #95ff63;
+				text-decoration-thickness: 3px;
+				text-underline-position: auto;
+			}
+		}
 	}
 	.mypage {
 		width: 100%;
@@ -1332,6 +1360,90 @@ html {
 			}
 		}
 		&__tab {
+		}
+		&-xs {
+			padding: 30px 40px;
+			background: #ffffff;
+			border: 1px solid #ececec;
+			border-radius: 10px;
+			.board {
+				&__title {
+					padding: 10px 0;
+					border-bottom: none;
+					&-item {
+						margin-right: 2.188rem;
+						button {
+							font-weight: 700;
+							font-size: 18px;
+							line-height: 27px;
+							&.active {
+								color: #222222;
+							}
+						}
+					}
+					&-more {
+						display: block;
+						width: 2.25rem;
+						height: 2.25rem;
+						background: url(../images/ico-board-more.svg) no-repeat 50% 50%;
+						font-size: 0;
+						@include media-breakpoint-down(md) {
+							position: absolute;
+							left: 50%;
+							bottom: 0;
+							width: 2.5rem;
+							height: 2.5rem;
+							background: #222222 url(../images/ico-board-more-white.svg) no-repeat 50% 50%;
+							border-radius: 2.5rem;
+							transform: translateX(-50%);
+						}
+					}
+				}
+				&__list {
+					ul {
+						li {
+							padding: 0 0;
+							border-bottom: none;
+							a {
+								display: flex;
+								align-items: center;
+								width: 100%;
+								height: 100%;
+								@include media-breakpoint-down(md) {
+									display: block;
+								}
+							}
+						}
+					}
+					&-text {
+						margin-right: 3.75rem;
+						strong {
+							font-weight: 500;
+							font-size: 1.125rem;
+							line-height: 1.688rem;
+							color: #222222;
+						}
+						p {
+							margin-top: 1.063rem;
+							font-style: normal;
+							font-weight: 300;
+							font-size: 1rem;
+							line-height: 1.5rem;
+							color: #222222;
+							@include text-clamp(1);
+						}
+					}
+					&-date {
+						font-weight: 300;
+						font-size: 1rem;
+						line-height: 1.5rem;
+						color: #222222;
+						@include media-breakpoint-down(md) {
+							margin-top: 0.625rem;
+						}
+					}
+				}
+			}
 		}
 	}
 }

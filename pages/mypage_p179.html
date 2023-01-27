@@ -48,60 +48,40 @@
 							<div class="snb__title">나의 학습방</div>
 							<ul>
 								<li><a href="">학습 현황</a></li>
-								<li class="active"><a href="">회원 정보 수정</a></li>
-								<li><a href="">1:1 문의</a></li>
+								<li><a href="">회원 정보 수정</a></li>
+								<li class="active"><a href="">1:1 문의</a></li>
 								<li><a href="">결제 내역</a></li>
 								<li><a href="">불만 신고 센터</a></li>
 							</ul>
 						</div>
 						<div class="mypage">
 							<div class="mypage__head">
-								<h1>회원 정보 수정</h1>
+								<h1>1:1 문의</h1>
 								<nav aria-label="breadcrumb">
 									<ol class="breadcrumb">
 										<li class="breadcrumb-item"><a href="#">홈</a></li>
 										<li class="breadcrumb-item"><a href="#">나의학습방</a></li>
-										<li class="breadcrumb-item active" aria-current="page">회원정보수정</li>
+										<li class="breadcrumb-item active" aria-current="page">1:1 문의</li>
 									</ol>
 								</nav>
 							</div>
-							<div class="nav tab btn-group w-100" role="tablist">
-								<button class="btn btn-lg btn-primary" data-bs-toggle="tab" data-bs-target="#boardNotice" type="button" role="tab">비밀번호 변경</button>
-								<button class="btn btn-lg btn-outline-secondary" data-bs-toggle="tab" data-bs-target="#boardReference" type="button" role="tab">
-									회원정보
-								</button>
-							</div>
-							<div class="tab-content">
-								<div class="tab-pane fade show active" id="boardNotice" role="tabpanel">
-									<form action="">
-										<div class="find__form">
-											<div class="find__form-item">
-												<label for="mypageId" class="form-label"><em>*</em>아이디</label>
-												<input type="text" class="form-control" id="mypageId" value="HTD124" disabled />
-											</div>
-											<div class="find__form-item">
-												<label for="mypageName" class="form-label"><em>*</em>이름</label>
-												<input type="text" class="form-control" id="mypageName" value="김은지" disabled />
-											</div>
-											<div class="find__form-item">
-												<label for="mypageBirthday" class="form-label"><em>*</em>생년월일</label>
-												<input type="text" class="form-control" id="mypageBirthday" value="1987-08-20" disabled />
-											</div>
-											<div class="find__form-item">
-												<label for="mypageEmail" class="form-label"><em>*</em>이메일</label>
-												<input type="text" class="form-control" id="mypageEmail" value="ffff1@naver.com" />
-											</div>
-											<div class="find__form-item">
-												<label for="mypageTel" class="form-label"><em>*</em>휴대전화번호</label>
-												<input type="text" class="form-control" id="mypageTel" value="010-1234-5678" disabled />
-											</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal</button>
+
+							<!-- Modal -->
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 										</div>
-										<div class="find__button">
-											<button type="button" class="btn btn-primary btn-lg">수정</button>
+										<div class="modal-body">...</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save changes</button>
 										</div>
-									</form>
+									</div>
 								</div>
-								<div class="tab-pane fade" id="boardReference" role="tabpanel">2</div>
 							</div>
 						</div>
 					</div>

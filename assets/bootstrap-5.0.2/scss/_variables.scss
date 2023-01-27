@@ -360,7 +360,7 @@ $border-color: $gray-300 !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius: 0.25rem !default;
+$border-radius: 0.625rem !default;
 $border-radius-sm: 0.2rem !default;
 $border-radius-lg: 0.625rem !default;
 $border-radius-pill: 50rem !default;
@@ -575,7 +575,8 @@ $table-variants: (
 $input-btn-padding-y: 0.813rem !default;
 $input-btn-padding-x: 1.25rem !default;
 $input-btn-font-family: null !default;
-$input-btn-font-size: $font-size-base !default;
+//$input-btn-font-size: $font-size-base !default;
+$input-btn-font-size: 1.125rem !default;
 $input-btn-line-height: $line-height-base !default;
 
 $input-btn-focus-width: 0.25rem !default;
@@ -1237,7 +1238,7 @@ $modal-header-padding-x: $modal-inner-padding !default;
 $modal-header-padding: $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
 $modal-sm: 300px !default;
-$modal-md: 500px !default;
+$modal-md: 620px !default;
 $modal-lg: 800px !default;
 $modal-xl: 1140px !default;
 
@@ -1394,14 +1395,14 @@ $spinner-border-width-sm: 0.2em !default;
 // Close
 
 // scss-docs-start close-variables
-$btn-close-width: 1em !default;
+$btn-close-width: 1.375em !default;
 $btn-close-height: $btn-close-width !default;
 $btn-close-padding-x: 0.25em !default;
 $btn-close-padding-y: $btn-close-padding-x !default;
-$btn-close-color: $black !default;
+$btn-close-color: $white !default;
 $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
 $btn-close-focus-shadow: $input-btn-focus-box-shadow !default;
-$btn-close-opacity: 0.5 !default;
+$btn-close-opacity: 1 !default;
 $btn-close-hover-opacity: 0.75 !default;
 $btn-close-focus-opacity: 1 !default;
 $btn-close-disabled-opacity: 0.25 !default;

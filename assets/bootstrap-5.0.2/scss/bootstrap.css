@@ -5309,10 +5309,10 @@ fieldset:disabled .btn {
 
 .badge {
   display: inline-block;
-  padding: 0.35em 0.65em;
-  font-size: 0.75em;
-  font-weight: 700;
-  line-height: 1;
+  padding: 0.5em 0.938em;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5rem;
   color: #fff;
   text-align: center;
   white-space: nowrap;
@@ -5322,6 +5322,12 @@ fieldset:disabled .btn {
 
 .badge:empty {
   display: none;
+}
+
+.badge-outline-danger {
+  border: 1px solid #d65050;
+  border-radius: 5px;
+  color: #d65050;
 }
 
 .btn .badge {

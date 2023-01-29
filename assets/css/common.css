@@ -5311,10 +5311,10 @@ fieldset:disabled .btn {
 
 .badge {
   display: inline-block;
-  padding: 0.35em 0.65em;
-  font-size: 0.75em;
-  font-weight: 700;
-  line-height: 1;
+  padding: 0.438em 0.938em;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5rem;
   color: #fff;
   text-align: center;
   white-space: nowrap;
@@ -5324,6 +5324,18 @@ fieldset:disabled .btn {
 
 .badge:empty {
   display: none;
+}
+
+.badge-outline-danger {
+  border: 1px solid #d65050;
+  border-radius: 5px;
+  color: #d65050;
+}
+
+.badge-outline-primary {
+  border: 1px solid #4f80ff;
+  border-radius: 5px;
+  color: #4f80ff;
 }
 
 .btn .badge {
@@ -11500,6 +11512,10 @@ fieldset:disabled .btn {
   }
 }
 
+html.scrollNone {
+  overflow: hidden;
+}
+
 .kcraedu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11576,6 +11592,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu header .header .container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11597,6 +11614,24 @@ fieldset:disabled .btn {
   }
 }
 
+.kcraedu header .header__wrap {
+  display: none;
+}
+
+.kcraedu header .header__wrap .header__logo {
+  display: block;
+}
+
+.kcraedu header .header__logo {
+  display: none;
+}
+
+.kcraedu header .header__gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 1199.98px) {
   .kcraedu header .header__gnb {
     margin-top: 20px;
@@ -11611,18 +11646,25 @@ fieldset:disabled .btn {
 
 .kcraedu header .header__gnb-item {
   margin-left: 2.25rem;
-  font-weight: 500;
-  font-size: 1.375rem;
-  line-height: 2.063rem;
-  color: #222222;
 }
 
 .kcraedu header .header__gnb-item:first-child {
   margin-left: 0;
 }
 
+.kcraedu header .header__gnb-item > a {
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 2.063rem;
+  color: #222222;
+}
+
+.kcraedu header .header__gnb-item > ul {
+  display: none;
+}
+
 @media (max-width: 991.98px) {
-  .kcraedu header .header__gnb-item {
+  .kcraedu header .header__gnb-item > a {
     font-size: 1.25rem;
   }
 }
@@ -11639,7 +11681,11 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu header .navbar-header {
+.kcraedu header .header__info {
+  display: none;
+}
+
+.kcraedu header .header__navbar {
   position: absolute;
   top: 0;
   right: 0.563rem;
@@ -11654,13 +11700,14 @@ fieldset:disabled .btn {
       -ms-flex-pack: center;
           justify-content: center;
   display: none;
+  z-index: 250;
 }
 
-.kcraedu header .navbar-header input#burger-bao-toggle {
+.kcraedu header .header__navbar input#menuToggle {
   display: none;
 }
 
-.kcraedu header .navbar-header label.burger-bao {
+.kcraedu header .header__navbar label.burger-bao {
   display: block;
   cursor: pointer;
   width: 32px;
@@ -11668,9 +11715,9 @@ fieldset:disabled .btn {
   border: 0;
 }
 
-.kcraedu header .navbar-header label.burger-bao span,
-.kcraedu header .navbar-header label.burger-bao span:before,
-.kcraedu header .navbar-header label.burger-bao span:after {
+.kcraedu header .header__navbar label.burger-bao span,
+.kcraedu header .header__navbar label.burger-bao span:before,
+.kcraedu header .header__navbar label.burger-bao span:after {
   display: block;
   height: 3px;
   background: #222;
@@ -11680,38 +11727,38 @@ fieldset:disabled .btn {
           backface-visibility: hidden;
 }
 
-.kcraedu header .navbar-header label.burger-bao span {
+.kcraedu header .header__navbar label.burger-bao span {
   position: relative;
   width: 60%;
   margin: 14.5px auto;
 }
 
-.kcraedu header .navbar-header label.burger-bao span:before,
-.kcraedu header .navbar-header label.burger-bao span:after {
+.kcraedu header .header__navbar label.burger-bao span:before,
+.kcraedu header .header__navbar label.burger-bao span:after {
   width: 100%;
   position: absolute;
   content: "";
 }
 
-.kcraedu header .navbar-header label.burger-bao span:before {
+.kcraedu header .header__navbar label.burger-bao span:before {
   top: -8px;
 }
 
-.kcraedu header .navbar-header label.burger-bao span:after {
+.kcraedu header .header__navbar label.burger-bao span:after {
   top: 8px;
 }
 
-.kcraedu header .navbar-header input#burger-bao-toggle:checked + label > span:before {
+.kcraedu header .header__navbar input#menuToggle:checked + label > span:before {
   -webkit-transform: translate(0px, 8px) rotate(-90deg);
           transform: translate(0px, 8px) rotate(-90deg);
 }
 
-.kcraedu header .navbar-header input#burger-bao-toggle:checked + label > span:after {
+.kcraedu header .header__navbar input#menuToggle:checked + label > span:after {
   -webkit-transform: translate(0px, -8px) rotate(-90deg);
           transform: translate(0px, -8px) rotate(-90deg);
 }
 
-.kcraedu header .navbar-header input#burger-bao-toggle:checked + label > span {
+.kcraedu header .header__navbar input#menuToggle:checked + label > span {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -11720,27 +11767,89 @@ fieldset:disabled .btn {
   .kcraedu header .header {
     padding: 26px 0 30px;
   }
+  .kcraedu header .header .container {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .kcraedu header .header__wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0 12px;
+    background: #fff;
+    overflow-y: auto;
+    z-index: 200;
+  }
+  .kcraedu header .header__wrap .header__logo {
+    display: none;
+  }
+  .kcraedu header .header__logo {
+    display: block;
+  }
   .kcraedu header .header__logo img {
     width: 250px;
   }
   .kcraedu header .header__gnb {
-    display: none;
+    display: block;
   }
   .kcraedu header .header__gnb-item {
-    margin-left: 2.25rem;
+    margin: 0;
+    padding: 20px;
+  }
+  .kcraedu header .header__gnb-item > a {
     font-weight: 500;
-    font-size: 1.375rem;
-    line-height: 2.063rem;
+    font-size: 24px;
+    line-height: 36px;
     color: #222222;
   }
+  .kcraedu header .header__gnb-item > ul {
+    display: block;
+    margin-top: 10px;
+  }
+  .kcraedu header .header__gnb-item > ul li {
+    margin-top: 10px;
+  }
+  .kcraedu header .header__gnb-item > ul li:first-child {
+    margin-top: 0;
+  }
+  .kcraedu header .header__gnb-item > ul li a {
+    font-weight: 500;
+    font-size: 18px;
+    color: #666666;
+  }
   .kcraedu header .header__menu {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 17px 20px 30px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  .kcraedu header .header__menu-item {
+    display: block;
+    width: 100px;
+    margin: 10px 0 0 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #999999;
+  }
+  .kcraedu header .header__menu-item:first-child {
+    margin-top: 0;
+  }
+  .kcraedu header .header__menu-item--remote {
     display: none;
   }
-  .kcraedu header .navbar-header {
+  .kcraedu header .header__navbar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.kcraedu--menu header .header__wrap {
+  display: block;
 }
 
 .kcraedu main {
@@ -12575,14 +12684,14 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .find__title {
+.kcraedu .find-title {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 2.125rem;
   color: #222222;
 }
 
-.kcraedu .find__text {
+.kcraedu .find-text {
   margin: 2.188rem 0 0 0;
   padding: 1.875rem 2.5rem;
   background: #f8f8f8;
@@ -12594,16 +12703,16 @@ fieldset:disabled .btn {
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .find__text {
+  .kcraedu .find-text {
     padding: 1.875rem 1.25rem;
   }
 }
 
-.kcraedu .find__result {
+.kcraedu .find-result {
   margin-top: 4.375rem;
 }
 
-.kcraedu .find__result-id {
+.kcraedu .find-result__id {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12628,7 +12737,7 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .find__result-id p {
+.kcraedu .find-result__id p {
   margin-top: 0.625rem;
   font-weight: 700;
   font-size: 2.5rem;
@@ -12636,7 +12745,7 @@ fieldset:disabled .btn {
   color: #4f80ff;
 }
 
-.kcraedu .find__result-text {
+.kcraedu .find-result__text {
   margin-top: 3.125rem;
   text-align: center;
   font-weight: 500;
@@ -12645,12 +12754,12 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .find__form {
+.kcraedu .find-form {
   margin-top: 4.063rem;
   border-top: 0.125rem solid #222;
 }
 
-.kcraedu .find__form-item {
+.kcraedu .find-form__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12658,7 +12767,7 @@ fieldset:disabled .btn {
   border-bottom: 0.063rem solid #d9d9d9;
 }
 
-.kcraedu .find__form-item label {
+.kcraedu .find-form__item label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12675,25 +12784,25 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .find__form-item label em {
+.kcraedu .find-form__item label em {
   margin-right: 0.375rem;
   color: #d65050;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .find__form-item {
+  .kcraedu .find-form__item {
     display: block;
   }
 }
 
-.kcraedu .find__form-email {
+.kcraedu .find-form__email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.kcraedu .find__form-email p {
+.kcraedu .find-form__email p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12704,20 +12813,20 @@ fieldset:disabled .btn {
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .find__form-email {
+  .kcraedu .find-form__email {
     display: block;
   }
-  .kcraedu .find__form-email .form-select {
+  .kcraedu .find-form__email .form-select {
     width: 100% !important;
     margin: 0.5rem 0 0 0 !important;
   }
 }
 
-.kcraedu .find__save {
+.kcraedu .find-save {
   padding: 1.875rem 0.625rem 3.125rem;
 }
 
-.kcraedu .find__button {
+.kcraedu .find-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12728,7 +12837,7 @@ fieldset:disabled .btn {
   text-align: center;
 }
 
-.kcraedu .find__button .btn {
+.kcraedu .find-button .btn {
   width: 14.375rem;
   margin: 0 0.563rem;
 }
@@ -12747,7 +12856,7 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .login__title {
+.kcraedu .login-title {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 2.125rem;
@@ -12756,12 +12865,12 @@ fieldset:disabled .btn {
   word-break: keep-all;
 }
 
-.kcraedu .login__form {
+.kcraedu .login-form {
   margin-top: 4.063rem;
   border-top: 0.125rem solid #222;
 }
 
-.kcraedu .login__form-item {
+.kcraedu .login-form__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12772,7 +12881,7 @@ fieldset:disabled .btn {
   border-bottom: 0.063rem solid #d9d9d9;
 }
 
-.kcraedu .login__form-item label {
+.kcraedu .login-form__item label {
   min-width: 8.5rem;
   margin: 0;
   white-space: nowrap;
@@ -12782,19 +12891,19 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .login__save {
+.kcraedu .login-save {
   padding: 1.875rem 0.625rem 3.125rem;
 }
 
-.kcraedu .login__button {
+.kcraedu .login-button {
   text-align: center;
 }
 
-.kcraedu .login__button .btn {
+.kcraedu .login-button .btn {
   width: 14.375rem;
 }
 
-.kcraedu .login__menu {
+.kcraedu .login-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12807,11 +12916,11 @@ fieldset:disabled .btn {
   margin-top: 2.25rem;
 }
 
-.kcraedu .login__menu .btn-link {
+.kcraedu .login-menu .btn-link {
   color: #666;
 }
 
-.kcraedu .login__menu hr {
+.kcraedu .login-menu hr {
   width: 0.063rem;
   height: 1rem;
   margin: 0 0.375rem;
@@ -12844,7 +12953,7 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .join__title {
+.kcraedu .join-title {
   margin-bottom: 2.125rem;
   font-weight: 500;
   font-size: 1.125rem;
@@ -12852,7 +12961,7 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .join__text {
+.kcraedu .join-text {
   margin-bottom: 4.125rem;
   padding: 1.875rem 2.5rem;
   background: #f8f8f8;
@@ -12864,17 +12973,17 @@ fieldset:disabled .btn {
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .join__text {
+  .kcraedu .join-text {
     padding: 1.875rem 1.25rem;
   }
 }
 
-.kcraedu .join__nav {
+.kcraedu .join-nav {
   position: relative;
   margin: 2.125rem 0 3.125rem 0;
 }
 
-.kcraedu .join__nav:after {
+.kcraedu .join-nav:after {
   content: "";
   display: block;
   position: absolute;
@@ -12884,42 +12993,42 @@ fieldset:disabled .btn {
   left: 0;
 }
 
-.kcraedu .join__nav .btn-outline-secondary {
+.kcraedu .join-nav .btn-outline-secondary {
   border-color: #ececec;
   color: #999;
 }
 
-.kcraedu .join__agree-check {
+.kcraedu .join-agree__check {
   padding: 2.125rem 2.5rem;
   border-top: 0.063rem solid #ececec;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .join__agree-check {
+  .kcraedu .join-agree__check {
     padding: 1.25rem 1.25rem;
   }
 }
 
-.kcraedu .join__agree-text {
+.kcraedu .join-agree__text {
   padding: 0 2.5rem 2rem;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .join__agree-text {
+  .kcraedu .join-agree__text {
     padding: 0 1.25rem 1.25rem;
   }
 }
 
-.kcraedu .join__agree dl {
+.kcraedu .join-agree dl {
   border: 0.063rem solid #ececec;
   border-top: none;
 }
 
-.kcraedu .join__agree dl dt {
+.kcraedu .join-agree dl dt {
   font-weight: 400;
 }
 
-.kcraedu .join__agree dl textarea {
+.kcraedu .join-agree dl textarea {
   width: 100%;
   height: 10rem;
   padding: 1.875rem;
@@ -12929,13 +13038,13 @@ fieldset:disabled .btn {
   line-height: 1.5;
 }
 
-.kcraedu .join__certification {
+.kcraedu .join-certification {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.kcraedu .join__certification-text {
+.kcraedu .join-certification__text {
   margin-bottom: 4.375rem;
   padding: 1.875rem 2.5rem;
   background: #f8f8f8;
@@ -12944,24 +13053,24 @@ fieldset:disabled .btn {
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .join__certification-text {
+  .kcraedu .join-certification__text {
     padding: 1.875rem 1.25rem;
   }
 }
 
-.kcraedu .join__certification dl {
+.kcraedu .join-certification dl {
   width: 100%;
 }
 
-.kcraedu .join__certification dl:first-child {
+.kcraedu .join-certification dl:first-child {
   margin-right: 0.75rem;
 }
 
-.kcraedu .join__certification dl:last-child {
+.kcraedu .join-certification dl:last-child {
   margin-left: 0.75rem;
 }
 
-.kcraedu .join__certification dl dd {
+.kcraedu .join-certification dl dd {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12980,34 +13089,34 @@ fieldset:disabled .btn {
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .join__certification dl dd img {
+  .kcraedu .join-certification dl dd img {
     width: 80px;
   }
 }
 
-.kcraedu .join__certification dl dt {
+.kcraedu .join-certification dl dt {
   text-align: center;
 }
 
-.kcraedu .join__certification dl dt .btn {
+.kcraedu .join-certification dl dt .btn {
   width: 14.375rem;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .join__certification dl dt .btn {
+  .kcraedu .join-certification dl dt .btn {
     width: 100%;
   }
 }
 
-.kcraedu .join .find__form {
+.kcraedu .join .form {
   margin-top: 0;
 }
 
-.kcraedu .join__result {
+.kcraedu .join-result {
   margin-top: 3.125rem;
 }
 
-.kcraedu .join__result-title {
+.kcraedu .join-result__title {
   padding: 3.25rem 1.875rem;
   background: #f8f8f8;
   border-radius: 1.25rem;
@@ -13019,7 +13128,7 @@ fieldset:disabled .btn {
   word-break: keep-all;
 }
 
-.kcraedu .join__result-text {
+.kcraedu .join-result__text {
   margin-top: 3.125rem;
   text-align: center;
   font-weight: 500;
@@ -13028,7 +13137,7 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .join__button {
+.kcraedu .join-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13039,7 +13148,7 @@ fieldset:disabled .btn {
   text-align: center;
 }
 
-.kcraedu .join__button .btn {
+.kcraedu .join-button .btn {
   width: 14.375rem;
   margin: 0 0.563rem;
 }
@@ -13082,7 +13191,7 @@ fieldset:disabled .btn {
   padding: 4.375rem 0 0 0;
 }
 
-.kcraedu .mypage__head {
+.kcraedu .mypage-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13108,6 +13217,9 @@ fieldset:disabled .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -13223,7 +13335,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .board-xs .board__title {
-  padding: 10px 0;
+  padding: 0;
   border-bottom: none;
 }
 
@@ -13264,29 +13376,25 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .board-xs .board__list ul li {
-  padding: 0 0;
+  position: relative;
+  padding: 0 0 0 15px;
   border-bottom: none;
 }
 
-.kcraedu .board-xs .board__list ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 767.98px) {
-  .kcraedu .board-xs .board__list ul li a {
-    display: block;
-  }
+.kcraedu .board-xs .board__list ul li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background: #4f80ff;
+  border-radius: 5px;
 }
 
 .kcraedu .board-xs .board__list-text {
-  margin-right: 3.75rem;
+  margin-right: 1.875;
 }
 
 .kcraedu .board-xs .board__list-text strong {
@@ -13297,31 +13405,12 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .board-xs .board__list-text p {
-  margin-top: 1.063rem;
+  max-height: auto;
+  margin-top: 0;
   font-style: normal;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #222222;
-  display: -webkit-box;
-  overflow: hidden;
-  /* autoprefixer: ignore next */
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  display: block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.kcraedu .board-xs .board__list-date {
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #222222;
-}
-
-@media (max-width: 767.98px) {
-  .kcraedu .board-xs .board__list-date {
-    margin-top: 0.625rem;
-  }
 }

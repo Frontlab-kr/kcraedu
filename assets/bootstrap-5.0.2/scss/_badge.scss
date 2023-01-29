@@ -4,26 +4,36 @@
 // `background-color`.
 
 .badge {
-  display: inline-block;
-  padding: $badge-padding-y $badge-padding-x;
-  @include font-size($badge-font-size);
-  font-weight: $badge-font-weight;
-  line-height: 1;
-  color: $badge-color;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  @include border-radius($badge-border-radius);
-  @include gradient-bg();
+	display: inline-block;
+	padding: $badge-padding-y $badge-padding-x;
+	@include font-size($badge-font-size);
+	font-weight: $badge-font-weight;
+	line-height: 1.5rem;
+	color: $badge-color;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	@include border-radius($badge-border-radius);
+	@include gradient-bg();
 
-  // Empty badges collapse automatically
-  &:empty {
-    display: none;
-  }
+	// Empty badges collapse automatically
+	&:empty {
+		display: none;
+	}
+	&-outline-danger {
+		border: 1px solid #d65050;
+		border-radius: 5px;
+		color: #d65050;
+	}
+	&-outline-primary {
+		border: 1px solid #4f80ff;
+		border-radius: 5px;
+		color: #4f80ff;
+	}
 }
 
 // Quick fix for badges in buttons
 .btn .badge {
-  position: relative;
-  top: -1px;
+	position: relative;
+	top: -1px;
 }

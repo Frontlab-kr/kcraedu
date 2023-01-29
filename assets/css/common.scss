@@ -7,6 +7,9 @@ html {
 	@include media-breakpoint-down(md) {
 		font-size: 0.75rem;
 	}
+	&.scrollNone {
+		overflow: hidden;
+	}
 }
 .kcraedu {
 	display: flex;
@@ -66,6 +69,7 @@ html {
 			position: relative;
 			padding: 1.25rem 0 2.5rem;
 			.container {
+				position: relative;
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
@@ -78,7 +82,17 @@ html {
 					}
 				}
 			}
+			&__wrap {
+				display: none;
+				.header__logo {
+					display: block;
+				}
+			}
+			&__logo {
+				display: none;
+			}
 			&__gnb {
+				display: flex;
 				@include media-breakpoint-down(xl) {
 					margin-top: 20px;
 				}
@@ -87,15 +101,22 @@ html {
 				}
 				&-item {
 					margin-left: 2.25rem;
-					font-weight: 500;
-					font-size: 1.375rem;
-					line-height: 2.063rem;
-					color: #222222;
 					&:first-child {
 						margin-left: 0;
 					}
+					> a {
+						font-weight: 500;
+						font-size: 1.375rem;
+						line-height: 2.063rem;
+						color: #222222;
+					}
+					> ul {
+						display: none;
+					}
 					@include media-breakpoint-down(lg) {
-						font-size: 1.25rem;
+						> a {
+							font-size: 1.25rem;
+						}
 					}
 				}
 			}
@@ -109,94 +130,160 @@ html {
 					color: #666666;
 				}
 			}
-		}
-		$bao-bun: 32px;
-		$bao-burger: 3px;
-		.navbar-header {
-			position: absolute;
-			top: 0;
-			right: 0.563rem;
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			display: none;
-			input#burger-bao-toggle {
+			&__info {
 				display: none;
 			}
+			$bao-bun: 32px;
+			$bao-burger: 3px;
+			&__navbar {
+				position: absolute;
+				top: 0;
+				right: 0.563rem;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				display: none;
+				z-index: 250;
+				input#menuToggle {
+					display: none;
+				}
 
-			label.burger-bao {
-				display: block;
-				cursor: pointer;
-				width: $bao-bun;
-				height: $bao-bun;
-				border: 0;
-
-				span,
-				span:before,
-				span:after {
+				label.burger-bao {
 					display: block;
-					height: $bao-burger;
-					background: #222;
-					transition: all 0.5s;
-					backface-visibility: hidden;
+					cursor: pointer;
+					width: $bao-bun;
+					height: $bao-bun;
+					border: 0;
+
+					span,
+					span:before,
+					span:after {
+						display: block;
+						height: $bao-burger;
+						background: #222;
+						transition: all 0.5s;
+						backface-visibility: hidden;
+					}
+
+					span {
+						position: relative;
+						width: 60%;
+						margin: ($bao-bun / 2-$bao-burger / 2) auto;
+					}
+
+					span:before,
+					span:after {
+						width: 100%;
+						position: absolute;
+						content: "";
+					}
+
+					span:before {
+						top: -$bao-bun / 4;
+					}
+					span:after {
+						top: $bao-bun / 4;
+					}
 				}
 
-				span {
-					position: relative;
-					width: 60%;
-					margin: ($bao-bun / 2-$bao-burger / 2) auto;
+				input#menuToggle:checked + label > span:before {
+					transform: translate(0px, $bao-bun / 4) rotate(-90deg);
 				}
-
-				span:before,
-				span:after {
-					width: 100%;
-					position: absolute;
-					content: "";
+				input#menuToggle:checked + label > span:after {
+					transform: translate(0px, -$bao-bun / 4) rotate(-90deg);
 				}
-
-				span:before {
-					top: -$bao-bun / 4;
+				input#menuToggle:checked + label > span {
+					transform: rotate(45deg);
 				}
-				span:after {
-					top: $bao-bun / 4;
-				}
-			}
-
-			input#burger-bao-toggle:checked + label > span:before {
-				transform: translate(0px, $bao-bun / 4) rotate(-90deg);
-			}
-			input#burger-bao-toggle:checked + label > span:after {
-				transform: translate(0px, -$bao-bun / 4) rotate(-90deg);
-			}
-			input#burger-bao-toggle:checked + label > span {
-				transform: rotate(45deg);
 			}
 		}
 		@include media-breakpoint-down(md) {
 			.header {
 				padding: 26px 0 30px;
+				.container {
+					justify-content: flex-start !important;
+				}
+				&__wrap {
+					position: fixed;
+					top: 0;
+					right: 0;
+					left: 0;
+					bottom: 0;
+					padding: 0 12px;
+					background: #fff;
+					overflow-y: auto;
+					z-index: 200;
+					.header__logo {
+						display: none;
+					}
+				}
 				&__logo {
+					display: block;
 					img {
 						width: 250px;
 					}
 				}
 				&__gnb {
-					display: none;
+					display: block;
 					&-item {
-						margin-left: 2.25rem;
-						font-weight: 500;
-						font-size: 1.375rem;
-						line-height: 2.063rem;
-						color: #222222;
+						margin: 0;
+						padding: 20px;
+
+						> a {
+							font-weight: 500;
+							font-size: 24px;
+							line-height: 36px;
+							color: #222222;
+						}
+						> ul {
+							display: block;
+							margin-top: 10px;
+							li {
+								margin-top: 10px;
+								&:first-child {
+									margin-top: 0;
+								}
+								a {
+									font-weight: 500;
+									font-size: 18px;
+									color: #666666;
+								}
+							}
+						}
 					}
 				}
 				&__menu {
-					display: none;
+					width: 100%;
+					margin-bottom: 0;
+					padding: 17px 20px 30px;
+					border-bottom: 1px solid #d9d9d9;
+					&-item {
+						display: block;
+						width: 100px;
+						margin: 10px 0 0 0;
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 24px;
+						color: #999999;
+						&:first-child {
+							margin-top: 0;
+						}
+						&--remote {
+							display: none;
+						}
+					}
+				}
+				&__navbar {
+					display: flex;
 				}
 			}
-			.navbar-header {
-				display: flex;
+		}
+	}
+	&--menu {
+		header {
+			.header__wrap {
+				display: block;
 			}
 		}
 	}
@@ -888,13 +975,13 @@ html {
 			line-height: 3.313rem;
 			color: #222222;
 		}
-		&__title {
+		&-title {
 			font-weight: 500;
 			font-size: 1.125rem;
 			line-height: 2.125rem;
 			color: #222222;
 		}
-		&__text {
+		&-text {
 			margin: 2.188rem 0 0 0;
 			padding: 1.875rem 2.5rem;
 			background: #f8f8f8;
@@ -907,9 +994,9 @@ html {
 				padding: 1.875rem 1.25rem;
 			}
 		}
-		&__result {
+		&-result {
 			margin-top: 4.375rem;
-			&-id {
+			&__id {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
@@ -931,7 +1018,7 @@ html {
 					color: #4f80ff;
 				}
 			}
-			&-text {
+			&__text {
 				margin-top: 3.125rem;
 				text-align: center;
 				font-weight: 500;
@@ -940,10 +1027,10 @@ html {
 				color: #666666;
 			}
 		}
-		&__form {
+		&-form {
 			margin-top: 4.063rem;
 			border-top: 0.125rem solid #222;
-			&-item {
+			&__item {
 				display: flex;
 				padding: 1.125rem 0.625rem;
 				border-bottom: 0.063rem solid #d9d9d9;
@@ -967,7 +1054,7 @@ html {
 					display: block;
 				}
 			}
-			&-email {
+			&__email {
 				display: flex;
 				width: 100%;
 				p {
@@ -984,10 +1071,10 @@ html {
 				}
 			}
 		}
-		&__save {
+		&-save {
 			padding: 1.875rem 0.625rem 3.125rem;
 		}
-		&__button {
+		&-button {
 			display: flex;
 			justify-content: center;
 			margin-top: 3.125rem;
@@ -1009,7 +1096,7 @@ html {
 			line-height: 3.313rem;
 			color: #222222;
 		}
-		&__title {
+		&-title {
 			font-weight: 500;
 			font-size: 1.125rem;
 			line-height: 2.125rem;
@@ -1017,10 +1104,10 @@ html {
 			text-align: center;
 			word-break: keep-all;
 		}
-		&__form {
+		&-form {
 			margin-top: 4.063rem;
 			border-top: 0.125rem solid #222;
-			&-item {
+			&__item {
 				display: flex;
 				align-items: center;
 				padding: 1.125rem 0.625rem;
@@ -1036,16 +1123,16 @@ html {
 				}
 			}
 		}
-		&__save {
+		&-save {
 			padding: 1.875rem 0.625rem 3.125rem;
 		}
-		&__button {
+		&-button {
 			text-align: center;
 			.btn {
 				width: 14.375rem;
 			}
 		}
-		&__menu {
+		&-menu {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -1078,14 +1165,14 @@ html {
 			line-height: 3.313rem;
 			color: #222222;
 		}
-		&__title {
+		&-title {
 			margin-bottom: 2.125rem;
 			font-weight: 500;
 			font-size: 1.125rem;
 			line-height: 2.125rem;
 			color: #222222;
 		}
-		&__text {
+		&-text {
 			margin-bottom: 4.125rem;
 			padding: 1.875rem 2.5rem;
 			background: #f8f8f8;
@@ -1098,7 +1185,7 @@ html {
 				padding: 1.875rem 1.25rem;
 			}
 		}
-		&__nav {
+		&-nav {
 			position: relative;
 			margin: 2.125rem 0 3.125rem 0;
 			&:after {
@@ -1115,15 +1202,15 @@ html {
 				color: #999;
 			}
 		}
-		&__agree {
-			&-check {
+		&-agree {
+			&__check {
 				padding: 2.125rem 2.5rem;
 				border-top: 0.063rem solid #ececec;
 				@include media-breakpoint-down(md) {
 					padding: 1.25rem 1.25rem;
 				}
 			}
-			&-text {
+			&__text {
 				padding: 0 2.5rem 2rem;
 				@include media-breakpoint-down(md) {
 					padding: 0 1.25rem 1.25rem;
@@ -1148,8 +1235,8 @@ html {
 				}
 			}
 		}
-		&__certification {
-			&-text {
+		&-certification {
+			&__text {
 				margin-bottom: 4.375rem;
 				padding: 1.875rem 2.5rem;
 				background: #f8f8f8;
@@ -1195,12 +1282,12 @@ html {
 				}
 			}
 		}
-		.find__form {
+		.form {
 			margin-top: 0;
 		}
-		&__result {
+		&-result {
 			margin-top: 3.125rem;
-			&-title {
+			&__title {
 				padding: 3.25rem 1.875rem;
 				background: #f8f8f8;
 				border-radius: 1.25rem;
@@ -1211,7 +1298,7 @@ html {
 				color: #222222;
 				word-break: keep-all;
 			}
-			&-text {
+			&__text {
 				margin-top: 3.125rem;
 				text-align: center;
 				font-weight: 500;
@@ -1220,7 +1307,7 @@ html {
 				color: #666666;
 			}
 		}
-		&__button {
+		&-button {
 			display: flex;
 			justify-content: center;
 			margin-top: 3.125rem;
@@ -1266,7 +1353,7 @@ html {
 	.mypage {
 		width: 100%;
 		padding: 4.375rem 0 0 0;
-		&__head {
+		&-head {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -1280,6 +1367,7 @@ html {
 		}
 		&__title {
 			display: flex;
+			align-items: center;
 			justify-content: space-between;
 			padding: 1.25rem 0;
 			border-bottom: 0.063rem solid #222;
@@ -1368,7 +1456,7 @@ html {
 			border-radius: 10px;
 			.board {
 				&__title {
-					padding: 10px 0;
+					padding: 0;
 					border-bottom: none;
 					&-item {
 						margin-right: 2.188rem;
@@ -1402,21 +1490,24 @@ html {
 				&__list {
 					ul {
 						li {
-							padding: 0 0;
+							position: relative;
+							padding: 0 0 0 15px;
 							border-bottom: none;
-							a {
-								display: flex;
-								align-items: center;
-								width: 100%;
-								height: 100%;
-								@include media-breakpoint-down(md) {
-									display: block;
-								}
+							&::before {
+								content: "";
+								display: block;
+								position: absolute;
+								top: 10px;
+								left: 0;
+								width: 5px;
+								height: 5px;
+								background: #4f80ff;
+								border-radius: 5px;
 							}
 						}
 					}
 					&-text {
-						margin-right: 3.75rem;
+						margin-right: 1.875;
 						strong {
 							font-weight: 500;
 							font-size: 1.125rem;
@@ -1424,22 +1515,14 @@ html {
 							color: #222222;
 						}
 						p {
-							margin-top: 1.063rem;
+							max-height: auto;
+							margin-top: 0;
 							font-style: normal;
 							font-weight: 300;
 							font-size: 1rem;
 							line-height: 1.5rem;
 							color: #222222;
-							@include text-clamp(1);
-						}
-					}
-					&-date {
-						font-weight: 300;
-						font-size: 1rem;
-						line-height: 1.5rem;
-						color: #222222;
-						@include media-breakpoint-down(md) {
-							margin-top: 0.625rem;
+							-webkit-line-clamp: 1;
 						}
 					}
 				}

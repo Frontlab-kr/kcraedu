@@ -13,29 +13,75 @@
 		<div class="kcraedu">
 			<header>
 				<div class="header">
-					<div class="container justify-content-end">
-						<div class="header__menu">
-							<a href="" class="header__menu-item">로그인</a>
-							<a href="" class="header__menu-item">회원가입</a>
-							<a href="" class="header__menu-item">원격지원</a>
-						</div>
-					</div>
-					<div class="container header__bottom">
+					<div class="container">
 						<div class="header__logo">
 							<a href="../pages/index.html"><img src="../assets/images/logo.png" alt="KCRA 한국휴게음식업중앙회교육원" /></a>
 						</div>
-						<div class="navbar-header">
-							<input type="checkbox" name="burger-bao-toggle" id="burger-bao-toggle" />
-							<label for="burger-bao-toggle" class="navbar-toggle burger-bao">
+						<div class="header__navbar">
+							<input type="checkbox" name="menuToggle" id="menuToggle" />
+							<label for="menuToggle" class="navbar-toggle burger-bao">
 								<span></span>
 							</label>
 						</div>
-						<div class="header__gnb">
-							<a href="" class="header__gnb-item">나의 학습방</a>
-							<a href="" class="header__gnb-item">기존영업자</a>
-							<a href="" class="header__gnb-item">신규영업자</a>
-							<a href="" class="header__gnb-item">식품자동판매기</a>
-							<a href="" class="header__gnb-item">집합교육일정</a>
+					</div>
+					<div class="header__wrap">
+						<div class="container justify-content-end">
+							<div class="header__menu">
+								<a href="" class="header__menu-item">로그인</a>
+								<a href="" class="header__menu-item">회원가입</a>
+								<a href="" class="header__menu-item header__menu-item--remote">원격지원</a>
+							</div>
+							<div class="header__info">
+								<div class="header__info-name"><strong>이선희</strong>님 환영합니다.</div>
+								<dl>
+									<dt>현재 수강 중인 강의</dt>
+									<dd>휴게음식점 기존영업자 위생교육(2022)</dd>
+								</dl>
+								<div class="header__info-btn">
+									<a href="" class="btn btn-primary">강의실 입장하기</a>
+									<a href="" class="btn btn-primary">로그아웃</a>
+								</div>
+							</div>
+						</div>
+						<div class="container header__bottom">
+							<div class="header__logo">
+								<a href="../pages/index.html"><img src="../assets/images/logo.png" alt="KCRA 한국휴게음식업중앙회교육원" /></a>
+							</div>
+							<div class="header__gnb">
+								<div class="header__gnb-item">
+									<a href="">나의 학습방</a>
+									<ul>
+										<li><a href="">학습현황</a></li>
+										<li><a href="">회원정보수정</a></li>
+										<li><a href="">1:1문의</a></li>
+										<li><a href="">결제내역</a></li>
+										<li><a href="">불만신고센터</a></li>
+									</ul>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">기존영업자</a>
+									<ul>
+										<li><a href="">기존영업자</a></li>
+									</ul>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">신규영업자</a>
+									<ul>
+										<li><a href="">신규영업자 집합교육</a></li>
+										<li><a href="">신규영업자 온라인교육</a></li>
+									</ul>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">식품자동판매기</a>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">집합교육일정</a>
+									<ul>
+										<li><a href="">신규영업자</a></li>
+										<li><a href="">자판기영업자</a></li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -45,25 +91,28 @@
 				<div class="container">
 					<div class="join">
 						<h1>회원가입</h1>
-						<div class="join-title">휴게음식중앙회 온라인 교육센터에 오신 것을 환영합니다.</div>
+						<div class="title-text">휴게음식중앙회 온라인 교육센터에 오신 것을 환영합니다.</div>
 						<form action="">
-							<div class="join-nav">
+							<div class="join-nav mt-4">
 								<div class="btn-group w-100">
 									<a href="#" class="btn btn-lg btn-outline-secondary">정보동의</a>
 									<a href="#" class="btn btn-lg btn-primary">본인인증</a>
 									<a href="#" class="btn btn-lg btn-outline-secondary">정보입력</a>
 								</div>
 							</div>
-							<div class="join-certification__text">
-								<p class="text-danger">본인 확인을 위해 인증 방식을 선택 해주세요.</p>
+							<div class="list-type01 mt-5">
+								<ul>
+									<li class="bullet-none text-danger">본인 확인을 위해 인증 방식을 선택 해주세요.</li>
+								</ul>
 							</div>
-							<div class="join-certification">
+
+							<div class="join-certification mt-7">
 								<dl>
 									<dd>
 										<img src="../assets/images/ico-join-BankCards.svg" alt="" />
 									</dd>
 									<dt>
-										<button type="button" class="btn btn-lg btn-primary">카드 본인인증</button>
+										<button type="button" class="btn btn-lg btn-info">카드 본인인증</button>
 									</dt>
 								</dl>
 								<dl>
@@ -71,7 +120,7 @@
 										<img src="../assets/images/ico-join-Calling.svg" alt="" />
 									</dd>
 									<dt>
-										<button type="button" class="btn btn-lg btn-info">휴대폰 본인인증</button>
+										<button type="button" class="btn btn-lg btn-primary">휴대폰 본인인증</button>
 									</dt>
 								</dl>
 							</div>

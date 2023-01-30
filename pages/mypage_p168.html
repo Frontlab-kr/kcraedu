@@ -89,25 +89,83 @@
 
 			<main>
 				<div class="container">
-					<div class="find">
-						<h1>비밀번호 찾기</h1>
-						<div class="title-text">새로운 비밀번호로 변경해 주세요.</div>
-						<form action="">
-							<div class="form mt-7">
-								<div class="form__item">
-									<label for="findPw" class="form-label"><em>*</em>새로운 비밀번호</label>
-									<input type="password" class="form-control" id="findPw" placeholder="새로운 비밀번호를 입력하세요." />
-								</div>
-								<div class="form__item">
-									<label for="findPwRe" class="form-label"><em>*</em>새로운 비밀번호 확인</label>
-									<input type="password" class="form-control" id="findPwRe" placeholder="새로운 비밀번호를 다시 입력하세요." />
-								</div>
+					<div class="contents">
+						<div class="snb">
+							<div class="snb__title">나의 학습방</div>
+							<ul>
+								<li><a href="">학습 현황</a></li>
+								<li><a href="">회원 정보 수정</a></li>
+								<li><a href="">1:1 문의</a></li>
+								<li class="active"><a href="">결제 내역</a></li>
+								<li><a href="">불만 신고 센터</a></li>
+							</ul>
+						</div>
+						<div class="mypage">
+							<div class="mypage-head">
+								<h1>결제 내역</h1>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">홈</li>
+										<li class="breadcrumb-item">나의학습방</li>
+										<li class="breadcrumb-item active" aria-current="page">결제 내역</li>
+									</ol>
+								</nav>
 							</div>
-							<p class="mt-3 text-danger">영문,숫자를 혼용하여 6글자 이상 20자리 미만으로 설정 해주세요.</p>
-							<div class="form__button">
-								<button type="button" class="btn btn-primary btn-lg">확인</button>
+							<div class="table-type02 mt-4">
+								<table>
+									<tbody>
+										<tr>
+											<th>결제일</th>
+											<td>2022.12.07</td>
+										</tr>
+										<tr>
+											<th>과정명</th>
+											<td>휴게음식점 기본영업자 위생교육(2022)</td>
+										</tr>
+										<tr>
+											<th>결제금액</th>
+											<td>17000원</td>
+										</tr>
+										<tr>
+											<th>결제상태</th>
+											<td>
+												<span class="text-danger">결제대기</span><br />
+												계좌번호: 56211104682768<br />
+												은행명 : 신한(통합)은행<br />
+												입금기한 : 20022.12.15 23:59:59<br />
+												예금주명 : (사)한국휴게음식업중앙회
+											</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
-						</form>
+							<div class="mypage-text mt-7">
+								<h4>환불 규정</h4>
+								<dl>
+									<dt>온라인 교육</dt>
+									<dd>
+										1차시 학습 또는 결제 후 3일이 지나면 수강 취소가 불가능 하오니 결제 취소를 원하시면 <a href="">1:1문의 게시판에 취소 요청</a> 해주세요.
+									</dd>
+								</dl>
+								<dl>
+									<dt>집합 교육</dt>
+									<dd>교육 현장 미 참석 시 환불 가능. <a href="">1:1문의 게시판에 취소 요청</a> 해주세요.</dd>
+								</dl>
+							</div>
+							<div class="list-type01 mt-4">
+								<ul>
+									<li>카드 결제 시 부가세법 시행령 57조 2항에 의거하여 세금계산거 대신 카드매출전표로 대신하게 됩니다.</li>
+									<li>무통장(가상계좌), 실시간 계좌 이체 시 현금영수증 신청이 가능합니다.</li>
+									<li>
+										현금영수증은 결제일 다음 날 발급이 완료 되며, 최대 1개월까지 발급이 가능합니다.
+										<ul>
+											<li>발급 완료 여부는 결제 완료 이틀 후 국세청 사이트에서 확인 가능합니다.</li>
+											<li>사업자 지출증빙용으로 발급받으신 현금영수증은 사업자 세액공제 시 필요 경비로 인정됩니다.</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</main>

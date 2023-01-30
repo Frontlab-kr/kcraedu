@@ -18,7 +18,7 @@
 	border: $btn-border-width solid transparent;
 	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
 	@include transition($btn-transition);
-
+	white-space: nowrap;
 	&:hover {
 		color: $body-color;
 		text-decoration: if($link-hover-decoration == underline, none, null);
@@ -105,4 +105,12 @@
 
 .btn-sm {
 	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+}
+
+.btn {
+	&-outline-primary {
+		&:hover {
+			color: #fff;
+		}
+	}
 }

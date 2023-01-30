@@ -23,7 +23,13 @@
 		color: $body-color;
 		text-decoration: if($link-hover-decoration == underline, none, null);
 	}
-
+	.bi {
+		position: relative;
+		top: 0.063rem;
+		font-size: 1rem;
+		line-height: 1;
+		margin-right: 0.25rem;
+	}
 	.btn-check:focus + &,
 	&:focus {
 		outline: 0;

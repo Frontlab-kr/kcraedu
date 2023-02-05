@@ -21,24 +21,36 @@
 		display: none;
 	}
 	&-outline-danger {
-		border: 1px solid #d65050;
-		border-radius: 5px;
+		border: 0.063rem solid #d65050;
+		border-radius: 0.313rem;
 		color: #d65050;
 	}
 	&-outline-primary {
-		border: 1px solid #4f80ff;
-		border-radius: 5px;
+		border: 0.063rem solid #4f80ff;
+		border-radius: 0.313rem;
 		color: #4f80ff;
 	}
 	&-outline-black {
-		border: 1px solid #222;
-		border-radius: 5px;
+		border: 0.063rem solid #222;
+		border-radius: 0.313rem;
 		color: #222;
+	}
+	&-outline-secondary {
+		border: 0.063rem solid #999;
+		border-radius: 0.313rem;
+		color: #999;
+	}
+	&-sm {
+		padding: 0 0.75rem;
+		height: 1.5rem;
+		border-radius: 1.5rem;
+		font-size: 0.875rem;
+		line-height: 1.313rem;
 	}
 }
 
 // Quick fix for badges in buttons
 .btn .badge {
 	position: relative;
-	top: -1px;
+	top: -0.063rem;
 }

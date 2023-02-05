@@ -135,6 +135,9 @@
 	// when there should be a fixed height on `.modal-dialog`.
 	flex: 1 1 auto;
 	padding: 3.75rem 2.5rem 0.625rem;
+	.form {
+		font-size: 0.875rem;
+	}
 }
 
 // Footer (for actions)

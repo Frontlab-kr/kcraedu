@@ -18,6 +18,7 @@
 	vertical-align: $table-cell-vertical-align;
 	border-color: $table-border-color;
 	border-top: 2px solid #222;
+	font-size: 1.125rem;
 	// Target th & td
 	// We need the child combinator to prevent styles leaking to nested tables which doesn't have a `.table` class.
 	// We use the universal selectors here to simplify the selector (else we would need 6 different selectors).
@@ -32,10 +33,15 @@
 
 	> tbody {
 		vertical-align: inherit;
+		tr {
+			td {
+				color: #666;
+			}
+		}
 	}
 
 	> thead {
-		vertical-align: bottom;
+		vertical-align: middle;
 	}
 
 	// Highlight border color between thead, tbody and tfoot.
@@ -61,6 +67,7 @@
 	> :not(caption) > * > * {
 		padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
 	}
+	font-size: 1rem;
 }
 
 // Border versions

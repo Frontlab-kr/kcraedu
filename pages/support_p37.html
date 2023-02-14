@@ -93,101 +93,95 @@
 				<div class="container">
 					<div class="contents">
 						<div class="snb">
-							<div class="snb__title">신규영업자</div>
+							<div class="snb__title">교육 지원</div>
 							<ul>
-								<li class="active"><a href="">신규영업자 집합교육</a></li>
-								<li><a href="">신규영업자 온라인교육</a></li>
+								<li><a href="">공지사항</a></li>
+								<li><a href="">자료실</a></li>
+								<li><a href="">FAQ</a></li>
+								<li><a href="">홍보게시판</a></li>
+								<li class="active"><a href="">전년도 수료조회</a></li>
 							</ul>
 						</div>
-						<div class="curriculum">
-							<div class="curriculum-head">
-								<h1>신규영업자 집합 교육</h1>
+						<div class="support">
+							<div class="support-head">
+								<h1>전년도 수료조회</h1>
 								<nav aria-label="breadcrumb">
 									<ol class="breadcrumb">
 										<li class="breadcrumb-item">홈</li>
-										<li class="breadcrumb-item">신규영업자</li>
-										<li class="breadcrumb-item active">신규영업자 집합 교육</li>
+										<li class="breadcrumb-item">교육지원</li>
+										<li class="breadcrumb-item active">전년도 수료조회</li>
 									</ol>
 								</nav>
 							</div>
-							<h4 class="mt-7">집합 교육 일정</h4>
-							<p class="mt-3">
-								영업장 소재지 상관 없이 원하시는 지역에서 교육 받으 실 수 있습니다.<br />
-								대전, 광주, 전북 지역은 교육원으로 문의 바랍니다.
-							</p>
-							<div class="form-search mt-7">
-								<form action="">
-									<div class="form-search__title">지역</div>
-									<select class="form-select">
-										<option selected>시/도 선택</option>
-										<option value="1">One</option>
-										<option value="2">Two</option>
-										<option value="3">Three</option>
-									</select>
-									<button type="button" class="btn btn-outline-primary btn-sm ms-1">검색</button>
-								</form>
+							<div class="list-type01 mt-7">
+								<ul>
+									<li>수료처리된 교육만 확인 가능합니다.​</li>
+									<li>수료증은 수료자(교육이수자) 정보로 조회됩니다.​</li>
+									<li>
+										기존영업자는
+										<span class="text-danger">수료일 기준 1년</span>, 신규/식품자동판매기 영업자는 <span class="text-danger">수료일 기준 2년</span> 이내만 조회
+										출력 하실 수 있습니다.​
+									</li>
+									<li>2022년도 수료증은 [나의학습방]에서 출력하실 수 있습니다.​</li>
+								</ul>
 							</div>
-							<div class="table-wrap mt-5">
+							<h4 class="mt-7">수료정보 입력</h4>
+							<form action="">
+								<div class="form mt-2">
+									<div class="form__item">
+										<label for="supportName" class="form-label">이수자 성명</label>
+										<input type="text" class="form-control" id="supportName" placeholder="이수자 이름을 입력해주세요​" />
+									</div>
+									<div class="form__item">
+										<label for="supportBirthday" class="form-label">생년월일</label>
+										<input type="text" class="form-control" id="supportBirthday" placeholder="숫자만 입력해주세요 (예:19901203)​" />
+									</div>
+									<div class="form__item">
+										<label for="supportTel" class="form-label">휴대전화번호</label>
+										<input type="text" class="form-control" id="supportTel" placeholder="숫자만 입력해주세요 (예:01012341234)​" />
+									</div>
+								</div>
+								<div class="form__button">
+									<button type="button" class="btn btn-primary btn-lg">검색</button>
+								</div>
+							</form>
+							<h4 class="mt-7">검색 결과</h4>
+							<div class="table-wrap mt-2">
 								<table class="table">
 									<colgroup>
 										<col style="width: 12%" />
 										<col style="width: 12%" />
-										<col style="width: 12%" />
-										<col style="width: 30%" />
 										<col style="width: 10%" />
-										<col style="width: 8%" />
-										<col style="width: 8%" />
-										<col style="width: 8%" />
+										<col style="width: 20%" />
+										<col style="width: 26%" />
+										<col style="width: 10%" />
+										<col style="width: 10%" />
 									</colgroup>
 									<thead>
 										<tr>
-											<th class="text-center">교육<br />일자</th>
-											<th class="text-center">신청<br />마감</th>
-											<th class="text-center">교육<br />시간</th>
-											<th class="text-center">교육<br />장소</th>
-											<th class="text-center">교육<br />문의</th>
-											<th class="text-center">정원</th>
-											<th class="text-center">잔여</th>
-											<th class="text-center">위치</th>
-											<th class="text-center">신청</th>
+											<th class="text-center">이수년도</th>
+											<th class="text-center">업종</th>
+											<th class="text-center">대표자</th>
+											<th class="text-center">업소명</th>
+											<th class="text-center">업소주소</th>
+											<th class="text-center">수료일</th>
+											<th class="text-center">수료증</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td class="text-center align-middle">2022-12-22</td>
-											<td class="text-center align-middle">12-21 17시까지</td>
-											<td class="text-center align-middle">09:00~ 16:00</td>
-											<td class="text-center align-middle">교통문화교육원 3층 대강당</td>
-											<td class="text-center align-middle">02-425- 6126~8</td>
-											<td class="text-center align-middle">220</td>
-											<td class="text-center align-middle">173</td>
+											<td class="text-center align-middle">2021</td>
+											<td class="text-center align-middle">기존영업자</td>
+											<td class="text-center align-middle">홍길동</td>
+											<td class="text-center align-middle">땡땡땡땡땡땡마트</td>
+											<td class="text-center align-middle">서울시 관악구 남부순환로 111-11</td>
+											<td class="text-center align-middle">2022.02.28</td>
 											<td class="text-center align-middle">
-												<button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#modal">약도</button>
-											</td>
-											<td class="text-center align-middle">
-												<button type="button" class="btn btn-sm btn-outline-primary">신청</button>
-											</td>
-										</tr>
-										<tr>
-											<td class="text-center align-middle">2022-12-22</td>
-											<td class="text-center align-middle">12-21 17시까지</td>
-											<td class="text-center align-middle">09:00~ 16:00</td>
-											<td class="text-center align-middle">교통문화교육원 3층 대강당</td>
-											<td class="text-center align-middle">02-425- 6126~8</td>
-											<td class="text-center align-middle">220</td>
-											<td class="text-center align-middle">173</td>
-											<td class="text-center align-middle">
-												<button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#modal">약도</button>
-											</td>
-											<td class="text-center align-middle">
-												<button type="button" class="btn btn-sm btn-outline-secondary" disabled>마감</button>
+												<button type="button" class="btn btn-sm btn-outline-primary">출력</button>
 											</td>
 										</tr>
 									</tbody>
 								</table>
-							</div>
-							<div class="form__button">
-								<button type="button" class="btn btn-primary btn-lg">결제 내역 확인하기</button>
 							</div>
 						</div>
 					</div>
@@ -217,40 +211,6 @@
 					</div>
 				</div>
 			</footer>
-
-			<!-- Modal -->
-			<div class="modal fade" id="modal" tabindex="-1">
-				<div class="modal-dialog modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="modalLabel">교육장 위치 안내</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<div class="curriculum-map ratio ratio-4x3">
-								<div>4x3</div>
-							</div>
-							<div class="table-type01 mt-4">
-								<table>
-									<tbody>
-										<tr>
-											<th>교육장소</th>
-											<td>교통문화교육원 3층 대강당</td>
-										</tr>
-										<tr>
-											<th>주소</th>
-											<td>서울특별시 관악구 남현1길 38-10</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-bs-dismiss="modal">닫기</button>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</body>
 </html>

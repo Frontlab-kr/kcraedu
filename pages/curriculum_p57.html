@@ -1,237 +1,482 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>한국휴게음식업중앙회</title>
-    <link rel="stylesheet" href="../assets/css/common.css" />
-    <script src="../assets/bootstrap-5.0.2/dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/common.js"></script>
-  </head>
-  <body>
-    <div class="kcraedu">
-      <header>
-        <div class="header">
-          <div class="container">
-            <div class="header__logo">
-              <a href="../pages/index.html"
-                ><img
-                  src="../assets/images/logo.png"
-                  alt="KCRA 한국휴게음식업중앙회교육원"
-              /></a>
-            </div>
-            <div class="header__navbar">
-              <input type="checkbox" name="menuToggle" id="menuToggle" />
-              <label for="menuToggle" class="navbar-toggle burger-bao">
-                <span></span>
-              </label>
-            </div>
-          </div>
-          <div class="header__wrap">
-            <div class="container justify-content-end">
-              <div class="header__menu">
-                <a href="" class="header__menu-item">로그인</a>
-                <a href="" class="header__menu-item">회원가입</a>
-                <a href="" class="header__menu-item header__menu-item--remote"
-                  >원격지원</a
-                >
-              </div>
-              <div class="header__info">
-                <div class="header__info-name">
-                  <strong>이선희</strong>님 환영합니다.
-                </div>
-                <dl>
-                  <dt>현재 수강 중인 강의</dt>
-                  <dd>휴게음식점 기존영업자 위생교육(2022)</dd>
-                </dl>
-                <div class="header__info-btn">
-                  <a href="" class="btn btn-primary">강의실 입장하기</a>
-                  <a href="" class="btn btn-primary">로그아웃</a>
-                </div>
-              </div>
-            </div>
-            <div class="container header__bottom">
-              <div class="header__logo">
-                <a href="../pages/index.html"
-                  ><img
-                    src="../assets/images/logo.png"
-                    alt="KCRA 한국휴게음식업중앙회교육원"
-                /></a>
-              </div>
-              <div class="header__gnb">
-                <div class="header__gnb-item">
-                  <a href="">나의 학습방</a>
-                  <ul>
-                    <li><a href="">학습현황</a></li>
-                    <li><a href="">회원정보수정</a></li>
-                    <li><a href="">1:1문의</a></li>
-                    <li><a href="">결제내역</a></li>
-                    <li><a href="">불만신고센터</a></li>
-                  </ul>
-                </div>
-                <div class="header__gnb-item">
-                  <a href="">기존영업자</a>
-                  <ul>
-                    <li><a href="">기존영업자</a></li>
-                  </ul>
-                </div>
-                <div class="header__gnb-item">
-                  <a href="">신규영업자</a>
-                  <ul>
-                    <li><a href="">신규영업자 집합교육</a></li>
-                    <li><a href="">신규영업자 온라인교육</a></li>
-                  </ul>
-                </div>
-                <div class="header__gnb-item">
-                  <a href="">식품자동판매기</a>
-                </div>
-                <div class="header__gnb-item">
-                  <a href="">집합교육일정</a>
-                  <ul>
-                    <li><a href="">신규영업자</a></li>
-                    <li><a href="">자판기영업자</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>한국휴게음식업중앙회</title>
+		<link rel="stylesheet" href="../assets/css/common.css" />
+		<script src="../assets/bootstrap-5.0.2/dist/js/bootstrap.min.js"></script>
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/aos.js"></script>
+		<script src="../assets/js/common.js"></script>
+	</head>
+	<body>
+		<div class="kcraedu">
+			<header>
+				<div class="header">
+					<div class="container">
+						<div class="header__logo">
+							<a href="../pages/index.html"><img src="../assets/images/logo.png" alt="KCRA 한국휴게음식업중앙회교육원" /></a>
+						</div>
+						<div class="header__navbar">
+							<input type="checkbox" name="menuToggle" id="menuToggle" />
+							<label for="menuToggle" class="navbar-toggle burger-bao">
+								<span></span>
+							</label>
+						</div>
+					</div>
+					<div class="header__wrap">
+						<div class="container justify-content-end">
+							<div class="header__menu">
+								<a href="" class="header__menu-item">로그인</a>
+								<a href="" class="header__menu-item">회원가입</a>
+								<a href="" class="header__menu-item header__menu-item--remote">원격지원</a>
+							</div>
+							<div class="header__info">
+								<div class="header__info-name"><strong>이선희</strong>님 환영합니다.</div>
+								<dl>
+									<dt>현재 수강 중인 강의</dt>
+									<dd>휴게음식점 기존영업자 위생교육(2022)</dd>
+								</dl>
+								<div class="header__info-btn">
+									<a href="" class="btn btn-primary">강의실 입장하기</a>
+									<a href="" class="btn btn-primary">로그아웃</a>
+								</div>
+							</div>
+						</div>
+						<div class="container header__bottom">
+							<div class="header__logo">
+								<a href="../pages/index.html"><img src="../assets/images/logo.png" alt="KCRA 한국휴게음식업중앙회교육원" /></a>
+							</div>
+							<div class="header__gnb">
+								<div class="header__gnb-item">
+									<a href="">나의 학습방</a>
+									<ul>
+										<li><a href="">학습현황</a></li>
+										<li><a href="">회원정보수정</a></li>
+										<li><a href="">1:1문의</a></li>
+										<li><a href="">결제내역</a></li>
+										<li><a href="">불만신고센터</a></li>
+									</ul>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">기존영업자</a>
+									<ul>
+										<li><a href="">기존영업자</a></li>
+									</ul>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">신규영업자</a>
+									<ul>
+										<li><a href="">신규영업자 집합교육</a></li>
+										<li><a href="">신규영업자 온라인교육</a></li>
+									</ul>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">식품자동판매기</a>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">집합교육일정</a>
+									<ul>
+										<li><a href="">신규영업자</a></li>
+										<li><a href="">자판기영업자</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
 
-      <main>
-        <div class="container">
-          <div class="contents">
-            <div class="snb">
-              <div class="snb__title">집합교육일정</div>
-              <ul>
-                <li class="active"><a href="">신규 영업자</a></li>
-                <li><a href="">자판기 영업자</a></li>
-              </ul>
-            </div>
-            <div class="curriculum">
-              <div class="curriculum-head">
-                <h1>신규영업자</h1>
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">홈</li>
-                    <li class="breadcrumb-item">집합교육일정</li>
-                    <li class="breadcrumb-item active">신규영업자</li>
-                  </ol>
-                </nav>
-              </div>
-              <h4>2022년 휴게음식점 신규영업자 집합(오프라인) 교육일정안내</h4>
-              <div class="curriculum-detail">
-                <dl>
-                  <dt>- 준비물</dt>
-                  <dd></dd>
-                </dl>
-                <dl>
-                  <dt>- 교육시간</dt>
-                  <dd></dd>
-                </dl>
-                <dl>
-                  <dt>- 교육 접수는 교육시간 30분 전부터 가능</dt>
-                  <dd></dd>
-                </dl>
-                <dl>
-                  <dt>
-                    - 영업장 소재기 상관없이 원하시는 지역에서 교육 받으실 수
-                    있습니다.
-                  </dt>
-                  <dd></dd>
-                </dl>
-                <dl>
-                  <dt>- 대전,광주,전북 지역은 교육원으로 문의 바랍니다.</dt>
-                  <dd></dd>
-                </dl>
-                <dl>
-                  <dt>- 첨부파일</dt>
-                  <dd></dd>
-                </dl>
-                <dl>
-                  <dt>- 일정표</dt>
-                  <dd></dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+			<main>
+				<div class="container">
+					<div class="contents">
+						<div class="snb">
+							<div class="snb__title">집합교육일정</div>
+							<ul>
+								<li class="active"><a href="">신규 영업자</a></li>
+								<li><a href="">자판기 영업자</a></li>
+							</ul>
+						</div>
+						<div class="curriculum">
+							<div class="curriculum-head">
+								<h1>신규영업자</h1>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">홈</li>
+										<li class="breadcrumb-item">집합교육일정</li>
+										<li class="breadcrumb-item active">신규영업자</li>
+									</ol>
+								</nav>
+							</div>
 
-      <footer>
-        <div class="footer">
-          <div class="footer__menu">
-            <div class="container">
-              <a href="" class="footer__menu-item text-primary"
-                >개인정보처리방침</a
-              >
-              <a href="" class="footer__menu-item">이용약관</a>
-              <a href="" class="footer__menu-item">이메일무단수집거부</a>
-            </div>
-          </div>
-          <div class="container">
-            <address>
-              서울시관악구 봉천동 1659-2(청동빌딩 601호)<br class="mo" />
-              한국휴게음식업중앙회<br class="mo" />
-              <br class="mo" />TEL : 02-425-6126~8<br class="mo" />
-              FAX : 02-425-6129<br />
-              사업자 번호 : 101-82-04756<br class="mo" />
-              대표자 : 최성회​
-            </address>
-          </div>
-        </div>
-      </footer>
+							<div class="curriculum-detail mt-7">
+								<h4 class="mb-3">2022년 휴게음식점 신규영업자 집합(오프라인) 교육일정안내</h4>
+								<dl>
+									<dt>- 준비물</dt>
+									<dd>교육비 28,000원(서울 25,000원), 신분증, 식품위생관리책임자 지정확인서</dd>
+								</dl>
+								<dl>
+									<dt>- 교육시간</dt>
+									<dd>6시간</dd>
+								</dl>
+								<dl>
+									<dt>- 교육 접수는 교육시간 30분 전부터 가능</dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt><span class="line">- 영업장 소재기 상관없이 원하시는 지역에서 교육 받으실 수 있습니다.</span></dt>
+									<dd></dd>
+								</dl>
+								<dl class="d-block">
+									<dt><span class="line">- 대전,광주,전북 지역은 교육원으로 문의 바랍니다.</span></dt>
+									<dd>
+										<p class="d-flex p-1">
+											<span style="white-space: nowrap" class="mr-1">*위생관리책임자 : </span>
+											<span>
+												&nbsp;대표자가 영업에 종사하지 않거나, 두 곳 이상의 장소에서 영업을 하는 경우에는 종업원 중에서 책임자를 지정하여 식품위생관리책임자
+												지정확인서를 첨부 (하단 첨부파일참조)
+											</span>
+										</p>
+									</dd>
+								</dl>
+								<dl>
+									<dt>- 첨부파일</dt>
+									<dd><a href="">식품위생관리책임자 지정확인서 6시간 식품위생관리책임자지정확인서 대리인참석시지참서류.pdf</a></dd>
+								</dl>
+								<dl class="d-block">
+									<dt>- 일정표</dt>
+									<dd>
+										<p class="mo"><strong>지역을 선택해주세요.</strong></p>
+										<div class="schedule__region">
+											<div class="pc">
+												<div class="schedule__region-tab">
+													<span data-region="seoul" class="active">서울</span>
+													<span data-region="busan">부산</span>
+													<span data-region="daegu">대구</span>
+													<span data-region="incheon">인천</span>
+													<span data-region="gwangju">광주</span>
+													<span data-region="daejeon">대전</span>
+													<span data-region="ulsan">울산</span>
+													<span data-region="gyeonggi" class="">경기</span>
+													<span data-region="gangwon">강원</span>
+													<span data-region="chungbuk" class="">충북</span>
+													<span data-region="chungnam">충남</span>
+													<span data-region="jeonbuk">전북</span>
+													<span data-region="jeonnam">전남</span>
+													<span data-region="gyeongbuk">경북</span>
+													<span data-region="gyeongnam">경남</span>
+													<span data-region="jeju">제주</span>
+												</div>
+											</div>
+											<div class="mo">
+												<select class="form-select d-inline-block">
+													<option value="seoul">서울</option>
+													<option value="busan">부산</option>
+													<option value="daegu">대구</option>
+													<option value="incheon">인천</option>
+													<option value="gwangju">광주</option>
+													<option value="daejeon">대전</option>
+													<option value="ulsan">울산</option>
+													<option value="gyeonggi">경기</option>
+													<option value="gangwon">강원</option>
+													<option value="chungbuk">충북</option>
+													<option value="chungnam">충남</option>
+													<option value="jeonbuk">전북</option>
+													<option value="jeonnam">전남</option>
+													<option value="gyeongbuk">경북</option>
+													<option value="gyeongnam">경남</option>
+													<option value="jeju">제주</option>
+												</select>
+											</div>
+										</div>
+										<div class="schedule__calendar">
+											<div id="calendar"></div>
+										</div>
 
-      <!-- Modal -->
-      <div class="modal fade" id="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalLabel">
-                교육신청 전 필수 확인 사항
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>
-                휴게음식점 기존영업자 교육은 영업 신고 후
-                <span class="text-danger"
-                  >그 다음 해부터 매년 받는 보수 교육</span
-                >입니다.
-              </p>
-              <p class="mt-3">
-                기존영업자 교육은
-                <span class="text-danger">영업신고증 기준</span>입니다.
-              </p>
-              <p class="mt-2 text-example">
-                2019년 1월 ~ 12월 영업 신고 (2020년 부터 기존영업자 교육
-                이수)<br />
-                2020년 1월 ~ 12월 영업 신고 (2021년 부터 기존영업자 교육
-                이수)<br />
-                2021년 1월 ~ 12월 영업 신고 (2022년 부터 기존영업자 교육 이수)
-              </p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-bs-dismiss="modal"
-              >
-                닫기
-              </button>
-              <button type="button" class="btn btn-primary">확인</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+										<div class="schedule__table mt-7">
+											<div class="pc">
+												<table class="table">
+													<colgroup>
+														<col style="width: 20%" />
+														<col style="width: 40%" />
+														<col style="width: 20%" />
+														<col style="width: 20%" />
+													</colgroup>
+													<thead>
+														<tr>
+															<th class="text-center">교육일</th>
+															<th class="text-center">교육장소</th>
+															<th class="text-center">교육시간</th>
+															<th class="text-center">문의처</th>
+														</tr>
+													</thead>
+													<tbody></tbody>
+												</table>
+											</div>
+											<div class="mo">
+												<div class="mobile__table">
+													<div class="mobile__table-item">
+														<dl>
+															<dt></dt>
+															<dd>
+																<ul>
+																	<li>
+																		<strong>교육장소</strong>
+																		<span class="mobile__table-item-address"></span>
+																	</li>
+																	<li>
+																		<strong>교육시간</strong>
+																		<span class="mobile__table-item-time"></span>
+																	</li>
+																	<li>
+																		<strong>문의처</strong>
+																		<span class="mobile__table-item-tel"></span>
+																	</li>
+																</ul>
+															</dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer>
+				<div class="footer">
+					<div class="footer__menu">
+						<div class="container">
+							<a href="" class="footer__menu-item">중앙회소개</a>
+							<a href="" class="footer__menu-item">전국지회연락처</a>
+							<a href="" class="footer__menu-item">이용약관</a>
+							<a href="" class="footer__menu-item text-primary">개인정보처리방침</a>
+							<a href="" class="footer__menu-item">이메일무단수집거부</a>
+						</div>
+					</div>
+					<div class="container">
+						<address>
+							서울시관악구 봉천동 1659-2(청동빌딩 601호)<br class="mo" />
+							한국휴게음식업중앙회<br class="mo" />
+							<br class="mo" />TEL : 02-425-6126~8<br class="mo" />
+							FAX : 02-425-6129<br />
+							사업자 번호 : 101-82-04756<br class="mo" />
+							대표자 : 최성회​
+						</address>
+					</div>
+				</div>
+			</footer>
+
+			<!-- Modal -->
+			<div class="modal fade" id="modal" tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalLabel">교육신청 전 필수 확인 사항</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<p>
+								휴게음식점 기존영업자 교육은 영업 신고 후
+								<span class="text-danger">그 다음 해부터 매년 받는 보수 교육</span>입니다.
+							</p>
+							<p class="mt-3">
+								기존영업자 교육은
+								<span class="text-danger">영업신고증 기준</span>입니다.
+							</p>
+							<p class="mt-2 text-example">
+								2019년 1월 ~ 12월 영업 신고 (2020년 부터 기존영업자 교육 이수)<br />
+								2020년 1월 ~ 12월 영업 신고 (2021년 부터 기존영업자 교육 이수)<br />
+								2021년 1월 ~ 12월 영업 신고 (2022년 부터 기존영업자 교육 이수)
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
+							<button type="button" class="btn btn-primary">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://kcraedu.or.kr/static/global_assets/js/plugins/ui/moment/moment.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+		<script>
+			function commonAsyncAjaxFunc(url, data, type, callback) {
+				$.ajax({
+					url: url,
+					cache: false,
+					async: false,
+					type: type,
+					dataType: "json",
+					data: data,
+					success: function (data) {
+						callback(data);
+					},
+				});
+			}
+		</script>
+		<script>
+			$(document).ready(function () {
+				var eventTarget = null;
+				commonAsyncAjaxFunc(
+					"info",
+					{
+						ccTarget: "N",
+						ccType: "OFFLINE",
+					},
+					"GET",
+					function (data) {
+						if (data != null) {
+							eventTarget = data.eventData;
+							var str = data.curriculumInfo.ccDescription.split("\n");
+							var htmlStr = "";
+							for (var i = 0; i < str.length; i++) {
+								htmlStr += "<li><span>" + str[i] + "</span></li>";
+							}
+							$(".schedule__text-style02 ul").html(htmlStr);
+						}
+					}
+				);
+
+				var calendarEl = document.getElementById("calendar");
+				var targetCityCurrent = "seoul";
+				var targetDateCurrent = "2022년 10월";
+
+				function leftPad(value) {
+					if (value >= 10) {
+						return value;
+					}
+
+					return `0`;
+				}
+
+				function toStringByFormatting(source, delimiter = "-") {
+					const year = source.getFullYear();
+					const month = leftPad(source.getMonth() + 1);
+					const day = leftPad(source.getDate());
+
+					return [year, month, day].join(delimiter);
+				}
+
+				function calendarChange(city) {
+					//캘린더
+					var targetCity = city;
+					console.log(eventTarget[0][targetCity]);
+					calendar = new FullCalendar.Calendar(calendarEl, {
+						initialView: "dayGridMonth",
+						locale: "ko",
+						events: eventTarget[0][targetCity],
+						height: 630,
+					});
+					calendar.render();
+
+					//테이블
+					$(".schedule__table table tbody").html("");
+					for (let index = 0; index < eventTarget[0][targetCity].length; index++) {
+						$(".schedule__table table tbody").append(
+							"<tr data-date=" +
+								eventTarget[0][targetCity][index].start +
+								">" +
+								"<td class='text-center align-middle'>" +
+								eventTarget[0][targetCity][index].start +
+								"</td><td class='text-center align-middle'><strong>" +
+								eventTarget[0][targetCity][index].title +
+								"</strong><br />" +
+								eventTarget[0][targetCity][index].address +
+								"</td><td class='text-center align-middle'>" +
+								eventTarget[0][targetCity][index].time +
+								"</td><td class='text-center align-middle'>" +
+								eventTarget[0][targetCity][index].tel +
+								"</td></tr>"
+						);
+					}
+
+					$(".mobile__table").html("");
+					for (let index = 0; index < eventTarget[0][targetCity].length; index++) {
+						$(".mobile__table").append(
+							"<div class='mobile__table-item' data-date=" +
+								eventTarget[0][targetCity][index].start +
+								"><dl><dt>" +
+								eventTarget[0][targetCity][index].start +
+								"</dt><dd><span class='mobile__table-item-title'>" +
+								eventTarget[0][targetCity][index].title +
+								"</span><ul><li><strong>주소</strong><span class='mobile__table-item-address'>" +
+								eventTarget[0][targetCity][index].address +
+								"</span></li><li><strong>교육시간</strong><span class='mobile__table-item-time'>" +
+								eventTarget[0][targetCity][index].time +
+								"</span></li><li><strong>문의처</strong><span class='mobile__table-item-tel'>" +
+								eventTarget[0][targetCity][index].tel +
+								"</span></li></ul></dd></dl></div>"
+						);
+					}
+
+					tableChange();
+				}
+
+				function tableChange() {
+					//20221020
+					$(".schedule__table table tbody tr.none").remove();
+					$(".schedule__table .mobile__table-none").remove();
+					$(".schedule__table table tbody tr,.mobile__table-item").each(function () {
+						if ($(this).attr("data-date").substr(0, 7) == moment(calendar.currentData.currentDate).format("YYYY-MM")) {
+							//toStringByFormatting(calendar.currentData.currentDate).substr(0, 7)
+							$(this).show();
+						} else {
+							$(this).hide();
+						}
+					});
+					if ($(".schedule__table .pc").css("display") === "block") {
+						if ($(".schedule__table table tbody").height() === 0) {
+							$(".schedule__table table tbody").append("<tr data-date='00000000' class='none'><td colspan='4'>해당 기간에는 교육일정이 없습니다.</td></tr>");
+						}
+					}
+					if ($(".schedule__table .mo").css("display") === "block") {
+						if ($(".mobile__table").height() === 0) {
+							$(".mobile__table").append("<div class='mobile__table-none'>해당 기간에는 교육일정이 없습니다.</div>");
+						}
+					}
+				}
+
+				//init
+				calendarChange("seoul");
+				var delay = 100;
+				var timer = null;
+				//20221020
+				window.addEventListener("resize", function () {
+					clearTimeout(timer);
+					timer = setTimeout(function () {
+						tableChange();
+					}, delay);
+				});
+
+				//지역 선택
+				$(".schedule__region span").on("click", function () {
+					$(".schedule__region span").removeClass("active");
+					$(this).addClass("active");
+					calendarChange($(this).attr("data-region"));
+					//20221019
+					$(".schedule__region select").val($(this).attr("data-region")).prop("selected", true);
+				});
+
+				$(".schedule__region select").on("change", function () {
+					calendarChange(this.value);
+					//20221019
+					$(".schedule__region span").removeClass("active");
+					$(".schedule__region span[data-region=" + this.value + "]").addClass("active");
+				});
+
+				//달력 이동
+				$(".fc-prev-button,.fc-next-button").on("click", function () {
+					tableChange();
+				});
+			});
+		</script>
+	</body>
 </html>

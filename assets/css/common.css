@@ -13293,7 +13293,7 @@ fieldset:disabled .btn {
 
 @media (max-width: 767.98px) {
   .kcraedu header .header {
-    padding: 26px 0 1.875rem;
+    padding: 1.625rem 0 1.875rem;
   }
   .kcraedu header .header .container {
     -webkit-box-pack: start !important;
@@ -13318,7 +13318,7 @@ fieldset:disabled .btn {
     display: block;
   }
   .kcraedu header .header__logo img {
-    width: 250px;
+    width: 15.625rem;
   }
   .kcraedu header .header__gnb {
     display: block;
@@ -13365,7 +13365,7 @@ fieldset:disabled .btn {
   }
   .kcraedu header .header__menu-item {
     display: block;
-    width: 100px;
+    width: 6.25rem;
     margin: 0.625rem 0 0 0;
     font-weight: 500;
     font-size: 1rem;
@@ -14844,78 +14844,217 @@ fieldset:disabled .btn {
 
 .kcraedu .curriculum-detail h4, .kcraedu .curriculum-detail .h4 {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 35px;
+  font-size: 1.5rem;
+  line-height: 2.188rem;
   color: #222222;
+  word-break: keep-all;
 }
 
 .kcraedu .curriculum-detail > dl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 1.6rem;
 }
 
 .kcraedu .curriculum-detail > dl > dt {
-  min-width: 114px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 7.125rem;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
   color: #222222;
+  word-break: keep-all;
 }
 
-.kcraedu .curriculum-detail > dl > dd {
+.kcraedu .curriculum-detail > dl > dt::before {
+  content: "-";
+  display: block;
+  margin-right: 0.375rem;
+}
+
+.kcraedu .curriculum-detail > dl > dd > p {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
   color: #666666;
 }
 
+@media (max-width: 767.98px) {
+  .kcraedu .curriculum-detail > dl {
+    display: block;
+  }
+  .kcraedu .curriculum-detail > dl > dt {
+    margin-bottom: 5px;
+  }
+  .kcraedu .curriculum-detail > dl > dd > p {
+    margin-left: 8px;
+    padding: 0 !important;
+  }
+}
+
+.kcraedu .curriculum-detail .schedule__region {
+  margin: 1.875rem 0;
+}
+
+.kcraedu .curriculum-detail .schedule__region-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.125rem;
+  background: #ffffff;
+}
+
+.kcraedu .curriculum-detail .schedule__region-tab span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 0.063rem solid #ececec;
+  border-left: none;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #999999;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.kcraedu .curriculum-detail .schedule__region-tab span:hover {
+  color: #666;
+}
+
+.kcraedu .curriculum-detail .schedule__region-tab span:last-child {
+  border-radius: 0 0.313rem 0.313rem 0;
+}
+
+.kcraedu .curriculum-detail .schedule__region-tab span:first-child {
+  border-left: 0.063rem solid #ececec;
+  border-radius: 0.313rem 0 0 0.313rem;
+}
+
+.kcraedu .curriculum-detail .schedule__region-tab span.active {
+  border-color: #4f80ff;
+  background: #4f80ff;
+  color: #fff;
+}
+
+.kcraedu .curriculum-detail .schedule__region-title {
+  font-size: 1rem;
+  margin-bottom: 0.625rem;
+}
+
 .kcraedu .curriculum-detail .schedule__calendar * {
-  font-size: 12px;
+  font-size: 0.813rem;
 }
 
 .kcraedu .curriculum-detail .schedule__calendar a {
   color: #222;
 }
 
+.kcraedu .curriculum-detail .fc-toolbar-title {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #222222;
+}
+
+.kcraedu .curriculum-detail .fc-today-button {
+  height: 2.5rem;
+  border-radius: 0.313rem;
+  background: #3766de;
+  border: none;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.kcraedu .curriculum-detail .fc-prev-button,
+.kcraedu .curriculum-detail .fc-next-button {
+  width: 2.375rem;
+  height: 2.5rem;
+  border-radius: 0.313rem;
+  background: none;
+  border: 0.063rem solid #3766de;
+  color: #3766de;
+}
+
+.kcraedu .curriculum-detail .fc-prev-button:hover, .kcraedu .curriculum-detail .fc-prev-button:active,
+.kcraedu .curriculum-detail .fc-next-button:hover,
+.kcraedu .curriculum-detail .fc-next-button:active {
+  border-color: #3766de !important;
+  background: #3766de !important;
+  color: #fff !important;
+}
+
+.kcraedu .curriculum-detail .fc-event-title {
+  padding: 0.313rem;
+  white-space: normal;
+  line-height: 1.2;
+  word-break: keep-all;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .curriculum-detail .fc-view-harness {
+    display: none;
+  }
+  .kcraedu .curriculum-detail #calendar {
+    height: 2.5rem !important;
+  }
+}
+
 .kcraedu .curriculum-detail .mobile__table-none {
-  margin-bottom: 30px;
-  padding: 10px 0;
-  border-top: 1px solid #afafaf;
+  margin-bottom: 1.875rem;
+  padding: 0.625rem 0;
+  border-top: 0.063rem solid #afafaf;
   overflow: hidden;
-  font-size: 13px;
+  font-size: 0.813rem;
   line-height: 1.5;
   word-break: keep-all;
   color: #333;
 }
 
 .kcraedu .curriculum-detail .mobile__table-item dl {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .kcraedu .curriculum-detail .mobile__table-item dl dt {
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 0.313rem;
 }
 
 .kcraedu .curriculum-detail .mobile__table-item dl dd {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  padding: 0.75rem;
+  border: 0.063rem solid #ddd;
+  border-radius: 0.313rem;
   overflow: hidden;
 }
 
 .kcraedu .curriculum-detail .mobile__table-item dl dd ul {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0.625rem;
 }
 
 .kcraedu .curriculum-detail .mobile__table-item dl dd ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5px;
-  font-size: 14px;
+  margin-top: 0.313rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -14928,19 +15067,19 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .curriculum-detail .mobile__table-item dl dd ul li strong {
-  min-width: 70px;
-  margin-right: 10px;
+  min-width: 4.375rem;
+  margin-right: 0.625rem;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 0.813rem;
   white-space: noWrap;
 }
 
 .kcraedu .curriculum-detail .mobile__table-item-title {
   display: inline-block;
-  margin-bottom: 15px;
-  padding: 2px 10px 0px;
-  border-radius: 4px;
-  font-size: 14px;
+  margin-bottom: 0.938rem;
+  padding: 0.125rem 0.625rem 0;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
   font-weight: 400;
   color: #3788d8;
   background-color: rgba(55, 136, 216, 0.1);
@@ -14950,7 +15089,7 @@ fieldset:disabled .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 12px -12px -12px -12px;
+  margin: 0.75rem -0.75rem -0.75rem -0.75rem;
 }
 
 .kcraedu .curriculum-detail .mobile__table-item-btn button {
@@ -15028,11 +15167,11 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .support-search .form-select {
-  width: 230px;
+  width: 14.375rem;
 }
 
 .kcraedu .support-search .form-control {
-  width: 360px;
+  width: 22.5rem;
 }
 
 .kcraedu .support-view {
@@ -15079,7 +15218,7 @@ fieldset:disabled .btn {
   padding: 1.875rem 1.25rem;
   border-bottom: 0.063rem solid #d9d9d9;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5rem;
   color: #666666;
 }
 
@@ -15505,7 +15644,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .board__list-text p {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   font-style: normal;
   font-weight: 300;
   font-size: 1rem;
@@ -15522,7 +15661,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .board__list-date {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -15658,7 +15797,7 @@ fieldset:disabled .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 26px 1.25rem;
+  padding: 1.625rem 1.25rem;
   background-color: #fafafa;
   border-bottom: 0.063rem solid #d9d9d9;
   font-weight: 400;
@@ -16112,4 +16251,8 @@ fieldset:disabled .btn {
   padding-right: 0.875rem;
   border-top-right-radius: 0.313rem;
   border-bottom-right-radius: 0.313rem;
+}
+
+.inipay_modal.fade {
+  opacity: 1 !important;
 }

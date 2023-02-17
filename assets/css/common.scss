@@ -243,7 +243,7 @@ html {
 		}
 		@include media-breakpoint-down(md) {
 			.header {
-				padding: 26px 0 1.875rem;
+				padding: 1.625rem 0 1.875rem;
 				.container {
 					justify-content: flex-start !important;
 				}
@@ -265,7 +265,7 @@ html {
 				&__logo {
 					display: block;
 					img {
-						width: 250px;
+						width: 15.625rem;
 					}
 				}
 				&__gnb {
@@ -316,7 +316,7 @@ html {
 					border-bottom: 0.063rem solid #d9d9d9;
 					&-item {
 						display: block;
-						width: 100px;
+						width: 6.25rem;
 						margin: 0.625rem 0 0 0;
 						font-weight: 500;
 						font-size: 1rem;
@@ -1510,67 +1510,181 @@ html {
 		&-detail {
 			h4 {
 				font-weight: 500;
-				font-size: 24px;
-				line-height: 35px;
+				font-size: 1.5rem;
+				line-height: 2.188rem;
 				color: #222222;
+				word-break: keep-all;
 			}
 			> dl {
 				display: flex;
-				margin-bottom: 20px;
+				margin-bottom: 1.6rem;
 				> dt {
-					min-width: 114px;
+					display: flex;
+					min-width: 7.125rem;
 					font-weight: 500;
-					font-size: 18px;
-					line-height: 26px;
+					font-size: 1.125rem;
+					line-height: 1.625rem;
 					color: #222222;
+					word-break: keep-all;
+					&::before {
+						content: "-";
+						display: block;
+						margin-right: 0.375rem;
+					}
 				}
 				> dd {
-					font-weight: 400;
-					font-size: 18px;
-					line-height: 26px;
-					color: #666666;
+					> p {
+						font-weight: 400;
+						font-size: 1.125rem;
+						line-height: 1.625rem;
+						color: #666666;
+					}
+				}
+				@include media-breakpoint-down(md) {
+					display: block;
+					> dt {
+						margin-bottom: 5px;
+					}
+					> dd {
+						> p {
+							margin-left: 8px;
+							padding: 0 !important;
+						}
+					}
 				}
 			}
 			.schedule {
+				&__region {
+					margin: 1.875rem 0;
+					&-tab {
+						display: flex;
+						align-items: center;
+						height: 3.125rem;
+						background: #ffffff;
+
+						span {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 100%;
+							height: 100%;
+							border: 0.063rem solid #ececec;
+							border-left: none;
+							font-weight: 500;
+							font-size: 1rem;
+							line-height: 1.5rem;
+							text-align: center;
+							color: #999999;
+							overflow: hidden;
+							&:hover {
+								color: #666;
+							}
+							cursor: pointer;
+							&:last-child {
+								border-radius: 0 0.313rem 0.313rem 0;
+							}
+							&:first-child {
+								border-left: 0.063rem solid #ececec;
+								border-radius: 0.313rem 0 0 0.313rem;
+							}
+							&.active {
+								border-color: #4f80ff;
+								background: #4f80ff;
+								color: #fff;
+							}
+						}
+					}
+					&-title {
+						font-size: 1rem;
+						margin-bottom: 0.625rem;
+					}
+				}
 				&__calendar {
 					* {
-						font-size: 12px;
+						font-size: 0.813rem;
 					}
 					a {
 						color: #222;
 					}
 				}
 			}
+			.fc-toolbar-title {
+				font-weight: 500;
+				font-size: 1rem;
+				line-height: 1.5rem;
+				color: #222222;
+			}
+			.fc-today-button {
+				height: 2.5rem;
+				border-radius: 0.313rem;
+				background: #3766de;
+				border: none;
+				font-weight: 400;
+				font-size: 1rem;
+				line-height: 1.5rem;
+				text-align: center;
+				color: #ffffff;
+			}
+			.fc-prev-button,
+			.fc-next-button {
+				width: 2.375rem;
+				height: 2.5rem;
+				border-radius: 0.313rem;
+				background: none;
+				border: 0.063rem solid #3766de;
+				color: #3766de;
+				&:hover,
+				&:active {
+					border-color: #3766de !important;
+					background: #3766de !important;
+					color: #fff !important;
+				}
+			}
+			.fc-event-title {
+				padding: 0.313rem;
+				white-space: normal;
+				line-height: 1.2;
+				word-break: keep-all;
+			}
+
+			@include media-breakpoint-down(md) {
+				.fc-view-harness {
+					display: none;
+				}
+				#calendar {
+					height: 2.5rem !important;
+				}
+			}
 			.mobile__table-none {
-				margin-bottom: 30px;
-				padding: 10px 0;
-				border-top: 1px solid #afafaf;
+				margin-bottom: 1.875rem;
+				padding: 0.625rem 0;
+				border-top: 0.063rem solid #afafaf;
 				overflow: hidden;
-				font-size: 13px;
+				font-size: 0.813rem;
 				line-height: 1.5;
 				word-break: keep-all;
 				color: #333;
 			}
 			.mobile__table-item dl {
-				margin-bottom: 20px;
+				margin-bottom: 1.25rem;
 			}
 			.mobile__table-item dl dt {
-				font-size: 16px;
-				margin-bottom: 5px;
+				font-size: 1rem;
+				margin-bottom: 0.313rem;
 			}
 			.mobile__table-item dl dd {
-				padding: 12px;
-				border: 1px solid #ddd;
-				border-radius: 5px;
+				padding: 0.75rem;
+				border: 0.063rem solid #ddd;
+				border-radius: 0.313rem;
 				overflow: hidden;
 			}
 			.mobile__table-item dl dd ul {
-				margin: 0 0 0 10px;
+				margin: 0 0 0 0.625rem;
 			}
 			.mobile__table-item dl dd ul li {
 				display: flex;
-				margin-top: 5px;
-				font-size: 14px;
+				margin-top: 0.313rem;
+				font-size: 0.875rem;
 				line-height: 1.5;
 			}
 			.mobile__table-item dl dd ul li:first-child {
@@ -1580,25 +1694,25 @@ html {
 				margin: 0;
 			}
 			.mobile__table-item dl dd ul li strong {
-				min-width: 70px;
-				margin-right: 10px;
+				min-width: 4.375rem;
+				margin-right: 0.625rem;
 				font-weight: 400;
-				font-size: 13px;
+				font-size: 0.813rem;
 				white-space: noWrap;
 			}
 			.mobile__table-item-title {
 				display: inline-block;
-				margin-bottom: 15px;
-				padding: 2px 10px 0px;
-				border-radius: 4px;
-				font-size: 14px;
+				margin-bottom: 0.938rem;
+				padding: 0.125rem 0.625rem 0;
+				border-radius: 0.25rem;
+				font-size: 0.875rem;
 				font-weight: 400;
 				color: #3788d8;
 				background-color: rgba(55, 136, 216, 0.1);
 			}
 			.mobile__table-item-btn {
 				display: flex;
-				margin: 12px -12px -12px -12px;
+				margin: 0.75rem -0.75rem -0.75rem -0.75rem;
 			}
 			.mobile__table-item-btn button {
 				width: 100%;
@@ -1641,10 +1755,10 @@ html {
 				width: 100%;
 			}
 			.form-select {
-				width: 230px;
+				width: 14.375rem;
 			}
 			.form-control {
-				width: 360px;
+				width: 22.5rem;
 			}
 		}
 		&-view {
@@ -1678,7 +1792,7 @@ html {
 				padding: 1.875rem 1.25rem;
 				border-bottom: 0.063rem solid #d9d9d9;
 				font-size: 1rem;
-				line-height: 24px;
+				line-height: 1.5rem;
 				color: #666666;
 			}
 			&__foot {
@@ -1991,7 +2105,7 @@ html {
 					@include text-clamp(1);
 				}
 				p {
-					margin-top: 10px;
+					margin-top: 0.625rem;
 					font-style: normal;
 					font-weight: 300;
 					font-size: 1rem;
@@ -2001,7 +2115,7 @@ html {
 				}
 			}
 			&-date {
-				margin-top: 10px;
+				margin-top: 0.625rem;
 				font-weight: 300;
 				font-size: 1rem;
 				line-height: 1.5rem;
@@ -2113,7 +2227,7 @@ html {
 			}
 			&__reply {
 				display: flex;
-				padding: 26px 1.25rem;
+				padding: 1.625rem 1.25rem;
 				background-color: #fafafa;
 				border-bottom: 0.063rem solid #d9d9d9;
 				font-weight: 400;

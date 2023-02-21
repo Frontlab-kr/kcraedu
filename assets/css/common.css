@@ -14651,6 +14651,556 @@ fieldset:disabled .btn {
   margin: 0;
 }
 
+.kcraedu .introduction-ceo {
+  margin-top: 4.375rem;
+}
+
+.kcraedu .introduction-ceo__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.kcraedu .introduction-ceo__img img {
+  margin-right: 2.375rem;
+}
+
+.kcraedu .introduction-ceo__text p {
+  margin-top: 1.875rem;
+  font-size: 1.125rem;
+  line-height: 2;
+  color: #666;
+}
+
+.kcraedu .introduction-ceo__text p strong {
+  color: #222;
+}
+
+.kcraedu .introduction-ceo__text p:first-child {
+  margin-top: 0;
+}
+
+.kcraedu .introduction-ceo__sign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 5.625rem;
+}
+
+.kcraedu .introduction-ceo__sign img {
+  margin-left: 1.875rem;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .introduction-ceo__img {
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .kcraedu .introduction-ceo__img img {
+    max-width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+
+.kcraedu .introduction-business {
+  margin-top: 4.375rem;
+}
+
+.kcraedu .introduction-business h4, .kcraedu .introduction-business .h4 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.188rem;
+  color: #222222;
+}
+
+.kcraedu .introduction-business ul {
+  margin-top: 3.125rem;
+}
+
+.kcraedu .introduction-business ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: #666666;
+  word-break: keep-all;
+}
+
+.kcraedu .introduction-business ul li:first-child {
+  margin-top: 0;
+}
+
+.kcraedu .introduction-business ul li::before {
+  content: "";
+  display: block;
+  background: url(../images/x-diamond-fill.svg) no-repeat 50% 50%;
+  min-width: 0.875rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  margin: 0.375rem 0.875rem 0 0;
+  background-size: cover;
+}
+
+.kcraedu .introduction-history ul {
+  margin-top: 4.375rem;
+  border-bottom: 0.125rem solid #ececec;
+}
+
+.kcraedu .introduction-history ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 5.625rem;
+  padding: 1.563rem 1.25rem;
+  border-top: 0.125rem solid #ececec;
+}
+
+.kcraedu .introduction-history ul li h6, .kcraedu .introduction-history ul li .h6 {
+  margin-right: 4rem;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.125rem;
+  color: #999;
+  font-family: "Arial";
+}
+
+.kcraedu .introduction-history ul li h6 span, .kcraedu .introduction-history ul li .h6 span {
+  color: #222;
+}
+
+.kcraedu .introduction-history ul li p {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: #666666;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .introduction-history ul li {
+    display: block;
+  }
+  .kcraedu .introduction-history ul li h6, .kcraedu .introduction-history ul li .h6 {
+    margin-bottom: 0.625rem;
+  }
+}
+
+.kcraedu .introduction-company {
+  margin-top: 4.375rem;
+  position: relative;
+}
+
+.kcraedu .introduction-company > ul {
+  position: relative;
+}
+
+.kcraedu .introduction-company > ul::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0.063rem;
+  height: 37.5rem;
+  background-color: #d9d9d9;
+  z-index: 10;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .introduction-company > ul::before {
+    height: 20rem;
+  }
+}
+
+.kcraedu .introduction-company > ul > li {
+  position: relative;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.875rem;
+}
+
+.kcraedu .introduction-company > ul > li:first-child {
+  margin-top: 0;
+}
+
+.kcraedu .introduction-company > ul > li > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 11.875rem;
+  height: 3.75rem;
+  margin: 0 0.938rem;
+  background: #3766de;
+  border-radius: 0.313rem 1.25rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.kcraedu .introduction-company > ul > li:nth-child(1) > span {
+  height: 4.375rem;
+}
+
+.kcraedu .introduction-company > ul > li:nth-child(2) > span {
+  background: #193b92;
+}
+
+.kcraedu .introduction-company > ul > li:nth-child(3) > span {
+  background: #f8f8f8;
+  border: 0.063rem solid #d9d9d9;
+  color: #999999;
+}
+
+.kcraedu .introduction-company > ul > li:nth-child(4) > span {
+  background: #7085be;
+}
+
+.kcraedu .introduction-company > ul > li > ul {
+  position: relative;
+  margin-top: 3.125rem;
+}
+
+.kcraedu .introduction-company > ul > li > ul::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  width: 0.063rem;
+  height: 36.25rem;
+  background-color: #d9d9d9;
+  z-index: 10;
+}
+
+.kcraedu .introduction-company > ul > li > ul:nth-child(2)::before {
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 0.063rem;
+  -webkit-transform: scaleX(2);
+          transform: scaleX(2);
+}
+
+.kcraedu .introduction-company > ul > li > ul > li {
+  position: relative;
+  z-index: 20;
+  margin-top: 0.625rem;
+}
+
+.kcraedu .introduction-company > ul > li > ul > li:first-child {
+  margin-top: 0;
+}
+
+.kcraedu .introduction-company > ul > li > ul > li > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 11.875rem;
+  height: 3.75rem;
+  margin: 0 0.938rem;
+  background: #ffffff;
+  border: 0.063rem solid #d9d9d9;
+  border-radius: 0.313rem 1.25rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.438rem;
+  text-align: center;
+  color: #999999;
+}
+
+.kcraedu .introduction-company > ul > li > ul > li > ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 11.875rem;
+  margin: 2.5rem auto;
+}
+
+.kcraedu .introduction-company > ul > li > ul > li > ul > li {
+  position: relative;
+}
+
+.kcraedu .introduction-company > ul > li > ul > li > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1.25rem;
+  left: 50%;
+  width: 0.063rem;
+  height: 3.125rem;
+  background-color: #d9d9d9;
+  z-index: 10;
+}
+
+.kcraedu .introduction-company > ul > li > ul > li > ul > li:nth-child(1)::before {
+  -webkit-transform: translateX(-0.063rem);
+          transform: translateX(-0.063rem);
+}
+
+.kcraedu .introduction-company > ul > li > ul > li > ul > li:nth-child(2)::before {
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 0.063rem;
+  -webkit-transform: scaleX(2.7);
+          transform: scaleX(2.7);
+}
+
+.kcraedu .introduction-company > ul > li > ul > li > ul > li > span {
+  position: relative;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3.25rem;
+  height: 6.625rem;
+  background: #ffffff;
+  border: 0.063rem solid #d9d9d9;
+  border-radius: 0.313rem 1.25rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.438rem;
+  text-align: center;
+  color: #999999;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .introduction-company > ul > li:nth-child(5) {
+    display: block;
+  }
+  .kcraedu .introduction-company > ul > li > ul::before {
+    top: 0;
+    height: 32rem;
+  }
+  .kcraedu .introduction-company > ul > li > ul > li > span {
+    margin: 0 auto;
+  }
+  .kcraedu .introduction-company > ul > li > ul:nth-child(2)::before {
+    left: 0;
+    right: auto;
+    width: auto;
+    height: 0.063rem;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    width: 0.063rem;
+    height: 15rem;
+    background-color: #d9d9d9;
+    z-index: 10;
+  }
+}
+
+.kcraedu .introduction-executive {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1.875rem;
+  -webkit-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+  margin-top: 4.375rem;
+}
+
+.kcraedu .introduction-executive dl {
+  padding: 1.875rem 1.875rem 1.875rem 2.5rem;
+  background: #ffffff;
+  border: 0.063rem solid #ececec;
+  border-radius: 0.625rem;
+}
+
+.kcraedu .introduction-executive dl dt {
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.188rem;
+  color: #222222;
+}
+
+.kcraedu .introduction-executive dl dd strong {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: #222222;
+}
+
+.kcraedu .introduction-executive dl dd p {
+  margin-top: 0.625rem;
+  font-size: 1rem;
+  line-height: 1.438rem;
+  color: #666666;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .introduction-executive {
+    display: block;
+  }
+  .kcraedu .introduction-executive dl {
+    margin-top: 1.875rem;
+    padding: 1.875rem;
+  }
+}
+
+.kcraedu .introduction-introduction {
+  margin-top: 4.375rem;
+}
+
+.kcraedu .introduction-introduction h4, .kcraedu .introduction-introduction .h4 {
+  margin-bottom: 1.875rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.188rem;
+  color: #222222;
+}
+
+.kcraedu .introduction-introduction p {
+  font-size: 1.125rem;
+  line-height: 2;
+  color: #666666;
+}
+
+.kcraedu .introduction-education {
+  margin-top: 4.375rem;
+}
+
+.kcraedu .introduction-education dl {
+  margin-top: 4.375rem;
+}
+
+.kcraedu .introduction-education dl dt {
+  margin-bottom: 1.875rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.188rem;
+  color: #222222;
+}
+
+.kcraedu .introduction-education dl dd p {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: #666666;
+  word-break: keep-all;
+}
+
+.kcraedu .introduction-education dl dd h6, .kcraedu .introduction-education dl dd .h6 {
+  margin-bottom: 1.063rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: #222222;
+}
+
+.kcraedu .introduction-education dl dd ul {
+  margin-bottom: 2.5rem;
+}
+
+.kcraedu .introduction-education dl dd ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.625rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.438rem;
+  color: #666666;
+  word-break: keep-all;
+}
+
+.kcraedu .introduction-education dl dd ul li:first-child {
+  margin-top: 0;
+}
+
+.kcraedu .introduction-education dl dd ul li::before {
+  content: "-";
+  display: block;
+  margin-right: 0.313rem;
+}
+
+.kcraedu .introduction-education dl dd ol {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+
+.kcraedu .introduction-education dl dd ol li {
+  margin-top: 0.625rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.438rem;
+  color: #666666;
+  word-break: keep-all;
+}
+
+.kcraedu .introduction-education dl dd ol li:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .introduction-education dl dd .d-flex {
+    display: block !important;
+  }
+  .kcraedu .introduction-education dl dd .d-flex ol {
+    margin-top: 0.625rem;
+    width: 100%;
+  }
+}
+
 .kcraedu .mypage {
   width: 100%;
   max-width: 56.625rem;

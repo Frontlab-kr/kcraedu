@@ -408,6 +408,22 @@ html {
 	}
 	.contents {
 		display: flex;
+		&-head {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			h1 {
+				margin: 0;
+			}
+			@include media-breakpoint-down(md) {
+				flex-direction: column-reverse;
+				align-items: flex-start;
+				justify-content: flex-start;
+				h1 {
+					margin-top: 0.625rem;
+				}
+			}
+		}
 	}
 	.snb {
 		width: 13.5rem;
@@ -1378,7 +1394,7 @@ html {
 			}
 			&__text {
 				p {
-					margin-top: 1.875rem; 
+					margin-top: 1.875rem;
 					font-size: 1.125rem;
 					line-height: 2;
 					color: #666;
@@ -1833,14 +1849,6 @@ html {
 		width: 100%;
 		max-width: 56.625rem;
 		padding: 4.375rem 0 0 0;
-		&-head {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			h1 {
-				margin: 0;
-			}
-		}
 		&-text {
 			h4 {
 				margin-bottom: 1.875rem;
@@ -1882,22 +1890,6 @@ html {
 			text-decoration-color: #95ff63;
 			text-decoration-thickness: 0.188rem;
 			text-underline-position: auto;
-		}
-		&-head {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			h1 {
-				margin: 0;
-			}
-			@include media-breakpoint-down(md) {
-				flex-direction: column-reverse;
-				align-items: flex-start;
-				justify-content: flex-start;
-				h1 {
-					margin-top: 0.625rem;
-				}
-			}
 		}
 		&-result {
 			margin-top: 2.5rem;

@@ -99,7 +99,7 @@
 							</ul>
 						</div>
 						<div class="curriculum">
-							<div class="curriculum-head">
+							<div class="contents-head">
 								<h1>기존영업자</h1>
 								<nav aria-label="breadcrumb">
 									<ol class="breadcrumb">
@@ -276,7 +276,16 @@
 									</div>
 									<div class="form__item">
 										<label for="curriculum" class="form-label">영업소주소</label>
-										<input type="text" class="form-control" id="curriculum" placeholder="검색 정보로 자동 입력 됩니다" readonly />
+										<div class="w-100">
+											<div class="d-flex align-items-center w-100">
+												<input type="text" class="form-control" id="curriculum" placeholder="검색 정보로 자동 입력 됩니다" readonly />
+												<p class="ms-1">
+													<button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal">우편번호 검색</button>
+												</p>
+											</div>
+											<input type="text" class="form-control mt-1" id="curriculum" placeholder="검색 정보로 자동 입력 됩니다" readonly />
+											<input type="text" class="form-control mt-1" id="curriculum" placeholder="검색 정보로 자동 입력 됩니다" readonly />
+										</div>
 									</div>
 									<div class="form__item">
 										<label for="curriculum" class="form-label">
@@ -284,6 +293,7 @@
 											지정 확인서
 										</label>
 										<button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal02">등록하기</button>
+										<button type="button" class="btn btn-outline-primary btn-sm ms-1" data-bs-toggle="modal" data-bs-target="#modal04">확인서</button>
 										<button type="button" class="btn btn-outline-primary btn-sm ms-1" data-bs-toggle="modal" data-bs-target="#modal03">
 											도서/벽지 지역 검색
 										</button>
@@ -497,6 +507,87 @@
 						<div class="modal-footer">
 							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
 							<button type="button" class="btn btn-primary">등록하기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="modal04" tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalLabel">식품위생관리책임자 지정 확인서</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<h6>영업자</h6>
+							<div class="table-type01 mt-2">
+								<table>
+									<colgroup>
+										<col style="width: 40%" />
+										<col style="width: 60%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>성명</th>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<th class="align-middle">생년월일</th>
+											<td>19901010</td>
+										</tr>
+										<tr>
+											<th>영업소 명칭 또는 상호</th>
+											<td>테스트테스트</td>
+										</tr>
+										<tr>
+											<th>영업소 소재지</th>
+											<td>강원도 홍천군 홍천읍 석화로 111</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h6 class="mt-4">식품위생관리 책임자</h6>
+							<div class="table-type01 mt-2">
+								<table>
+									<colgroup>
+										<col style="width: 40%" />
+										<col style="width: 60%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>성명</th>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<th class="align-middle">생년월일</th>
+											<td>19990909</td>
+										</tr>
+										<tr>
+											<th>주소</th>
+											<td>강원도 홍천군 홍천읍 석화로 111</td>
+										</tr>
+										<tr>
+											<th>직책</th>
+											<td>위생관리책임자</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="mt-4 text-center text-secondary">
+								「식품위생법」 제 41조 제 3항에 따른<br />
+								식품위생관리책임자로 지정한 자임을 확인 합니다.
+							</div>
+							<div class="mt-4 text-end">
+								2022년 12월 13일<br />
+								확인자(영업자):홍길동
+							</div>
+							<div class="mt-4 text-center">(사)한국휴게음식업중앙회교육원장 귀하</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
+							<button type="button" class="btn btn-primary">다운로드</button>
+							<button type="button" class="btn btn-primary">프린트</button>
 						</div>
 					</div>
 				</div>

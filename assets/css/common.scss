@@ -87,10 +87,10 @@ html {
 			&__gnb {
 				display: flex;
 				@include media-breakpoint-down(xl) {
-					margin-top: 20px;
+					margin-top: 1.25rem;
 				}
 				@include media-breakpoint-down(lg) {
-					margin-top: 15px;
+					margin-top: 0.938rem;
 				}
 				&-item {
 					position: relative;
@@ -209,7 +209,7 @@ html {
 						position: relative;
 						width: 88%;
 						margin: ($bao-bun / 2-$bao-burger / 2) auto;
-						border-radius: 3px;
+						border-radius: 0.188rem;
 					}
 
 					span:before,
@@ -217,7 +217,7 @@ html {
 						width: 100%;
 						position: absolute;
 						content: "";
-						border-radius: 3px;
+						border-radius: 0.188rem;
 					}
 
 					span:before {
@@ -229,11 +229,11 @@ html {
 				}
 
 				input#menuToggle:checked + label > span:before {
-					transform: translate(0px, $bao-bun / 4) rotate(-90deg);
+					transform: translate(0, $bao-bun / 4) rotate(-90deg);
 					opacity: 0;
 				}
 				input#menuToggle:checked + label > span:after {
-					transform: translate(0px, -$bao-bun / 4) rotate(-90deg);
+					transform: translate(0, -$bao-bun / 4) rotate(-90deg);
 				}
 				input#menuToggle:checked + label > span {
 					transform: rotate(45deg);
@@ -2002,11 +2002,11 @@ html {
 				@include media-breakpoint-down(md) {
 					display: block;
 					> dt {
-						margin-bottom: 5px;
+						margin-bottom: 0.313rem;
 					}
 					> dd {
 						> p {
-							margin-left: 8px;
+							margin-left: 0.5rem;
 							padding: 0 !important;
 						}
 					}
@@ -2323,6 +2323,417 @@ html {
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+	.education {
+		width: 100vw;
+		height: 100vh;
+		overflow: auto;
+		&__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 6.25rem;
+			padding: 0 2.5rem;
+			background: #3f5692;
+			p {
+				display: flex;
+				align-items: center;
+				strong {
+					margin-right: 0.625rem;
+					font-weight: 500;
+					font-size: 1.5rem;
+					line-height: 2.188rem;
+					color: #ffffff;
+				}
+				.btn {
+					border-color: #3766de !important;
+					background: #3766de !important;
+					border-radius: 0.313rem !important;
+				}
+			}
+			> button {
+				border: none;
+				background: none;
+				color: #fff;
+				font-size: 1.875rem;
+			}
+			@include media-breakpoint-down(lg) {
+				height: 5rem;
+				padding: 0 1.25rem;
+				p {
+					padding-top: 0.8rem;
+					strong {
+						font-size: 1.25rem;
+						line-height: 1;
+					}
+					@include text-clamp(1);
+					.btn {
+						position: relative;
+						top: -0.2rem;
+					}
+				}
+			}
+		}
+		&-contents {
+			&__head {
+				display: flex;
+				align-items: center;
+				height: 4.063rem;
+				padding: 0 2.5rem;
+				.progress {
+					width: 100%;
+					height: 0.313rem;
+					background: #e4f2ff;
+					&-bar {
+						background: #3766de;
+					}
+				}
+				p {
+					margin-left: 1.875rem;
+					font-weight: 400;
+					font-size: 1rem;
+					line-height: 1.438rem;
+					color: #999999;
+					white-space: nowrap;
+				}
+				@include media-breakpoint-down(lg) {
+					padding: 0 1.25rem;
+				}
+			}
+			&__body {
+				display: flex;
+				width: 100%;
+				padding: 0 2.5rem;
+				@include media-breakpoint-down(lg) {
+					display: block;
+					width: auto;
+					padding: 0 1.25rem;
+				}
+			}
+			&__nav {
+				min-width: 15.625rem;
+				width: 20%;
+				height: calc(100vh - 12.813rem);
+				margin-right: 0.625rem;
+				padding-right: 0.625rem;
+				overflow: auto;
+				ul {
+					li {
+						margin-bottom: 0.375rem;
+						padding: 1.25rem;
+						background: #ffffff;
+						border: 0.063rem solid #d9d9d9;
+						border-radius: 0.625rem;
+						transition: all 0.1s ease;
+						a {
+							display: block;
+							width: 100%;
+							height: 100%;
+						}
+						.badge {
+							padding: 0 0.938em;
+							font-size: 0.688rem;
+						}
+						p {
+							margin-top: 0.563rem;
+							font-weight: 400;
+							font-size: 1rem;
+							line-height: 1.438rem;
+							color: #666666;
+							transition: all 0.1s ease;
+							@include text-clamp(2, 23);
+						}
+						&.active,
+						&:hover {
+							border-color: #3766de;
+							p {
+								color: #193b92;
+							}
+						}
+					}
+				}
+				@include media-breakpoint-down(lg) {
+					width: 100%;
+					height: 9.25rem;
+					margin: 0 0 1.25rem 0;
+					padding: 0;
+					overflow-y: hidden;
+					overflow-x: auto;
+					ul {
+						display: flex;
+						li {
+							display: flex;
+							min-width: 15em;
+							max-width: 15rem;
+							margin-right: 0.625rem;
+						}
+					}
+				}
+			}
+			&__player {
+				width: 100%;
+				height: calc(100vh - 12.813rem);
+				iframe {
+					width: 100%;
+					height: 100%;
+				}
+				@include media-breakpoint-down(lg) {
+					height: calc(100vh - 22rem);
+				}
+			}
+			&__certification {
+				width: 100%;
+				height: calc(100vh - 12.813rem);
+				padding: 1.25rem 3.125rem;
+				overflow: auto;
+				@include media-breakpoint-down(lg) {
+					height: calc(100vh - 22rem);
+					padding: 1.25rem 0;
+				}
+				h4 {
+					margin-bottom: 1.25rem;
+					font-weight: 500;
+					font-size: 1.5rem;
+					line-height: 2.188rem;
+					color: #222222;
+				}
+				dl {
+					margin-bottom: 1.875rem;
+					dt {
+						margin-bottom: 0.625rem;
+						font-weight: 400;
+						font-size: 1rem;
+						line-height: 1.438rem;
+						/* identical to box height */
+
+						color: #666666;
+					}
+					dd {
+						.btn {
+							min-width: 5.625rem;
+						}
+					}
+				}
+			}
+			&__guide {
+				width: 100%;
+				height: calc(100vh - 12.813rem);
+				padding: 1.25rem 3.125rem;
+				overflow: auto;
+				@include media-breakpoint-down(lg) {
+					height: calc(100vh - 22rem);
+					padding: 1.25rem 0;
+				}
+				h4 {
+					margin-bottom: 1.25rem;
+					font-weight: 500;
+					font-size: 1.5rem;
+					line-height: 2.188rem;
+					color: #222222;
+				}
+				p {
+					margin-bottom: 1.25rem;
+					font-size: 1rem;
+					line-height: 2;
+					color: #666666;
+					strong {
+						color: #222;
+					}
+					&.text-14 {
+						font-size: 0.875rem;
+					}
+				}
+				.btn {
+					margin-top: 1.875rem;
+				}
+			}
+			&__question {
+				width: 100%;
+				height: calc(100vh - 12.813rem);
+				padding: 1.25rem 3.125rem;
+				overflow: auto;
+				@include media-breakpoint-down(lg) {
+					height: calc(100vh - 22rem);
+					padding: 1.25rem 0;
+				}
+				h4 {
+					margin-bottom: 1.25rem;
+					font-weight: 500;
+					font-size: 1.5rem;
+					line-height: 2.188rem;
+					color: #222222;
+				}
+				dl {
+					dt {
+						position: relative;
+						margin-bottom: 1.25rem;
+						font-weight: 400;
+						font-size: 1.125rem;
+						line-height: 1.625rem;
+						color: #222222;
+						&.wrong {
+							&::before {
+								content: "\f657";
+								display: block;
+								position: absolute;
+								top: 0.125rem;
+								left: -0.438rem;
+								font-family: bootstrap-icons !important;
+								font-style: normal;
+								font-weight: normal !important;
+								font-variant: normal;
+								text-transform: none;
+								line-height: 1;
+								vertical-align: -0.125em;
+								-webkit-font-smoothing: antialiased;
+								-moz-osx-font-smoothing: grayscale;
+								color: #d65050;
+								font-size: 1.5rem;
+							}
+						}
+					}
+					dd {
+						ol {
+							margin: 0;
+							padding: 0;
+							li {
+								position: relative;
+								margin-bottom: 0.5rem;
+								padding: 0.625rem 1.25rem;
+								background: #f8f8f8;
+								font-weight: 400;
+								font-size: 1rem;
+								line-height: 1.438rem;
+								color: #666666;
+								transition: all 0.1s ease;
+								cursor: pointer;
+								&.active,
+								&:hover {
+									background: #e7f2ff;
+									color: #3766de;
+								}
+								&.answer {
+									background: #ffdd28;
+								}
+								&.wrong {
+									&::before {
+										content: "\f659";
+										display: block;
+										position: absolute;
+										top: 0.625rem;
+										left: 0.75rem;
+										font-family: bootstrap-icons !important;
+										font-style: normal;
+										font-weight: normal !important;
+										font-variant: normal;
+										text-transform: none;
+										line-height: 1;
+										vertical-align: -0.125em;
+										-webkit-font-smoothing: antialiased;
+										-moz-osx-font-smoothing: grayscale;
+										color: #d65050;
+										font-size: 1.5rem;
+									}
+								}
+							}
+						}
+					}
+				}
+				&-answer {
+					margin: 1.875rem 0 1.25rem 0;
+					padding: 1.25rem 1.875rem;
+					background: #f2f9ff;
+					border-radius: 0.625rem;
+					strong {
+						font-size: 1.125rem;
+						line-height: 1.625rem;
+					}
+					p {
+						margin-top: 0.625rem;
+						font-weight: 400;
+						font-size: 0.875rem;
+						line-height: 1.25rem;
+
+						color: #666666;
+					}
+				}
+				&-result {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 9.75rem;
+					background: #f8f8f8;
+					border-radius: 0.625rem;
+					p {
+						position: relative;
+						width: 50%;
+						font-weight: 700;
+						font-size: 2.25rem;
+						line-height: 3.25rem;
+						text-align: center;
+						color: #222222;
+						&:first-child {
+							&::before {
+								content: "";
+								display: block;
+								position: absolute;
+								top: 50%;
+								right: 0;
+								width: 0.063rem;
+								height: 3.75rem;
+								background-color: #d9d9d9;
+								transform: translateY(-50%);
+							}
+						}
+					}
+				}
+				&-btn {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 1.875rem 0;
+					.btn {
+						min-width: 9.375rem;
+						margin: 0 0.313rem;
+					}
+				}
+				&-banner {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding: 2.5rem 0;
+					p {
+						font-weight: 400;
+						font-size: 1rem;
+						line-height: 1.438rem;
+						/* identical to box height */
+
+						color: #666666;
+						span {
+							display: block;
+							margin-top: 0.25rem;
+							font-weight: 400;
+							font-size: 0.875rem;
+							line-height: 1.25rem;
+
+							color: #999999;
+						}
+					}
+					@include media-breakpoint-down(lg) {
+						display: block;
+						p {
+							margin-bottom: 1.5rem;
+						}
+					}
+				}
+				&-foot {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding-bottom: 40px;
 				}
 			}
 		}

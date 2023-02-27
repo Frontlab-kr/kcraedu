@@ -816,9 +816,32 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="modal fade" id="modal02" tabindex="-1">
+				<div class="modal-dialog modal modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">공지사항</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<p>공통으로 사용하는 모달 팝업 입니다.</p>
+							<p>공통으로 사용하는 모달 팝업 입니다.</p>
+							<p>공통으로 사용하는 모달 팝업 입니다.</p>
+							<p>공통으로 사용하는 모달 팝업 입니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-bs-dismiss="modal">닫기</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script>
 			AOS.init();
+			$(document).ready(function () {
+				$("#modal02").modal("show");
+			});
 		</script>
 	</body>
 </html>

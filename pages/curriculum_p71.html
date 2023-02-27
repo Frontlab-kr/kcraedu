@@ -586,8 +586,8 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
-							<button type="button" class="btn btn-primary">다운로드</button>
-							<button type="button" class="btn btn-primary">프린트</button>
+							<button type="button" class="btn btn-primary"><i class="bi bi-download"></i> 다운로드</button>
+							<button type="button" class="btn btn-primary" onclick="javascript:print();"><i class="bi bi-printer"></i> 프린트</button>
 						</div>
 					</div>
 				</div>
@@ -709,5 +709,24 @@
 				</div>
 			</div>
 		</div>
+		<style>
+			@media print {
+				header,
+				main,
+				footer,
+				.modal,
+				.modal-header .btn-close,
+				.modal-footer .btn {
+					display: none;
+				}
+				/* modal04를 실제 개발 id로 바꿔주셔야합니다. */
+				#modal04 {
+					display: block;
+				}
+				#modal04 .modal-header .modal-title {
+					color: #000;
+				}
+			}
+		</style>
 	</body>
 </html>

@@ -7,6 +7,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 :root {
   --bs-blue: #4f80ff;
@@ -16387,10 +16388,10 @@ fieldset:disabled .btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
 }
 
-.kcraedu h1, .kcraedu .h1 {
+h1, .h1 {
   margin-bottom: 0.938rem;
   font-weight: 400;
   font-size: 2.25rem;
@@ -16398,20 +16399,20 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .title-text {
+.title-text {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 2.125rem;
   color: #222222;
 }
 
-.kcraedu .text-example {
+.text-example {
   position: relative;
   padding: 0 0 0 1.5rem;
   color: #666;
 }
 
-.kcraedu .text-example::before {
+.text-example::before {
   display: block;
   content: "예)";
   position: absolute;
@@ -16419,11 +16420,11 @@ fieldset:disabled .btn {
   left: 0;
 }
 
-.kcraedu .form {
+.form {
   border-top: 0.125rem solid #222;
 }
 
-.kcraedu .form__item {
+.form__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16434,7 +16435,7 @@ fieldset:disabled .btn {
   border-bottom: 0.063rem solid #d9d9d9;
 }
 
-.kcraedu .form__item > label {
+.form__item > label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16451,30 +16452,30 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .form__item > label em {
+.form__item > label em {
   margin-right: 0.375rem;
   color: #d65050;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .form__item {
+  .form__item {
     display: block;
   }
-  .kcraedu .form__item > label {
+  .form__item > label {
     width: 100%;
     height: auto;
     margin-bottom: 0.625rem;
   }
 }
 
-.kcraedu .form__email {
+.form__email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.kcraedu .form__email p {
+.form__email p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16485,16 +16486,16 @@ fieldset:disabled .btn {
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .form__email {
+  .form__email {
     display: block;
   }
-  .kcraedu .form__email .form-select {
+  .form__email .form-select {
     width: 100% !important;
     margin: 0.5rem 0 0 0 !important;
   }
 }
 
-.kcraedu .form__button {
+.form__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16505,20 +16506,20 @@ fieldset:disabled .btn {
   text-align: center;
 }
 
-.kcraedu .form__button .btn {
+.form__button .btn {
   min-width: 14.375rem;
   margin: 0 0.563rem;
 }
 
-.kcraedu .form__address {
+.form__address {
   width: 100%;
 }
 
-.kcraedu .form-sm .form__item {
+.form-sm .form__item {
   padding: 1.25rem;
 }
 
-.kcraedu .form-sm .form__item > label {
+.form-sm .form__item > label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16532,31 +16533,31 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .form-sm .form__item > label em {
+.form-sm .form__item > label em {
   margin-right: 0.375rem;
   color: #d65050;
 }
 
-.kcraedu .form-sm .form__item .form-control {
+.form-sm .form__item .form-control {
   font-size: 1rem;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .form-sm .form__item {
+  .form-sm .form__item {
     display: block;
   }
 }
 
-.kcraedu .form-sm .form__button {
+.form-sm .form__button {
   margin-top: 1.875rem;
 }
 
-.kcraedu .form-sm .form__button .btn {
+.form-sm .form__button .btn {
   min-width: auto;
   margin: 0 0.563rem;
 }
 
-.kcraedu .form-search {
+.form-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16569,7 +16570,7 @@ fieldset:disabled .btn {
   border-radius: 0.625rem;
 }
 
-.kcraedu .form-search form {
+.form-search form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16579,7 +16580,7 @@ fieldset:disabled .btn {
   width: 100%;
 }
 
-.kcraedu .form-search__title {
+.form-search__title {
   margin-right: 4.25rem;
   white-space: nowrap;
   font-weight: 500;
@@ -16588,33 +16589,33 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .tab .btn-outline-secondary {
+.tab .btn-outline-secondary {
   border-color: #ececec;
   color: #999;
 }
 
-.kcraedu .tab .btn-outline-secondary:hover {
+.tab .btn-outline-secondary:hover {
   background-color: #fff;
   color: #999;
 }
 
-.kcraedu .tab .btn-outline-secondary.active {
+.tab .btn-outline-secondary.active {
   background-color: #4f80ff;
   color: #fff;
 }
 
-.kcraedu .board {
+.board {
   position: relative;
   width: 100%;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .board {
+  .board {
     padding: 0 0 3.75rem 0;
   }
 }
 
-.kcraedu .board__title {
+.board__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16628,11 +16629,11 @@ fieldset:disabled .btn {
   border-bottom: 0.063rem solid #222;
 }
 
-.kcraedu .board__title-item {
+.board__title-item {
   margin-right: 2.188rem;
 }
 
-.kcraedu .board__title-item button {
+.board__title-item button {
   padding: 0;
   border: none;
   background: none;
@@ -16642,18 +16643,18 @@ fieldset:disabled .btn {
   color: rgba(34, 34, 34, 0.5);
 }
 
-.kcraedu .board__title-item button.active {
+.board__title-item button.active {
   color: #222222;
 }
 
-.kcraedu .board__title-more {
+.board__title-more {
   display: block;
   width: 2.25rem;
   height: 2.25rem;
   font-size: 0;
 }
 
-.kcraedu .board__title-more::before {
+.board__title-more::before {
   content: "\F4FE";
   display: block;
   display: inline-block;
@@ -16670,33 +16671,33 @@ fieldset:disabled .btn {
   color: #222;
 }
 
-.kcraedu .board__list ul li {
+.board__list ul li {
   padding: 1.563rem 0;
   border-bottom: 0.063rem solid rgba(0, 0, 0, 0.2);
 }
 
-.kcraedu .board__list ul li a {
+.board__list ul li a {
   width: 100%;
   height: 100%;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .board__list ul li a {
+  .board__list ul li a {
     display: block;
   }
 }
 
-.kcraedu .board__list-text {
+.board__list-text {
   margin-right: 3.75rem;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .board__list-text {
+  .board__list-text {
     margin-right: 0;
   }
 }
 
-.kcraedu .board__list-text strong {
+.board__list-text strong {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.688rem;
@@ -16711,7 +16712,7 @@ fieldset:disabled .btn {
   text-overflow: ellipsis;
 }
 
-.kcraedu .board__list-text p {
+.board__list-text p {
   margin-top: 0.625rem;
   font-style: normal;
   font-weight: 300;
@@ -16728,7 +16729,7 @@ fieldset:disabled .btn {
   text-overflow: ellipsis;
 }
 
-.kcraedu .board__list-date {
+.board__list-date {
   margin-top: 0.625rem;
   font-weight: 300;
   font-size: 1rem;
@@ -16737,44 +16738,44 @@ fieldset:disabled .btn {
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .board__list-date {
+  .board__list-date {
     margin-top: 0.625rem;
   }
 }
 
-.kcraedu .board-sm {
+.board-sm {
   padding: 1.875rem 2.5rem;
   background: #ffffff;
   border: 0.063rem solid #ececec;
   border-radius: 0.625rem;
 }
 
-.kcraedu .board-sm .board__title {
+.board-sm .board__title {
   padding: 0;
   border-bottom: none;
 }
 
-.kcraedu .board-sm .board__title-item {
+.board-sm .board__title-item {
   margin-right: 2.188rem;
 }
 
-.kcraedu .board-sm .board__title-item button {
+.board-sm .board__title-item button {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.688rem;
 }
 
-.kcraedu .board-sm .board__title-item button.active {
+.board-sm .board__title-item button.active {
   color: #222222;
 }
 
-.kcraedu .board-sm .board__list ul li {
+.board-sm .board__list ul li {
   position: relative;
   padding: 0 0 0 0.938rem;
   border-bottom: none;
 }
 
-.kcraedu .board-sm .board__list ul li::before {
+.board-sm .board__list ul li::before {
   content: "";
   display: block;
   position: absolute;
@@ -16786,18 +16787,18 @@ fieldset:disabled .btn {
   border-radius: 0.313rem;
 }
 
-.kcraedu .board-sm .board__list-text {
+.board-sm .board__list-text {
   margin-right: 1.875;
 }
 
-.kcraedu .board-sm .board__list-text strong {
+.board-sm .board__list-text strong {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.688rem;
   color: #222222;
 }
 
-.kcraedu .board-sm .board__list-text p {
+.board-sm .board__list-text p {
   max-height: auto;
   margin-top: 0;
   font-style: normal;
@@ -16808,11 +16809,11 @@ fieldset:disabled .btn {
   -webkit-line-clamp: 1;
 }
 
-.kcraedu .board-view {
+.board-view {
   border-top: 0.125rem solid #222;
 }
 
-.kcraedu .board-view__title {
+.board-view__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16826,7 +16827,7 @@ fieldset:disabled .btn {
   border-bottom: 0.063rem solid #d9d9d9;
 }
 
-.kcraedu .board-view__title p {
+.board-view__title p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16835,11 +16836,11 @@ fieldset:disabled .btn {
           align-items: center;
 }
 
-.kcraedu .board-view__title p .badge {
+.board-view__title p .badge {
   margin-right: 1.25rem;
 }
 
-.kcraedu .board-view__title-text {
+.board-view__title-text {
   margin-right: 1.25rem;
   font-weight: 500;
   font-size: 1.125rem;
@@ -16847,12 +16848,12 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .board-view__title-date {
+.board-view__title-date {
   font-size: 1rem;
   color: #999999;
 }
 
-.kcraedu .board-view__contents {
+.board-view__contents {
   padding: 1.875rem 1.25rem;
   border-bottom: 0.063rem solid #d9d9d9;
   font-weight: 400;
@@ -16861,7 +16862,7 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .board-view__reply {
+.board-view__reply {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16874,12 +16875,12 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .board-view__reply .badge {
+.board-view__reply .badge {
   min-width: 5.5rem;
   margin-right: 1.25rem;
 }
 
-.kcraedu .board-view__reply-date {
+.board-view__reply-date {
   display: block;
   margin-top: 1.875rem;
   font-weight: 400;
@@ -16888,7 +16889,7 @@ fieldset:disabled .btn {
   color: #999999;
 }
 
-.kcraedu .board-view__button {
+.board-view__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16899,13 +16900,13 @@ fieldset:disabled .btn {
   text-align: center;
 }
 
-.kcraedu .board-view__button .btn {
+.board-view__button .btn {
   min-width: 14.375rem;
   margin: 0 0.563rem;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .board:not(.board-sm) .board__title-more {
+  .board:not(.board-sm) .board__title-more {
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -16917,7 +16918,7 @@ fieldset:disabled .btn {
     background-color: #222;
     overflow: hidden;
   }
-  .kcraedu .board:not(.board-sm) .board__title-more::before {
+  .board:not(.board-sm) .board__title-more::before {
     width: 100%;
     height: 100%;
     color: #fff;
@@ -16925,19 +16926,19 @@ fieldset:disabled .btn {
   }
 }
 
-.kcraedu .list-type01 > ul {
+.list-type01 > ul {
   padding: 1.875rem 2.5rem;
   background: #f8f8f8;
   border-radius: 0.625rem;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .list-type01 > ul {
+  .list-type01 > ul {
     padding: 1.875rem 1.25rem;
   }
 }
 
-.kcraedu .list-type01 > ul li {
+.list-type01 > ul li {
   position: relative;
   margin-top: 0.375rem;
   padding: 0 0 0 0.625rem;
@@ -16948,11 +16949,11 @@ fieldset:disabled .btn {
   word-break: keep-all;
 }
 
-.kcraedu .list-type01 > ul li:first-child {
+.list-type01 > ul li:first-child {
   margin-top: 0;
 }
 
-.kcraedu .list-type01 > ul li::before {
+.list-type01 > ul li::before {
   content: "-";
   display: block;
   position: absolute;
@@ -16960,23 +16961,23 @@ fieldset:disabled .btn {
   left: 0;
 }
 
-.kcraedu .list-type01 > ul li ul {
+.list-type01 > ul li ul {
   margin-top: 0.625rem;
 }
 
-.kcraedu .list-type01 > ul li ul li::before {
+.list-type01 > ul li ul li::before {
   content: "*";
 }
 
-.kcraedu .list-type01 > ul li.bullet-none {
+.list-type01 > ul li.bullet-none {
   padding: 0;
 }
 
-.kcraedu .list-type01 > ul li.bullet-none:before {
+.list-type01 > ul li.bullet-none:before {
   display: none;
 }
 
-.kcraedu .list-type02 h4, .kcraedu .list-type02 .h4 {
+.list-type02 h4, .list-type02 .h4 {
   margin-bottom: 1.5rem;
   font-weight: 500;
   font-size: 1.5rem;
@@ -16985,12 +16986,12 @@ fieldset:disabled .btn {
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .list-type02 > ul {
+  .list-type02 > ul {
     padding: 1.875rem 1.25rem;
   }
 }
 
-.kcraedu .list-type02 > ul li {
+.list-type02 > ul li {
   position: relative;
   margin-top: 0.375rem;
   padding: 0 0 0 0.625rem;
@@ -17001,11 +17002,11 @@ fieldset:disabled .btn {
   word-break: keep-all;
 }
 
-.kcraedu .list-type02 > ul li:first-child {
+.list-type02 > ul li:first-child {
   margin-top: 0;
 }
 
-.kcraedu .list-type02 > ul li::before {
+.list-type02 > ul li::before {
   content: "-";
   display: block;
   position: absolute;
@@ -17013,19 +17014,19 @@ fieldset:disabled .btn {
   left: 0;
 }
 
-.kcraedu .list-type02 > ul li ul {
+.list-type02 > ul li ul {
   margin-top: 0.625rem;
 }
 
-.kcraedu .list-type02 > ul li ul li::before {
+.list-type02 > ul li ul li::before {
   content: "*";
 }
 
-.kcraedu .list-type02 > ul li.bullet-none:before {
+.list-type02 > ul li.bullet-none:before {
   display: none;
 }
 
-.kcraedu .list-type03 ul li {
+.list-type03 ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17033,7 +17034,7 @@ fieldset:disabled .btn {
   border-bottom: 0.063rem solid #d9d9d9;
 }
 
-.kcraedu .list-type03 ul li h6, .kcraedu .list-type03 ul li .h6 {
+.list-type03 ul li h6, .list-type03 ul li .h6 {
   min-width: 7.125rem;
   margin: 0;
   font-weight: 500;
@@ -17043,7 +17044,7 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .list-type03 p {
+.list-type03 p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17053,7 +17054,7 @@ fieldset:disabled .btn {
   width: calc(100% - 7.125rem);
 }
 
-.kcraedu .list-type03__text {
+.list-type03__text {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
@@ -17073,11 +17074,11 @@ fieldset:disabled .btn {
   text-overflow: ellipsis;
 }
 
-.kcraedu .list-type03__text .badge {
+.list-type03__text .badge {
   margin-right: 0.375rem;
 }
 
-.kcraedu .list-type03__time {
+.list-type03__time {
   margin-right: 3.75rem;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -17085,28 +17086,28 @@ fieldset:disabled .btn {
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .list-type03 ul li h6, .kcraedu .list-type03 ul li .h6 {
+  .list-type03 ul li h6, .list-type03 ul li .h6 {
     min-width: 4rem;
   }
-  .kcraedu .list-type03 p {
+  .list-type03 p {
     width: calc(100% - 4rem);
   }
-  .kcraedu .list-type03__time {
+  .list-type03__time {
     margin-right: 0;
   }
 }
 
-.kcraedu .table-wrap {
+.table-wrap {
   overflow-x: auto;
 }
 
 @media (max-width: 767.98px) {
-  .kcraedu .table-wrap .table > :not(caption) > * > * {
+  .table-wrap .table > :not(caption) > * > * {
     white-space: nowrap;
   }
 }
 
-.kcraedu .table-type01 {
+.table-type01 {
   border-top: 0.125rem solid #222;
   border-bottom: 0.063rem solid #d9d9d9;
   padding: 1.25rem 1.25rem 1.875rem 1.25rem;
@@ -17116,11 +17117,11 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .table-type01 table {
+.table-type01 table {
   width: 100%;
 }
 
-.kcraedu .table-type01 table tbody th {
+.table-type01 table tbody th {
   padding: 0.625rem 1.875rem 0 0;
   font-weight: 500;
   font-size: 1rem;
@@ -17129,7 +17130,7 @@ fieldset:disabled .btn {
   vertical-align: top;
 }
 
-.kcraedu .table-type01 table tbody td {
+.table-type01 table tbody td {
   padding: 0.625rem 0 0 0;
   font-weight: 400;
   font-size: 1rem;
@@ -17137,7 +17138,7 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .table-type01__button {
+.table-type01__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17148,12 +17149,12 @@ fieldset:disabled .btn {
   text-align: center;
 }
 
-.kcraedu .table-type01__button .btn {
+.table-type01__button .btn {
   min-width: 14.375rem;
   margin: 0 0.563rem;
 }
 
-.kcraedu .table-type02 {
+.table-type02 {
   padding: 1.875rem 2.5rem;
   border: 0.063rem solid #ececec;
   border-radius: 0.625rem;
@@ -17163,7 +17164,7 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .table-type02 table tbody th {
+.table-type02 table tbody th {
   height: 2.5rem;
   padding: 0.438rem 3.438rem 0 0;
   font-weight: 500;
@@ -17173,7 +17174,7 @@ fieldset:disabled .btn {
   vertical-align: top;
 }
 
-.kcraedu .table-type02 table tbody td {
+.table-type02 table tbody td {
   height: 2.5rem;
   font-weight: 400;
   font-size: 1rem;
@@ -17181,25 +17182,25 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .table-type02 table tbody td .btn {
+.table-type02 table tbody td .btn {
   min-width: 3.75rem;
 }
 
 @media (max-width: 991.98px) {
-  .kcraedu .table-type02 table tbody th,
-  .kcraedu .table-type02 table tbody td {
+  .table-type02 table tbody th,
+  .table-type02 table tbody td {
     display: block;
     height: auto;
   }
-  .kcraedu .table-type02 table tbody th {
+  .table-type02 table tbody th {
     margin-bottom: 0.313rem;
   }
-  .kcraedu .table-type02 table tbody td {
+  .table-type02 table tbody td {
     margin-bottom: 0.625rem;
   }
 }
 
-.kcraedu .table-type02__button {
+.table-type02__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17210,37 +17211,37 @@ fieldset:disabled .btn {
   text-align: center;
 }
 
-.kcraedu .table-type02__button .btn {
+.table-type02__button .btn {
   min-width: 11.25rem;
   margin: 0 0.563rem;
 }
 
 @media (max-width: 991.98px) {
-  .kcraedu .table-type02__button {
+  .table-type02__button {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     gap: 0.625rem;
   }
-  .kcraedu .table-type02__button .btn {
+  .table-type02__button .btn {
     min-width: 100%;
     width: 100%;
     margin: 0;
   }
 }
 
-.kcraedu .accordion {
+.accordion {
   border-top: 0.125rem solid #222222;
 }
 
-.kcraedu .accordion-item {
+.accordion-item {
   border: none;
   border-bottom: 0.063rem solid #d9d9d9;
   border-radius: 0;
 }
 
-.kcraedu .accordion-button {
+.accordion-button {
   border-radius: 0 !important;
   font-weight: 400;
   font-size: 1.125rem;
@@ -17248,7 +17249,7 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
-.kcraedu .accordion-button strong {
+.accordion-button strong {
   margin-right: 3.125rem;
   font-weight: 400;
   font-size: 1rem;
@@ -17259,7 +17260,7 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .accordion-button p {
+.accordion-button p {
   margin-right: 2.5rem;
   display: -webkit-box;
   overflow: hidden;
@@ -17271,11 +17272,11 @@ fieldset:disabled .btn {
   text-overflow: ellipsis;
 }
 
-.kcraedu .accordion-button:not(.collapsed) {
+.accordion-button:not(.collapsed) {
   background: none;
 }
 
-.kcraedu .accordion-button:not(.collapsed) p {
+.accordion-button:not(.collapsed) p {
   color: #3766de;
   display: block;
   text-overflow: clip;
@@ -17283,7 +17284,7 @@ fieldset:disabled .btn {
   white-space: normal;
 }
 
-.kcraedu .accordion-body {
+.accordion-body {
   padding: 2.188rem 5rem;
   background: #fafafa;
   font-style: normal;
@@ -17293,7 +17294,7 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
-.kcraedu .pagination .page-link {
+.pagination .page-link {
   padding: 0.75rem 1.375rem;
   border-color: #ececec;
   font-weight: 500;
@@ -17303,18 +17304,18 @@ fieldset:disabled .btn {
   color: #999999;
 }
 
-.kcraedu .pagination .page-item.active .page-link {
+.pagination .page-item.active .page-link {
   color: #fff;
 }
 
-.kcraedu .pagination .page-item:first-child .page-link {
+.pagination .page-item:first-child .page-link {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
   border-top-left-radius: 0.313rem;
   border-bottom-left-radius: 0.313rem;
 }
 
-.kcraedu .pagination .page-item:last-child .page-link {
+.pagination .page-item:last-child .page-link {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
   border-top-right-radius: 0.313rem;
@@ -17323,4 +17324,156 @@ fieldset:disabled .btn {
 
 .inipay_modal.fade {
   opacity: 1 !important;
+}
+
+.certificats {
+  position: relative;
+  padding: 6.25rem 1.875rem;
+  border: 0.25rem solid #ad8447;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+@media print {
+  .certificats {
+    padding: 3.125rem 0;
+  }
+}
+
+.certificats__bg-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.certificats__bg-top::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -0.625rem;
+  left: -0.625rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  background: url(../images/certificate_bg.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.certificats__bg-top::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -0.625rem;
+  right: -0.625rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  background: url(../images/certificate_bg.png) no-repeat 50% 50%;
+  background-size: cover;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.certificats__bg-btm {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.certificats__bg-btm::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.625rem;
+  left: -0.625rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  background: url(../images/certificate_bg.png) no-repeat 50% 50%;
+  background-size: cover;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.certificats__bg-btm::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.625rem;
+  right: -0.625rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  background: url(../images/certificate_bg.png) no-repeat 50% 50%;
+  background-size: cover;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.certificats__title {
+  margin: 3.125rem 0;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1.25rem;
+}
+
+.certificats__table table {
+  width: 100%;
+}
+
+.certificats__table table tbody th {
+  text-align: center;
+}
+
+.certificats__table table tbody td {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.certificats__table table tbody th,
+.certificats__table table tbody td {
+  padding: 0.5rem;
+  border: 0.063rem solid #222;
+  font-size: 0.875rem;
+}
+
+.certificats__text {
+  margin-top: 3.125rem;
+  font-size: 1rem;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.certificats__sign {
+  margin-top: 3.125rem;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+@media print {
+  .certificats {
+    border: none;
+  }
+  .certificats__bg-top {
+    display: none;
+  }
+  .certificats__bg-btm {
+    display: none;
+  }
+}
+
+@media print {
+  html,
+  body {
+    overflow: hidden;
+  }
+  .modal-header .btn-close {
+    display: none;
+  }
+  .modal-header .modal-title {
+    color: #000;
+  }
+  .modal-footer .btn {
+    display: none;
+  }
+  .certificats-modal .modal-header {
+    display: none;
+  }
 }

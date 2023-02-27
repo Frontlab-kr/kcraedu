@@ -294,6 +294,7 @@
 										</label>
 										<button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal02">등록하기</button>
 										<button type="button" class="btn btn-outline-primary btn-sm ms-1" data-bs-toggle="modal" data-bs-target="#modal04">확인서</button>
+										<button type="button" class="btn btn-outline-primary btn-sm ms-1" data-bs-toggle="modal" data-bs-target="#modal05">수료증</button>
 										<button type="button" class="btn btn-outline-primary btn-sm ms-1" data-bs-toggle="modal" data-bs-target="#modal03">
 											도서/벽지 지역 검색
 										</button>
@@ -587,7 +588,82 @@
 						<div class="modal-footer">
 							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
 							<button type="button" class="btn btn-primary"><i class="bi bi-download"></i> 다운로드</button>
-							<button type="button" class="btn btn-primary" onclick="javascript:print();"><i class="bi bi-printer"></i> 프린트</button>
+							<button type="button" class="btn btn-primary print" onclick="printModal('#modal04')"><i class="bi bi-printer"></i> 프린트</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="modal05" tabindex="-1">
+				<div class="modal-dialog modal-lg modal-dialog-centered certificats-modal">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalLabel">수료증</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="certificats">
+								<div class="certificats__bg-top"></div>
+								<div class="certificats__id">제 2022 - 3493 호</div>
+								<div class="certificats__title">수료증</div>
+								<div class="certificats__table">
+									<table>
+										<colgroup>
+											<col style="width: 20%" />
+											<col style="width: 40%" />
+											<col style="width: 15%" />
+											<col style="width: 25%" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>교육이수자 성명</th>
+												<td>김미숙</td>
+												<th>직책</th>
+												<td>대표자</td>
+											</tr>
+											<tr>
+												<th>생년월일</th>
+												<td>1960년 06월 16일</td>
+												<th>대표자 성명</th>
+												<td>김미숙</td>
+											</tr>
+											<tr>
+												<th>영업소 명칭</th>
+												<td colspan="3">씨유(CU)화순만연점</td>
+											</tr>
+											<tr>
+												<th>영업소의 소재지</th>
+												<td colspan="3">전남 화순군 화순읍 서양로 470 (신기리) 1층</td>
+											</tr>
+											<tr>
+												<th>교육일시(시간)</th>
+												<td colspan="3">2022년 01월 10일(6시간)</td>
+											</tr>
+											<tr>
+												<th>영업의 종류</th>
+												<td colspan="3">휴게음식업 신규영업자</td>
+											</tr>
+											<tr>
+												<th>교육실시기관명</th>
+												<td><span>사단법인</span>한국휴게음식업중앙회</td>
+												<th>교육구분</th>
+												<td>온라인교육</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="certificats__text">
+									위 사람은 ⌜식품위생법⌟ 제 41조, 동법 시행령 제 27조 및 시행규칙 제 51조 내지 제 54조에 따라 휴게음식점 신규영업자 위생교육을 이수하였으므로
+									수료증을 교부합니다.
+								</div>
+								<div class="certificats__sign">(사) 한국휴게음식업중앙회교육원장</div>
+								<div class="certificats__bg-btm"></div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
+							<button type="button" class="btn btn-primary"><i class="bi bi-download"></i> 다운로드</button>
+							<button type="button" class="btn btn-primary" onclick="printModal('#modal05')"><i class="bi bi-printer"></i> 프린트</button>
 						</div>
 					</div>
 				</div>
@@ -709,24 +785,5 @@
 				</div>
 			</div>
 		</div>
-		<style>
-			@media print {
-				header,
-				main,
-				footer,
-				.modal,
-				.modal-header .btn-close,
-				.modal-footer .btn {
-					display: none;
-				}
-				/* modal04를 실제 개발 id로 바꿔주셔야합니다. */
-				#modal04 {
-					display: block;
-				}
-				#modal04 .modal-header .modal-title {
-					color: #000;
-				}
-			}
-		</style>
 	</body>
 </html>

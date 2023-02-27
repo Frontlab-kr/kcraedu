@@ -21,3 +21,17 @@ $(document).ready(function () {
 		$(target).toggleClass("d-none");
 	});
 });
+
+//print
+function printModal(t) {
+	const section = $("body");
+	const modalBody = $(t).clone();
+
+	const content = $(".kcraedu").detach();
+	section.append(modalBody);
+	window.print();
+	section.empty();
+	section.append(content);
+	$(".modal").modal("hide");
+	//$(t).append(modalBody);
+}

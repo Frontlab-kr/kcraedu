@@ -20,6 +20,11 @@ $(document).ready(function () {
 		var target = $(this).attr("href");
 		$(target).toggleClass("d-none");
 	});
+
+	//modal
+	$(document).on("click", ".kcraedu-modal__title button", function () {
+		$(this).parents(".kcraedu-modal").remove();
+	});
 });
 
 //print

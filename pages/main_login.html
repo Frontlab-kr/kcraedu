@@ -817,21 +817,43 @@
 				</div>
 			</div>
 
-			<div class="modal fade" id="modal02" tabindex="-1">
-				<div class="modal-dialog modal modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">공지사항</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="kcraedu-modal__area">
+				<div class="container">
+					<!-- 위치를 직접 줄 경우 아래와 같이 사용합니다. -->
+					<!-- <div class="kcraedu-modal" style="position: absolute; top: 0; right: 0; margin:0"> -->
+					<div class="kcraedu-modal">
+						<div class="kcraedu-modal__title">
+							<h4>2023 기존영업자 교육 안내</h4>
+							<button><i class="bi bi-x-lg"></i></button>
 						</div>
-						<div class="modal-body">
-							<p>공통으로 사용하는 모달 팝업 입니다.</p>
-							<p>공통으로 사용하는 모달 팝업 입니다.</p>
-							<p>공통으로 사용하는 모달 팝업 입니다.</p>
-							<p>공통으로 사용하는 모달 팝업 입니다.</p>
+						<div class="kcraedu-modal__contents">
+							텍스트로 들어갈 경우 입니다. 텍스트 텍스트 <br />
+							텍스트로 들어갈 경우 입니다. 텍스트 텍스트 <br />
+							텍스트로 들어갈 경우 입니다. 텍스트 텍스트 <br />
+							텍스트로 들어갈 경우 입니다. 텍스트 텍스트 <br />
+							텍스트로 들어갈 경우 입니다. 텍스트 텍스트 <br />
 						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-bs-dismiss="modal">닫기</button>
+						<div class="kcraedu-modal__footer">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" value="" id="" />
+								<label class="form-check-label" for=""> 하루동안 창 열지않음 </label>
+							</div>
+						</div>
+					</div>
+
+					<div class="kcraedu-modal">
+						<div class="kcraedu-modal__title">
+							<h4>신규영업자 집합교육 안내</h4>
+							<button><i class="bi bi-x-lg"></i></button>
+						</div>
+						<div class="kcraedu-modal__contents">
+							<img src="https://d1r563r0svqb5x.cloudfront.net/SITE_00001/summernote/20230222155151_230127-001.png" />
+						</div>
+						<div class="kcraedu-modal__footer">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" value="" id="" />
+								<label class="form-check-label" for=""> 하루동안 창 열지않음 </label>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -839,9 +861,6 @@
 		</div>
 		<script>
 			AOS.init();
-			$(document).ready(function () {
-				$("#modal02").modal("show");
-			});
 		</script>
 	</body>
 </html>

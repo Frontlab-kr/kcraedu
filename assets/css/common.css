@@ -13989,6 +13989,10 @@ fieldset:disabled .btn {
   color: #ffffff;
 }
 
+.kcraedu .main-menu__item--login .main-menu__item-info table td a {
+  color: #ffffff;
+}
+
 .kcraedu .main-menu__item--login .main-menu__item-button {
   margin-bottom: 1.875rem;
 }
@@ -16295,6 +16299,25 @@ fieldset:disabled .btn {
   font-size: 1.5rem;
 }
 
+.kcraedu .education-contents__question dl dt.correct::before {
+  content: "\F28A";
+  display: block;
+  position: absolute;
+  top: 0.125rem;
+  left: -0.438rem;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #4f80ff;
+  font-size: 1.5rem;
+}
+
 .kcraedu .education-contents__question dl dd ol {
   margin: 0;
   padding: 0;
@@ -16339,6 +16362,25 @@ fieldset:disabled .btn {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #d65050;
+  font-size: 1.5rem;
+}
+
+.kcraedu .education-contents__question dl dd ol li.correct::before {
+  content: "\F270";
+  display: block;
+  position: absolute;
+  top: 0.625rem;
+  left: 0.75rem;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #4f80ff;
   font-size: 1.5rem;
 }
 

@@ -24,6 +24,9 @@ $(document).ready(function () {
 	//modal
 	$(document).on("click", ".kcraedu-modal__title button", function () {
 		$(this).parents(".kcraedu-modal").remove();
+		if ($(".kcraedu-modal").length === 0) {
+			$(".kcraedu-modal__area").remove();
+		}
 	});
 });
 

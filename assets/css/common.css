@@ -16314,7 +16314,7 @@ fieldset:disabled .btn {
   vertical-align: -0.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #4f80ff;
+  color: #d65050;
   font-size: 1.5rem;
 }
 
@@ -16366,7 +16366,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .education-contents__question dl dd ol li.correct::before {
-  content: "\F270";
+  content: "\F272";
   display: block;
   position: absolute;
   top: 0.625rem;
@@ -16380,7 +16380,7 @@ fieldset:disabled .btn {
   vertical-align: -0.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #4f80ff;
+  color: #00c7a3;
   font-size: 1.5rem;
 }
 

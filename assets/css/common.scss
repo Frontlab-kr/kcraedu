@@ -947,6 +947,7 @@ html {
 			width: 100%;
 			.board {
 				width: 50%;
+				min-width: 50%;
 				&:first-child {
 					margin-right: 3.75rem;
 				}
@@ -3783,9 +3784,9 @@ h1 {
 
 //custom
 .note-modal-footer {
-	height: auto;
-	text-align: right;
+	height: auto !important;
+	text-align: right !important;
 }
 .note-modal-footer .note-btn {
-	float: none;
+	float: none !important;
 }

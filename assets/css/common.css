@@ -14142,6 +14142,7 @@ fieldset:disabled .btn {
 
 .kcraedu .main-board .board {
   width: 50%;
+  min-width: 50%;
 }
 
 .kcraedu .main-board .board:first-child {
@@ -17635,10 +17636,10 @@ h1, .h1 {
 }
 
 .note-modal-footer {
-  height: auto;
-  text-align: right;
+  height: auto !important;
+  text-align: right !important;
 }
 
 .note-modal-footer .note-btn {
-  float: none;
+  float: none !important;
 }

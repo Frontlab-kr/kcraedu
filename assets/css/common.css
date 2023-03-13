@@ -13223,7 +13223,7 @@ fieldset:disabled .btn {
 
 @media (max-width: 1199.98px) {
   .kcraedu header .header__2depth-item {
-    margin-left: 30px;
+    margin-left: 1.875rem;
   }
 }
 
@@ -14250,6 +14250,10 @@ fieldset:disabled .btn {
 
 .kcraedu .main-board .board:last-child {
   margin-left: 3.75rem;
+}
+
+.kcraedu .main-board .board:last-child .board__list-text {
+  width: 100%;
 }
 
 .kcraedu .main-board .board__list ul {
@@ -16928,12 +16932,6 @@ h1, .h1 {
   height: 100%;
 }
 
-@media (max-width: 767.98px) {
-  .board__list ul li a {
-    display: block;
-  }
-}
-
 .board__list-text {
   width: calc(100% - 6.25rem);
 }
@@ -17741,4 +17739,8 @@ h1, .h1 {
 
 .note-modal-footer .note-btn {
   float: none !important;
+}
+
+.my-video-dimensions.vjs-fluid {
+  padding-top: 46% !important;
 }

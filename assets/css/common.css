@@ -14152,6 +14152,27 @@ fieldset:disabled .btn {
   margin-left: 3.75rem;
 }
 
+.kcraedu .main-board .board__list ul {
+  margin: 0;
+}
+
+.kcraedu .main-board .board__list ul li {
+  margin: 0;
+}
+
+.kcraedu .main-board .board__list ul li a {
+  display: block;
+}
+
+.kcraedu .main-board .board__list-text {
+  width: 100%;
+}
+
+.kcraedu .main-board .board__list-date {
+  margin-top: 0.625rem;
+  text-align: left;
+}
+
 @media (max-width: 1199.98px) {
   .kcraedu .main-board {
     display: block;
@@ -15846,6 +15867,10 @@ fieldset:disabled .btn {
   color: #666666;
 }
 
+.kcraedu .support-view__contents img {
+  max-width: 100%;
+}
+
 .kcraedu .support-view__foot {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16751,7 +16776,7 @@ h1, .h1 {
 }
 
 .board__title-item {
-  margin-right: 2.188rem;
+  margin-right: 2.188rem !important;
 }
 
 .board__title-item button {
@@ -16792,12 +16817,23 @@ h1, .h1 {
   color: #222;
 }
 
+.board__list ul {
+  margin-top: 20px;
+}
+
 .board__list ul li {
+  margin-top: 6px;
   padding: 1.563rem 0;
   border-bottom: 0.063rem solid rgba(0, 0, 0, 0.2);
 }
 
 .board__list ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -16809,6 +16845,7 @@ h1, .h1 {
 }
 
 .board__list-text {
+  width: calc(100% - 100px);
   margin-right: 3.75rem;
 }
 
@@ -16851,11 +16888,11 @@ h1, .h1 {
 }
 
 .board__list-date {
-  margin-top: 0.625rem;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #222222;
+  text-align: right;
 }
 
 @media (max-width: 767.98px) {
@@ -16892,6 +16929,7 @@ h1, .h1 {
 
 .board-sm .board__list ul li {
   position: relative;
+  margin-top: 10px;
   padding: 0 0 0 0.938rem;
   border-bottom: none;
 }
@@ -16909,7 +16947,8 @@ h1, .h1 {
 }
 
 .board-sm .board__list-text {
-  margin-right: 1.875;
+  width: 100%;
+  margin-right: 1.875rem;
 }
 
 .board-sm .board__list-text strong {
@@ -16928,6 +16967,11 @@ h1, .h1 {
   line-height: 1.5rem;
   color: #222222;
   -webkit-line-clamp: 1;
+}
+
+.board-sm .board__list-date {
+  margin-top: 0;
+  text-align: left;
 }
 
 .board-view {
@@ -17228,6 +17272,10 @@ h1, .h1 {
   }
 }
 
+.table-wrap table {
+  table-layout: fixed;
+}
+
 .table-type01 {
   border-top: 0.125rem solid #222;
   border-bottom: 0.063rem solid #d9d9d9;
@@ -17415,6 +17463,10 @@ h1, .h1 {
   color: #666666;
 }
 
+.accordion-body img {
+  max-width: 100%;
+}
+
 .pagination .page-link {
   padding: 0.75rem 1.375rem;
   border-color: #ececec;
@@ -17597,4 +17649,13 @@ h1, .h1 {
   .certificats-modal .modal-header {
     display: none;
   }
+}
+
+.note-modal-footer {
+  height: auto;
+  text-align: right;
+}
+
+.note-modal-footer .note-btn {
+  float: none;
 }

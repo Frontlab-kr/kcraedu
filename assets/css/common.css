@@ -16270,6 +16270,12 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .education-contents__player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: calc(100vh - 12.813rem);
 }
@@ -17743,4 +17749,10 @@ h1, .h1 {
 
 .my-video-dimensions.vjs-fluid {
   padding-top: 46% !important;
+}
+
+@media (max-width: 767.98px) {
+  .my-video-dimensions.vjs-fluid {
+    padding-top: 100% !important;
+  }
 }

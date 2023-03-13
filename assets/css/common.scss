@@ -2636,6 +2636,8 @@ html {
 				}
 			}
 			&__player {
+				display: flex;
+				align-items: center;
 				width: 100%;
 				height: calc(100vh - 12.813rem);
 				iframe {
@@ -3871,4 +3873,7 @@ h1 {
 }
 .my-video-dimensions.vjs-fluid {
 	padding-top: 46% !important;
+	@include media-breakpoint-down(md) {
+		padding-top: 100% !important;
+	}
 }

@@ -13065,6 +13065,8 @@ fieldset:disabled .btn {
 
 .kcraedu header {
   border-bottom: 0.063rem solid #d9d9d9;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 .kcraedu header .header {
@@ -13146,13 +13148,98 @@ fieldset:disabled .btn {
           transform: translateY(100%);
 }
 
-.kcraedu header .header__gnb-item:hover > ul {
-  display: block;
-}
-
 @media (max-width: 991.98px) {
   .kcraedu header .header__gnb-item > a {
     font-size: 1.25rem;
+  }
+}
+
+.kcraedu header .header__2depth {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  background: #ffffff;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.kcraedu header .header__2depth .container {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1199.98px) {
+  .kcraedu header .header__2depth .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.kcraedu header .header__2depth-item {
+  margin-left: 5.625rem;
+  padding-top: 5.188rem;
+  padding-bottom: 11.875rem;
+}
+
+.kcraedu header .header__2depth-item:first-child {
+  margin-left: 0;
+}
+
+.kcraedu header .header__2depth-item > a {
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: #222222;
+  white-space: nowrap;
+}
+
+.kcraedu header .header__2depth-item ul {
+  margin-top: 1.875rem;
+}
+
+.kcraedu header .header__2depth-item ul li {
+  margin-top: 0.438rem;
+}
+
+.kcraedu header .header__2depth-item ul li a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: #666666;
+  white-space: nowrap;
+}
+
+@media (max-width: 1199.98px) {
+  .kcraedu header .header__2depth-item {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .kcraedu header .header__2depth-item > a {
+    font-size: 1.125rem;
+  }
+  .kcraedu header .header__2depth-item ul {
+    margin-top: 1.875rem;
+  }
+  .kcraedu header .header__2depth-item ul li {
+    margin-top: 0.438rem;
+  }
+  .kcraedu header .header__2depth-item ul li a {
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -13386,6 +13473,18 @@ fieldset:disabled .btn {
   }
 }
 
+.kcraedu header.active {
+  background: #fff;
+}
+
+.kcraedu header.active .header__2depth {
+  opacity: 1;
+  visibility: visible;
+  border-top: 0.063rem solid #c5c5c5;
+  -webkit-box-shadow: 0 0.625rem 0.625rem rgba(0, 0, 0, 0.06);
+          box-shadow: 0 0.625rem 0.625rem rgba(0, 0, 0, 0.06);
+}
+
 @media (max-width: 767.98px) {
   .kcraedu--login header .header__menu {
     display: none;
@@ -13560,9 +13659,9 @@ fieldset:disabled .btn {
 
 .kcraedu-modal {
   display: inline-block;
-  min-width: 320px;
+  min-width: 20rem;
   height: auto;
-  margin: 0 0 20px 20px;
+  margin: 0 0 1.25rem rem;
   background: #fff;
   text-align: left;
 }
@@ -13571,7 +13670,7 @@ fieldset:disabled .btn {
   position: fixed;
   top: 0;
   right: 0;
-  padding: 30px;
+  padding: 1.875rem;
   z-index: 300;
 }
 
@@ -13604,8 +13703,8 @@ fieldset:disabled .btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 15px 20px 10px 30px;
-  font-size: 20px;
+  padding: 0.938rem 1.25rem 0.625rem 1.875rem;
+  font-size: 1.25rem;
   background-color: #3f5692;
   color: #fff;
 }
@@ -13617,22 +13716,22 @@ fieldset:disabled .btn {
 }
 
 .kcraedu-modal__contents {
-  padding: 30px 30px 15px 30px;
+  padding: 1.875rem 1.875rem 0.938rem 1.875rem;
 }
 
 .kcraedu-modal__contents img {
-  max-width: 500px;
+  max-width: 31.25rem;
 }
 
 @media (max-width: 767.98px) {
   .kcraedu-modal__contents img {
     width: 100%;
-    max-width: 300px;
+    max-width: 18.75rem;
   }
 }
 
 .kcraedu-modal__footer {
-  padding: 15px 30px 20px 30px;
+  padding: 0.938rem 1.875rem 1.25rem 1.875rem;
 }
 
 .kcraedu--main header {
@@ -16806,11 +16905,11 @@ h1, .h1 {
 }
 
 .board__list ul {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .board__list ul li {
-  margin-top: 6px;
+  margin-top: 0.375rem;
   padding: 1.563rem 0;
   border-bottom: 0.063rem solid rgba(0, 0, 0, 0.2);
 }
@@ -16836,7 +16935,7 @@ h1, .h1 {
 }
 
 .board__list-text {
-  width: calc(100% - 100px);
+  width: calc(100% - 6.25rem);
 }
 
 @media (max-width: 767.98px) {
@@ -16919,7 +17018,7 @@ h1, .h1 {
 
 .board-sm .board__list ul li {
   position: relative;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   padding: 0 0 0 0.938rem;
   border-bottom: none;
 }

@@ -15,6 +15,25 @@ $(document).ready(function () {
 		$(this).parents(".header__gnb-item").addClass("active");
 	});
 
+	$(".header__gnb-item").hover(
+		function () {
+			// over
+			$("header").addClass("active");
+		},
+		function () {
+			// out
+		}
+	);
+	$("header").hover(
+		function () {
+			// over
+		},
+		function () {
+			// out
+			$("header").removeClass("active");
+		}
+	);
+
 	//toggle
 	$(".btn-toggle").on("click", function () {
 		var target = $(this).attr("href");

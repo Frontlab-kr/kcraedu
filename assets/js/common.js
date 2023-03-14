@@ -10,35 +10,22 @@ $(document).ready(function () {
 		}
 	});
 
-	$(".header__gnb-item > a").on("click", function () {
+	$(document).on("click", ".header__gnb-item > a", function () {
 		$(".header__gnb-item").removeClass("active");
 		$(this).parents(".header__gnb-item").addClass("active");
 		if ($(".header__navbar").css("display") == "flex") {
 			return false;
 		}
 	});
-
-	$(".header__gnb-item").hover(
-		function () {
-			// over
-			$("header").addClass("active");
-		},
-		function () {
-			// out
-		}
-	);
-	$("header").hover(
-		function () {
-			// over
-		},
-		function () {
-			// out
-			$("header").removeClass("active");
-		}
-	);
+	$(document).on("mouseover", ".header__gnb-item", function () {
+		$("header").addClass("active");
+	});
+	$(document).on("mouseout", "header", function () {
+		$("header").removeClass("active");
+	});
 
 	//toggle
-	$(".btn-toggle").on("click", function () {
+	$(document).on("click", ".btn-toggle", function () {
 		var target = $(this).attr("href");
 		$(target).toggleClass("d-none");
 	});

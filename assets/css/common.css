@@ -14694,7 +14694,7 @@ fieldset:disabled .btn {
     display: none;
   }
   .kcraedu .join-nav ul li:after {
-    margin: 0 2.2rem;
+    margin: 0 1.25rem;
   }
 }
 
@@ -14790,6 +14790,7 @@ fieldset:disabled .btn {
 
 @media (max-width: 767.98px) {
   .kcraedu .join-certification dl dt .btn {
+    min-width: auto;
     width: 100%;
   }
 }
@@ -14833,6 +14834,21 @@ fieldset:disabled .btn {
 .kcraedu .join-button .btn {
   min-width: 14.375rem;
   margin: 0 0.563rem;
+}
+
+.kcraedu .join-button .btn:first-child {
+  margin-left: 0;
+}
+
+.kcraedu .join-button .btn:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .join-button .btn {
+    min-width: auto;
+    width: 100%;
+  }
 }
 
 .kcraedu .join-caution {
@@ -16313,6 +16329,7 @@ fieldset:disabled .btn {
           align-items: center;
   width: 100%;
   height: calc(100vh - 12.813rem);
+  overflow: hidden;
 }
 
 .kcraedu .education-contents__player iframe {
@@ -17802,7 +17819,7 @@ h1, .h1 {
 }
 
 .my-video-dimensions.vjs-fluid {
-  padding-top: 46% !important;
+  padding-top: 50% !important;
 }
 
 @media (max-width: 767.98px) {

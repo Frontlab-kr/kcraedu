@@ -16550,6 +16550,12 @@ fieldset:disabled .btn {
   font-size: 1.5rem;
 }
 
+@media (max-width: 991.98px) {
+  .kcraedu .education-contents__question dl dt {
+    margin-left: 0.6rem;
+  }
+}
+
 .kcraedu .education-contents__question dl dd ol {
   margin: 0;
   padding: 0;
@@ -17576,6 +17582,12 @@ h1, .h1 {
   .table-type01__button .btn {
     min-width: auto;
     width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .table-type01 {
+    padding: 1.25rem 0 1.875rem 0;
   }
 }
 

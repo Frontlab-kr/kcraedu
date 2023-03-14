@@ -1318,6 +1318,17 @@ html {
 			text-align: center;
 			.btn {
 				min-width: 14.375rem;
+				margin: 0 0.563rem;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+				@include media-breakpoint-down(md) {
+					min-width: auto;
+					width: 100%;
+				}
 			}
 		}
 		&-menu {
@@ -1462,6 +1473,13 @@ html {
 					text-align: center;
 					.btn {
 						min-width: 14.375rem;
+						margin: 0 0.563rem;
+						&:first-child {
+							margin-left: 0;
+						}
+						&:last-child {
+							margin-right: 0;
+						}
 						@include media-breakpoint-down(md) {
 							min-width: auto;
 							width: 100%;
@@ -2471,6 +2489,16 @@ html {
 				.btn {
 					min-width: 14.375rem;
 					margin: 0 0.563rem;
+					&:first-child {
+						margin-left: 0;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+					@include media-breakpoint-down(md) {
+						min-width: auto;
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -3062,6 +3090,16 @@ h1 {
 		.btn {
 			min-width: 14.375rem;
 			margin: 0 0.563rem;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			@include media-breakpoint-down(md) {
+				min-width: auto;
+				width: 100%;
+			}
 		}
 	}
 	&__address {
@@ -3380,6 +3418,16 @@ h1 {
 			.btn {
 				min-width: 14.375rem;
 				margin: 0 0.563rem;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+				@include media-breakpoint-down(md) {
+					min-width: auto;
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -3611,6 +3659,16 @@ h1 {
 			.btn {
 				min-width: 14.375rem;
 				margin: 0 0.563rem;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+				@include media-breakpoint-down(md) {
+					min-width: auto;
+					width: 100%;
+				}
 			}
 		}
 	}

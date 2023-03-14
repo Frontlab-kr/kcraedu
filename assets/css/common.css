@@ -14612,6 +14612,22 @@ fieldset:disabled .btn {
 
 .kcraedu .login-button .btn {
   min-width: 14.375rem;
+  margin: 0 0.563rem;
+}
+
+.kcraedu .login-button .btn:first-child {
+  margin-left: 0;
+}
+
+.kcraedu .login-button .btn:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .login-button .btn {
+    min-width: auto;
+    width: 100%;
+  }
 }
 
 .kcraedu .login-menu {
@@ -14804,6 +14820,15 @@ fieldset:disabled .btn {
 
 .kcraedu .join-certification dl dt .btn {
   min-width: 14.375rem;
+  margin: 0 0.563rem;
+}
+
+.kcraedu .join-certification dl dt .btn:first-child {
+  margin-left: 0;
+}
+
+.kcraedu .join-certification dl dt .btn:last-child {
+  margin-right: 0;
 }
 
 @media (max-width: 767.98px) {
@@ -16070,6 +16095,21 @@ fieldset:disabled .btn {
   margin: 0 0.563rem;
 }
 
+.kcraedu .support-view__button .btn:first-child {
+  margin-left: 0;
+}
+
+.kcraedu .support-view__button .btn:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .support-view__button .btn {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
 .kcraedu .support-faq {
   background: #ffffff;
   border: 0.063rem solid #ececec;
@@ -16824,6 +16864,21 @@ h1, .h1 {
   margin: 0 0.563rem;
 }
 
+.form__button .btn:first-child {
+  margin-left: 0;
+}
+
+.form__button .btn:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .form__button .btn {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
 .form__address {
   width: 100%;
 }
@@ -17234,6 +17289,21 @@ h1, .h1 {
   margin: 0 0.563rem;
 }
 
+.board-view__button .btn:first-child {
+  margin-left: 0;
+}
+
+.board-view__button .btn:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .board-view__button .btn {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
 @media (max-width: 767.98px) {
   .board:not(.board-sm) .board__title-more {
     position: absolute;
@@ -17492,6 +17562,21 @@ h1, .h1 {
 .table-type01__button .btn {
   min-width: 14.375rem;
   margin: 0 0.563rem;
+}
+
+.table-type01__button .btn:first-child {
+  margin-left: 0;
+}
+
+.table-type01__button .btn:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .table-type01__button .btn {
+    min-width: auto;
+    width: 100%;
+  }
 }
 
 .table-type02 {

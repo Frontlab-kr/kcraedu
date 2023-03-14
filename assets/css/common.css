@@ -171,7 +171,7 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 0;
 }
 
@@ -202,11 +202,11 @@ sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 a {
@@ -227,18 +227,15 @@ pre,
 code,
 kbd,
 samp {
-  font-family: var(--bs-font-monospace);
+  font-family: "Noto Sans KR", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1em;
   direction: ltr /* rtl:ignore */;
   unicode-bidi: bidi-override;
 }
 
 pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
-  font-size: 0.875em;
+  margin: 0;
+  white-space: normal;
 }
 
 pre code {
@@ -2698,6 +2695,12 @@ textarea.form-control-lg {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+@media (max-width: 767.98px) {
+  .form-select {
+    background-size: 12px 12px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15910,6 +15913,26 @@ fieldset:disabled .btn {
   width: 22.5rem;
 }
 
+@media (max-width: 767.98px) {
+  .kcraedu .support-search {
+    padding: 1.25rem 1.25rem;
+  }
+  .kcraedu .support-search form {
+    display: block;
+  }
+  .kcraedu .support-search .form-select {
+    width: 100%;
+  }
+  .kcraedu .support-search .form-control {
+    width: 100%;
+    margin: 0.625rem 0 0 0 !important;
+  }
+  .kcraedu .support-search .btn {
+    width: 100%;
+    margin: 0.625rem 0 0 0 !important;
+  }
+}
+
 .kcraedu .support-view {
   border-top: 0.125rem solid #222;
 }
@@ -15950,6 +15973,12 @@ fieldset:disabled .btn {
   color: #999999;
 }
 
+@media (max-width: 767.98px) {
+  .kcraedu .support-view__head {
+    padding: 1.875rem 0;
+  }
+}
+
 .kcraedu .support-view__contents {
   padding: 1.875rem 1.25rem;
   border-bottom: 0.063rem solid #d9d9d9;
@@ -15960,6 +15989,12 @@ fieldset:disabled .btn {
 
 .kcraedu .support-view__contents img {
   max-width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .support-view__contents {
+    padding: 1.875rem 0;
+  }
 }
 
 .kcraedu .support-view__foot {
@@ -17061,6 +17096,12 @@ h1, .h1 {
   margin-top: 0;
 }
 
+@media (max-width: 767.98px) {
+  .board-sm {
+    padding: 1.875rem 1.25rem;
+  }
+}
+
 .board-view {
   border-top: 0.125rem solid #222;
 }
@@ -17363,6 +17404,12 @@ h1, .h1 {
   table-layout: fixed;
 }
 
+@media (max-width: 767.98px) {
+  .table-wrap table {
+    table-layout: auto;
+  }
+}
+
 .table-type01 {
   border-top: 0.125rem solid #222;
   border-bottom: 0.063rem solid #d9d9d9;
@@ -17419,6 +17466,12 @@ h1, .h1 {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #666666;
+}
+
+@media (max-width: 767.98px) {
+  .table-type02 {
+    padding: 1.875rem 1.25rem;
+  }
 }
 
 .table-type02 table tbody th {

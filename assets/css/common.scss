@@ -2378,6 +2378,23 @@ html {
 			.form-control {
 				width: 22.5rem;
 			}
+			@include media-breakpoint-down(md) {
+				padding: 1.25rem 1.25rem;
+				form {
+					display: block;
+				}
+				.form-select {
+					width: 100%;
+				}
+				.form-control {
+					width: 100%;
+					margin: 0.625rem 0 0 0 !important;
+				}
+				.btn {
+					width: 100%;
+					margin: 0.625rem 0 0 0 !important;
+				}
+			}
 		}
 		&-view {
 			border-top: 0.125rem solid #222;
@@ -2405,6 +2422,9 @@ html {
 						color: #999999;
 					}
 				}
+				@include media-breakpoint-down(md) {
+					padding: 1.875rem 0;
+				}
 			}
 			&__contents {
 				padding: 1.875rem 1.25rem;
@@ -2414,6 +2434,9 @@ html {
 				color: #666666;
 				img {
 					max-width: 100%;
+				}
+				@include media-breakpoint-down(md) {
+					padding: 1.875rem 0;
 				}
 			}
 			&__foot {
@@ -3277,6 +3300,9 @@ h1 {
 				}
 			}
 		}
+		@include media-breakpoint-down(md) {
+			padding: 1.875rem 1.25rem;
+		}
 	}
 	&-view {
 		border-top: 0.125rem solid #222;
@@ -3533,6 +3559,9 @@ h1 {
 		}
 		table {
 			table-layout: fixed;
+			@include media-breakpoint-down(md) {
+				table-layout: auto;
+			}
 		}
 	}
 	&-type01 {
@@ -3583,6 +3612,9 @@ h1 {
 		font-size: 1rem;
 		line-height: 1.5rem;
 		color: #666666;
+		@include media-breakpoint-down(md) {
+			padding: 1.875rem 1.25rem;
+		}
 		table {
 			tbody {
 				th {

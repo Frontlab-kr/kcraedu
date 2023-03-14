@@ -20,6 +20,9 @@
 	background-position: $form-select-bg-position;
 	background-size: $form-select-bg-size;
 	//border: $form-select-border-width solid $form-select-border-color;
+	@include media-breakpoint-down(md) {
+		background-size: 12px 12px;
+	}
 	border: none;
 	//@include border-radius($form-select-border-radius, 0);
 	@include box-shadow($form-select-box-shadow);

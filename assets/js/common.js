@@ -10,9 +10,12 @@ $(document).ready(function () {
 		}
 	});
 
-	$(".header__gnb-item a").on("click", function () {
+	$(".header__gnb-item > a").on("click", function () {
 		$(".header__gnb-item").removeClass("active");
 		$(this).parents(".header__gnb-item").addClass("active");
+		if ($(".header__navbar").css("display") == "flex") {
+			return false;
+		}
 	});
 
 	$(".header__gnb-item").hover(

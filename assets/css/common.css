@@ -17375,6 +17375,7 @@ h1, .h1 {
 
 .table-type01 table {
   width: 100%;
+  table-layout: fixed;
 }
 
 .table-type01 table tbody th {

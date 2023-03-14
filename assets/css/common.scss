@@ -3545,6 +3545,7 @@ h1 {
 		color: #666666;
 		table {
 			width: 100%;
+			table-layout: fixed;
 			tbody {
 				th {
 					padding: 0.625rem 1.875rem 0 0;

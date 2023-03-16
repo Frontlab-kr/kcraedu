@@ -17018,7 +17018,7 @@ h1, .h1 {
   color: rgba(34, 34, 34, 0.5);
 }
 
-.board__title-item button.active {
+.board__title-item button:hover, .board__title-item button.active {
   color: #222222;
 }
 

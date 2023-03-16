@@ -2283,7 +2283,7 @@ html {
 					background: #3766de !important;
 					color: #fff !important;
 				}
-			} 
+			}
 			.fc-event-title {
 				padding: 0.313rem;
 				white-space: normal;
@@ -3200,6 +3200,7 @@ h1 {
 				font-size: 1.5rem;
 				line-height: 2.25rem;
 				color: rgba(34, 34, 34, 0.5);
+				&:hover,
 				&.active {
 					color: #222222;
 				}

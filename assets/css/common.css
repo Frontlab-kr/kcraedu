@@ -16820,15 +16820,15 @@ fieldset:disabled .btn {
 }
 
 .swal2-popup {
-  padding: 1rem 0;
+  padding: 1rem 0 !important;
 }
 
 .swal2-title {
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
 }
 
 .swal2 .swal2-styled.swal2-confirm {
-  background-color: #4f80ff;
+  background-color: #4f80ff !important;
 }
 
 h1, .h1 {

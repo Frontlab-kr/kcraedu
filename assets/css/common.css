@@ -15886,85 +15886,6 @@ fieldset:disabled .btn {
   }
 }
 
-.kcraedu .curriculum-detail .mobile__table-none {
-  margin-bottom: 1.875rem;
-  padding: 0.625rem 0;
-  border-top: 0.063rem solid #afafaf;
-  overflow: hidden;
-  font-size: 0.813rem;
-  line-height: 1.5;
-  word-break: keep-all;
-  color: #333;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item dl {
-  margin-bottom: 1.25rem;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item dl dt {
-  font-size: 1rem;
-  margin-bottom: 0.313rem;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item dl dd {
-  padding: 0.75rem;
-  border: 0.063rem solid #ddd;
-  border-radius: 0.313rem;
-  overflow: hidden;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item dl dd ul {
-  margin: 0 0 0 0.625rem;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item dl dd ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0.313rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item dl dd ul li:first-child {
-  margin-top: 0;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item dl dd ul li p {
-  margin: 0;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item dl dd ul li strong {
-  min-width: 4.375rem;
-  margin-right: 0.625rem;
-  font-weight: 400;
-  font-size: 0.813rem;
-  white-space: noWrap;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item-title {
-  display: inline-block;
-  margin-bottom: 0.938rem;
-  padding: 0.125rem 0.625rem 0;
-  border-radius: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #3788d8;
-  background-color: rgba(55, 136, 216, 0.1);
-}
-
-.kcraedu .curriculum-detail .mobile__table-item-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0.75rem -0.75rem -0.75rem -0.75rem;
-}
-
-.kcraedu .curriculum-detail .mobile__table-item-btn button {
-  width: 100%;
-  border-radius: 0 !important;
-}
-
 .kcraedu .support {
   width: 100%;
   max-width: 56.625rem;
@@ -18042,6 +17963,85 @@ h1, .h1 {
   .certificats__bg-btm {
     display: none;
   }
+}
+
+.mobile__table-none {
+  margin-bottom: 1.875rem;
+  padding: 0.625rem 0;
+  border-top: 0.063rem solid #afafaf;
+  overflow: hidden;
+  font-size: 0.813rem;
+  line-height: 1.5;
+  word-break: keep-all;
+  color: #333;
+}
+
+.mobile__table-item dl {
+  margin-bottom: 1.25rem;
+}
+
+.mobile__table-item dl dt {
+  font-size: 1.25rem;
+  margin-bottom: 0.313rem;
+}
+
+.mobile__table-item dl dd {
+  padding: 0.75rem;
+  border: 0.063rem solid #ddd;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.mobile__table-item dl dd ul {
+  margin: 0.6rem 0 1.3rem 0.625rem;
+}
+
+.mobile__table-item dl dd ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.313rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.mobile__table-item dl dd ul li:first-child {
+  margin-top: 0;
+}
+
+.mobile__table-item dl dd ul li p {
+  margin: 0;
+}
+
+.mobile__table-item dl dd ul li strong {
+  min-width: 4.375rem;
+  margin-right: 0.625rem;
+  font-weight: 400;
+  font-size: 1rem;
+  white-space: noWrap;
+}
+
+.mobile__table-item-title {
+  display: inline-block;
+  margin-bottom: 0.938rem;
+  padding: 0.125rem 0.625rem 0;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #3788d8;
+  background-color: rgba(55, 136, 216, 0.1);
+}
+
+.mobile__table-item-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.75rem -0.75rem -0.75rem -0.75rem;
+}
+
+.mobile__table-item-btn button {
+  width: 100%;
+  border-radius: 0 !important;
 }
 
 @media print {

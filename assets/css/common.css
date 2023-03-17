@@ -13172,7 +13172,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu header .header__gnb-item > a:hover {
-  color: rgba(34, 34, 34, 0.7);
+  color: #4f80ff;
 }
 
 .kcraedu header .header__gnb-item > ul {
@@ -13245,7 +13245,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu header .header__2depth-item > a:hover {
-  color: rgba(34, 34, 34, 0.7);
+  color: #4f80ff;
 }
 
 .kcraedu header .header__2depth-item ul {
@@ -13270,7 +13270,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu header .header__2depth-item ul li a:hover {
-  color: rgba(102, 102, 102, 0.7);
+  color: #4f80ff;
 }
 
 @media (max-width: 1199.98px) {
@@ -14305,6 +14305,10 @@ fieldset:disabled .btn {
           box-shadow: 0 0.063rem 0.625rem #929ebe;
 }
 
+.kcraedu .main-link__item:hover p {
+  color: #222;
+}
+
 .kcraedu .main-board {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14865,6 +14869,8 @@ fieldset:disabled .btn {
   border: 0.063rem solid #ececec;
   border-radius: 0.625rem;
   text-align: center;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 @media (max-width: 767.98px) {
@@ -14895,6 +14901,10 @@ fieldset:disabled .btn {
     min-width: auto;
     width: 100%;
   }
+}
+
+.kcraedu .join-certification dl:hover dd {
+  border-color: #4f80ff;
 }
 
 .kcraedu .join-result {
@@ -16226,7 +16236,7 @@ fieldset:disabled .btn {
   white-space: nowrap;
 }
 
-.kcraedu .support-faq ul li.active a p {
+.kcraedu .support-faq ul li.active a p, .kcraedu .support-faq ul li:hover a p {
   color: #222222;
 }
 
@@ -16809,8 +16819,16 @@ fieldset:disabled .btn {
   padding-bottom: 2.5rem;
 }
 
+.swal2-popup {
+  padding: 1rem 0;
+}
+
 .swal2-title {
   font-size: 1.25rem;
+}
+
+.swal2 .swal2-styled.swal2-confirm {
+  background-color: #4f80ff;
 }
 
 h1, .h1 {
@@ -17108,6 +17126,13 @@ h1, .h1 {
   -moz-osx-font-smoothing: grayscale;
   font-size: 2.25rem;
   color: #222;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.board__title-more:hover:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .board__list ul {
@@ -17135,6 +17160,10 @@ h1, .h1 {
 }
 
 .board__list ul li a:hover strong {
+  color: rgba(34, 34, 34, 0.7);
+}
+
+.board__list ul li:hover .board__list-text p {
   color: rgba(34, 34, 34, 0.7);
 }
 

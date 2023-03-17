@@ -15,7 +15,10 @@
 	vertical-align: baseline;
 	@include border-radius($badge-border-radius);
 	@include gradient-bg();
-
+	@include media-breakpoint-down(md) {
+		padding: 0.25em 0.625em;
+		font-size: 0.875rem;
+	}
 	// Empty badges collapse automatically
 	&:empty {
 		display: none;

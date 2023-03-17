@@ -5551,6 +5551,13 @@ fieldset:disabled .btn {
   border-radius: 0.625rem;
 }
 
+@media (max-width: 767.98px) {
+  .badge {
+    padding: 0.25em 0.625em;
+    font-size: 0.875rem;
+  }
+}
+
 .badge:empty {
   display: none;
 }
@@ -13160,6 +13167,14 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
+.kcraedu header .header__gnb-item > a:hover {
+  color: #000;
+}
+
+.kcraedu header .header__gnb-item > a:hover {
+  color: rgba(34, 34, 34, 0.7);
+}
+
 .kcraedu header .header__gnb-item > ul {
   display: none;
   position: absolute;
@@ -13225,6 +13240,14 @@ fieldset:disabled .btn {
   white-space: nowrap;
 }
 
+.kcraedu header .header__2depth-item > a:hover {
+  color: #000;
+}
+
+.kcraedu header .header__2depth-item > a:hover {
+  color: rgba(34, 34, 34, 0.7);
+}
+
 .kcraedu header .header__2depth-item ul {
   margin-top: 1.875rem;
 }
@@ -13240,6 +13263,14 @@ fieldset:disabled .btn {
   line-height: 1.625rem;
   color: #666666;
   white-space: nowrap;
+}
+
+.kcraedu header .header__2depth-item ul li a:hover {
+  color: #444;
+}
+
+.kcraedu header .header__2depth-item ul li a:hover {
+  color: rgba(102, 102, 102, 0.7);
 }
 
 @media (max-width: 1199.98px) {
@@ -13274,6 +13305,10 @@ fieldset:disabled .btn {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #666666;
+}
+
+.kcraedu header .header__menu-item:hover {
+  color: rgba(102, 102, 102, 0.7);
 }
 
 .kcraedu header .header__info {
@@ -13545,6 +13580,14 @@ fieldset:disabled .btn {
   color: #222222;
 }
 
+.kcraedu footer .footer__menu-item:last-child {
+  margin-right: 0;
+}
+
+.kcraedu footer .footer__menu-item:hover {
+  color: rgba(34, 34, 34, 0.7);
+}
+
 .kcraedu footer .footer address {
   font-weight: 500;
   font-size: 1rem;
@@ -13613,6 +13656,10 @@ fieldset:disabled .btn {
   line-height: 1.688rem;
   color: #666666;
   word-break: keep-all;
+}
+
+.kcraedu .snb ul li a:hover {
+  color: rgba(102, 102, 102, 0.7);
 }
 
 .kcraedu .snb ul li:after {
@@ -14058,6 +14105,10 @@ fieldset:disabled .btn {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.kcraedu .main-menu__item--logoff .main-menu__item-link a:hover {
+  color: #fff;
+}
+
 .kcraedu .main-menu__item--login {
   background: #4f80ff;
   border-radius: 1.25rem;
@@ -14111,6 +14162,10 @@ fieldset:disabled .btn {
 
 .kcraedu .main-menu__item--login .main-menu__item-info table td a {
   color: #ffffff;
+}
+
+.kcraedu .main-menu__item--login .main-menu__item-info table td a:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .kcraedu .main-menu__item--login .main-menu__item-button {
@@ -14431,6 +14486,10 @@ fieldset:disabled .btn {
   font-size: 1.125rem;
   line-height: 1.688rem;
   color: #222222;
+}
+
+.kcraedu .main-download__item a:hover {
+  color: rgba(34, 34, 34, 0.7);
 }
 
 .kcraedu .main-download__item a img {
@@ -16750,6 +16809,10 @@ fieldset:disabled .btn {
   padding-bottom: 2.5rem;
 }
 
+.swal2-title {
+  font-size: 1.25rem;
+}
+
 h1, .h1 {
   margin-bottom: 0.938rem;
   font-weight: 400;
@@ -16819,6 +16882,7 @@ h1, .h1 {
 @media (max-width: 767.98px) {
   .form__item {
     display: block;
+    padding: 1.125rem 0;
   }
   .form__item > label {
     width: 100%;
@@ -17070,6 +17134,10 @@ h1, .h1 {
   height: 100%;
 }
 
+.board__list ul li a:hover strong {
+  color: rgba(34, 34, 34, 0.7);
+}
+
 .board__list-text {
   width: calc(100% - 6.25rem);
 }
@@ -17118,12 +17186,6 @@ h1, .h1 {
   line-height: 1.5rem;
   color: #222222;
   text-align: right;
-}
-
-@media (max-width: 767.98px) {
-  .board__list-date {
-    margin-top: 0.625rem;
-  }
 }
 
 .board-sm {
@@ -17243,6 +17305,21 @@ h1, .h1 {
   color: #999999;
 }
 
+@media (max-width: 767.98px) {
+  .board-view__title {
+    padding: 1.563rem 0;
+  }
+  .board-view__title p .badge {
+    margin-right: 1rem;
+  }
+  .board-view__title-text {
+    font-size: 1rem;
+  }
+  .board-view__title-date {
+    font-size: 0.875rem;
+  }
+}
+
 .board-view__contents {
   padding: 1.875rem 1.25rem;
   border-bottom: 0.063rem solid #d9d9d9;
@@ -17250,6 +17327,12 @@ h1, .h1 {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #666666;
+}
+
+@media (max-width: 767.98px) {
+  .board-view__contents {
+    padding: 1.875rem 0;
+  }
 }
 
 .board-view__reply {
@@ -17277,6 +17360,19 @@ h1, .h1 {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #999999;
+}
+
+@media (max-width: 767.98px) {
+  .board-view__reply {
+    padding: 1.625rem 0.625rem;
+  }
+  .board-view__reply .badge {
+    min-width: auto;
+    margin-right: 1rem;
+  }
+  .board-view__reply-date {
+    font-size: 0.875rem;
+  }
 }
 
 .board-view__button {
@@ -17339,7 +17435,7 @@ h1, .h1 {
 
 @media (max-width: 767.98px) {
   .list-type01 > ul {
-    padding: 1.875rem 1.25rem;
+    padding: 1.25rem 1.25rem;
   }
 }
 
@@ -17603,7 +17699,7 @@ h1, .h1 {
 
 @media (max-width: 767.98px) {
   .table-type02 {
-    padding: 1.875rem 1.25rem;
+    padding: 0.938rem 1.25rem;
   }
 }
 

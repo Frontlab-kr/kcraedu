@@ -105,6 +105,12 @@ html {
 						font-size: 1.375rem;
 						line-height: 2.063rem;
 						color: #222222;
+						&:hover {
+							color: #000;
+						}
+						&:hover {
+							color: transparentize(#222, 0.3);
+						}
 					}
 					> ul {
 						display: none;
@@ -156,6 +162,12 @@ html {
 						font-size: 1.375rem;
 						color: #222222;
 						white-space: nowrap;
+						&:hover {
+							color: #000;
+						}
+						&:hover {
+							color: transparentize(#222, 0.3);
+						}
 					}
 					ul {
 						margin-top: 1.875rem;
@@ -168,6 +180,12 @@ html {
 								line-height: 1.625rem;
 								color: #666666;
 								white-space: nowrap;
+								&:hover {
+									color: #444;
+								}
+								&:hover {
+									color: transparentize(#666, 0.3);
+								}
 							}
 						}
 					}
@@ -199,6 +217,9 @@ html {
 					font-size: 1rem;
 					line-height: 1.5rem;
 					color: #666666;
+					&:hover {
+						color: transparentize(#666, 0.3);
+					}
 				}
 			}
 			&__info {
@@ -455,6 +476,12 @@ html {
 					font-size: 1.125rem;
 					line-height: 1.688rem;
 					color: #222222;
+					&:last-child {
+						margin-right: 0;
+					}
+					&:hover {
+						color: transparentize(#222, 0.3);
+					}
 				}
 			}
 			address {
@@ -513,6 +540,9 @@ html {
 					line-height: 1.688rem;
 					color: #666666;
 					word-break: keep-all;
+					&:hover {
+						color: transparentize(#666, 0.3);
+					}
 				}
 				&:after {
 					content: "";
@@ -862,6 +892,9 @@ html {
 							line-height: 1.5rem;
 							text-align: center;
 							color: rgba(255, 255, 255, 0.5);
+							&:hover {
+								color: #fff;
+							}
 						}
 					}
 				}
@@ -906,6 +939,9 @@ html {
 								color: #ffffff;
 								a {
 									color: #ffffff;
+									&:hover {
+										color: transparentize(#fff, 0.3);
+									}
 								}
 							}
 						}
@@ -1174,6 +1210,9 @@ html {
 					font-size: 1.125rem;
 					line-height: 1.688rem;
 					color: #222222;
+					&:hover {
+						color: transparentize(#222, 0.3);
+					}
 					img {
 						margin-right: 0.938rem;
 					}
@@ -3007,6 +3046,12 @@ html {
 	}
 }
 
+//alert
+.swal2 {
+	&-title {
+		font-size: 1.25rem;
+	}
+}
 //component
 h1 {
 	margin-bottom: 0.938rem;
@@ -3062,6 +3107,7 @@ h1 {
 		}
 		@include media-breakpoint-down(md) {
 			display: block;
+			padding: 1.125rem 0;
 			> label {
 				width: 100%;
 				height: auto;
@@ -3242,6 +3288,11 @@ h1 {
 					justify-content: space-between;
 					width: 100%;
 					height: 100%;
+					&:hover {
+						strong {
+							color: transparentize(#222, 0.3);
+						}
+					}
 					@include media-breakpoint-down(md) {
 						//display: block;
 					}
@@ -3279,7 +3330,7 @@ h1 {
 			color: #222222;
 			text-align: right;
 			@include media-breakpoint-down(md) {
-				margin-top: 0.625rem;
+				//margin-top: 0.625rem;
 			}
 		}
 	}
@@ -3383,6 +3434,21 @@ h1 {
 				font-size: 1rem;
 				color: #999999;
 			}
+			@include media-breakpoint-down(md) {
+				padding: 1.563rem 0;
+				p {
+					.badge {
+						margin-right: 1rem;
+					}
+				}
+				&-text {
+					font-size: 1rem;
+				}
+
+				&-date {
+					font-size: 0.875rem;
+				}
+			}
 		}
 		&__contents {
 			padding: 1.875rem 1.25rem;
@@ -3391,6 +3457,9 @@ h1 {
 			font-size: 1rem;
 			line-height: 1.5rem;
 			color: #666666;
+			@include media-breakpoint-down(md) {
+				padding: 1.875rem 0;
+			}
 		}
 		&__reply {
 			display: flex;
@@ -3412,6 +3481,16 @@ h1 {
 				font-size: 1rem;
 				line-height: 1.5rem;
 				color: #999999;
+			}
+			@include media-breakpoint-down(md) {
+				padding: 1.625rem 0.625rem;
+				.badge {
+					min-width: auto;
+					margin-right: 1rem;
+				}
+				&-date {
+					font-size: 0.875rem;
+				}
 			}
 		}
 		&__button {
@@ -3469,7 +3548,7 @@ h1 {
 			background: #f8f8f8;
 			border-radius: 0.625rem;
 			@include media-breakpoint-down(md) {
-				padding: 1.875rem 1.25rem;
+				padding: 1.25rem 1.25rem;
 			}
 			li {
 				position: relative;
@@ -3688,7 +3767,7 @@ h1 {
 		line-height: 1.5rem;
 		color: #666666;
 		@include media-breakpoint-down(md) {
-			padding: 1.875rem 1.25rem;
+			padding: 0.938rem 1.25rem;
 		}
 		table {
 			tbody {

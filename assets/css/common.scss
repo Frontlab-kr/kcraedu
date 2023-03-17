@@ -499,13 +499,16 @@ html {
 			padding: 0 0 2rem 0;
 			.footer {
 				&__menu {
+					padding-top: 2rem;
+					padding-bottom: 1rem;
 					.container {
-						display: grid;
-						grid-template-columns: 1fr 1fr 1fr;
+						// display: grid;
+						// grid-template-columns: 1fr 1fr 1fr;
 					}
 					&-item {
+						display: inline-block;
 						margin-bottom: 1rem;
-						font-size: 1.063rem;
+						//font-size: 1.063rem;
 						// &:first-child {
 						// 	margin-top: 0;
 						// }

@@ -281,7 +281,7 @@ pre {
 
 	// Account for some code outputs that place code tags in pre tags
 	margin: 0;
-	white-space: pre;
+	white-space: normal;
 	code {
 		@include font-size(inherit);
 		color: inherit;

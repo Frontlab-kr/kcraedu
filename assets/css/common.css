@@ -235,7 +235,7 @@ samp {
 
 pre {
   margin: 0;
-  white-space: pre;
+  white-space: normal;
 }
 
 pre code {
@@ -13479,13 +13479,13 @@ fieldset:disabled .btn {
   }
   .kcraedu header .header__gnb-item > ul {
     display: none;
-    margin-top: 0.625rem;
+    margin-top: 1.25rem;
     position: static;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   .kcraedu header .header__gnb-item > ul li {
-    margin-top: 0.625rem;
+    margin-top: 1rem;
   }
   .kcraedu header .header__gnb-item > ul li:first-child {
     margin-top: 0;

@@ -16243,11 +16243,6 @@ fieldset:disabled .btn {
   white-space: nowrap;
 }
 
-.kcraedu .support-faq ul li.active, .kcraedu .support-faq ul li:hover {
-  z-index: 20;
-  border-color: #4f80ff;
-}
-
 .kcraedu .support-faq ul li.active a p, .kcraedu .support-faq ul li:hover a p {
   color: #222222;
 }

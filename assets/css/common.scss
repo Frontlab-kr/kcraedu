@@ -2552,20 +2552,29 @@ html {
 		}
 		&-faq {
 			background: #ffffff;
-			border: 0.063rem solid #ececec;
-			border-radius: 0.625rem;
+			//border: 0.063rem solid #ececec;
+			// border-radius: 0.625rem;
 			overflow-x: auto;
 			ul {
 				display: flex;
 				justify-content: space-between;
 				li {
+					position: relative;
 					width: 100%;
 					min-width: 8.75rem;
 					height: 8.75rem;
 					text-align: center;
-					border-left: 0.063rem solid #ececec;
+					background: #fff;
+					border: 0.063rem solid #ececec;
+
+					z-index: 10;
+					margin-left: -1px;
 					&:first-child {
-						border-left: none;
+						border-radius: 0.625rem 0 0 0.625rem;
+						margin-left: 0;
+					}
+					&:last-child {
+						border-radius: 0 0.625rem 0.625rem 0;
 					}
 					a {
 						display: flex;
@@ -2587,11 +2596,17 @@ html {
 					}
 					&.active,
 					&:hover {
+						z-index: 20;
+						border-color: #4f80ff;
 						a {
 							p {
 								color: #222222;
 							}
 						}
+					}
+					&.active {
+						z-index: 20;
+						border-color: #4f80ff;
 					}
 				}
 			}

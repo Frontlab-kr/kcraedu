@@ -16181,8 +16181,6 @@ fieldset:disabled .btn {
 
 .kcraedu .support-faq {
   background: #ffffff;
-  border: 0.063rem solid #ececec;
-  border-radius: 0.625rem;
   overflow-x: auto;
 }
 
@@ -16196,15 +16194,24 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .support-faq ul li {
+  position: relative;
   width: 100%;
   min-width: 8.75rem;
   height: 8.75rem;
   text-align: center;
-  border-left: 0.063rem solid #ececec;
+  background: #fff;
+  border: 0.063rem solid #ececec;
+  z-index: 10;
+  margin-left: -1px;
 }
 
 .kcraedu .support-faq ul li:first-child {
-  border-left: none;
+  border-radius: 0.625rem 0 0 0.625rem;
+  margin-left: 0;
+}
+
+.kcraedu .support-faq ul li:last-child {
+  border-radius: 0 0.625rem 0.625rem 0;
 }
 
 .kcraedu .support-faq ul li a {
@@ -16236,8 +16243,18 @@ fieldset:disabled .btn {
   white-space: nowrap;
 }
 
+.kcraedu .support-faq ul li.active, .kcraedu .support-faq ul li:hover {
+  z-index: 20;
+  border-color: #4f80ff;
+}
+
 .kcraedu .support-faq ul li.active a p, .kcraedu .support-faq ul li:hover a p {
   color: #222222;
+}
+
+.kcraedu .support-faq ul li.active {
+  z-index: 20;
+  border-color: #4f80ff;
 }
 
 .kcraedu .education {

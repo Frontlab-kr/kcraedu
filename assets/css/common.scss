@@ -499,12 +499,15 @@ html {
 			padding: 0 0 2rem 0;
 			.footer {
 				&__menu {
+					.container {
+						display: grid;
+						grid-template-columns: 1fr 1fr 1fr;
+					}
 					&-item {
-						display: block;
-						margin-top: 0.5rem;
-						&:first-child {
-							margin-top: 0;
-						}
+						margin-bottom: 1rem;
+						// &:first-child {
+						// 	margin-top: 0;
+						// }
 					}
 				}
 			}

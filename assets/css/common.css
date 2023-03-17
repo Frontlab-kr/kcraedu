@@ -13604,12 +13604,14 @@ fieldset:disabled .btn {
   .kcraedu footer {
     padding: 0 0 2rem 0;
   }
-  .kcraedu footer .footer__menu-item {
-    display: block;
-    margin-top: 0.5rem;
+  .kcraedu footer .footer__menu .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
-  .kcraedu footer .footer__menu-item:first-child {
-    margin-top: 0;
+  .kcraedu footer .footer__menu-item {
+    margin-bottom: 1rem;
   }
 }
 

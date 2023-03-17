@@ -3077,9 +3077,9 @@ html {
 	&-title {
 		font-size: 1.25rem !important;
 	}
-	.swal2-confirm {
-		background-color: #4f80ff !important;
-	}
+}
+.swal2-styled.swal2-confirm {
+	background-color: #4f80ff !important;
 }
 //component
 h1 {

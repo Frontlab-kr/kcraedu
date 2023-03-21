@@ -518,6 +518,7 @@ html {
 		}
 	}
 	.contents {
+		position: relative;
 		//display: flex;
 	}
 	.snb {
@@ -591,6 +592,11 @@ html {
 					margin-top: 0.625rem;
 				}
 			}
+		}
+		nav {
+			position: absolute;
+			top: 0;
+			right: 0;
 		}
 	}
 	&-modal {

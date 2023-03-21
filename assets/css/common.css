@@ -13614,6 +13614,10 @@ fieldset:disabled .btn {
   }
 }
 
+.kcraedu .contents {
+  position: relative;
+}
+
 .kcraedu .snb {
   width: 13.5rem;
   min-width: 13.5rem;
@@ -13719,6 +13723,12 @@ fieldset:disabled .btn {
   .kcraedu .content-head h1, .kcraedu .content-head .h1 {
     margin-top: 0.625rem;
   }
+}
+
+.kcraedu .content nav {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .kcraedu-modal {

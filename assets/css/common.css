@@ -13622,12 +13622,11 @@ fieldset:disabled .btn {
   width: 13.5rem;
   min-width: 13.5rem;
   width: 100%;
-  margin: 3rem 0 0 0;
-  border-bottom: 0.063rem solid #d9d9d9;
+  margin: 4.375rem 0 0 0;
+  border-bottom: 0.188rem solid #d9d9d9;
 }
 
 .kcraedu .snb__title {
-  margin: 0 0 0.625rem 0;
   font-weight: 700;
   font-size: 1.875rem;
   line-height: 2.75rem;
@@ -13638,6 +13637,8 @@ fieldset:disabled .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 1.875rem 0 2.5rem 0;
+  overflow: auto;
 }
 
 .kcraedu .snb ul li {
@@ -13650,7 +13651,6 @@ fieldset:disabled .btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1.875rem 0;
 }
 
 .kcraedu .snb ul li a {
@@ -13729,6 +13729,12 @@ fieldset:disabled .btn {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@media (max-width: 1199.98px) {
+  .kcraedu .content nav {
+    position: relative;
+  }
 }
 
 .kcraedu-modal {
@@ -13917,15 +13923,15 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .main-menu__item:nth-child(1)::after {
-  background: #3464e0;
+  background: #4577f5;
 }
 
 .kcraedu .main-menu__item:nth-child(2)::after {
-  background: #56bd3c;
+  background: #69c352;
 }
 
 .kcraedu .main-menu__item:nth-child(3)::after {
-  background: #f3c628;
+  background: #fad245;
 }
 
 .kcraedu .main-menu__item::before {
@@ -14203,25 +14209,28 @@ fieldset:disabled .btn {
   color: #7c9df5;
 }
 
-.kcraedu .main-menu__item:hover:not(.main-menu__item--login):not(.main-menu__item--logoff)::after, .kcraedu .main-menu__item:hover:not(.main-menu__item--login):not(.main-menu__item--logoff)::before {
-  opacity: 1;
+.kcraedu .main-menu__item:nth-child(1):hover::after {
+  background: rgba(69, 119, 245, 0.9);
 }
 
-.kcraedu .main-menu__item:hover:not(.main-menu__item--login):not(.main-menu__item--logoff) .main-menu__item-title {
-  color: #fff;
+.kcraedu .main-menu__item:nth-child(1):hover::before {
+  border-bottom-color: rgba(49, 95, 212, 0.9);
 }
 
-.kcraedu .main-menu__item:hover:not(.main-menu__item--login):not(.main-menu__item--logoff) .main-menu__item-text {
-  color: #fff;
+.kcraedu .main-menu__item:nth-child(2):hover::after {
+  background: rgba(105, 195, 82, 0.9);
 }
 
-.kcraedu .main-menu__item:hover:not(.main-menu__item--login):not(.main-menu__item--logoff) .main-menu__item-text p {
-  color: rgba(255, 255, 255, 0.7);
+.kcraedu .main-menu__item:nth-child(2):hover::before {
+  border-bottom-color: rgba(80, 181, 55, 0.9);
 }
 
-.kcraedu .main-menu__item:hover:not(.main-menu__item--login):not(.main-menu__item--logoff) .main-menu__item-link span {
-  color: #fff;
-  border-color: #fff;
+.kcraedu .main-menu__item:nth-child(3):hover::after {
+  background: rgba(250, 210, 69, 0.9);
+}
+
+.kcraedu .main-menu__item:nth-child(3):hover::before {
+  border-bottom-color: rgba(241, 196, 35, 0.9);
 }
 
 .kcraedu .main-link {

@@ -518,28 +518,29 @@ html {
 		}
 	}
 	.contents {
-		display: flex;
+		//display: flex;
 	}
 	.snb {
 		width: 13.5rem;
 		min-width: 13.5rem;
+		width: 100%;
 		margin: 4.375rem 6.25rem 0 0;
+		border-bottom: 0.063rem solid #d9d9d9;
 		&__title {
 			margin: 0 0 0.625rem 0;
 			padding: 0 0 1.875rem 0.625rem;
-			border-bottom: 0.188rem solid #222222;
 			font-weight: 700;
 			font-size: 1.875rem;
 			line-height: 2.75rem;
 			color: #222222;
 		}
 		ul {
+			display: flex;
 			li {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				padding: 1.875rem 0.625rem;
-				border-bottom: 0.063rem solid #d9d9d9;
+				padding: 1.875rem 0;
 				a {
 					display: block;
 					font-weight: 500;
@@ -550,22 +551,20 @@ html {
 					&:hover {
 						color: transparentize(#666, 0.3);
 					}
+					&:last-child {
+						&:after {
+							display: none;
+						}
+					}
 				}
 				&:after {
-					content: "";
+					content: "/";
 					display: block;
-					width: 1.125rem;
-					min-width: 1.125rem;
-					height: 0.25rem;
-					//margin-left: 0.625rem;
-					background: #d9d9d9;
+					margin: 0 1rem;
 				}
 				&.active {
 					a {
 						color: #3766de;
-					}
-					&:after {
-						background: #3766de;
 					}
 				}
 			}
@@ -576,7 +575,7 @@ html {
 	}
 	.content {
 		width: 100%;
-		max-width: 56.625rem;
+		//max-width: 56.625rem;
 		padding: 4.375rem 0 0 0;
 		&-head {
 			display: flex;
@@ -1013,7 +1012,7 @@ html {
 				text-align: center;
 				@include media-breakpoint-down(lg) {
 					&:first-child {
-						display: none;
+						//display: none;
 					}
 				}
 				span {
@@ -2552,6 +2551,39 @@ html {
 					}
 				}
 			}
+			@include media-breakpoint-down(lg) {
+				overflow: hidden;
+				ul {
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					gap: 2px;
+					li {
+						margin: 0;
+						&:first-child {
+							border-radius: 0.625rem 0 0 0;
+							margin-left: 0;
+						}
+						&:nth-child(3) {
+							border-radius: 0 0.625rem 0 0;
+						}
+						&:nth-child(4) {
+							border-radius: 0 0 0 0.625rem;
+						}
+						&:last-child {
+							border-radius: 0 0 0.625rem 0;
+						}
+					}
+				}
+			}
+			@include media-breakpoint-down(md) {
+				ul {
+					li {
+						img {
+							transform: scale(0.8);
+						}
+					}
+				}
+			}
 		}
 	}
 	.education {
@@ -3683,7 +3715,16 @@ h1 {
 			}
 		}
 		table {
-			table-layout: fixed;
+			//table-layout: fixed;
+			th {
+				br {
+					display: none;
+				}
+			}
+			th,
+			td {
+				white-space: nowrap;
+			}
 			@include media-breakpoint-down(md) {
 				table-layout: auto;
 			}

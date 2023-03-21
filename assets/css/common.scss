@@ -731,21 +731,21 @@ html {
 					left: 0;
 					z-index: 5;
 					transition: all 0.2s ease;
-					opacity: 0;
+					opacity: 1;
 				}
 				&:nth-child(1) {
 					&::after {
-						background: #9e64fd;
+						background: #3464e0;
 					}
 				}
 				&:nth-child(2) {
 					&::after {
-						background: #4e80ff;
+						background: #56bd3c;
 					}
 				}
 				&:nth-child(3) {
 					&::after {
-						background: #fdc14d;
+						background: #f3c628;
 					}
 				}
 				&::before {
@@ -758,22 +758,22 @@ html {
 					z-index: 10;
 					width: 0;
 					height: 0;
-					border-bottom: 10rem solid #843ef5;
+					border-bottom: 10rem solid #315fd4;
 					border-right: 43.75rem solid rgba(0, 0, 0, 0);
 					transition: all 0.2s ease;
-					opacity: 0;
+					opacity: 1;
 					@include media-breakpoint-down(lg) {
 						border-bottom-width: 6.25rem;
 					}
 				}
 				&:nth-child(2) {
 					&::before {
-						border-bottom-color: #315fd5;
+						border-bottom-color: #50b537;
 					}
 				}
 				&:nth-child(3) {
 					&::before {
-						border-bottom-color: #fda116;
+						border-bottom-color: #f1c423;
 					}
 				}
 				@include media-breakpoint-down(md) {
@@ -809,6 +809,7 @@ html {
 					color: #888888;
 					word-break: keep-all;
 					transition: all 0.1s ease;
+					color: #fff;
 				}
 				&-text {
 					position: relative;
@@ -820,11 +821,13 @@ html {
 					color: #888888;
 					word-break: keep-all;
 					transition: all 0.1s ease;
+					color: #fff;
 					p {
 						margin-top: 0.625rem;
 						font-weight: 500;
 						font-size: 0.875rem;
 						line-height: 1.313rem;
+						color: rgba(255, 255, 255, 0.7);
 					}
 				}
 				&-button {
@@ -849,6 +852,8 @@ html {
 						font-size: 1.125rem;
 						line-height: 1.688rem;
 						color: #888888;
+						color: #fff;
+						border-color: #fff;
 					}
 					@include media-breakpoint-down(xl) {
 						bottom: 2.5rem;
@@ -856,7 +861,7 @@ html {
 					}
 				}
 				&--logoff {
-					background: #4f80ff;
+					background: #fff;
 					border-radius: 1.25rem;
 					@include media-breakpoint-down(md) {
 						display: none;
@@ -866,7 +871,7 @@ html {
 					}
 					.main-menu__item-text {
 						margin-bottom: 2.5rem;
-						color: #fff;
+						color: #222222;
 						text-align: center;
 						@include media-breakpoint-down(xl) {
 							margin-bottom: 1.5rem;
@@ -882,7 +887,8 @@ html {
 							font-size: 1.125rem;
 							line-height: 1.688rem;
 							text-align: center;
-							color: #4f80ff;
+							background-color: #4f80ff;
+							color: #fff;
 							border: none;
 							&:first-child {
 								margin-top: 0;
@@ -902,15 +908,16 @@ html {
 							font-size: 1rem;
 							line-height: 1.5rem;
 							text-align: center;
-							color: rgba(255, 255, 255, 0.5);
+							color: rgba(34, 34, 34, 0.5);
 							&:hover {
-								color: #fff;
+								color: #222;
 							}
 						}
 					}
 				}
 				&--login {
-					background: #4f80ff;
+					padding-top: 1.875rem;
+					background: #fff;
 					border-radius: 1.25rem;
 					@include media-breakpoint-down(md) {
 						display: none;
@@ -921,14 +928,14 @@ html {
 					.main-menu__item-info {
 						position: relative;
 						z-index: 20;
-						margin-bottom: 2.5rem;
-						color: #fff;
+						margin-bottom: 2rem;
+						color: #4f80ff;
 						h5 {
 							margin-bottom: 1.25rem;
 							font-weight: 700;
 							font-size: 1.25rem;
 							line-height: 1.875rem;
-							color: #ffffff;
+							color: #4f80ff;
 						}
 						table {
 							width: 100%;
@@ -938,7 +945,7 @@ html {
 								font-size: 1rem;
 								line-height: 1.5rem;
 
-								color: rgba(255, 255, 255, 0.6);
+								color: rgba(34, 34, 34, 0.6);
 							}
 							td {
 								text-align: right;
@@ -947,18 +954,18 @@ html {
 								line-height: 1.5rem;
 								text-align: right;
 
-								color: #ffffff;
+								color: #4f80ff;
 								a {
-									color: #ffffff;
+									color: #4f80ff;
 									&:hover {
-										color: transparentize(#fff, 0.3);
+										color: transparentize(#4f80ff, 0.3);
 									}
 								}
 							}
 						}
 					}
 					.main-menu__item-button {
-						margin-bottom: 1.875rem;
+						//margin-bottom: 1.875rem;
 						.btn {
 							height: 3.25rem;
 							margin-top: 0.625rem;
@@ -967,8 +974,9 @@ html {
 							font-size: 1.125rem;
 							line-height: 1.688rem;
 							text-align: center;
-							color: #4f80ff;
+							color: #fff;
 							border: none;
+							background-color: #4f80ff;
 							&:first-child {
 								margin-top: 0;
 							}
@@ -2260,19 +2268,18 @@ html {
 				&__region {
 					margin: 1.875rem 0;
 					&-tab {
-						display: flex;
+						display: grid;
+						grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 						align-items: center;
-						height: 3.125rem;
 						background: #ffffff;
-
+						gap: 2px;
 						span {
 							display: flex;
 							align-items: center;
 							justify-content: center;
 							width: 100%;
-							height: 100%;
+							height: 3.125rem;
 							border: 0.063rem solid #ececec;
-							border-left: none;
 							font-weight: 500;
 							font-size: 1rem;
 							line-height: 1.5rem;
@@ -2283,12 +2290,17 @@ html {
 								color: #666;
 							}
 							cursor: pointer;
-							&:last-child {
-								border-radius: 0 0.313rem 0.313rem 0;
-							}
 							&:first-child {
-								border-left: 0.063rem solid #ececec;
-								border-radius: 0.313rem 0 0 0.313rem;
+								border-radius: 0.313rem 0 0 0;
+							}
+							&:nth-child(8) {
+								border-radius: 0 0.313rem 0 0;
+							}
+							&:nth-child(9) {
+								border-radius: 0 0 0 0.313rem;
+							}
+							&:last-child {
+								border-radius: 0 0 0.313rem 0;
 							}
 							&.active {
 								border-color: #4f80ff;

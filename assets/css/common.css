@@ -13618,13 +13618,12 @@ fieldset:disabled .btn {
   width: 13.5rem;
   min-width: 13.5rem;
   width: 100%;
-  margin: 4.375rem 6.25rem 0 0;
+  margin: 3rem 0 0 0;
   border-bottom: 0.063rem solid #d9d9d9;
 }
 
 .kcraedu .snb__title {
   margin: 0 0 0.625rem 0;
-  padding: 0 0 1.875rem 0.625rem;
   font-weight: 700;
   font-size: 1.875rem;
   line-height: 2.75rem;
@@ -13663,7 +13662,7 @@ fieldset:disabled .btn {
   color: rgba(102, 102, 102, 0.7);
 }
 
-.kcraedu .snb ul li a:last-child:after {
+.kcraedu .snb ul li:last-child:after {
   display: none;
 }
 

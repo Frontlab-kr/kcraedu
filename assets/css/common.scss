@@ -580,6 +580,9 @@ html {
     //max-width: 56.625rem;
     padding: 4.375rem 0 0 0;
     padding: 0;
+    @include media-breakpoint-down(lg) {
+      padding: 4.375rem 0 0 0;
+    }
     &-head {
       display: flex;
       align-items: center;

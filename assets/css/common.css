@@ -13700,6 +13700,12 @@ fieldset:disabled .btn {
   padding: 0;
 }
 
+@media (max-width: 991.98px) {
+  .kcraedu .content {
+    padding: 4.375rem 0 0 0;
+  }
+}
+
 .kcraedu .content-head {
   display: -webkit-box;
   display: -ms-flexbox;

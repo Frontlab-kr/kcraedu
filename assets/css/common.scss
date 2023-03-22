@@ -3893,18 +3893,20 @@ h1 {
       }
     }
     &__button {
-      display: flex;
-      justify-content: center;
-      margin-top: 1.875rem;
-      text-align: center;
+      // display: flex;
+      // justify-content: center;
+      // margin-top: 1.875rem;
+      // text-align: center;
       .btn {
         min-width: 11.25rem;
-        margin: 0 0.563rem;
+        width: 100%;
+        margin: 0 0 0.563rem 0;
       }
       @include media-breakpoint-down(lg) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0.625rem;
+        margin-top: 1.875rem;
         .btn {
           min-width: 100%;
           width: 100%;

@@ -17809,20 +17809,10 @@ h1, .h1 {
   }
 }
 
-.table-type02__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 1.875rem;
-  text-align: center;
-}
-
 .table-type02__button .btn {
   min-width: 11.25rem;
-  margin: 0 0.563rem;
+  width: 100%;
+  margin: 0 0 0.563rem 0;
 }
 
 @media (max-width: 991.98px) {
@@ -17832,6 +17822,7 @@ h1, .h1 {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     gap: 0.625rem;
+    margin-top: 1.875rem;
   }
   .table-type02__button .btn {
     min-width: 100%;

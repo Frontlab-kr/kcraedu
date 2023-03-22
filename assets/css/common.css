@@ -13651,6 +13651,7 @@ fieldset:disabled .btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-right: 1.625rem;
 }
 
 .kcraedu .snb ul li a {
@@ -13674,6 +13675,7 @@ fieldset:disabled .btn {
   content: "/";
   display: block;
   margin: 0 1rem;
+  display: none;
 }
 
 .kcraedu .snb ul li.active a {
@@ -13725,14 +13727,14 @@ fieldset:disabled .btn {
   }
 }
 
-.kcraedu .content nav {
+.kcraedu .content-head nav {
   position: absolute;
   top: 0;
   right: 0;
 }
 
 @media (max-width: 1199.98px) {
-  .kcraedu .content nav {
+  .kcraedu .content-head nav {
     position: relative;
   }
 }
@@ -13741,7 +13743,7 @@ fieldset:disabled .btn {
   display: inline-block;
   min-width: 20rem;
   height: auto;
-  margin: 0 0 1.25rem rem;
+  margin: 0 0 1.25rem 0rem;
   background: #fff;
   text-align: left;
 }
@@ -14343,10 +14345,6 @@ fieldset:disabled .btn {
 
 .kcraedu .main-board .board:last-child {
   margin-left: 3.75rem;
-}
-
-.kcraedu .main-board .board:last-child .board__list-text {
-  width: 100%;
 }
 
 .kcraedu .main-board .board__list ul {
@@ -15734,6 +15732,7 @@ fieldset:disabled .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   margin-bottom: 1.6rem;
 }
 
@@ -15755,6 +15754,10 @@ fieldset:disabled .btn {
   margin-right: 0.375rem;
 }
 
+.kcraedu .curriculum-detail > dl > dd {
+  width: 100%;
+}
+
 .kcraedu .curriculum-detail > dl > dd > p {
   font-weight: 400;
   font-size: 1.125rem;
@@ -15773,6 +15776,50 @@ fieldset:disabled .btn {
     margin-left: 0.5rem;
     padding: 0 !important;
   }
+}
+
+.kcraedu .curriculum-detail__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.kcraedu .curriculum-detail__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 0 20px;
+}
+
+.kcraedu .curriculum-detail__list li strong {
+  font-size: 20px;
+}
+
+.kcraedu .curriculum-detail__list li:after {
+  content: "\F134";
+  display: block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.5rem;
+}
+
+.kcraedu .curriculum-detail__list li:last-child:after {
+  display: none;
 }
 
 .kcraedu .curriculum-detail .schedule__region {

@@ -13866,7 +13866,7 @@ fieldset:disabled .btn {
     right: 0;
     bottom: 0;
     left: 0;
-    height: 21.25rem;
+    height: 38.25rem;
     background-color: #e2edfa;
   }
 }
@@ -13903,7 +13903,7 @@ fieldset:disabled .btn {
   position: relative;
   width: 100%;
   min-height: 23.75rem;
-  padding: 3.125rem 1.875rem;
+  padding: 2.5rem 1.875rem;
   background: #fff;
   border-radius: 1.875rem 1.875rem 1.875rem 0;
   -webkit-transition: all 0.4s ease;
@@ -14003,7 +14003,7 @@ fieldset:disabled .btn {
 .kcraedu .main-menu__item-title {
   position: relative;
   z-index: 20;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   font-weight: 500;
   font-size: 1.75rem;
   line-height: 2.563rem;
@@ -14015,10 +14015,41 @@ fieldset:disabled .btn {
   color: #fff;
 }
 
+@media (max-width: 767.98px) {
+  .kcraedu .main-menu__item-title {
+    margin-bottom: 0.875rem;
+  }
+}
+
+.kcraedu .main-menu__item-target {
+  position: relative;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.625rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  color: #ffffff;
+}
+
+.kcraedu .main-menu__item-target::before {
+  content: "";
+  display: block;
+  width: 0.625rem;
+  height: 0.5rem;
+  background: url(../images/check-lg.svg) no-repeat 50% 50%;
+  background-size: cover;
+  margin-right: 0.375rem;
+}
+
 .kcraedu .main-menu__item-text {
   position: relative;
   z-index: 20;
-  margin-bottom: 3.75rem;
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.688rem;
@@ -14067,8 +14098,10 @@ fieldset:disabled .btn {
 
 @media (max-width: 1199.98px) {
   .kcraedu .main-menu__item-link {
-    bottom: 2.5rem;
-    left: 2.5rem;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 1.563rem;
   }
 }
 

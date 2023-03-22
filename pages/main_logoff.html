@@ -1,857 +1,1431 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>한국휴게음식업중앙회</title>
-		<link rel="stylesheet" href="../assets/css/common.css" />
-		<script src="../assets/bootstrap-5.0.2/dist/js/bootstrap.min.js"></script>
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/aos.js"></script>
-		<script src="../assets/js/common.js"></script>
-	</head>
-	<body>
-		<div class="kcraedu kcraedu--main">
-			<header>
-				<div class="header">
-					<div class="container">
-						<div class="header__logo">
-							<a href="../pages/index.html"><img src="../assets/images/logo.png" alt="KCRA 한국휴게음식업중앙회교육원" /></a>
-						</div>
-						<div class="header__navbar">
-							<input type="checkbox" name="menuToggle" id="menuToggle" />
-							<label for="menuToggle" class="navbar-toggle burger-bao">
-								<span></span>
-							</label>
-						</div>
-					</div>
-					<div class="header__wrap">
-						<div class="container justify-content-end">
-							<div class="header__menu">
-								<a href="" class="header__menu-item">로그인</a>
-								<a href="" class="header__menu-item" data-bs-toggle="modal" data-bs-target="#modal">회원가입</a>
-								<a href="" class="header__menu-item header__menu-item--remote">원격지원</a>
-							</div>
-							<div class="header__info">
-								<div class="header__info-name"><strong>이선희</strong>님 환영합니다.</div>
-								<dl>
-									<dt>현재 수강 중인 강의</dt>
-									<dd>휴게음식점 기존영업자 위생교육(2022)</dd>
-								</dl>
-								<div class="header__info-btn">
-									<a href="" class="btn btn-sm btn-primary">강의실 입장하기</a>
-									<a href="" class="btn btn-sm btn-outline-dark">로그아웃</a>
-								</div>
-							</div>
-						</div>
-						<div class="container header__bottom">
-							<div class="header__logo">
-								<a href="../pages/index.html"><img src="../assets/images/logo.png" alt="KCRA 한국휴게음식업중앙회교육원" /></a>
-							</div>
-							<div class="header__gnb">
-								<div class="header__gnb-item">
-									<a href="javascript:void(0)">나의 학습방</a>
-									<ul>
-										<li><a href="">학습현황</a></li>
-										<li><a href="">회원정보수정</a></li>
-										<li><a href="">1:1문의</a></li>
-										<li><a href="">결제내역</a></li>
-										<li><a href="">불만신고센터</a></li>
-									</ul>
-								</div>
-								<div class="header__gnb-item">
-									<a href="javascript:void(0)">기존영업자</a>
-									<ul>
-										<li><a href="">기존영업자</a></li>
-									</ul>
-								</div>
-								<div class="header__gnb-item">
-									<a href="javascript:void(0)">신규영업자</a>
-									<ul>
-										<li><a href="">신규영업자 집합교육</a></li>
-										<li><a href="">신규영업자 온라인교육</a></li>
-									</ul>
-								</div>
-								<div class="header__gnb-item">
-									<a href="javascript:void(0)">식품자동판매기</a>
-									<ul>
-										<li><a href="">식품자동판매기</a></li>
-									</ul>
-								</div>
-								<div class="header__gnb-item">
-									<a href="javascript:void(0)">집합교육일정</a>
-									<ul>
-										<li><a href="">신규영업자</a></li>
-										<li><a href="">자판기영업자</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="header__2depth">
-							<div class="container">
-								<div class="header__2depth-item">
-									<a href="javascript:void(0)">나의 학습방</a>
-									<ul>
-										<li><a href="">학습현황</a></li>
-										<li><a href="">회원정보수정</a></li>
-										<li><a href="">1:1문의</a></li>
-										<li><a href="">결제내역</a></li>
-										<li><a href="">불만신고센터</a></li>
-									</ul>
-								</div>
-								<div class="header__2depth-item">
-									<a href="javascript:void(0)">기존영업자</a>
-									<ul>
-										<li><a href="">기존영업자</a></li>
-									</ul>
-								</div>
-								<div class="header__2depth-item">
-									<a href="javascript:void(0)">신규영업자</a>
-									<ul>
-										<li><a href="">신규영업자 집합교육</a></li>
-										<li><a href="">신규영업자 온라인교육</a></li>
-									</ul>
-								</div>
-								<div class="header__2depth-item">
-									<a href="javascript:void(0)">식품자동판매기</a>
-									<ul>
-										<li><a href="">식품자동판매기</a></li>
-									</ul>
-								</div>
-								<div class="header__2depth-item">
-									<a href="javascript:void(0)">집합교육일정</a>
-									<ul>
-										<li><a href="">신규영업자</a></li>
-										<li><a href="">자판기영업자</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국휴게음식업중앙회</title>
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <script src="../assets/bootstrap-5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/common.js"></script>
+  </head>
+  <body>
+    <div class="kcraedu kcraedu--main">
+      <header>
+        <div class="header">
+          <div class="container">
+            <div class="header__logo">
+              <a href="../pages/index.html"
+                ><img
+                  src="../assets/images/logo.png"
+                  alt="KCRA 한국휴게음식업중앙회교육원"
+              /></a>
+            </div>
+            <div class="header__navbar">
+              <input type="checkbox" name="menuToggle" id="menuToggle" />
+              <label for="menuToggle" class="navbar-toggle burger-bao">
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class="header__wrap">
+            <div class="container justify-content-end">
+              <div class="header__menu">
+                <a href="" class="header__menu-item">로그인</a>
+                <a
+                  href=""
+                  class="header__menu-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal"
+                  >회원가입</a
+                >
+                <a href="" class="header__menu-item header__menu-item--remote"
+                  >원격지원</a
+                >
+              </div>
+              <div class="header__info">
+                <div class="header__info-name">
+                  <strong>이선희</strong>님 환영합니다.
+                </div>
+                <dl>
+                  <dt>현재 수강 중인 강의</dt>
+                  <dd>휴게음식점 기존영업자 위생교육(2022)</dd>
+                </dl>
+                <div class="header__info-btn">
+                  <a href="" class="btn btn-sm btn-primary">강의실 입장하기</a>
+                  <a href="" class="btn btn-sm btn-outline-dark">로그아웃</a>
+                </div>
+              </div>
+            </div>
+            <div class="container header__bottom">
+              <div class="header__logo">
+                <a href="../pages/index.html"
+                  ><img
+                    src="../assets/images/logo.png"
+                    alt="KCRA 한국휴게음식업중앙회교육원"
+                /></a>
+              </div>
+              <div class="header__gnb">
+                <div class="header__gnb-item">
+                  <a href="javascript:void(0)">나의 학습방</a>
+                  <ul>
+                    <li><a href="">학습현황</a></li>
+                    <li><a href="">회원정보수정</a></li>
+                    <li><a href="">1:1문의</a></li>
+                    <li><a href="">결제내역</a></li>
+                    <li><a href="">불만신고센터</a></li>
+                  </ul>
+                </div>
+                <div class="header__gnb-item">
+                  <a href="javascript:void(0)">기존영업자</a>
+                  <ul>
+                    <li><a href="">기존영업자</a></li>
+                  </ul>
+                </div>
+                <div class="header__gnb-item">
+                  <a href="javascript:void(0)">신규영업자</a>
+                  <ul>
+                    <li><a href="">신규영업자 집합교육</a></li>
+                    <li><a href="">신규영업자 온라인교육</a></li>
+                  </ul>
+                </div>
+                <div class="header__gnb-item">
+                  <a href="javascript:void(0)">식품자동판매기</a>
+                  <ul>
+                    <li><a href="">식품자동판매기</a></li>
+                  </ul>
+                </div>
+                <div class="header__gnb-item">
+                  <a href="javascript:void(0)">집합교육일정</a>
+                  <ul>
+                    <li><a href="">신규영업자</a></li>
+                    <li><a href="">자판기영업자</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header__2depth">
+              <div class="container">
+                <div class="header__2depth-item">
+                  <a href="javascript:void(0)">나의 학습방</a>
+                  <ul>
+                    <li><a href="">학습현황</a></li>
+                    <li><a href="">회원정보수정</a></li>
+                    <li><a href="">1:1문의</a></li>
+                    <li><a href="">결제내역</a></li>
+                    <li><a href="">불만신고센터</a></li>
+                  </ul>
+                </div>
+                <div class="header__2depth-item">
+                  <a href="javascript:void(0)">기존영업자</a>
+                  <ul>
+                    <li><a href="">기존영업자</a></li>
+                  </ul>
+                </div>
+                <div class="header__2depth-item">
+                  <a href="javascript:void(0)">신규영업자</a>
+                  <ul>
+                    <li><a href="">신규영업자 집합교육</a></li>
+                    <li><a href="">신규영업자 온라인교육</a></li>
+                  </ul>
+                </div>
+                <div class="header__2depth-item">
+                  <a href="javascript:void(0)">식품자동판매기</a>
+                  <ul>
+                    <li><a href="">식품자동판매기</a></li>
+                  </ul>
+                </div>
+                <div class="header__2depth-item">
+                  <a href="javascript:void(0)">집합교육일정</a>
+                  <ul>
+                    <li><a href="">신규영업자</a></li>
+                    <li><a href="">자판기영업자</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
-			<main>
-				<div class="main">
-					<div class="main__head">
-						<div class="container">
-							<div class="main-menu">
-								<a href="" class="main-menu__item" data-aos="fade-up" data-aos-delay="100">
-									<div class="main-menu__item-title">
-										휴게음식점​<br />
-										기존 영업자(3시간)​
-									</div>
-									<div class="main-menu__item-text">
-										영업신고 후 ​그 다음해 부터 매년 받는 보수교육 입니다.​
-										<p>2022년 12월31일까지 이수하여야 합니다.</p>
-									</div>
-									<div class="main-menu__item-link">
-										<span>온라인 교육신청</span>
-									</div>
-								</a>
-								<a href="" class="main-menu__item" data-aos="fade-up" data-aos-delay="150">
-									<div class="main-menu__item-title">
-										휴게음식점​<br />
-										신규 영업자(6시간)​
-									</div>
-									<div class="main-menu__item-text">
-										영업을 하려는자,<br />
-										지위승계자(명의변경)​
-									</div>
-									<div class="main-menu__item-link">
-										<span>집합 교육신청</span>
-									</div>
-								</a>
-								<a href="" class="main-menu__item" data-aos="fade-up" data-aos-delay="200">
-									<div class="main-menu__item-title">
-										식품자동판매기​​<br />
-										신규 영업자(4시간)​
-									</div>
-									<div class="main-menu__item-text">신규 영업을 하려는자,<br />​ 지위승계자(명의변경)​</div>
-									<div class="main-menu__item-link">
-										<span>집합 교육신청</span>
-									</div>
-								</a>
-								<div class="main-menu__item main-menu__item--logoff" data-aos="fade-up" data-aos-delay="250">
-									<div class="main-menu__item-text">
-										처음 방문하시거나​<br />
-										전년도 가입자는<br />
-										회원가입을 새로 해주세요​.
-									</div>
-									<div class="main-menu__item-button">
-										<a href="" class="btn btn-light w-100">로그인</a>
-										<a href="" class="btn btn-light w-100">회원가입</a>
-									</div>
-									<div class="main-menu__item-link">
-										<a href="">아이디/비밀번호 찾기</a>
-									</div>
-								</div>
-							</div>
-							<div class="main-link">
-								<a href="" class="main-link__item" data-aos="fade-up" data-aos-delay="450">
-									<span><img src="../assets/images/ico-main-Join.svg" alt="" /></span>
-									<p>회원가입</p>
-								</a>
-								<a href="" class="main-link__item" data-aos="fade-up" data-aos-delay="500">
-									<span><img src="../assets/images/ico-main-RemoteDesktop.svg" alt="" /></span>
-									<p>원격지원</p>
-								</a>
-								<a href="" class="main-link__item" data-aos="fade-up" data-aos-delay="550">
-									<span><img src="../assets/images/ico-main-Study.svg" alt="" /></span>
-									<p>나의학습방</p>
-								</a>
-								<a href="" class="main-link__item" data-aos="fade-up" data-aos-delay="600">
-									<span><img src="../assets/images/ico-main-KnowledgeSharing.svg" alt="" /></span>
-									<p>교육지원</p>
-								</a>
-								<a href="" class="main-link__item" data-aos="fade-up" data-aos-delay="650">
-									<span><img src="../assets/images/ico-main-Calendar.svg" alt="" /></span>
-									<p>집합교육일정</p>
-								</a>
-								<a href="" class="main-link__item" data-aos="fade-up" data-aos-delay="700">
-									<span><img src="../assets/images/ico-main-View.svg" alt="" /></span>
-									<p>전년도수료조회</p>
-								</a>
-								<a href="" class="main-link__item" data-aos="fade-up" data-aos-delay="750">
-									<span><img src="../assets/images/ico-main-Diploma.svg" alt="" /></span>
-									<p>수료증출력</p>
-								</a>
-								<a href="" class="main-link__item" data-aos="fade-up" data-aos-delay="800">
-									<span><img src="../assets/images/ico-main-Cheque.svg" alt="" /></span>
-									<p>영수증출력</p>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="main__contents">
-						<div class="container">
-							<div class="main-board">
-								<div class="board" data-aos="fade-up" data-aos-delay="100">
-									<div class="board__title">
-										<ul class="nav board-tab__title" role="tablist">
-											<li class="board__title-item" role="presentation">
-												<button class="active" data-bs-toggle="tab" data-bs-target="#boardNotice" type="button" role="tab">공지사항</button>
-											</li>
-											<li class="board__title-item" role="presentation">
-												<button class="" data-bs-toggle="tab" data-bs-target="#boardReference" type="button" role="tab">자료실</button>
-											</li>
-											<li class="board__title-item" role="presentation">
-												<button class="" data-bs-toggle="tab" data-bs-target="#boardPromotion" type="button" role="tab">홍보게시판</button>
-											</li>
-										</ul>
-										<a href="" class="board__title-more"> 더보기 </a>
-									</div>
-									<div class="board__list">
-										<div class="tab-content">
-											<div class="tab-pane fade show active" id="boardNotice" role="tabpanel">
-												<ul>
-													<li>
-														<a href="">
-															<div class="board__list-text">
-																<strong
-																	>2022년 휴게음식점 기존 영업자 위생교육 안내2022년 휴게음식점 기존 영업자 위생교육 안내2022년 휴게음식점 기존 영업자 위생교육
-																	안내2022년 휴게음식점 기존 영업자 위생교육 안내2022년 휴게음식점 기존 영업자 위생교육 안내</strong
-																>
-															</div>
-															<div class="board__list-date">2022.05.10</div>
-														</a>
-													</li>
-													<li>
-														<a href="">
-															<div class="board__list-text">
-																<strong>2022년 휴게음식점 기존 영업자 위생교육 안내</strong>
-															</div>
-															<div class="board__list-date">2022.05.10</div>
-														</a>
-													</li>
-													<li>
-														<a href="">
-															<div class="board__list-text">
-																<strong>2022년 휴게음식점 기존 영업자 위생교육 안내</strong>
-															</div>
-															<div class="board__list-date">2022.05.10</div>
-														</a>
-													</li>
-												</ul>
-											</div>
-											<div class="tab-pane fade" id="boardReference" role="tabpanel">2</div>
-											<div class="tab-pane fade" id="boardPromotion" role="tabpanel">3</div>
-										</div>
-									</div>
-								</div>
-								<div class="board" data-aos="fade-up" data-aos-delay="200">
-									<div class="board__title">
-										<ul class="nav board-tab__title">
-											<li class="board__title-item">
-												<button class="active">자주 찾는 질문</button>
-											</li>
-										</ul>
-										<a href="" class="board__title-more"> 더보기 </a>
-									</div>
-									<div class="board__list">
-										<div class="board-tab__contents">
-											<ul>
-												<li>
-													<a href="">
-														<div class="board__list-text">
-															<strong
-																>2022년 휴게음식점 기존 영업자 위생교육 안내2022년 휴게음식점 기존 영업자 위생교육 안내2022년 휴게음식점 기존 영업자 위생교육
-																안내2022년 휴게음식점 기존 영업자 위생교육 안내2022년 휴게음식점 기존 영업자 위생교육 안내</strong
-															>
-															<!-- <p>
+      <main>
+        <div class="main">
+          <div class="main__head">
+            <div class="container">
+              <div class="main-menu">
+                <a
+                  href=""
+                  class="main-menu__item"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div class="main-menu__item-title">
+                    휴게음식점​<br />
+                    기존 영업자(3시간)​
+                  </div>
+                  <div class="main-menu__item-target">교육대상</div>
+                  <div class="main-menu__item-text">
+                    영업신고 후 ​그 다음해 부터 매년 받는 보수교육 입니다.​
+                    <p>2022년 12월31일까지 이수하여야 합니다.</p>
+                  </div>
+                  <div class="main-menu__item-link">
+                    <span>온라인 교육신청</span>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  class="main-menu__item"
+                  data-aos="fade-up"
+                  data-aos-delay="150"
+                >
+                  <div class="main-menu__item-title">
+                    휴게음식점​<br />
+                    신규 영업자(6시간)​
+                  </div>
+                  <div class="main-menu__item-target">교육대상</div>
+                  <div class="main-menu__item-text">
+                    영업을 하려는자,<br />
+                    지위승계자(명의변경)​
+                  </div>
+                  <div class="main-menu__item-link">
+                    <span>집합 교육신청</span>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  class="main-menu__item"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="main-menu__item-title">
+                    식품자동판매기​​<br />
+                    신규 영업자(4시간)​
+                  </div>
+                  <div class="main-menu__item-target">교육대상</div>
+                  <div class="main-menu__item-text">
+                    신규 영업을 하려는자,<br />​ 지위승계자(명의변경)​
+                  </div>
+                  <div class="main-menu__item-link">
+                    <span>집합 교육신청</span>
+                  </div>
+                </a>
+                <div
+                  class="main-menu__item main-menu__item--logoff"
+                  data-aos="fade-up"
+                  data-aos-delay="250"
+                >
+                  <div class="main-menu__item-text">
+                    처음 방문하시거나​<br />
+                    전년도 가입자는<br />
+                    회원가입을 새로 해주세요​.
+                  </div>
+                  <div class="main-menu__item-button">
+                    <a href="" class="btn btn-light w-100">로그인</a>
+                    <a href="" class="btn btn-light w-100">회원가입</a>
+                  </div>
+                  <div class="main-menu__item-link">
+                    <a href="">아이디/비밀번호 찾기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="main-link">
+                <a
+                  href=""
+                  class="main-link__item"
+                  data-aos="fade-up"
+                  data-aos-delay="450"
+                >
+                  <span
+                    ><img src="../assets/images/ico-main-Join.svg" alt=""
+                  /></span>
+                  <p>회원가입</p>
+                </a>
+                <a
+                  href=""
+                  class="main-link__item"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  <span
+                    ><img
+                      src="../assets/images/ico-main-RemoteDesktop.svg"
+                      alt=""
+                  /></span>
+                  <p>원격지원</p>
+                </a>
+                <a
+                  href=""
+                  class="main-link__item"
+                  data-aos="fade-up"
+                  data-aos-delay="550"
+                >
+                  <span
+                    ><img src="../assets/images/ico-main-Study.svg" alt=""
+                  /></span>
+                  <p>나의학습방</p>
+                </a>
+                <a
+                  href=""
+                  class="main-link__item"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
+                  <span
+                    ><img
+                      src="../assets/images/ico-main-KnowledgeSharing.svg"
+                      alt=""
+                  /></span>
+                  <p>교육지원</p>
+                </a>
+                <a
+                  href=""
+                  class="main-link__item"
+                  data-aos="fade-up"
+                  data-aos-delay="650"
+                >
+                  <span
+                    ><img src="../assets/images/ico-main-Calendar.svg" alt=""
+                  /></span>
+                  <p>집합교육일정</p>
+                </a>
+                <a
+                  href=""
+                  class="main-link__item"
+                  data-aos="fade-up"
+                  data-aos-delay="700"
+                >
+                  <span
+                    ><img src="../assets/images/ico-main-View.svg" alt=""
+                  /></span>
+                  <p>전년도수료조회</p>
+                </a>
+                <a
+                  href=""
+                  class="main-link__item"
+                  data-aos="fade-up"
+                  data-aos-delay="750"
+                >
+                  <span
+                    ><img src="../assets/images/ico-main-Diploma.svg" alt=""
+                  /></span>
+                  <p>수료증출력</p>
+                </a>
+                <a
+                  href=""
+                  class="main-link__item"
+                  data-aos="fade-up"
+                  data-aos-delay="800"
+                >
+                  <span
+                    ><img src="../assets/images/ico-main-Cheque.svg" alt=""
+                  /></span>
+                  <p>영수증출력</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="main__contents">
+            <div class="container">
+              <div class="main-board">
+                <div class="board" data-aos="fade-up" data-aos-delay="100">
+                  <div class="board__title">
+                    <ul class="nav board-tab__title" role="tablist">
+                      <li class="board__title-item" role="presentation">
+                        <button
+                          class="active"
+                          data-bs-toggle="tab"
+                          data-bs-target="#boardNotice"
+                          type="button"
+                          role="tab"
+                        >
+                          공지사항
+                        </button>
+                      </li>
+                      <li class="board__title-item" role="presentation">
+                        <button
+                          class=""
+                          data-bs-toggle="tab"
+                          data-bs-target="#boardReference"
+                          type="button"
+                          role="tab"
+                        >
+                          자료실
+                        </button>
+                      </li>
+                      <li class="board__title-item" role="presentation">
+                        <button
+                          class=""
+                          data-bs-toggle="tab"
+                          data-bs-target="#boardPromotion"
+                          type="button"
+                          role="tab"
+                        >
+                          홍보게시판
+                        </button>
+                      </li>
+                    </ul>
+                    <a href="" class="board__title-more"> 더보기 </a>
+                  </div>
+                  <div class="board__list">
+                    <div class="tab-content">
+                      <div
+                        class="tab-pane fade show active"
+                        id="boardNotice"
+                        role="tabpanel"
+                      >
+                        <ul>
+                          <li>
+                            <a href="">
+                              <div class="board__list-text">
+                                <strong
+                                  >2022년 휴게음식점 기존 영업자 위생교육
+                                  안내2022년 휴게음식점 기존 영업자 위생교육
+                                  안내2022년 휴게음식점 기존 영업자 위생교육
+                                  안내2022년 휴게음식점 기존 영업자 위생교육
+                                  안내2022년 휴게음식점 기존 영업자 위생교육
+                                  안내</strong
+                                >
+                              </div>
+                              <div class="board__list-date">2022.05.10</div>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <div class="board__list-text">
+                                <strong
+                                  >2022년 휴게음식점 기존 영업자 위생교육
+                                  안내</strong
+                                >
+                              </div>
+                              <div class="board__list-date">2022.05.10</div>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <div class="board__list-text">
+                                <strong
+                                  >2022년 휴게음식점 기존 영업자 위생교육
+                                  안내</strong
+                                >
+                              </div>
+                              <div class="board__list-date">2022.05.10</div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="boardReference"
+                        role="tabpanel"
+                      >
+                        2
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="boardPromotion"
+                        role="tabpanel"
+                      >
+                        3
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="board" data-aos="fade-up" data-aos-delay="200">
+                  <div class="board__title">
+                    <ul class="nav board-tab__title">
+                      <li class="board__title-item">
+                        <button class="active">자주 찾는 질문</button>
+                      </li>
+                    </ul>
+                    <a href="" class="board__title-more"> 더보기 </a>
+                  </div>
+                  <div class="board__list">
+                    <div class="board-tab__contents">
+                      <ul>
+                        <li>
+                          <a href="">
+                            <div class="board__list-text">
+                              <strong
+                                >2022년 휴게음식점 기존 영업자 위생교육
+                                안내2022년 휴게음식점 기존 영업자 위생교육
+                                안내2022년 휴게음식점 기존 영업자 위생교육
+                                안내2022년 휴게음식점 기존 영업자 위생교육
+                                안내2022년 휴게음식점 기존 영업자 위생교육
+                                안내</strong
+                              >
+                              <!-- <p>
 																휴게음식점 기존영업자교육은 영업신고 후 그 다음해 부터 매년 받는 위생교육 휴게음식점 기존영업자교육은 영업신고 후 그 휴게음식점
 																기존영업자교육은 영업신고 후 그 다음해 부터 매년 받는 위생교육 휴게음식점 기존영업자교육은 영업신고 후 그
 															</p> -->
-														</div>
-													</a>
-												</li>
-												<li>
-													<a href="">
-														<div class="board__list-text">
-															<strong>2022년 휴게음식점 기존 영업자 위생교육 안내</strong>
-															<!-- <p>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <div class="board__list-text">
+                              <strong
+                                >2022년 휴게음식점 기존 영업자 위생교육
+                                안내</strong
+                              >
+                              <!-- <p>
 																휴게음식점 기존영업자교육은 영업신고 후 그 다음해 부터 매년 받는 위생교육 휴게음식점 기존영업자교육은 영업신고 후 그 휴게음식점
 																기존영업자교육은 영업신고 후 그 다음해 부터 매년 받는 위생교육 휴게음식점 기존영업자교육은 영업신고 후 그
 															</p> -->
-														</div>
-													</a>
-												</li>
-												<li>
-													<a href="">
-														<div class="board__list-text">
-															<strong>2022년 휴게음식점 기존 영업자 위생교육 안내</strong>
-															<!-- <p>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <div class="board__list-text">
+                              <strong
+                                >2022년 휴게음식점 기존 영업자 위생교육
+                                안내</strong
+                              >
+                              <!-- <p>
 																휴게음식점 기존영업자교육은 영업신고 후 그 다음해 부터 매년 받는 위생교육 휴게음식점 기존영업자교육은 영업신고 후 그 휴게음식점
 																기존영업자교육은 영업신고 후 그 다음해 부터 매년 받는 위생교육 휴게음식점 기존영업자교육은 영업신고 후 그
 															</p> -->
-														</div>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="main-customer">
-								<div class="main-customer__video" data-aos="fade-up" data-aos-delay="100">
-									<div class="ratio ratio-4x3">
-										<iframe frameborder="0" src="//www.youtube.com/embed/G64QumSGcc8" width="550" height="370"></iframe>
-									</div>
-								</div>
-								<div class="main-customer__info" data-aos="fade-up" data-aos-delay="200">
-									<dl>
-										<dt>고객센터</dt>
-										<dd>
-											월~금요일 09:00~12:00, 13:00~18:00​<br />
-											주말, 공휴일 휴무​
-										</dd>
-									</dl>
-									<dl>
-										<dt>학습장애 문의처​</dt>
-										<dd>
-											<div class="main-customer__info-tel">
-												<a href="tel:1833-6168">1833-6168</a>, <a href="tel:080-850-6168">080-850-6168</a>
-												<span>(수신자 부담)</span>
-											</div>
-											홈페이지, 회원가입, 결제 등 사이트 장애문의​
-										</dd>
-									</dl>
-									<dl>
-										<dt>교육관련 문의처</dt>
-										<dd>
-											<div class="main-customer__info-tel02">
-												<a href="tel:02-425-6126~8">02-425-6126~8</a>
-											</div>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="main-download" data-aos="fade-up" data-aos-delay="100">
-								<div class="main-download__item">
-									<a href="">
-										<img src="../assets/images/ico-main-BookReading.svg" alt="" />
-										교육소개 바로가기</a
-									>
-								</div>
-								<hr />
-								<div class="main-download__item">
-									<a href="">
-										<img src="../assets/images/ico-main-Businessman.svg" alt="" />
-										사업자 등록증 다운로드</a
-									>
-								</div>
-								<hr />
-								<div class="main-download__item">
-									<a href="">
-										<img src="../assets/images/ico-main-Chrome.svg" alt="" />
-										크롬 브라우저 다운로드</a
-									>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</main>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-customer">
+                <div
+                  class="main-customer__video"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div class="ratio ratio-4x3">
+                    <iframe
+                      frameborder="0"
+                      src="//www.youtube.com/embed/G64QumSGcc8"
+                      width="550"
+                      height="370"
+                    ></iframe>
+                  </div>
+                </div>
+                <div
+                  class="main-customer__info"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <dl>
+                    <dt>고객센터</dt>
+                    <dd>
+                      월~금요일 09:00~12:00, 13:00~18:00​<br />
+                      주말, 공휴일 휴무​
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>학습장애 문의처​</dt>
+                    <dd>
+                      <div class="main-customer__info-tel">
+                        <a href="tel:1833-6168">1833-6168</a>,
+                        <a href="tel:080-850-6168">080-850-6168</a>
+                        <span>(수신자 부담)</span>
+                      </div>
+                      홈페이지, 회원가입, 결제 등 사이트 장애문의​
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>교육관련 문의처</dt>
+                    <dd>
+                      <div class="main-customer__info-tel02">
+                        <a href="tel:02-425-6126~8">02-425-6126~8</a>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div
+                class="main-download"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="main-download__item">
+                  <a href="">
+                    <img
+                      src="../assets/images/ico-main-BookReading.svg"
+                      alt=""
+                    />
+                    교육소개 바로가기</a
+                  >
+                </div>
+                <hr />
+                <div class="main-download__item">
+                  <a href="">
+                    <img
+                      src="../assets/images/ico-main-Businessman.svg"
+                      alt=""
+                    />
+                    사업자 등록증 다운로드</a
+                  >
+                </div>
+                <hr />
+                <div class="main-download__item">
+                  <a href="">
+                    <img src="../assets/images/ico-main-Chrome.svg" alt="" />
+                    크롬 브라우저 다운로드</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
 
-			<footer>
-				<div class="footer">
-					<div class="footer__menu">
-						<div class="container">
-							<a href="" class="footer__menu-item">중앙회소개</a>
-							<a href="" class="footer__menu-item">전국지회연락처</a>
-							<a href="" class="footer__menu-item" data-bs-toggle="modal" data-bs-target="#termsModal">이용약관</a>
-							<a href="" class="footer__menu-item text-primary" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">개인정보처리방침</a>
-							<a href="" class="footer__menu-item" data-bs-toggle="modal" data-bs-target="#prohibitionEmailModal">이메일무단수집거부</a>
-						</div>
-					</div>
-					<div class="container">
-						<address>
-							서울시관악구 봉천동 1659-2(청동빌딩 601호)<br class="mo" />
-							한국휴게음식업중앙회<br class="mo" />
-							<br class="mo" />TEL : 02-425-6126~8<br class="mo" />
-							FAX : 02-425-6129<br />
-							사업자 번호 : 101-82-04756<br class="mo" />
-							대표자 : 최성회​
-						</address>
-					</div>
-				</div>
-			</footer>
+      <footer>
+        <div class="footer">
+          <div class="footer__menu">
+            <div class="container">
+              <a href="" class="footer__menu-item">중앙회소개</a>
+              <a href="" class="footer__menu-item">전국지회연락처</a>
+              <a
+                href=""
+                class="footer__menu-item"
+                data-bs-toggle="modal"
+                data-bs-target="#termsModal"
+                >이용약관</a
+              >
+              <a
+                href=""
+                class="footer__menu-item text-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#privacyPolicyModal"
+                >개인정보처리방침</a
+              >
+              <a
+                href=""
+                class="footer__menu-item"
+                data-bs-toggle="modal"
+                data-bs-target="#prohibitionEmailModal"
+                >이메일무단수집거부</a
+              >
+            </div>
+          </div>
+          <div class="container">
+            <address>
+              서울시관악구 봉천동 1659-2(청동빌딩 601호)<br class="mo" />
+              한국휴게음식업중앙회<br class="mo" />
+              <br class="mo" />TEL : 02-425-6126~8<br class="mo" />
+              FAX : 02-425-6129<br />
+              사업자 번호 : 101-82-04756<br class="mo" />
+              대표자 : 최성회​
+            </address>
+          </div>
+        </div>
+      </footer>
 
-			<div class="modal fade" id="modal" tabindex="-1">
-				<div class="modal-dialog modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="modalLabel">회원 가입 전 필수 사항 확인</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<div class="join-caution">
-								<p>휴게음식점 위생교육은 영업자(대표자)가 받아야 하는 교육이며, 영업자(대표자) 대신 받을 수 있는 경우는 아래와 같습니다.</p>
-								<div class="join-caution__box mt-4">
-									「식품위생법」 제 41조 제3항 <span class="line">영업자가 영업에 직접 종사하지 아니하 거나, 두 곳 이상의 장소</span> 에서 영업을 하는 경우에는
-									<span class="line">종업원 중에서 위생 관리에 관한 책임자를 지정</span>하여 영업자 대신 교육을 받게 할 수 있다.
-								</div>
-								<p class="mt-4">회원가입은 반드시 <span class="text-danger">교육을 받으시는 분의 정보로 등록</span>하여야 합니다.</p>
+      <div class="modal fade" id="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">
+                회원 가입 전 필수 사항 확인
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="join-caution">
+                <p>
+                  휴게음식점 위생교육은 영업자(대표자)가 받아야 하는 교육이며,
+                  영업자(대표자) 대신 받을 수 있는 경우는 아래와 같습니다.
+                </p>
+                <div class="join-caution__box mt-4">
+                  「식품위생법」 제 41조 제3항
+                  <span class="line"
+                    >영업자가 영업에 직접 종사하지 아니하 거나, 두 곳 이상의
+                    장소</span
+                  >
+                  에서 영업을 하는 경우에는
+                  <span class="line"
+                    >종업원 중에서 위생 관리에 관한 책임자를 지정</span
+                  >하여 영업자 대신 교육을 받게 할 수 있다.
+                </div>
+                <p class="mt-4">
+                  회원가입은 반드시
+                  <span class="text-danger"
+                    >교육을 받으시는 분의 정보로 등록</span
+                  >하여야 합니다.
+                </p>
 
-								<p class="mt-4">
-									- 개인사업자 : 본인(개인)정보로 회원가입<br />
-									- 법인사업자 : 위생관리 책임자(개인)정보로 회원가입
-								</p>
-								<p class="mt-4">
-									교육 이수자가 영업자 또는 식품위생관리 책임자가 아닌 경우, 허가 및 신고 관청 으로부터 수료 인정이 되지 않을 수 있으며, 교육 이수자
-									정보(회원가입 정보)는 수정이 불가능하오니 회원가입시 정확한 정보로 회원가입 하여 진행해주시기 바랍니다.
-								</p>
-								<p>휴게음식점 영업신고 후 <strong class="line">위생교육을 이수하지 않은 경우</strong></p>
-								<p><strong>「식품위생법」</strong> 제101조 동법시행령 제67조 규정에 의한 <strong>과태료 200,000원 부과등 행정 처분</strong>을 받게 됩니다.</p>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-info" data-bs-dismiss="modal"><strong>닫기</strong></button>
-							<button type="button" class="btn btn-primary"><strong>확인</strong></button>
-						</div>
-					</div>
-				</div>
-			</div>
+                <p class="mt-4">
+                  - 개인사업자 : 본인(개인)정보로 회원가입<br />
+                  - 법인사업자 : 위생관리 책임자(개인)정보로 회원가입
+                </p>
+                <p class="mt-4">
+                  교육 이수자가 영업자 또는 식품위생관리 책임자가 아닌 경우,
+                  허가 및 신고 관청 으로부터 수료 인정이 되지 않을 수 있으며,
+                  교육 이수자 정보(회원가입 정보)는 수정이 불가능하오니
+                  회원가입시 정확한 정보로 회원가입 하여 진행해주시기 바랍니다.
+                </p>
+                <p>
+                  휴게음식점 영업신고 후
+                  <strong class="line">위생교육을 이수하지 않은 경우</strong>
+                </p>
+                <p>
+                  <strong>「식품위생법」</strong> 제101조 동법시행령 제67조
+                  규정에 의한
+                  <strong>과태료 200,000원 부과등 행정 처분</strong>을 받게
+                  됩니다.
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-info"
+                data-bs-dismiss="modal"
+              >
+                <strong>닫기</strong>
+              </button>
+              <button type="button" class="btn btn-primary">
+                <strong>확인</strong>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div class="modal fade" id="privacyPolicyModal" tabindex="-1">
-				<div class="modal-dialog modal-lg modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">이용약관</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<p>제1장 총칙</p>
-							<br />
-							<p>제1조 (목적)</p>
-							<p>
-								이 약관은 '(사)한국휴게음식업중앙회' (이하 '중앙회'라 합니다)와 그 지회,지부가 공동으로 제공하는 온라인 서비스(이하 '서비스'라 합니다)를
-								이용함에 있어 중앙회와 이용자의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
-							</p>
-							<br />
-							<p>제2조 (약관의 효력과 변경)</p>
-							<p>(1) 이 약관은 서비스를 통하여 이를 공지함으로써 효력이 발생합니다.</p>
-							<p>
-								(2) 중앙회는 사정상 중요한 사유가 발생될 경우 사전 고지 없이 이 약관을 변경할 수 있으며, 변경된 약관은 제1항과 같은 방법으로 공지 또는
-								통지함으로써 효력이 발생됩니다.
-							</p>
-							<p>
-								(3) 회원은 변경된 약관에 동의하지 않을 경우 회원 탈퇴를 요청할 수 있으며, 변경된 약관의 효력 발생일 이후에도 서비스를 계속 사용할 경우 약관의
-								변경 사항에 동의한 것으로 간주됩니다.
-							</p>
-							<br />
-							<p>
-								제3조 (약관 규정 외 사항에 관한 준칙) 본 약관에 규정되지 않은 사항에 대해서는 전기통신기본법, 전기통신사업법, 정보통신망 이용촉진 등 관계 법령에
-								규정을 따르게 됩니다. 제4조 (용어의 정의)
-							</p>
-							<p>(1) kcraedu.or.kr 을 중심으로 (사)한국휴게음식업중앙회의 인터넷 온라인 서비스를 제공하는 다수의 지회,지부를 말합니다.</p>
-							<p>(2) 회원 : 중앙회와 서비스 이용 계약을 체결하고 이용자 아이디(ID)와 비밀번호를 부여 받은 자를 말합니다.</p>
-							<p>
-								(3) 아이디 : 회원의 식별과 회원의 서비스 이용을 위하여 회원이 선정하고 중앙회가 승인하는 문자나 숫자 혹은 그 조합을 말합니다(이하 'ID'라
-								합니다).
-							</p>
-							<p>
-								(4) 비밀번호 : 회원이 부여 받은 ID와 일치된 회원임을 확인하고, 회원 자신의 비밀을 보호하기 위하여 회원이 정한 문자와 숫자의 조합을 말합니다.
-							</p>
-							<p>(5) 해지 : 회원이 서비스 사용 후 이용계약을 해약하는 것을 말합니다.</p>
-							<br />
-							<p>제2장 회원가입과 서비스 이용</p>
-							<br />
-							<p>제1조 (이용 계약의 성립)</p>
-							<p>(1) 회원은 국내 거주자에 한합니다.</p>
-							<p>(2) 회원은 개인에 한정되며 중앙회나 단체 및 법인은 회원으로 가입할 수 없습니다.</p>
-							<p>(3) 회원은 이용자의 이용신청에 대한 중앙회의 승낙과 이용자의 약관내용에 대한 동의로 성립됩니다.</p>
-							<p>(4) 이용자가 회원가입신청 시 본 약관을 읽고 "동의함" 버튼을 클릭하면 이 약관 내용을 인지, 동의하는 것으로 간주합니다.</p>
-							<br />
-							<p>
-								제2조 (이용신청) 회원으로 가입하여 서비스를 이용하기를 희망하는 자는 중앙회가 정한 소정 양식에 따라 개인인적사항을 제공하여 이용신청을 합니다.
-							</p>
-							<br />
-							<p>제3조 (이용신청의 승낙)</p>
-							<p>(1) 중앙회는 제2장 제2조에 따른 이용신청에 대하여 특별한 사정이 없는 한 접수 순서대로 이용신청을 승낙합니다.</p>
-							<p>(2) 중앙회는 다음 각 호에 해당하는 경우 이용신청에 대한 승낙을 제한할 수 있고, 그 사유가 해소될 때까지 승낙을 유보할 수 있습니다.</p>
-							<p>① 서비스 관련 설비에 여유가 없는 경우</p>
-							<p>② 기술상 지장이 있는 경우 ③ 기타 중앙회의 사정상 필요하다고 인정되는 경우</p>
-							<p>(3) 중앙회는 다음 각 호에 해당하는 가입 신청에 대하여는 승낙하지 않습니다.</p>
-							<p>① 다른 사람의 명의를 사용하여 신청하였을 때</p>
-							<p>② 본인의 실명으로 신청하지 않았을 때</p>
-							<p>③ 가입 신청서의 내용을 허위로 기재하였을 때</p>
-							<p>④ 사회의 안녕과 질서 혹은 미풍양속을 저해할 목적으로 신청하였을 때</p>
-							<p>⑤ 기타 중앙회가 정한 이용 신청 요건이 미비된 경우</p>
-							<p>
-								(4) 제2항 또는 3항에 의하여 이용신청의 승낙을 유보하거나 승낙하지 아니하는 경우, 중앙회는 이를 이용신청자에게 알려야 합니다. 다만 중앙회의
-								귀책사유 없이 이용신청자에게 통지할 수 없는 경우는 예외로 합니다.
-							</p>
-							<br />
-							<p>제4조 (개인정보의 보호)</p>
-							<p>(1) 중앙회는 회원의 개인정보를 보호하고 존중합니다.</p>
-							<p>
-								(2) 중앙회는 이용 신청 시 회원이 제공하는 정보, 커뮤니티 활동, 각종 이벤트 참가를 위하여 회원이 제공하는 정보, 기타 서비스 이용 과정에서
-								수집되는 정보 등을 통하여 회원에 관한 정보를 수집하며, 회원의 개인정보는 본 이용계약의 이행과 본 이용계약상의 서비스 제공을 위한 목적으로
-								사용됩니다.
-							</p>
-							<p>
-								(3) 중앙회는 서비스 제공과 관련하여 취득한 회원의 신상정보를 본인의 승낙 없이 제3자에게 누설 또는 배포할 수 없으며 상업적 목적으로 사용할 수
-								없습니다. 다만, 다음의 각 호에 해당하는 경우에는 그러하지 아니합니다.
-							</p>
-							<p>① 정보통신서비스의 제공에 따른 요금 정산을 위하여 필요한 경우</p>
-							<p>② 통계작성, 학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 알아볼 수 없는 형태로 가공하여 제공하는 경우</p>
-							<p>③ 관계 법령에 의하여 수사상 목적으로 정해진 절차와 방법에 따라 관계기관의 요구가 있는 경우</p>
-							<p>④ 다른 법률에 특별한 규정이 있는 경우</p>
-							<p>⑤ 정보통신윤리위원회의 요청이 있는 경우</p>
-							<p>
-								(4) 회원이 '중앙회' 회원 가입 시 제공한 개인정보는 kcraedu.or.kr 에 통합관리 됩니다. 이는 각각의 지회,지부 각종 고객상담, E-Mail 서비스, 정보
-								서비스 등 이용 계약상의 서비스를 원활하게 제공하기 위한 것입니다. 통합관리 되는 개인정보는 회원 가입 시 제공한 기본정보(이름, 생년월일, 주소,
-								전화번호, 아이디, 패스워드, E-Mail주소 등)이며, 필요에 따라 서비스 이용 중 추가로 제공하는 정보도 해당될 수 있습니다.
-							</p>
+      <div class="modal fade" id="privacyPolicyModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">이용약관</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>제1장 총칙</p>
+              <br />
+              <p>제1조 (목적)</p>
+              <p>
+                이 약관은 '(사)한국휴게음식업중앙회' (이하 '중앙회'라 합니다)와
+                그 지회,지부가 공동으로 제공하는 온라인 서비스(이하 '서비스'라
+                합니다)를 이용함에 있어 중앙회와 이용자의 권리, 의무 및 책임
+                사항을 규정함을 목적으로 합니다.
+              </p>
+              <br />
+              <p>제2조 (약관의 효력과 변경)</p>
+              <p>
+                (1) 이 약관은 서비스를 통하여 이를 공지함으로써 효력이
+                발생합니다.
+              </p>
+              <p>
+                (2) 중앙회는 사정상 중요한 사유가 발생될 경우 사전 고지 없이 이
+                약관을 변경할 수 있으며, 변경된 약관은 제1항과 같은 방법으로
+                공지 또는 통지함으로써 효력이 발생됩니다.
+              </p>
+              <p>
+                (3) 회원은 변경된 약관에 동의하지 않을 경우 회원 탈퇴를 요청할
+                수 있으며, 변경된 약관의 효력 발생일 이후에도 서비스를 계속
+                사용할 경우 약관의 변경 사항에 동의한 것으로 간주됩니다.
+              </p>
+              <br />
+              <p>
+                제3조 (약관 규정 외 사항에 관한 준칙) 본 약관에 규정되지 않은
+                사항에 대해서는 전기통신기본법, 전기통신사업법, 정보통신망
+                이용촉진 등 관계 법령에 규정을 따르게 됩니다. 제4조 (용어의
+                정의)
+              </p>
+              <p>
+                (1) kcraedu.or.kr 을 중심으로 (사)한국휴게음식업중앙회의 인터넷
+                온라인 서비스를 제공하는 다수의 지회,지부를 말합니다.
+              </p>
+              <p>
+                (2) 회원 : 중앙회와 서비스 이용 계약을 체결하고 이용자
+                아이디(ID)와 비밀번호를 부여 받은 자를 말합니다.
+              </p>
+              <p>
+                (3) 아이디 : 회원의 식별과 회원의 서비스 이용을 위하여 회원이
+                선정하고 중앙회가 승인하는 문자나 숫자 혹은 그 조합을
+                말합니다(이하 'ID'라 합니다).
+              </p>
+              <p>
+                (4) 비밀번호 : 회원이 부여 받은 ID와 일치된 회원임을 확인하고,
+                회원 자신의 비밀을 보호하기 위하여 회원이 정한 문자와 숫자의
+                조합을 말합니다.
+              </p>
+              <p>
+                (5) 해지 : 회원이 서비스 사용 후 이용계약을 해약하는 것을
+                말합니다.
+              </p>
+              <br />
+              <p>제2장 회원가입과 서비스 이용</p>
+              <br />
+              <p>제1조 (이용 계약의 성립)</p>
+              <p>(1) 회원은 국내 거주자에 한합니다.</p>
+              <p>
+                (2) 회원은 개인에 한정되며 중앙회나 단체 및 법인은 회원으로
+                가입할 수 없습니다.
+              </p>
+              <p>
+                (3) 회원은 이용자의 이용신청에 대한 중앙회의 승낙과 이용자의
+                약관내용에 대한 동의로 성립됩니다.
+              </p>
+              <p>
+                (4) 이용자가 회원가입신청 시 본 약관을 읽고 "동의함" 버튼을
+                클릭하면 이 약관 내용을 인지, 동의하는 것으로 간주합니다.
+              </p>
+              <br />
+              <p>
+                제2조 (이용신청) 회원으로 가입하여 서비스를 이용하기를 희망하는
+                자는 중앙회가 정한 소정 양식에 따라 개인인적사항을 제공하여
+                이용신청을 합니다.
+              </p>
+              <br />
+              <p>제3조 (이용신청의 승낙)</p>
+              <p>
+                (1) 중앙회는 제2장 제2조에 따른 이용신청에 대하여 특별한 사정이
+                없는 한 접수 순서대로 이용신청을 승낙합니다.
+              </p>
+              <p>
+                (2) 중앙회는 다음 각 호에 해당하는 경우 이용신청에 대한 승낙을
+                제한할 수 있고, 그 사유가 해소될 때까지 승낙을 유보할 수
+                있습니다.
+              </p>
+              <p>① 서비스 관련 설비에 여유가 없는 경우</p>
+              <p>
+                ② 기술상 지장이 있는 경우 ③ 기타 중앙회의 사정상 필요하다고
+                인정되는 경우
+              </p>
+              <p>
+                (3) 중앙회는 다음 각 호에 해당하는 가입 신청에 대하여는 승낙하지
+                않습니다.
+              </p>
+              <p>① 다른 사람의 명의를 사용하여 신청하였을 때</p>
+              <p>② 본인의 실명으로 신청하지 않았을 때</p>
+              <p>③ 가입 신청서의 내용을 허위로 기재하였을 때</p>
+              <p>
+                ④ 사회의 안녕과 질서 혹은 미풍양속을 저해할 목적으로 신청하였을
+                때
+              </p>
+              <p>⑤ 기타 중앙회가 정한 이용 신청 요건이 미비된 경우</p>
+              <p>
+                (4) 제2항 또는 3항에 의하여 이용신청의 승낙을 유보하거나
+                승낙하지 아니하는 경우, 중앙회는 이를 이용신청자에게 알려야
+                합니다. 다만 중앙회의 귀책사유 없이 이용신청자에게 통지할 수
+                없는 경우는 예외로 합니다.
+              </p>
+              <br />
+              <p>제4조 (개인정보의 보호)</p>
+              <p>(1) 중앙회는 회원의 개인정보를 보호하고 존중합니다.</p>
+              <p>
+                (2) 중앙회는 이용 신청 시 회원이 제공하는 정보, 커뮤니티 활동,
+                각종 이벤트 참가를 위하여 회원이 제공하는 정보, 기타 서비스 이용
+                과정에서 수집되는 정보 등을 통하여 회원에 관한 정보를 수집하며,
+                회원의 개인정보는 본 이용계약의 이행과 본 이용계약상의 서비스
+                제공을 위한 목적으로 사용됩니다.
+              </p>
+              <p>
+                (3) 중앙회는 서비스 제공과 관련하여 취득한 회원의 신상정보를
+                본인의 승낙 없이 제3자에게 누설 또는 배포할 수 없으며 상업적
+                목적으로 사용할 수 없습니다. 다만, 다음의 각 호에 해당하는
+                경우에는 그러하지 아니합니다.
+              </p>
+              <p>
+                ① 정보통신서비스의 제공에 따른 요금 정산을 위하여 필요한 경우
+              </p>
+              <p>
+                ② 통계작성, 학술연구 또는 시장조사를 위하여 필요한 경우로서 특정
+                개인을 알아볼 수 없는 형태로 가공하여 제공하는 경우
+              </p>
+              <p>
+                ③ 관계 법령에 의하여 수사상 목적으로 정해진 절차와 방법에 따라
+                관계기관의 요구가 있는 경우
+              </p>
+              <p>④ 다른 법률에 특별한 규정이 있는 경우</p>
+              <p>⑤ 정보통신윤리위원회의 요청이 있는 경우</p>
+              <p>
+                (4) 회원이 '중앙회' 회원 가입 시 제공한 개인정보는 kcraedu.or.kr
+                에 통합관리 됩니다. 이는 각각의 지회,지부 각종 고객상담, E-Mail
+                서비스, 정보 서비스 등 이용 계약상의 서비스를 원활하게 제공하기
+                위한 것입니다. 통합관리 되는 개인정보는 회원 가입 시 제공한
+                기본정보(이름, 생년월일, 주소, 전화번호, 아이디, 패스워드,
+                E-Mail주소 등)이며, 필요에 따라 서비스 이용 중 추가로 제공하는
+                정보도 해당될 수 있습니다.
+              </p>
 
-							<p>
-								(5) '중앙회'는 다음의 각 호와 같은 경우에는 이용자의 동의 하에 개인정보를 제3자에게 제공할 수 있습니다. 이러한 경우에도 개인정보의 제3자 제공은
-								이용자의 동의 하에서만 이루어지며 개인정보가 제공되는 것을 원하지 않는 경우에는, 특정 서비스를 이용하지 않거나 특정한 형태의 판촉이나 이벤트에
-								참여하지 않으면 됩니다.
-							</p>
-							<p>① kcraedu.or.kr 사이트 내에서 벌어지는 각종 이벤트 행사에 참여한 회원의 개인정보가 해당 이벤트의 주최자에게 제공될 수 있습니다.</p>
-							<p>
-								(6) 제 3 항의 범위 내에서 중앙회는 업무와 관련하여 회원 전체 또는 일부의 개인정보에 관한 집합적인 통계 자료를 작성하여 이를 사용할 수 있고,
-								서비스를 통하여 회원의 컴퓨터에 쿠키를 전송할 수 있습니다. 이 경우 회원은 쿠키의 수신을 거부하거나 쿠키의 수신에 대하여 경고하도록 사용하는
-								컴퓨터의 브라우저의 설정을 변경할 수 있습니다.
-							</p>
-							<p>
-								(7) 그외 법령이 정하는 바에 따라서 이용자의 등록정보를 포함한 이용자의 개인정보를 보호하기 위하여 노력합니다. 이용자의 개인정보보호에 관해서는
-								관련 법령 및 중앙회가 정하는 "개인정보 보호정책"에서 정한 바에 의합니다. <br />
-							</p>
+              <p>
+                (5) '중앙회'는 다음의 각 호와 같은 경우에는 이용자의 동의 하에
+                개인정보를 제3자에게 제공할 수 있습니다. 이러한 경우에도
+                개인정보의 제3자 제공은 이용자의 동의 하에서만 이루어지며
+                개인정보가 제공되는 것을 원하지 않는 경우에는, 특정 서비스를
+                이용하지 않거나 특정한 형태의 판촉이나 이벤트에 참여하지 않으면
+                됩니다.
+              </p>
+              <p>
+                ① kcraedu.or.kr 사이트 내에서 벌어지는 각종 이벤트 행사에 참여한
+                회원의 개인정보가 해당 이벤트의 주최자에게 제공될 수 있습니다.
+              </p>
+              <p>
+                (6) 제 3 항의 범위 내에서 중앙회는 업무와 관련하여 회원 전체
+                또는 일부의 개인정보에 관한 집합적인 통계 자료를 작성하여 이를
+                사용할 수 있고, 서비스를 통하여 회원의 컴퓨터에 쿠키를 전송할 수
+                있습니다. 이 경우 회원은 쿠키의 수신을 거부하거나 쿠키의 수신에
+                대하여 경고하도록 사용하는 컴퓨터의 브라우저의 설정을 변경할 수
+                있습니다.
+              </p>
+              <p>
+                (7) 그외 법령이 정하는 바에 따라서 이용자의 등록정보를 포함한
+                이용자의 개인정보를 보호하기 위하여 노력합니다. 이용자의
+                개인정보보호에 관해서는 관련 법령 및 중앙회가 정하는 "개인정보
+                보호정책"에서 정한 바에 의합니다. <br />
+              </p>
 
-							<p>제5조 (계약사항의 변경)</p>
-							<p>(1) 회원은 개인정보관리 페이지를 통해 언제든지 본인의 개인정보를 열람하고 수정할 수 있습니다.</p>
-							<p>
-								(2) 회원은 이용신청 시 기재한 사항이 변경되었을 경우 온라인으로 수정을 해야 하며 회원정보를 변경하지 아니하여 발생되는 문제의 책임은 회원에게
-								있습니다. 제3장 계약 당사자의 의무 제1조 (중앙회의 의무)
-							</p>
-							<p>(1) 중앙회는 특별한 사정이 없는 한 회원이 서비스를 이용할 수 있도록 합니다.</p>
-							<p>
-								(2) 중앙회는 이 약관에서 정한 바에 따라 계속적, 안정적인 서비스의 제공을 위하여 지속적으로 노력하며, 설비에 장애가 생기거나 멸실 된 때에는 지체
-								없이 이를 수리 복구하여야 합니다. 다만, 천재지변, 비상사태
-							</p>
-							<p>또는 그 밖에 부득이한 경우에는 그 서비스를 일시 중단하거나 중지할 수 있습니다.</p>
-							<p>
-								(3) 중앙회는 회원으로부터 소정의 절차에 의해 제기되는 의견이나 불만이 정당하다고 인정할 경우에는 적절한 절차를 거쳐 처리하여야 합니다. 처리 시
-								일정기간이 소요될 경우 회원에게 그 사유와 처리 일정을 알려주어야 합니다.
-							</p>
-							<p>(4) 중앙회는 회원의 프라이버시 보호와 관련하여 제4조 항에 제시된 내용을 지킵니다.</p>
-							<p>
-								(5) 중앙회는 이용계약의 체결, 계약사항의 변경 및 해지 등 이용고객과의 계약 관련 절차 및 내용 등에 있어 이용고객에게 편의를 제공하도록
-								노력합니다.
-							</p>
-							<br />
-							<p>제2조 (회원의 의무)</p>
-							<p>
-								(1) 회원은 이 약관에서 규정하는 사항과 서비스 이용안내 또는 주의사항 등 중앙회가 공지 혹은 통지하는 사항을 준수하여야 하며, 기타 중앙회의 업무에
-								방해되는 행위를 하여서는 안됩니다.
-							</p>
-							<p>
-								(2) 회원의 ID와 비밀번호에 관한 모든 관리책임은 회원에게 있습니다. 회원에게 부여된 ID와 비밀번호의 관리 소홀, 부정 사용에 의하여 발생하는 모든
-								결과에 대한 책임은 회원에게 있습니다.
-							</p>
-							<p>
-								(3) 회원은 자신의 ID나 비밀번호가 부정하게 사용되었다는 사실을 발견한 경우에는 즉시 중앙회에 신고하여야 하며, 신고를 하지 않아 발생하는 모든
-								결과에 대한 책임은 회원에게 있습니다.
-							</p>
-							<p>(4) 회원은 내용별로 중앙회가 서비스 공지사항에 게시하거나 별도로 공지한 이용제한 사항을 준수하여야 합니다.</p>
-							<p>
-								(5) 회원은 중앙회의 사전승낙 없이는 서비스를 이용하여 영업활동을 할 수 없으며, 그 영업활동의 결과와 회원이 약관에 위반한 영업활동을 하여 발생한
-								결과에 대하여 중앙회는 책임을 지지 않습니다. 회원은 이와 같은 영업활동으로 중앙회가 손해를 입은 경우 회원은 중앙회에 대하여 손해배상의무를
-								집니다.
-							</p>
-							<p>
-								(6) 회원은 중앙회의 명시적인 동의가 없는 한 서비스의 이용권한, 기타 이용 계약상 지위를 타인에게 양도,증여할 수 없으며, 이를 담보로 제공할 수
-								없습니다.
-							</p>
-							<p>(7) 회원은 서비스 이용과 관련하여 다음 각 호에 해당되는 행위를 하여서는 안됩니다.</p>
-							<p>① 다른 회원의 ID와 비밀번호, 주민등록번호 등을 도용하는 행위</p>
-							<p>
-								② 본 서비스를 통하여 얻은 정보를 중앙회의 사전승낙 없이 회원의 이용 이외 목적으로 복제하거나 이를 출판 및 방송 등에 사용하거나 제3자에게
-								제공하는 행위
-							</p>
-							<p>③ 타인의 특허, 상표, 영업비밀, 저작권 기타 지적재산권을 침해하는 내용을 게시, 전자메일 또는 기타의 방법으로 타인에게 유포하는 행위</p>
-							<p>
-								④ 공공질서 및 미풍양속에 위반되는 저속, 음란한 내용의 정보, 문장, 도형 등을 전송, 게시, 전자메일 또는 기타의 방법으로 타인에게 유포하는 행위
-							</p>
-							<p>⑤ 모욕적이거나 위협적이어서 타인의 프라이버시를 침해할 수 있는 내용을 전송, 게시, 전자메일 또는 기타의 방법으로 타인에게 유포하는 행위</p>
-							<p>⑥ 범죄와 결부된다고 객관적으로 판단되는 행위</p>
-							<p>⑦ 중앙회의 승인을 받지 않고 다른 회원의 개인정보를 수집 또는 저장하는 행위</p>
-							<p>⑧ 기타 관계법령에 위배되는 행위</p>
-							<br />
-							<p>제4장 회원 서비스 이용</p>
-							<br />
-							<p>제1조 (요금, 유료정보 및 결제 등)</p>
-							<p>(1) 본 사이트의 회원으로 등록한 모든 사람들이 무료로 사용할 수 있습니다. 단, 유료 콘텐츠의 경우 결제 후 사용할 수 있습니다.</p>
-							<p>(2) 중앙회가 사이트를 유료화할 경우 유료화의 시기, 정책, 비용에 대하여 유료화 실시 이전에 서비스에 공시하여야 합니다.</p>
-							<br />
-							<p>제2조 (정보의 제공)</p>
-							<p>(1) 중앙회는 회원이 서비스 이용 중 필요가 있다고 인정되는 다양한 정보를 공지사항이나 전자우편 등의 방법으로 회원에게 제공할 수 있습니다.</p>
-							<p>
-								(2) 중앙회는 회원에게 보다 나은 서비스 혜택 제공을 위해 다양한 전달 방법(전화, 안내문, 메일 등)을 통해 서비스 관련 정보를 제공할 수 있습니다.
-							</p>
-							<p>
-								(3) 단, 중앙회는 회원이 서비스 혜택 정보 제공을 원치 않는다는 의사를 밝히는 경우 정보 제공 대상에서 해당 회원을 제외하여야 하며, 대상에서
-								제외되어 서비스 정보를 제공받지 못해 불이익이 발생하더라도 이에
-							</p>
-							<p>대해서는 중앙회가 책임지지 않습니다.</p>
-							<p>(4) 서비스에서 제공되는 내용은 개략적이며 일반적인 내용이고 정보제공만을 위해 제공됩니다.</p>
-							<br />
-							<p>제3조 (상담실 및 예약 서비스의 이용)</p>
-							<p>
-								(1) 중앙회는 서비스의 회원 혹은 회원들의 상담 및 예약의 내용이 상담의와 서비스 관리자를 제외한 제3자에게 유출되지 않도록 최선을 다해 보안을
-								유지하려고 노력합니다. 그러나 다음과 같은 경우에는 상담 내용 공개
-							</p>
-							<p>및 상실에 대하여 중앙회에 책임이 없습니다.</p>
-							<p>① 회원의 부주의로 암호가 유출되어 상담 내용이 공개되는 경우</p>
-							<p>② 회원의 '상담삭제' 또는 '예약삭제' 기능을 사용하여 내용을 삭제하였을 경우</p>
-							<p>③ 천재지변이나 그 밖의 중앙회가 통제할 수 없는 상황에 의하여 상담 또는 예약 내용이 공개되거나 그 내용이 상실되었을 경우</p>
-							<p>(2) 서비스에서 진행된 상담의 내용은 개인 신상정보를 삭제한 다음 아래와 같은 목적으로 사용할 수 있습니다.</p>
-							<p>① 학술활동</p>
-							<p>② 인쇄물, CD-ROM 등의 저작활동</p>
-							<p>③ FAQ, 추천상담 등의 서비스 내용의 일부</p>
-							<p>(3) 아래와 같은 상담을 신청하는 경우에는 상담 서비스를 전체 또는 일부 제공하지 않을 수 있습니다.</p>
-							<p>① 같은 내용의 상담을 반복하여 신청하는 경우</p>
-							<p>② 상식에 어긋나는 표현을 사용하여 상담을 신청하는 경우</p>
-							<br />
-							<p>
-								제4조 (회원의 게시물) 중앙회는 회원이 게시하거나 등록하는 서비스내의 내용물이 다음 각 호에 해당한다고 판단되는 경우에 사전통지 없이 삭제할 수
-								있습니다.
-							</p>
-							<p>① 다른 회원, 중앙회, 또는 제3자를 비방하거나 중상모략으로 명예를 손상시키는 내용인 경우</p>
-							<p>② 공공질서 및 미풍양속에 위반되는 내용인 경우</p>
-							<p>③ 범죄적 행위에 결부된다고 인정되는 내용일 경우</p>
-							<p>④ 중앙회의 저작권, 제 3 자의 저작권 등 기타 권리를 침해하는 내용인 경우</p>
-							<p>⑤ 중앙회에서 규정한 게시기간을 초과한 경우</p>
-							<p>⑥ 회원이 자신의 홈페이지와 게시판에 음란물을 게재하거나 음란사이트를 링크하는 경우</p>
-							<p>⑦ 게시판의 성격에 부합하지 않는 게시물의 경우</p>
-							<p>⑧ 기타 관계법령에 위반된다고 판단되는 경우</p>
-							<br />
-							<p>제5조 (게시물의 저작권) 서비스에 게재된 자료에 대한 권리는 다음 각 호와 같습니다.</p>
-							<p>
-								① 게시물에 대한 권리와 책임은 게시자에게 있으며 중앙회는 게시자의 동의 없이는 이를 서비스 내 게재 이외에 영리적 목적으로 사용할 수 없습니다. 단,
-								비영리적인 경우에는 그러하지 아니하며 또한 중앙회는 서비스 내의
-							</p>
-							<p>게재권을 갖습니다.</p>
-							<p>② 회원은 서비스를 이용하여 얻은 정보를 가공, 판매하는 행위 등 서비스에 게재된 자료를 상업적으로 사용할 수 없습니다.</p>
-							<br />
-							<p>제6조 (광고 개재 및 광고주와의 거래)</p>
-							<p>
-								(1) 중앙회가 회원에게 서비스를 제공할 수 있는 서비스 투자기반의 일부는 광고게재를 통한 수익으로부터 나옵니다. 서비스를 이용하고자 하는 자는
-								서비스 이용 시 노출되는 광고게재에 대해 동의하는 것으로 간주됩니다.
-							</p>
-							<p>
-								(2) 중앙회는 본 서비스상에 게재되어 있거나 본 서비스를 통한 광고주의 판촉활동에 회원이 참여하거나 교신 또는 거래의 결과로서 발생하는 모든 손실
-								또는 손해에 대해 책임을 지지 않습니다.
-							</p>
-							<br />
-							<p>제7조 (서비스 이용시간)</p>
-							<p>(1) 서비스 이용은 중앙회의 업무상 또는 기술상 특별한 지장이 없는 한 연중무휴, 1일 24시간을 원칙으로 합니다.</p>
-							<p>(2) 전항의 서비스 이용시간은 시스템 정기점검 등 중앙회가 필요한 경우, 회원에게 사전 통지한 후, 제한할 수 있습니다.</p>
-							<br />
-							<p>
-								제8조 (서비스 이용 책임) 회원은 중앙회에서 권한 있는 직원이 서명한 명시적인 서면에 구체적으로 허용한 경우를 제외하고는 서비스를 이용하여 상품을
-								판매하는 영업활동을 할 수 없으며 특히 해킹, 돈벌이 광고, 음란
-							</p>
-							<p>
-								사이트 등을 통한 상업행위, 상용S/W 불법배포 등을 할 수 없습니다. 이를 어기고 발생한 영업활동의 결과 및 손실, 관계기관에 의한 구속 등 법적
-								조치등에 관해서는 중앙회가 책임을 지지 않습니다.
-							</p>
-							<br />
-							<p>제9조 (서비스 제공의 중지 등)</p>
-							<p>(1) 중앙회는 다음 각 호에 해당하는 경우 서비스 제공을 중지할 수 있습니다.</p>
-							<p>① 서비스용 설비의 보수 등 공사로 인한 부득이한 경우</p>
-							<p>② 전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지했을 경우</p>
-							<p>③ 기타 불가항력적 사유가 있는 경우</p>
-							<p>
-								(2) 중앙회는 국가비상사태, 정전, 서비스 설비의 장애 또는 서비스 이용의 폭주 등으로 정상적인 서비스 이용에 지장이 있는 때에는 서비스의 전부 또는
-								일부를 제한하거나 중지할 수 있습니다.
-							</p>
-							<p>
-								(3) 중앙회는 제 1 항 및 2항의 규정에 의하여 서비스의 이용을 제한하거나 중지한 때에는 그 사유 및 제한기간 등을 지체 없이 회원에게 알려야 합니다.
-							</p>
-							<br />
-							<p>
-								제5장 계약 해지 및 이용 제한 제1조 (계약 해지) 회원이 이용 계약을 해지하고자 하는 경우에는 회원 본인이 온라인을 통해 회원탈퇴를 중앙회에
-								신청하여야 합니다.
-							</p>
-							<br />
-							<p>
-								제2조 (이용제한) 중앙회는 회원이 다음 각 호에 해당하는 행위를 하였을 경우 사전통지 없이 이용계약을 해지하거나 또는 기간을 정하여 서비스 이용을
-								중지할 수 있습니다.
-							</p>
-							<p>① 타인의 개인정보, ID 및 비밀번호를 도용한 경우</p>
-							<p>② 가입한 이름이 실명이 아닌 경우</p>
-							<p>③ 같은 회원이 다른 ID로 이중등록을 한 경우</p>
-							<p>④ 타인의 명예를 손상시키거나 불이익을 주는 행위를 한 경우</p>
-							<p>⑤ 중앙회, 다른 회원 또는 제 3자의 지적재산권을 침해하는 경우</p>
-							<p>⑥ 공공질서 및 미풍양속에 저해되는 내용을 고의로 유포시킨 경우</p>
-							<p>⑦ 회원이 국익 또는 사회적 공익을 저해할 목적으로 서비스 이용을 계획 또는 실행하는 경우</p>
-							<p>⑧ 서비스 운영을 고의로 방해한 경우</p>
-							<p>⑨ 서비스의 안정적 운영을 방해할 목적으로 다량의 정보를 전송하거나 광고성 정보를 전송하는 경우</p>
-							<p>⑩ 정보통신설비의 오작동이나 정보의 파괴를 유발시키는 컴퓨터 바이러스 프로그램 등을 유포하는 경우</p>
-							<p>⑪ 정보통신윤리위원회 등 외부기관의 시정요구가 있거나 불법선거운동과 관련하여 선거관리위원회의 유권해석을 받은 경우</p>
-							<p>⑫ 중앙회의 서비스 정보를 이용하여 얻은 정보를 중앙회의 사전 승낙 없이 복제 또는 유통시키거나 상업적으로 이용하는 경우</p>
-							<p>⑬ 회원이 자신의 홈페이지와 게시판에 음란물을 게재하거나 음란 사이트 링크하는 경우</p>
-							<p>⑭ 본 약관을 포함하여 기타 중앙회가 정한 이용 조건에 위반한 경우</p>
-							<br />
-							<p>제6장 손해배상 및 면책 사항</p>
-							<br />
-							<p>
-								제1조 (손해배상) 중앙회는 서비스 요금이 무료인 동안의 서비스 이용과 관련하여 회원에게 발생한 어떠한 손해에 관하여도 책임을 지지 않습니다. (다만
-								유료화할 경우 별도의 약관을 규정)
-							</p>
-							<br />
-							<p>제2조 (면책조항)</p>
-							<p>(1) 중앙회는 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 관한 책임이 면제됩니다.</p>
-							<p>(2) 중앙회는 회원의 귀책사유로 인한 서비스 이용의 장애에 대하여 책임을 지지 않습니다.</p>
-							<p>(3) 중앙회는 회원이 서비스를 이용하여 기대하는 수익을 상실한 것이나 서비스를 통하여 얻은 자료로 인한 손해에 관하여 책임을 지지 않습니다.</p>
-							<p>(4) 중앙회는 회원이 서비스에 게재한 정보, 자료, 사실의 신뢰도, 정확성 등 내용에 관하여는 책임을 지지 않습니다.</p>
-							<p>(5) 중앙회는 서비스 이용과 관련하여 가입자에게 발생한 손해 가운데 가입자의 고의, 과실에 의한 손해에 대하여 책임을 지지 않습니다.</p>
-							<br />
-							<p>제3조 (관할법원) 서비스 이용으로 발생한 분쟁에 대해 소송이 제기될 경우 중앙회의 본사 소재지를 관할하는 법원을 관할법원으로 합니다.</p>
-							<p>[부칙] 1. (시행일) 이 약관은 공시한 날부터 시행합니다.</p>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-bs-dismiss="modal">닫기</button>
-						</div>
-					</div>
-				</div>
-			</div>
+              <p>제5조 (계약사항의 변경)</p>
+              <p>
+                (1) 회원은 개인정보관리 페이지를 통해 언제든지 본인의 개인정보를
+                열람하고 수정할 수 있습니다.
+              </p>
+              <p>
+                (2) 회원은 이용신청 시 기재한 사항이 변경되었을 경우 온라인으로
+                수정을 해야 하며 회원정보를 변경하지 아니하여 발생되는 문제의
+                책임은 회원에게 있습니다. 제3장 계약 당사자의 의무 제1조
+                (중앙회의 의무)
+              </p>
+              <p>
+                (1) 중앙회는 특별한 사정이 없는 한 회원이 서비스를 이용할 수
+                있도록 합니다.
+              </p>
+              <p>
+                (2) 중앙회는 이 약관에서 정한 바에 따라 계속적, 안정적인
+                서비스의 제공을 위하여 지속적으로 노력하며, 설비에 장애가
+                생기거나 멸실 된 때에는 지체 없이 이를 수리 복구하여야 합니다.
+                다만, 천재지변, 비상사태
+              </p>
+              <p>
+                또는 그 밖에 부득이한 경우에는 그 서비스를 일시 중단하거나
+                중지할 수 있습니다.
+              </p>
+              <p>
+                (3) 중앙회는 회원으로부터 소정의 절차에 의해 제기되는 의견이나
+                불만이 정당하다고 인정할 경우에는 적절한 절차를 거쳐 처리하여야
+                합니다. 처리 시 일정기간이 소요될 경우 회원에게 그 사유와 처리
+                일정을 알려주어야 합니다.
+              </p>
+              <p>
+                (4) 중앙회는 회원의 프라이버시 보호와 관련하여 제4조 항에 제시된
+                내용을 지킵니다.
+              </p>
+              <p>
+                (5) 중앙회는 이용계약의 체결, 계약사항의 변경 및 해지 등
+                이용고객과의 계약 관련 절차 및 내용 등에 있어 이용고객에게
+                편의를 제공하도록 노력합니다.
+              </p>
+              <br />
+              <p>제2조 (회원의 의무)</p>
+              <p>
+                (1) 회원은 이 약관에서 규정하는 사항과 서비스 이용안내 또는
+                주의사항 등 중앙회가 공지 혹은 통지하는 사항을 준수하여야 하며,
+                기타 중앙회의 업무에 방해되는 행위를 하여서는 안됩니다.
+              </p>
+              <p>
+                (2) 회원의 ID와 비밀번호에 관한 모든 관리책임은 회원에게
+                있습니다. 회원에게 부여된 ID와 비밀번호의 관리 소홀, 부정 사용에
+                의하여 발생하는 모든 결과에 대한 책임은 회원에게 있습니다.
+              </p>
+              <p>
+                (3) 회원은 자신의 ID나 비밀번호가 부정하게 사용되었다는 사실을
+                발견한 경우에는 즉시 중앙회에 신고하여야 하며, 신고를 하지 않아
+                발생하는 모든 결과에 대한 책임은 회원에게 있습니다.
+              </p>
+              <p>
+                (4) 회원은 내용별로 중앙회가 서비스 공지사항에 게시하거나 별도로
+                공지한 이용제한 사항을 준수하여야 합니다.
+              </p>
+              <p>
+                (5) 회원은 중앙회의 사전승낙 없이는 서비스를 이용하여 영업활동을
+                할 수 없으며, 그 영업활동의 결과와 회원이 약관에 위반한
+                영업활동을 하여 발생한 결과에 대하여 중앙회는 책임을 지지
+                않습니다. 회원은 이와 같은 영업활동으로 중앙회가 손해를 입은
+                경우 회원은 중앙회에 대하여 손해배상의무를 집니다.
+              </p>
+              <p>
+                (6) 회원은 중앙회의 명시적인 동의가 없는 한 서비스의 이용권한,
+                기타 이용 계약상 지위를 타인에게 양도,증여할 수 없으며, 이를
+                담보로 제공할 수 없습니다.
+              </p>
+              <p>
+                (7) 회원은 서비스 이용과 관련하여 다음 각 호에 해당되는 행위를
+                하여서는 안됩니다.
+              </p>
+              <p>
+                ① 다른 회원의 ID와 비밀번호, 주민등록번호 등을 도용하는 행위
+              </p>
+              <p>
+                ② 본 서비스를 통하여 얻은 정보를 중앙회의 사전승낙 없이 회원의
+                이용 이외 목적으로 복제하거나 이를 출판 및 방송 등에 사용하거나
+                제3자에게 제공하는 행위
+              </p>
+              <p>
+                ③ 타인의 특허, 상표, 영업비밀, 저작권 기타 지적재산권을 침해하는
+                내용을 게시, 전자메일 또는 기타의 방법으로 타인에게 유포하는
+                행위
+              </p>
+              <p>
+                ④ 공공질서 및 미풍양속에 위반되는 저속, 음란한 내용의 정보,
+                문장, 도형 등을 전송, 게시, 전자메일 또는 기타의 방법으로
+                타인에게 유포하는 행위
+              </p>
+              <p>
+                ⑤ 모욕적이거나 위협적이어서 타인의 프라이버시를 침해할 수 있는
+                내용을 전송, 게시, 전자메일 또는 기타의 방법으로 타인에게
+                유포하는 행위
+              </p>
+              <p>⑥ 범죄와 결부된다고 객관적으로 판단되는 행위</p>
+              <p>
+                ⑦ 중앙회의 승인을 받지 않고 다른 회원의 개인정보를 수집 또는
+                저장하는 행위
+              </p>
+              <p>⑧ 기타 관계법령에 위배되는 행위</p>
+              <br />
+              <p>제4장 회원 서비스 이용</p>
+              <br />
+              <p>제1조 (요금, 유료정보 및 결제 등)</p>
+              <p>
+                (1) 본 사이트의 회원으로 등록한 모든 사람들이 무료로 사용할 수
+                있습니다. 단, 유료 콘텐츠의 경우 결제 후 사용할 수 있습니다.
+              </p>
+              <p>
+                (2) 중앙회가 사이트를 유료화할 경우 유료화의 시기, 정책, 비용에
+                대하여 유료화 실시 이전에 서비스에 공시하여야 합니다.
+              </p>
+              <br />
+              <p>제2조 (정보의 제공)</p>
+              <p>
+                (1) 중앙회는 회원이 서비스 이용 중 필요가 있다고 인정되는 다양한
+                정보를 공지사항이나 전자우편 등의 방법으로 회원에게 제공할 수
+                있습니다.
+              </p>
+              <p>
+                (2) 중앙회는 회원에게 보다 나은 서비스 혜택 제공을 위해 다양한
+                전달 방법(전화, 안내문, 메일 등)을 통해 서비스 관련 정보를
+                제공할 수 있습니다.
+              </p>
+              <p>
+                (3) 단, 중앙회는 회원이 서비스 혜택 정보 제공을 원치 않는다는
+                의사를 밝히는 경우 정보 제공 대상에서 해당 회원을 제외하여야
+                하며, 대상에서 제외되어 서비스 정보를 제공받지 못해 불이익이
+                발생하더라도 이에
+              </p>
+              <p>대해서는 중앙회가 책임지지 않습니다.</p>
+              <p>
+                (4) 서비스에서 제공되는 내용은 개략적이며 일반적인 내용이고
+                정보제공만을 위해 제공됩니다.
+              </p>
+              <br />
+              <p>제3조 (상담실 및 예약 서비스의 이용)</p>
+              <p>
+                (1) 중앙회는 서비스의 회원 혹은 회원들의 상담 및 예약의 내용이
+                상담의와 서비스 관리자를 제외한 제3자에게 유출되지 않도록 최선을
+                다해 보안을 유지하려고 노력합니다. 그러나 다음과 같은 경우에는
+                상담 내용 공개
+              </p>
+              <p>및 상실에 대하여 중앙회에 책임이 없습니다.</p>
+              <p>① 회원의 부주의로 암호가 유출되어 상담 내용이 공개되는 경우</p>
+              <p>
+                ② 회원의 '상담삭제' 또는 '예약삭제' 기능을 사용하여 내용을
+                삭제하였을 경우
+              </p>
+              <p>
+                ③ 천재지변이나 그 밖의 중앙회가 통제할 수 없는 상황에 의하여
+                상담 또는 예약 내용이 공개되거나 그 내용이 상실되었을 경우
+              </p>
+              <p>
+                (2) 서비스에서 진행된 상담의 내용은 개인 신상정보를 삭제한 다음
+                아래와 같은 목적으로 사용할 수 있습니다.
+              </p>
+              <p>① 학술활동</p>
+              <p>② 인쇄물, CD-ROM 등의 저작활동</p>
+              <p>③ FAQ, 추천상담 등의 서비스 내용의 일부</p>
+              <p>
+                (3) 아래와 같은 상담을 신청하는 경우에는 상담 서비스를 전체 또는
+                일부 제공하지 않을 수 있습니다.
+              </p>
+              <p>① 같은 내용의 상담을 반복하여 신청하는 경우</p>
+              <p>② 상식에 어긋나는 표현을 사용하여 상담을 신청하는 경우</p>
+              <br />
+              <p>
+                제4조 (회원의 게시물) 중앙회는 회원이 게시하거나 등록하는
+                서비스내의 내용물이 다음 각 호에 해당한다고 판단되는 경우에
+                사전통지 없이 삭제할 수 있습니다.
+              </p>
+              <p>
+                ① 다른 회원, 중앙회, 또는 제3자를 비방하거나 중상모략으로 명예를
+                손상시키는 내용인 경우
+              </p>
+              <p>② 공공질서 및 미풍양속에 위반되는 내용인 경우</p>
+              <p>③ 범죄적 행위에 결부된다고 인정되는 내용일 경우</p>
+              <p>
+                ④ 중앙회의 저작권, 제 3 자의 저작권 등 기타 권리를 침해하는
+                내용인 경우
+              </p>
+              <p>⑤ 중앙회에서 규정한 게시기간을 초과한 경우</p>
+              <p>
+                ⑥ 회원이 자신의 홈페이지와 게시판에 음란물을 게재하거나
+                음란사이트를 링크하는 경우
+              </p>
+              <p>⑦ 게시판의 성격에 부합하지 않는 게시물의 경우</p>
+              <p>⑧ 기타 관계법령에 위반된다고 판단되는 경우</p>
+              <br />
+              <p>
+                제5조 (게시물의 저작권) 서비스에 게재된 자료에 대한 권리는 다음
+                각 호와 같습니다.
+              </p>
+              <p>
+                ① 게시물에 대한 권리와 책임은 게시자에게 있으며 중앙회는
+                게시자의 동의 없이는 이를 서비스 내 게재 이외에 영리적 목적으로
+                사용할 수 없습니다. 단, 비영리적인 경우에는 그러하지 아니하며
+                또한 중앙회는 서비스 내의
+              </p>
+              <p>게재권을 갖습니다.</p>
+              <p>
+                ② 회원은 서비스를 이용하여 얻은 정보를 가공, 판매하는 행위 등
+                서비스에 게재된 자료를 상업적으로 사용할 수 없습니다.
+              </p>
+              <br />
+              <p>제6조 (광고 개재 및 광고주와의 거래)</p>
+              <p>
+                (1) 중앙회가 회원에게 서비스를 제공할 수 있는 서비스 투자기반의
+                일부는 광고게재를 통한 수익으로부터 나옵니다. 서비스를
+                이용하고자 하는 자는 서비스 이용 시 노출되는 광고게재에 대해
+                동의하는 것으로 간주됩니다.
+              </p>
+              <p>
+                (2) 중앙회는 본 서비스상에 게재되어 있거나 본 서비스를 통한
+                광고주의 판촉활동에 회원이 참여하거나 교신 또는 거래의 결과로서
+                발생하는 모든 손실 또는 손해에 대해 책임을 지지 않습니다.
+              </p>
+              <br />
+              <p>제7조 (서비스 이용시간)</p>
+              <p>
+                (1) 서비스 이용은 중앙회의 업무상 또는 기술상 특별한 지장이 없는
+                한 연중무휴, 1일 24시간을 원칙으로 합니다.
+              </p>
+              <p>
+                (2) 전항의 서비스 이용시간은 시스템 정기점검 등 중앙회가 필요한
+                경우, 회원에게 사전 통지한 후, 제한할 수 있습니다.
+              </p>
+              <br />
+              <p>
+                제8조 (서비스 이용 책임) 회원은 중앙회에서 권한 있는 직원이
+                서명한 명시적인 서면에 구체적으로 허용한 경우를 제외하고는
+                서비스를 이용하여 상품을 판매하는 영업활동을 할 수 없으며 특히
+                해킹, 돈벌이 광고, 음란
+              </p>
+              <p>
+                사이트 등을 통한 상업행위, 상용S/W 불법배포 등을 할 수 없습니다.
+                이를 어기고 발생한 영업활동의 결과 및 손실, 관계기관에 의한 구속
+                등 법적 조치등에 관해서는 중앙회가 책임을 지지 않습니다.
+              </p>
+              <br />
+              <p>제9조 (서비스 제공의 중지 등)</p>
+              <p>
+                (1) 중앙회는 다음 각 호에 해당하는 경우 서비스 제공을 중지할 수
+                있습니다.
+              </p>
+              <p>① 서비스용 설비의 보수 등 공사로 인한 부득이한 경우</p>
+              <p>
+                ② 전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를
+                중지했을 경우
+              </p>
+              <p>③ 기타 불가항력적 사유가 있는 경우</p>
+              <p>
+                (2) 중앙회는 국가비상사태, 정전, 서비스 설비의 장애 또는 서비스
+                이용의 폭주 등으로 정상적인 서비스 이용에 지장이 있는 때에는
+                서비스의 전부 또는 일부를 제한하거나 중지할 수 있습니다.
+              </p>
+              <p>
+                (3) 중앙회는 제 1 항 및 2항의 규정에 의하여 서비스의 이용을
+                제한하거나 중지한 때에는 그 사유 및 제한기간 등을 지체 없이
+                회원에게 알려야 합니다.
+              </p>
+              <br />
+              <p>
+                제5장 계약 해지 및 이용 제한 제1조 (계약 해지) 회원이 이용
+                계약을 해지하고자 하는 경우에는 회원 본인이 온라인을 통해
+                회원탈퇴를 중앙회에 신청하여야 합니다.
+              </p>
+              <br />
+              <p>
+                제2조 (이용제한) 중앙회는 회원이 다음 각 호에 해당하는 행위를
+                하였을 경우 사전통지 없이 이용계약을 해지하거나 또는 기간을
+                정하여 서비스 이용을 중지할 수 있습니다.
+              </p>
+              <p>① 타인의 개인정보, ID 및 비밀번호를 도용한 경우</p>
+              <p>② 가입한 이름이 실명이 아닌 경우</p>
+              <p>③ 같은 회원이 다른 ID로 이중등록을 한 경우</p>
+              <p>④ 타인의 명예를 손상시키거나 불이익을 주는 행위를 한 경우</p>
+              <p>
+                ⑤ 중앙회, 다른 회원 또는 제 3자의 지적재산권을 침해하는 경우
+              </p>
+              <p>
+                ⑥ 공공질서 및 미풍양속에 저해되는 내용을 고의로 유포시킨 경우
+              </p>
+              <p>
+                ⑦ 회원이 국익 또는 사회적 공익을 저해할 목적으로 서비스 이용을
+                계획 또는 실행하는 경우
+              </p>
+              <p>⑧ 서비스 운영을 고의로 방해한 경우</p>
+              <p>
+                ⑨ 서비스의 안정적 운영을 방해할 목적으로 다량의 정보를
+                전송하거나 광고성 정보를 전송하는 경우
+              </p>
+              <p>
+                ⑩ 정보통신설비의 오작동이나 정보의 파괴를 유발시키는 컴퓨터
+                바이러스 프로그램 등을 유포하는 경우
+              </p>
+              <p>
+                ⑪ 정보통신윤리위원회 등 외부기관의 시정요구가 있거나
+                불법선거운동과 관련하여 선거관리위원회의 유권해석을 받은 경우
+              </p>
+              <p>
+                ⑫ 중앙회의 서비스 정보를 이용하여 얻은 정보를 중앙회의 사전 승낙
+                없이 복제 또는 유통시키거나 상업적으로 이용하는 경우
+              </p>
+              <p>
+                ⑬ 회원이 자신의 홈페이지와 게시판에 음란물을 게재하거나 음란
+                사이트 링크하는 경우
+              </p>
+              <p>
+                ⑭ 본 약관을 포함하여 기타 중앙회가 정한 이용 조건에 위반한 경우
+              </p>
+              <br />
+              <p>제6장 손해배상 및 면책 사항</p>
+              <br />
+              <p>
+                제1조 (손해배상) 중앙회는 서비스 요금이 무료인 동안의 서비스
+                이용과 관련하여 회원에게 발생한 어떠한 손해에 관하여도 책임을
+                지지 않습니다. (다만 유료화할 경우 별도의 약관을 규정)
+              </p>
+              <br />
+              <p>제2조 (면책조항)</p>
+              <p>
+                (1) 중앙회는 천재지변 또는 이에 준하는 불가항력으로 인하여
+                서비스를 제공할 수 없는 경우에는 서비스 제공에 관한 책임이
+                면제됩니다.
+              </p>
+              <p>
+                (2) 중앙회는 회원의 귀책사유로 인한 서비스 이용의 장애에 대하여
+                책임을 지지 않습니다.
+              </p>
+              <p>
+                (3) 중앙회는 회원이 서비스를 이용하여 기대하는 수익을 상실한
+                것이나 서비스를 통하여 얻은 자료로 인한 손해에 관하여 책임을
+                지지 않습니다.
+              </p>
+              <p>
+                (4) 중앙회는 회원이 서비스에 게재한 정보, 자료, 사실의 신뢰도,
+                정확성 등 내용에 관하여는 책임을 지지 않습니다.
+              </p>
+              <p>
+                (5) 중앙회는 서비스 이용과 관련하여 가입자에게 발생한 손해
+                가운데 가입자의 고의, 과실에 의한 손해에 대하여 책임을 지지
+                않습니다.
+              </p>
+              <br />
+              <p>
+                제3조 (관할법원) 서비스 이용으로 발생한 분쟁에 대해 소송이
+                제기될 경우 중앙회의 본사 소재지를 관할하는 법원을 관할법원으로
+                합니다.
+              </p>
+              <p>[부칙] 1. (시행일) 이 약관은 공시한 날부터 시행합니다.</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                닫기
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div class="modal fade" id="termsModal" tabindex="-1">
-				<div class="modal-dialog modal-lg modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">이용약관</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<p>
-								(사)한국휴게음식업중앙회'은 (이하 '중앙회'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.
-							</p>
-							<p>
-								중앙회는 개인정보취급방침을 통하여 회원님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가
-								취해지고 있는지 알려드립니다.
-							</p>
-							<p>중앙회는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p>
-							<p>본 방침은 : 2012 년 08 월 01 일 부터 시행됩니다.</p>
-							<br />
-							<p>- 수집하는 개인정보의 항목 중앙회는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.</p>
-							<p>
-								수집항목 : 이름 , 생년월일 , 성별 , ID , 비밀번호 , 전화번호 , 주소 , 휴대전화번호 , 이메일 ,성별 , 상호명 , 대표자 ,서비스 이용기록 , 접속 로그
-								, 쿠키 , 접속 IP 정보
-							</p>
-							<p>개인정보 수집방법 : 홈페이지(회원가입,상담게시판등) , 전화/팩스를 통한 회원가입 , 생성정보 수집 툴을 통한 수집</p>
-							<br />
-							<p>- 개인정보의 수집 및 이용목적 중앙회는 수집한 개인정보를 다음의 목적을 위해 활용합니다.</p>
-							<p>서비스 제공에 관한 계약 이행 온라인 교육 콘텐츠 제공</p>
-							<p>
-								회원 관리 회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 불량회원의 부정 이용 방지와 비인가 사용 방지 , 가입 의사 확인 , 연령확인 , 만14세
-								미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인 , 불만처리 등 민원처리 , 고지사항 전달
-							</p>
-							<p>
-								마케팅 및 광고에 활용 이벤트 등 광고성 정보 전달 , 인구통계학적 특성에 따른 서비스 제공 및 광고 게재 , 접속 빈도 파악 또는 회원의 서비스 이용에
-								대한 통계
-							</p>
-							<br />
-							<p>- 개인정보의 보유 및 이용기간 원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.</p>
-							<p>단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 중앙회는 아래와 같이 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다.</p>
-							<p>
-								보존 항목 : 이름 , 생년월일 , 성별 , ID , 비밀번호 , 전화번호 , 주소 , 휴대전화번호 , 이메일 ,성별 , 상호명 , 대표자 ,서비스 이용기록 , 접속
-								로그 , 쿠키 , 접속 IP 정보
-							</p>
-							<p>보존 근거 : 신용정보의 이용 및 보호에 관한 법률</p>
-							<p>보존 기간 : 3년 표시/광고에 관한 기록 : 6개월 (전자상거래등에서의 소비자보호에 관한 법률)</p>
-							<p>소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래등에서의 소비자보호에 관한 법률)</p>
-							<p>신용정보의 수집/처리 및 이용 등에 관한 기록 : 3년 (신용정보의 이용 및 보호에 관한 법률)</p>
-							<br />
-							<p>기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.</p>
-							<p>1.개인분쟁조정위원회 (www.1336.or.kr/1336)</p>
-							<p>2.정보보호마크인증위원회 (www.eprivacy.or.kr/02-580-0533~4)</p>
-							<p>3.대검찰청 인터넷범죄수사센터 (http://icic.sppo.go.kr/02-3480-3600)</p>
-							<p>4.경찰청 사이버테러대응센터 (www.ctrc.go.kr/02-392-0330)</p>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-bs-dismiss="modal">닫기</button>
-						</div>
-					</div>
-				</div>
-			</div>
+      <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">이용약관</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                (사)한국휴게음식업중앙회'은 (이하 '중앙회'는) 고객님의
+                개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한
+                법률을 준수하고 있습니다.
+              </p>
+              <p>
+                중앙회는 개인정보취급방침을 통하여 회원님께서 제공하시는
+                개인정보가 어떠한 용도와 방식으로 이용되고 있으며,
+                개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+              </p>
+              <p>
+                중앙회는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는
+                개별공지)을 통하여 공지할 것입니다.
+              </p>
+              <p>본 방침은 : 2012 년 08 월 01 일 부터 시행됩니다.</p>
+              <br />
+              <p>
+                - 수집하는 개인정보의 항목 중앙회는 회원가입, 상담, 서비스 신청
+                등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+              </p>
+              <p>
+                수집항목 : 이름 , 생년월일 , 성별 , ID , 비밀번호 , 전화번호 ,
+                주소 , 휴대전화번호 , 이메일 ,성별 , 상호명 , 대표자 ,서비스
+                이용기록 , 접속 로그 , 쿠키 , 접속 IP 정보
+              </p>
+              <p>
+                개인정보 수집방법 : 홈페이지(회원가입,상담게시판등) ,
+                전화/팩스를 통한 회원가입 , 생성정보 수집 툴을 통한 수집
+              </p>
+              <br />
+              <p>
+                - 개인정보의 수집 및 이용목적 중앙회는 수집한 개인정보를 다음의
+                목적을 위해 활용합니다.
+              </p>
+              <p>서비스 제공에 관한 계약 이행 온라인 교육 콘텐츠 제공</p>
+              <p>
+                회원 관리 회원제 서비스 이용에 따른 본인확인 , 개인 식별 ,
+                불량회원의 부정 이용 방지와 비인가 사용 방지 , 가입 의사 확인 ,
+                연령확인 , 만14세 미만 아동 개인정보 수집 시 법정 대리인
+                동의여부 확인 , 불만처리 등 민원처리 , 고지사항 전달
+              </p>
+              <p>
+                마케팅 및 광고에 활용 이벤트 등 광고성 정보 전달 , 인구통계학적
+                특성에 따른 서비스 제공 및 광고 게재 , 접속 빈도 파악 또는
+                회원의 서비스 이용에 대한 통계
+              </p>
+              <br />
+              <p>
+                - 개인정보의 보유 및 이용기간 원칙적으로, 개인정보 수집 및
+                이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.
+              </p>
+              <p>
+                단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 중앙회는
+                아래와 같이 관계법령에서 정한 일정한 기간 동안 회원정보를
+                보관합니다.
+              </p>
+              <p>
+                보존 항목 : 이름 , 생년월일 , 성별 , ID , 비밀번호 , 전화번호 ,
+                주소 , 휴대전화번호 , 이메일 ,성별 , 상호명 , 대표자 ,서비스
+                이용기록 , 접속 로그 , 쿠키 , 접속 IP 정보
+              </p>
+              <p>보존 근거 : 신용정보의 이용 및 보호에 관한 법률</p>
+              <p>
+                보존 기간 : 3년 표시/광고에 관한 기록 : 6개월
+                (전자상거래등에서의 소비자보호에 관한 법률)
+              </p>
+              <p>
+                소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+                (전자상거래등에서의 소비자보호에 관한 법률)
+              </p>
+              <p>
+                신용정보의 수집/처리 및 이용 등에 관한 기록 : 3년 (신용정보의
+                이용 및 보호에 관한 법률)
+              </p>
+              <br />
+              <p>
+                기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래
+                기관에 문의하시기 바랍니다.
+              </p>
+              <p>1.개인분쟁조정위원회 (www.1336.or.kr/1336)</p>
+              <p>2.정보보호마크인증위원회 (www.eprivacy.or.kr/02-580-0533~4)</p>
+              <p>
+                3.대검찰청 인터넷범죄수사센터
+                (http://icic.sppo.go.kr/02-3480-3600)
+              </p>
+              <p>4.경찰청 사이버테러대응센터 (www.ctrc.go.kr/02-392-0330)</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                닫기
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div class="modal fade" id="prohibitionEmailModal" tabindex="-1">
-				<div class="modal-dialog modal-lg modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">이용약관</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<p>정보통신망법 제 50조의 2 (전자우편주소의 무단 수집행위 등 금지)</p>
-							<br />
-							<p>
-								누구든지 전자우편주소의 수집을 거부하는 의사가 명시된 인터넷 홈페이지에서 자동으로 전자우편주소를 수집하는 프로그램 그 밖의 기술적 장치를
-								이용하여 전자우편주소를 수집하여서는 아니된다.
-							</p>
-							<p>누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매·유통하여서는 아니된다.</p>
-							<p>누구든지 제1항의 및 제2항의 규정에 의하여 수집·판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보전송에 이용하여서는 아니된다.</p>
-							<p>
-								※ 만일, 위와 같은 기술적 조치를 사용한 이메일주소 무단수집 피해를 당하신 경우 불법스팸 대응센터 전용전화(국번없이 02-1336)나 홈페이지(
-								www.spamcop.or.kr )의 신고 창을 통하여 신고하기 바랍니다.
-							</p>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-bs-dismiss="modal">닫기</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script>
-			AOS.init();
-		</script>
-	</body>
+      <div class="modal fade" id="prohibitionEmailModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">이용약관</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                정보통신망법 제 50조의 2 (전자우편주소의 무단 수집행위 등 금지)
+              </p>
+              <br />
+              <p>
+                누구든지 전자우편주소의 수집을 거부하는 의사가 명시된 인터넷
+                홈페이지에서 자동으로 전자우편주소를 수집하는 프로그램 그 밖의
+                기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.
+              </p>
+              <p>
+                누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를
+                판매·유통하여서는 아니된다.
+              </p>
+              <p>
+                누구든지 제1항의 및 제2항의 규정에 의하여 수집·판매 및 유통이
+                금지된 전자우편주소임을 알고 이를 정보전송에 이용하여서는
+                아니된다.
+              </p>
+              <p>
+                ※ 만일, 위와 같은 기술적 조치를 사용한 이메일주소 무단수집
+                피해를 당하신 경우 불법스팸 대응센터 전용전화(국번없이
+                02-1336)나 홈페이지( www.spamcop.or.kr )의 신고 창을 통하여
+                신고하기 바랍니다.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                닫기
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

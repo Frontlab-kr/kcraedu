@@ -579,12 +579,14 @@ html {
     width: 100%;
     //max-width: 56.625rem;
     padding: 4.375rem 0 0 0;
+    padding: 0;
     &-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
       h1 {
         margin: 0;
+        display: none;
       }
       @include media-breakpoint-down(md) {
         flex-direction: column-reverse;
@@ -3777,15 +3779,16 @@ h1 {
       }
     }
     table {
-      //table-layout: fixed;
+      // table-layout: fixed;
       th {
+        white-space: nowrap;
         br {
           display: none;
         }
       }
       th,
       td {
-        white-space: nowrap;
+        //white-space: nowrap;
       }
       @include media-breakpoint-down(md) {
         table-layout: auto;

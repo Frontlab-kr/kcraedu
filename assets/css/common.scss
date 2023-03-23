@@ -4003,14 +4003,13 @@ h1 {
 				margin: 0 0 0.563rem 0;
 			}
 			@include media-breakpoint-down(lg) {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 0.625rem;
+				// display: grid;
+				// grid-template-columns: 1fr 1fr;
+				// gap: 0.625rem;
 				margin-top: 1.875rem;
 				.btn {
 					min-width: 100%;
 					width: 100%;
-					margin: 0;
 				}
 			}
 		}

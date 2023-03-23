@@ -17946,17 +17946,11 @@ h1, .h1 {
 
 @media (max-width: 991.98px) {
   .table-type03__button {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    gap: 0.625rem;
     margin-top: 1.875rem;
   }
   .table-type03__button .btn {
     min-width: 100%;
     width: 100%;
-    margin: 0;
   }
 }
 

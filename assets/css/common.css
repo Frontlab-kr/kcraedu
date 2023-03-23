@@ -2269,23 +2269,17 @@ progress {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-  --bs-table-accent-bg: var(
-      --bs-table-striped-bg
-    );
+  --bs-table-accent-bg: var(--bs-table-striped-bg);
   color: var(--bs-table-striped-color);
 }
 
 .table-active {
-  --bs-table-accent-bg: var(
-    --bs-table-active-bg
-  );
+  --bs-table-accent-bg: var(--bs-table-active-bg);
   color: var(--bs-table-active-color);
 }
 
 .table-hover > tbody > tr:hover {
-  --bs-table-accent-bg: var(
-      --bs-table-hover-bg
-    );
+  --bs-table-accent-bg: var(--bs-table-hover-bg);
   color: var(--bs-table-hover-color);
 }
 
@@ -13034,6 +13028,10 @@ fieldset:disabled .btn {
   }
 }
 
+html {
+  font-size: 15px;
+}
+
 @media (max-width: 767.98px) {
   html {
     font-size: 0.75rem;
@@ -13364,6 +13362,12 @@ fieldset:disabled .btn {
   top: 0;
   right: 1.25rem;
   height: 100%;
+  display: none;
+  z-index: 250;
+  text-align: center;
+}
+
+.kcraedu header .header__navbar-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13373,8 +13377,6 @@ fieldset:disabled .btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: none;
-  z-index: 250;
 }
 
 .kcraedu header .header__navbar input#menuToggle {
@@ -13441,6 +13443,10 @@ fieldset:disabled .btn {
   width: 100%;
 }
 
+.kcraedu header .header__navbar p {
+  font-size: 1rem;
+}
+
 @media (max-width: 767.98px) {
   .kcraedu header .header {
     padding: 1.625rem 0 1.875rem;
@@ -13504,6 +13510,9 @@ fieldset:disabled .btn {
   .kcraedu header .header__gnb-item:hover > ul {
     display: none;
   }
+  .kcraedu header .header__gnb-item.active > a {
+    color: #4f80ff;
+  }
   .kcraedu header .header__gnb-item.active > ul {
     display: block;
   }
@@ -13514,11 +13523,14 @@ fieldset:disabled .btn {
     border-bottom: 0.063rem solid #d9d9d9;
   }
   .kcraedu header .header__menu-item {
-    margin: 0.625rem 4rem 0 0;
+    margin: 0.625rem 1rem 0 0;
     font-weight: 500;
-    font-size: 1.25rem;
     line-height: 1.5rem;
-    color: #999999;
+    color: #fff;
+    background-color: #4f80ff;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.313rem;
   }
   .kcraedu header .header__menu-item:first-child {
     margin-top: 0;
@@ -13527,9 +13539,7 @@ fieldset:disabled .btn {
     display: none;
   }
   .kcraedu header .header__navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 }
 
@@ -13556,6 +13566,10 @@ fieldset:disabled .btn {
 
 .kcraedu--menu header .header__wrap {
   display: block;
+}
+
+.kcraedu--menu header .header__navbar p {
+  display: none;
 }
 
 .kcraedu main {
@@ -13627,6 +13641,7 @@ fieldset:disabled .btn {
   min-width: 13.5rem;
   width: 100%;
   margin: 4.375rem 0 0 0;
+  margin: 2.188rem 0 0 0;
   border-bottom: 0.188rem solid #d9d9d9;
 }
 
@@ -13643,6 +13658,7 @@ fieldset:disabled .btn {
   display: flex;
   padding: 1.875rem 0 2.5rem 0;
   overflow: auto;
+  padding: 1rem 0;
 }
 
 .kcraedu .snb ul li {
@@ -13655,7 +13671,7 @@ fieldset:disabled .btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 1.625rem;
+  margin-right: 0.325rem;
 }
 
 .kcraedu .snb ul li a {
@@ -13679,7 +13695,6 @@ fieldset:disabled .btn {
   content: "/";
   display: block;
   margin: 0 1rem;
-  display: none;
 }
 
 .kcraedu .snb ul li.active a {
@@ -13922,6 +13937,12 @@ fieldset:disabled .btn {
   }
 }
 
+@media (max-width: 767.98px) {
+  .kcraedu .main-menu__item {
+    padding: 1.875rem 1.875rem;
+  }
+}
+
 .kcraedu .main-menu__item::after {
   content: "";
   display: block;
@@ -14015,6 +14036,8 @@ fieldset:disabled .btn {
 
 @media (max-width: 767.98px) {
   .kcraedu .main-menu__item-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
     margin-bottom: 0.875rem;
   }
 }
@@ -14031,7 +14054,7 @@ fieldset:disabled .btn {
   margin-bottom: 0.625rem;
   font-weight: 500;
   font-size: 1.125rem;
-  line-height: 1.688rem;
+  line-height: 1.5;
   color: #ffffff;
 }
 
@@ -14045,12 +14068,18 @@ fieldset:disabled .btn {
   margin-right: 0.375rem;
 }
 
+@media (max-width: 767.98px) {
+  .kcraedu .main-menu__item-target {
+    font-size: 1rem;
+  }
+}
+
 .kcraedu .main-menu__item-text {
   position: relative;
   z-index: 20;
   font-weight: 500;
   font-size: 1.125rem;
-  line-height: 1.688rem;
+  line-height: 1.5;
   color: #888888;
   word-break: keep-all;
   -webkit-transition: all 0.1s ease;
@@ -14064,6 +14093,18 @@ fieldset:disabled .btn {
   font-size: 0.875rem;
   line-height: 1.313rem;
   color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .main-menu__item-text {
+    font-size: 1rem;
+  }
+  .kcraedu .main-menu__item-text br {
+    display: none;
+  }
+  .kcraedu .main-menu__item-text p {
+    font-size: 0.75rem;
+  }
 }
 
 .kcraedu .main-menu__item-button {
@@ -14088,7 +14129,7 @@ fieldset:disabled .btn {
   border-bottom: 0.188rem solid #888888;
   font-weight: 500;
   font-size: 1.125rem;
-  line-height: 1.688rem;
+  line-height: 1.5;
   color: #888888;
   color: #fff;
   border-color: #fff;
@@ -14100,6 +14141,12 @@ fieldset:disabled .btn {
     bottom: auto;
     left: auto;
     margin-top: 1.563rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .main-menu__item-link span {
+    font-size: 1rem;
   }
 }
 
@@ -14408,6 +14455,7 @@ fieldset:disabled .btn {
     width: 100%;
   }
   .kcraedu .main-board .board:first-child, .kcraedu .main-board .board:last-child {
+    padding: 0 0 5rem 0;
     margin: 0 0 3rem 0;
   }
 }
@@ -15075,7 +15123,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .introduction-ceo {
-  margin-top: 4.375rem;
+  margin-top: 1.375rem;
 }
 
 .kcraedu .introduction-ceo__img {
@@ -15139,7 +15187,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .introduction-business {
-  margin-top: 4.375rem;
+  margin-top: 1.375rem;
 }
 
 .kcraedu .introduction-business h4, .kcraedu .introduction-business .h4 {
@@ -15180,7 +15228,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .introduction-history ul {
-  margin-top: 4.375rem;
+  margin-top: 1.375rem;
   border-bottom: 0.125rem solid #ececec;
 }
 
@@ -15226,7 +15274,7 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .introduction-company {
-  margin-top: 4.375rem;
+  margin-top: 1.375rem;
   position: relative;
 }
 
@@ -15477,7 +15525,7 @@ fieldset:disabled .btn {
   row-gap: 1.875rem;
   -webkit-column-gap: 1.25rem;
           column-gap: 1.25rem;
-  margin-top: 4.375rem;
+  margin-top: 1.375rem;
 }
 
 .kcraedu .introduction-executive dl {
@@ -15538,11 +15586,11 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .introduction-education {
-  margin-top: 4.375rem;
+  margin-top: 1.375rem;
 }
 
 .kcraedu .introduction-education dl {
-  margin-top: 4.375rem;
+  margin-top: 1.375rem;
 }
 
 .kcraedu .introduction-education dl dt {
@@ -15942,6 +15990,12 @@ fieldset:disabled .btn {
 
 .kcraedu .curriculum-detail .schedule__calendar a {
   color: #222;
+}
+
+.kcraedu .curriculum-detail .schedule__table table th,
+.kcraedu .curriculum-detail .schedule__table table td {
+  font-size: 1rem;
+  line-height: 1.3;
 }
 
 .kcraedu .curriculum-detail .fc-toolbar-title {
@@ -18287,4 +18341,31 @@ h1, .h1 {
   .my-video-dimensions.vjs-fluid {
     padding-top: 100% !important;
   }
+}
+
+.table.offline-curriculum {
+  /*.table > :not(caption) > * > * {} 다음에 추가*/
+  font-size: 1.063rem;
+}
+
+.table.offline-curriculum > :not(caption) > * > * {
+  /*추가*/
+  padding: 0.7rem 0.625rem;
+}
+
+.table > thead {
+  vertical-align: middle;
+  background: #f8f8f8;
+  /*추가*/
+}
+
+.table.offline-curriculum > thead {
+  /*추가*/
+  vertical-align: middle;
+  background: none;
+}
+
+.table-low-height > :not(caption) > * > * {
+  /* .table-sm > :not(caption) > * > * {} 다음에 추가*/
+  padding: 0.7rem 0.625rem;
 }

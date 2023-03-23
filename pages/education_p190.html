@@ -340,5 +340,38 @@
 				</div>
 			</div>
 		</div>
+		<div class="modal fade" id="modal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalLabel">평가 응시 안내</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p style="word-break: keep-all">
+							(사)한국휴게음식업중앙회 온라인 식품위생교육과정을 수강해 주셔서 감사합니다.<br />
+							본 회에서는 <span class="text-danger">식품의약품안전처의 온라인 식품위생교육 조치사항</span>에 따라,<br />
+							<span class="text-danger">온라인 식품위생교육 효과 제고</span> 확인을 위하여 수강 완료 후 학습평가를 실시하고 있습니다.<br />
+							<span class="text-danger">학습평가에 합격하여야 최종 수료 처리 되어 수료증을 출력</span> 하실 수 있습니다.<br />
+							평가 안내사항을 확인하시어 평가 응시해 주시기 바랍니다. <br />
+							<br />
+							- 평가 문항 : <strong>10문항</strong>(객관식 사지선다형)<br />
+							- 합격 기준 : <strong>7문항</strong> 이상<br />
+							* 불합격시 재수강 없이 재응시 가능(횟수 제한 없음)
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+							<strong>시험 응시하기</strong>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function () {
+				$("#modal").modal("show");
+			});
+		</script>
 	</body>
 </html>

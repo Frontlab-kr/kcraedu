@@ -14385,11 +14385,11 @@ fieldset:disabled .btn {
 }
 
 .kcraedu .main-board .board:first-child {
-  margin-right: 3.75rem;
+  padding-right: 3.75rem;
 }
 
 .kcraedu .main-board .board:last-child {
-  margin-left: 3.75rem;
+  padding-left: 3.75rem;
 }
 
 .kcraedu .main-board .board__list ul {

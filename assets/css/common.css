@@ -13514,11 +13514,9 @@ fieldset:disabled .btn {
     border-bottom: 0.063rem solid #d9d9d9;
   }
   .kcraedu header .header__menu-item {
-    display: block;
-    width: 6.25rem;
-    margin: 0.625rem 0 0 0;
+    margin: 0.625rem 4rem 0 0;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.5rem;
     color: #999999;
   }
@@ -17910,6 +17908,7 @@ h1, .h1 {
   line-height: 1.5rem;
   color: #222222;
   vertical-align: top;
+  white-space: nowrap;
 }
 
 .table-type03 table tbody td {
@@ -17918,24 +17917,11 @@ h1, .h1 {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #666666;
+  word-break: keep-all;
 }
 
 .table-type03 table tbody td .btn {
   min-width: 3.75rem;
-}
-
-@media (max-width: 991.98px) {
-  .table-type03 table tbody th,
-  .table-type03 table tbody td {
-    display: block;
-    height: auto;
-  }
-  .table-type03 table tbody th {
-    margin-bottom: 0.313rem;
-  }
-  .table-type03 table tbody td {
-    margin-bottom: 0.625rem;
-  }
 }
 
 .table-type03__button .btn {

@@ -3958,17 +3958,17 @@ h1 {
 					}
 				}
 				@include media-breakpoint-down(lg) {
-					th,
-					td {
-						display: block;
-						height: auto;
-					}
-					th {
-						margin-bottom: 0.313rem;
-					}
-					td {
-						margin-bottom: 0.625rem;
-					}
+					// th,
+					// td {
+					// 	display: block;
+					// 	height: auto;
+					// }
+					// th {
+					// 	margin-bottom: 0.313rem;
+					// }
+					// td {
+					// 	margin-bottom: 0.625rem;
+					// }
 				}
 			}
 		}

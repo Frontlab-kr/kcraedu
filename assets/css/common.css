@@ -2221,7 +2221,7 @@ progress {
 }
 
 .table > :not(caption) > * > * {
-  padding: 1.5rem 0.625rem;
+  padding: 0.75rem 0.625rem;
   background-color: var(--bs-table-bg);
   border-bottom-width: 1px;
   -webkit-box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
@@ -17891,20 +17891,6 @@ h1, .h1 {
 
 .table-type02 table tbody td .btn {
   min-width: 3.75rem;
-}
-
-@media (max-width: 991.98px) {
-  .table-type02 table tbody th,
-  .table-type02 table tbody td {
-    display: block;
-    height: auto;
-  }
-  .table-type02 table tbody th {
-    margin-bottom: 0.313rem;
-  }
-  .table-type02 table tbody td {
-    margin-bottom: 0.625rem;
-  }
 }
 
 .table-type02__button {

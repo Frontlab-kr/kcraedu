@@ -26,7 +26,7 @@
 	// stylelint-disable-next-line selector-max-universal
 	> :not(caption) > * > * {
 		//padding: $table-cell-padding-y $table-cell-padding-x;
-		padding: 1.5rem 0.625rem;
+		padding: 0.75rem 0.625rem;
 		background-color: var(--#{$variable-prefix}table-bg);
 		border-bottom-width: $table-border-width;
 		box-shadow: inset 0 0 0 9999px var(--#{$variable-prefix}table-accent-bg);

@@ -1,1134 +1,854 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>한국휴게음식업중앙회</title>
-    <link rel="stylesheet" href="../assets/css/common.css" />
-    <script src="../assets/bootstrap-5.0.2/dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/common.js"></script>
-  </head>
-  <body>
-    <div class="kcraedu">
-      <header>
-        <div class="header">
-          <div class="container">
-            <div class="header__logo">
-              <a href="../pages/index.html"
-                ><img
-                  src="../assets/images/logo.png"
-                  alt="KCRA 한국휴게음식업중앙회교육원"
-              /></a>
-            </div>
-            <div class="header__navbar">
-              <input type="checkbox" name="menuToggle" id="menuToggle" />
-              <label for="menuToggle" class="navbar-toggle burger-bao">
-                <span></span>
-              </label>
-            </div>
-          </div>
-          <div class="header__wrap">
-            <div class="container justify-content-end">
-              <div class="header__menu">
-                <a href="" class="header__menu-item">로그인</a>
-                <a href="" class="header__menu-item">회원가입</a>
-                <a href="" class="header__menu-item header__menu-item--remote"
-                  >원격지원</a
-                >
-              </div>
-              <div class="header__info">
-                <div class="header__info-name">
-                  <strong>이선희</strong>님 환영합니다.
-                </div>
-                <dl>
-                  <dt>현재 수강 중인 강의</dt>
-                  <dd>휴게음식점 기존영업자 위생교육(2022)</dd>
-                </dl>
-                <div class="header__info-btn">
-                  <a href="" class="btn btn-primary">강의실 입장하기</a>
-                  <a href="" class="btn btn-primary">로그아웃</a>
-                </div>
-              </div>
-            </div>
-            <div class="container header__bottom">
-              <div class="header__logo">
-                <a href="../pages/index.html"
-                  ><img
-                    src="../assets/images/logo.png"
-                    alt="KCRA 한국휴게음식업중앙회교육원"
-                /></a>
-              </div>
-              <div class="header__gnb">
-                <div class="header__gnb-item">
-                  <a href="">나의 학습방</a>
-                  <ul>
-                    <li><a href="">학습현황</a></li>
-                    <li><a href="">회원정보수정</a></li>
-                    <li><a href="">1:1문의</a></li>
-                    <li><a href="">결제내역</a></li>
-                    <li><a href="">불만신고센터</a></li>
-                  </ul>
-                </div>
-                <div class="header__gnb-item">
-                  <a href="">기존영업자</a>
-                  <ul>
-                    <li><a href="">기존영업자</a></li>
-                  </ul>
-                </div>
-                <div class="header__gnb-item">
-                  <a href="">신규영업자</a>
-                  <ul>
-                    <li><a href="">신규영업자 집합교육</a></li>
-                    <li><a href="">신규영업자 온라인교육</a></li>
-                  </ul>
-                </div>
-                <div class="header__gnb-item">
-                  <a href="">식품자동판매기</a>
-                </div>
-                <div class="header__gnb-item">
-                  <a href="">집합교육일정</a>
-                  <ul>
-                    <li><a href="">신규영업자</a></li>
-                    <li><a href="">자판기영업자</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>한국휴게음식업중앙회</title>
+		<link rel="stylesheet" href="../assets/css/common.css" />
+		<script src="../assets/bootstrap-5.0.2/dist/js/bootstrap.min.js"></script>
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/aos.js"></script>
+		<script src="../assets/js/common.js"></script>
+	</head>
+	<body>
+		<div class="kcraedu">
+			<header>
+				<div class="header">
+					<div class="container">
+						<div class="header__logo">
+							<a href="../pages/index.html"><img src="../assets/images/logo.png" alt="KCRA 한국휴게음식업중앙회교육원" /></a>
+						</div>
+						<div class="header__navbar">
+							<input type="checkbox" name="menuToggle" id="menuToggle" />
+							<label for="menuToggle" class="navbar-toggle burger-bao">
+								<span></span>
+							</label>
+						</div>
+					</div>
+					<div class="header__wrap">
+						<div class="container justify-content-end">
+							<div class="header__menu">
+								<a href="" class="header__menu-item">로그인</a>
+								<a href="" class="header__menu-item">회원가입</a>
+								<a href="" class="header__menu-item header__menu-item--remote">원격지원</a>
+							</div>
+							<div class="header__info">
+								<div class="header__info-name"><strong>이선희</strong>님 환영합니다.</div>
+								<dl>
+									<dt>현재 수강 중인 강의</dt>
+									<dd>휴게음식점 기존영업자 위생교육(2022)</dd>
+								</dl>
+								<div class="header__info-btn">
+									<a href="" class="btn btn-primary">강의실 입장하기</a>
+									<a href="" class="btn btn-primary">로그아웃</a>
+								</div>
+							</div>
+						</div>
+						<div class="container header__bottom">
+							<div class="header__logo">
+								<a href="../pages/index.html"><img src="../assets/images/logo.png" alt="KCRA 한국휴게음식업중앙회교육원" /></a>
+							</div>
+							<div class="header__gnb">
+								<div class="header__gnb-item">
+									<a href="">나의 학습방</a>
+									<ul>
+										<li><a href="">학습현황</a></li>
+										<li><a href="">회원정보수정</a></li>
+										<li><a href="">1:1문의</a></li>
+										<li><a href="">결제내역</a></li>
+										<li><a href="">불만신고센터</a></li>
+									</ul>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">기존영업자</a>
+									<ul>
+										<li><a href="">기존영업자</a></li>
+									</ul>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">신규영업자</a>
+									<ul>
+										<li><a href="">신규영업자 집합교육</a></li>
+										<li><a href="">신규영업자 온라인교육</a></li>
+									</ul>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">식품자동판매기</a>
+								</div>
+								<div class="header__gnb-item">
+									<a href="">집합교육일정</a>
+									<ul>
+										<li><a href="">신규영업자</a></li>
+										<li><a href="">자판기영업자</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
 
-      <main>
-        <div class="container">
-          <div class="contents">
-            <div class="snb">
-              <div class="snb__title">기존영업자</div>
-              <ul>
-                <li class="active"><a href="">기존영업자</a></li>
-              </ul>
-            </div>
-            <div class="content">
-              <div class="content-head">
-                <h1>기존영업자</h1>
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">홈</li>
-                    <li class="breadcrumb-item">기존영업자</li>
-                    <li class="breadcrumb-item active">기존영업자</li>
-                  </ol>
-                </nav>
-              </div>
-              <div class="table-type02 mt-7">
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>과정명</th>
-                      <td>휴게음식점 기존영업자 위생교육 (2022)</td>
-                    </tr>
-                    <tr>
-                      <th>교육기간</th>
-                      <td>수강신청일로부터 15일</td>
-                    </tr>
-                    <tr>
-                      <th>교육비</th>
-                      <td>17,000원</td>
-                    </tr>
-                    <tr>
-                      <th>교육시간</th>
-                      <td>3시간</td>
-                    </tr>
-                    <tr>
-                      <th>교육대상</th>
-                      <td class="text-danger">
-                        휴게음식점으로 영업신고가 되어 있는 영업자
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>수료조건</th>
-                      <td>
-                        필수 5과목 학습 완료 후 학습평가 70점 이상 (10문항 중
-                        7문제 이상) 수료
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="table-type02__button">
-                  <a href="#detail" class="btn btn-primary btn-toggle"
-                    >상세보기</a
-                  >
-                </div>
-              </div>
-              <div id="detail" class="d-none">
-                <h4 class="pt-7">강의 목차</h4>
-                <div class="list-type03 mt-1">
-                  <ul>
-                    <li>
-                      <h6>제1강</h6>
-                      <p>
-                        <span class="list-type03__text">
-                          <span class="badge badge-sm badge-outline-danger"
-                            >필수</span
-                          >
-                          식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)
-                        </span>
-                        <span class="list-type03__time">55분</span>
-                      </p>
-                    </li>
-                    <li>
-                      <h6>제2강</h6>
-                      <p>
-                        <span class="list-type03__text">
-                          <span class="badge badge-sm badge-outline-danger"
-                            >필수</span
-                          >
-                          식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)
-                        </span>
-                        <span class="list-type03__time">55분</span>
-                      </p>
-                    </li>
-                    <li>
-                      <h6>제3강</h6>
-                      <p>
-                        <span class="list-type03__text">
-                          <span class="badge badge-sm badge-outline-danger"
-                            >필수</span
-                          >
-                          식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)
-                        </span>
-                        <span class="list-type03__time">55분</span>
-                      </p>
-                    </li>
-                    <li>
-                      <h6>제4강</h6>
-                      <p>
-                        <span class="list-type03__text">
-                          <span class="badge badge-sm badge-outline-danger"
-                            >필수</span
-                          >
-                          식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)
-                        </span>
-                        <span class="list-type03__time">55분</span>
-                      </p>
-                    </li>
-                    <li>
-                      <h6>제5강</h6>
-                      <p>
-                        <span class="list-type03__text">
-                          <span class="badge badge-sm badge-outline-danger"
-                            >필수</span
-                          >
-                          식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)
-                        </span>
-                        <span class="list-type03__time">55분</span>
-                      </p>
-                    </li>
-                    <li>
-                      <h6>제6강</h6>
-                      <p>
-                        <span class="list-type03__text">
-                          <span class="badge badge-sm badge-outline-secondary"
-                            >선택</span
-                          >
-                          식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)식품위생법 해설 1
-                          (55분)식품위생법 해설 1 (55분)
-                        </span>
-                        <span class="list-type03__time">55분</span>
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <h4 class="mt-7">교육 이수자 정보</h4>
-              <div class="form mt-3">
-                <div class="form__item">
-                  <label for="curriculumName" class="form-label">이름</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="curriculumName"
-                    value="김은지"
-                    disabled
-                  />
-                </div>
-                <div class="form__item">
-                  <label for="curriculumBirthday" class="form-label"
-                    >생년월일</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="curriculumBirthday"
-                    value="1987-08-20"
-                    disabled
-                  />
-                </div>
-                <div class="form__item">
-                  <label for="curriculumEmail" class="form-label">이메일</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="curriculumEmail"
-                    placeholder="이메일을 입력하세요"
-                    value="ffff1@naver.com"
-                  />
-                </div>
-                <div class="form__item">
-                  <label for="curriculumTel" class="form-label"
-                    >휴대전화번호</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="curriculumTel"
-                    value="010-1234-5678"
-                    disabled
-                  />
-                </div>
-              </div>
-              <form action="">
-                <h4 class="mt-7">영업소 정보</h4>
-                <div class="form mt-3">
-                  <div class="form__item">
-                    <label for="findName" class="form-label"
-                      ><em>*</em>직책</label
-                    >
-                    <div class="mt-1">
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio1"
-                          value="option1"
-                        />
-                        <label class="form-check-label" for="inlineRadio1"
-                          >대표자</label
-                        >
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio2"
-                          value="option2"
-                        />
-                        <label class="form-check-label" for="inlineRadio2"
-                          >식품위생관리책임자</label
-                        >
-                      </div>
-                      <p class="text-danger mt-1">
-                        대표자 : 교육신청자와 대표자가 동일한 경우 선택<br />
-                        식품위생관리책임자 : 대표자를 대신하여 위임받은자가
-                        교육을 이수하는 경우 선택
-                      </p>
-                    </div>
-                  </div>
-                  <div class="form__item">
-                    <label for="curriculum" class="form-label">
-                      업소검색<br />
-                      (인허가번호)
-                    </label>
-                    <div class="d-flex align-items-center w-100">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="curriculum"
-                        placeholder="교육 받을 업소를 검색해 주세요"
-                        readonly
-                      />
-                      <p class="ms-1">
-                        <button
-                          type="button"
-                          class="btn btn-outline-primary btn-sm"
-                          data-bs-toggle="modal"
-                          data-bs-target="#modal"
-                        >
-                          검색
-                        </button>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="form__item">
-                    <label for="curriculum" class="form-label">대표자명</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="curriculum"
-                      placeholder="검색 정보로 자동 입력 됩니다"
-                      readonly
-                    />
-                  </div>
-                  <div class="form__item">
-                    <label for="curriculum" class="form-label">영업소명</label>
+			<main>
+				<div class="container">
+					<div class="contents">
+						<div class="snb">
+							<div class="snb__title">기존영업자</div>
+							<ul>
+								<li class="active"><a href="">기존영업자</a></li>
+							</ul>
+						</div>
+						<div class="content">
+							<div class="content-head">
+								<h1>기존영업자</h1>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">홈</li>
+										<li class="breadcrumb-item">기존영업자</li>
+										<li class="breadcrumb-item active">기존영업자</li>
+									</ol>
+								</nav>
+							</div>
+							<div class="table-type02 mt-7">
+								<table>
+									<tbody>
+										<tr>
+											<th>과정명</th>
+											<td>휴게음식점 기존영업자 위생교육 (2022)</td>
+										</tr>
+										<tr>
+											<th>교육기간</th>
+											<td>수강신청일로부터 15일</td>
+										</tr>
+										<tr>
+											<th>교육비</th>
+											<td>17,000원</td>
+										</tr>
+										<tr>
+											<th>교육시간</th>
+											<td>3시간</td>
+										</tr>
+										<tr>
+											<th>교육대상</th>
+											<td class="text-danger">휴게음식점으로 영업신고가 되어 있는 영업자</td>
+										</tr>
+										<tr>
+											<th>수료조건</th>
+											<td>필수 5과목 학습 완료 후 학습평가 70점 이상 (10문항 중 7문제 이상) 수료</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="table-type02__button">
+									<a href="#detail" class="btn btn-primary btn-toggle">상세보기</a>
+								</div>
+							</div>
+							<div id="detail" class="d-none">
+								<h4 class="pt-7">강의 목차</h4>
+								<div class="list-type03 mt-1">
+									<ul>
+										<li>
+											<h6>제1강</h6>
+											<p>
+												<span class="list-type03__text">
+													<span class="badge badge-sm badge-outline-danger">필수</span>
+													식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법
+													해설 1 (55분)식품위생법 해설 1 (55분)
+												</span>
+												<span class="list-type03__time">55분</span>
+											</p>
+										</li>
+										<li>
+											<h6>제2강</h6>
+											<p>
+												<span class="list-type03__text">
+													<span class="badge badge-sm badge-outline-danger">필수</span>
+													식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법
+													해설 1 (55분)식품위생법 해설 1 (55분)
+												</span>
+												<span class="list-type03__time">55분</span>
+											</p>
+										</li>
+										<li>
+											<h6>제3강</h6>
+											<p>
+												<span class="list-type03__text">
+													<span class="badge badge-sm badge-outline-danger">필수</span>
+													식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법
+													해설 1 (55분)식품위생법 해설 1 (55분)
+												</span>
+												<span class="list-type03__time">55분</span>
+											</p>
+										</li>
+										<li>
+											<h6>제4강</h6>
+											<p>
+												<span class="list-type03__text">
+													<span class="badge badge-sm badge-outline-danger">필수</span>
+													식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법
+													해설 1 (55분)식품위생법 해설 1 (55분)
+												</span>
+												<span class="list-type03__time">55분</span>
+											</p>
+										</li>
+										<li>
+											<h6>제5강</h6>
+											<p>
+												<span class="list-type03__text">
+													<span class="badge badge-sm badge-outline-danger">필수</span>
+													식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법
+													해설 1 (55분)식품위생법 해설 1 (55분)
+												</span>
+												<span class="list-type03__time">55분</span>
+											</p>
+										</li>
+										<li>
+											<h6>제6강</h6>
+											<p>
+												<span class="list-type03__text">
+													<span class="badge badge-sm badge-outline-secondary">선택</span>
+													식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법 해설 1 (55분)식품위생법
+													해설 1 (55분)식품위생법 해설 1 (55분)
+												</span>
+												<span class="list-type03__time">55분</span>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<h4 class="mt-7">교육 이수자 정보</h4>
+							<div class="form mt-3">
+								<div class="form__item">
+									<label for="curriculumName" class="form-label">이름</label>
+									<input type="text" class="form-control" id="curriculumName" value="김은지" disabled />
+								</div>
+								<div class="form__item">
+									<label for="curriculumBirthday" class="form-label">생년월일</label>
+									<input type="text" class="form-control" id="curriculumBirthday" value="1987-08-20" disabled />
+								</div>
+								<div class="form__item">
+									<label for="curriculumEmail" class="form-label">이메일</label>
+									<input type="text" class="form-control" id="curriculumEmail" placeholder="이메일을 입력하세요" value="ffff1@naver.com" />
+								</div>
+								<div class="form__item">
+									<label for="curriculumTel" class="form-label">휴대전화번호</label>
+									<input type="text" class="form-control" id="curriculumTel" value="010-1234-5678" disabled />
+								</div>
+							</div>
+							<form action="">
+								<h4 class="mt-7">영업소 정보</h4>
+								<div class="form mt-3">
+									<div class="form__item">
+										<label for="findName" class="form-label"><em>*</em>직책</label>
+										<div class="mt-1">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+												<label class="form-check-label" for="inlineRadio1">대표자</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+												<label class="form-check-label" for="inlineRadio2">식품위생관리책임자</label>
+											</div>
+											<p class="text-danger mt-1">
+												대표자 : 교육신청자와 대표자가 동일한 경우 선택<br />
+												식품위생관리책임자 : 대표자를 대신하여 위임받은자가 교육을 이수하는 경우 선택
+											</p>
+										</div>
+									</div>
+									<div class="form__item">
+										<label for="curriculum" class="form-label">
+											업소검색<br />
+											(인허가번호)
+										</label>
+										<div class="d-flex align-items-center w-100">
+											<input type="text" class="form-control" id="curriculum" placeholder="교육 받을 업소를 검색해 주세요" readonly />
+											<p class="ms-1">
+												<button type="button" class="utline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal">검색</button>
+											</p>
+										</div>
+									</div>
+									<div class="form__item">
+										<label for="curriculum" class="form-label">대표자명</label>
+										<input type="text" class="form-control" id="curriculum" placeholder="검색 정보로 자동 입력 됩니다" readonly />
+									</div>
+									<div class="form__item">
+										<label for="curriculum" class="form-label">영업소명</label>
 
-                    <div class="d-flex align-items-center w-100">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="curriculum"
-                        placeholder="검색 정보로 자동 입력 됩니다"
-                        readonly
-                      />
-                      <p class="ms-1 btn-size">
-                        <button
-                          type="button"
-                          class="btn btn-outline-primary btn-sm"
-                          data-bs-toggle="modal"
-                          data-bs-target="#modal"
-                        >
-                          미정시 클릭
-                        </button>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="form__item">
-                    <label for="curriculum" class="form-label"
-                      >영업소주소</label
-                    >
-                    <div class="w-100">
-                      <div class="d-flex align-items-center w-100">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="curriculum"
-                          placeholder="검색 정보로 자동 입력 됩니다"
-                          readonly
-                        />
-                        <p class="ms-1 btn-size">
-                          <button
-                            type="button"
-                            class="btn btn-outline-primary btn-sm"
-                            data-bs-toggle="modal"
-                            data-bs-target="#modal"
-                          >
-                            우편번호 검색
-                          </button>
-                        </p>
-                      </div>
-                      <input
-                        type="text"
-                        class="form-control mt-1"
-                        id="curriculum"
-                        placeholder="검색 정보로 자동 입력 됩니다"
-                        readonly
-                      />
-                      <input
-                        type="text"
-                        class="form-control mt-1"
-                        id="curriculum"
-                        placeholder="검색 정보로 자동 입력 됩니다"
-                        readonly
-                      />
-                    </div>
-                  </div>
-                  <div class="form__item">
-                    <label for="curriculum" class="form-label">
-                      식품위생관리책임자<br />
-                      지정 확인서
-                    </label>
-                    <button
-                      type="button"
-                      class="btn btn-outline-primary btn-sm"
-                      data-bs-toggle="modal"
-                      data-bs-target="#modal02"
-                    >
-                      등록하기
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-outline-primary btn-sm ms-1"
-                      data-bs-toggle="modal"
-                      data-bs-target="#modal04"
-                    >
-                      확인서
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-outline-primary btn-sm ms-1"
-                      data-bs-toggle="modal"
-                      data-bs-target="#modal05"
-                    >
-                      수료증
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-outline-primary btn-sm ms-1"
-                      data-bs-toggle="modal"
-                      data-bs-target="#modal03"
-                    >
-                      도서/벽지 지역 검색
-                    </button>
-                  </div>
-                </div>
-                <div class="form__button">
-                  <button type="button" class="btn btn-info btn-lg">
-                    목록
-                  </button>
-                  <button type="button" class="btn btn-primary btn-lg">
-                    결제하기
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <style>
-          .btn-size {
-            min-width: 113px;
-          }
-          .btn-size .btn {
-            width: 100%;
-          }
-          @media (max-width: 767.98px) {
-            .btn-size {
-              min-width: 85px;
-            }
-          }
-        </style>
-      </main>
+										<div class="d-flex align-items-center w-100">
+											<input type="text" class="form-control" id="curriculum" placeholder="검색 정보로 자동 입력 됩니다" readonly />
+											<p class="ms-1 btn-size">
+												<button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal">미정시 클릭</button>
+											</p>
+										</div>
+									</div>
+									<div class="form__item">
+										<label for="curriculum" class="form-label">영업소주소</label>
+										<div class="w-100">
+											<div class="d-flex align-items-center w-100">
+												<input type="text" class="form-control" id="curriculum" placeholder="검색 정보로 자동 입력 됩니다" readonly />
+												<p class="ms-1 btn-size">
+													<button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal">우편번호 검색</button>
+												</p>
+											</div>
+											<input type="text" class="form-control mt-1" id="curriculum" placeholder="검색 정보로 자동 입력 됩니다" readonly />
+											<input type="text" class="form-control mt-1" id="curriculum" placeholder="검색 정보로 자동 입력 됩니다" readonly />
+										</div>
+									</div>
+									<div class="form__item">
+										<label for="curriculum" class="form-label">
+											식품위생관리책임자<br />
+											지정 확인서
+										</label>
+										<button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal02">등록하기</button>
+										<button type="button" class="btn btn-outline-primary btn-sm ms-1" data-bs-toggle="modal" data-bs-target="#modal04">확인서</button>
+										<button type="button" class="btn btn-outline-primary btn-sm ms-1" data-bs-toggle="modal" data-bs-target="#modal05">수료증</button>
+										<button type="button" class="btn btn-outline-primary btn-sm ms-1" data-bs-toggle="modal" data-bs-target="#modal03">
+											도서/벽지 지역 검색
+										</button>
+									</div>
+								</div>
+								<div class="form__button">
+									<button type="button" class="btn btn-info btn-lg">목록</button>
+									<button type="button" class="btn btn-primary btn-lg">결제하기</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<style>
+					.btn-size {
+						min-width: 113px;
+					}
+					.btn-size .btn {
+						width: 100%;
+					}
+					@media (max-width: 767.98px) {
+						.btn-size {
+							min-width: 85px;
+						}
+					}
+				</style>
+			</main>
 
-      <footer>
-        <div class="footer">
-          <div class="footer__menu">
-            <div class="container">
-              <a href="" class="footer__menu-item">중앙회소개</a>
-              <a href="" class="footer__menu-item">전국지회연락처</a>
-              <a href="" class="footer__menu-item">이용약관</a>
-              <a href="" class="footer__menu-item text-primary"
-                >개인정보처리방침</a
-              >
-              <a href="" class="footer__menu-item">이메일무단수집거부</a>
-            </div>
-          </div>
-          <div class="container">
-            <address>
-              서울시관악구 봉천동 1659-2(청동빌딩 601호)<br class="mo" />
-              한국휴게음식업중앙회<br class="mo" />
-              <br class="mo" />TEL : 02-425-6126~8<br class="mo" />
-              FAX : 02-425-6129<br />
-              사업자 번호 : 101-82-04756<br class="mo" />
-              대표자 : 최성회​
-            </address>
-          </div>
-        </div>
-      </footer>
+			<footer>
+				<div class="footer">
+					<div class="footer__menu">
+						<div class="container">
+							<a href="" class="footer__menu-item">중앙회소개</a>
+							<a href="" class="footer__menu-item">전국지회연락처</a>
+							<a href="" class="footer__menu-item">이용약관</a>
+							<a href="" class="footer__menu-item text-primary">개인정보처리방침</a>
+							<a href="" class="footer__menu-item">이메일무단수집거부</a>
+						</div>
+					</div>
+					<div class="container">
+						<address>
+							서울시관악구 봉천동 1659-2(청동빌딩 601호)<br class="mo" />
+							한국휴게음식업중앙회<br class="mo" />
+							<br class="mo" />TEL : 02-425-6126~8<br class="mo" />
+							FAX : 02-425-6129<br />
+							사업자 번호 : 101-82-04756<br class="mo" />
+							대표자 : 최성회​
+						</address>
+					</div>
+				</div>
+			</footer>
 
-      <!-- Modal -->
-      <div class="modal fade" id="modal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalLabel">기존영업자 업소 검색</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form action="">
-                <div class="form form-sm">
-                  <div class="form__item">
-                    <label for="companyCeo" class="form-label">대표자명</label>
-                    <div class="w-100">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="companyCeo"
-                        placeholder="대표자 이름을 입력해 주세요"
-                      />
-                      <p class="text-danger mt-1">
-                        대표자명은 영업신고증 상의 정보로 정하여 입력해
-                        주세요<br />
-                        예) 홍길동, 대표이사 홍길동, 홍길동 외 1명
-                      </p>
-                    </div>
-                  </div>
-                  <div class="form__item">
-                    <label for="companyAddress" class="form-label">주소</label>
-                    <div class="w-100">
-                      <div id="companyAddress" class="d-flex w-100">
-                        <select class="form-select me-2">
-                          <option selected>시/도</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                        <select class="form-select">
-                          <option selected>군/구</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </div>
-                      <p class="text-danger mt-1">
-                        검색 버튼 클릭 후 업소 소재지 주소를 선택해 주세요
-                      </p>
-                    </div>
-                  </div>
-                  <div class="form__button">
-                    <button type="button" class="btn btn-primary btn-sm">
-                      검색
-                    </button>
-                  </div>
-                </div>
-              </form>
-              <p class="mt-4 mb-1">
-                아래 검색 된 영업장을 <span class="text-danger">선택</span>해
-                주세요
-              </p>
-              <div class="table-wrap">
-                <table class="table table-sm">
-                  <thead>
-                    <tr>
-                      <th class="text-center">인허가번호</th>
-                      <th class="text-center">업소명</th>
-                      <th class="text-center">대표자</th>
-                      <th class="text-center">소재지</th>
-                      <th class="text-center">상태</th>
-                      <th class="text-center"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-center align-middle">1111</td>
-                      <td class="text-center align-middle">
-                        테스트테스트테스트
-                      </td>
-                      <td class="text-center align-middle">테스트</td>
-                      <td class="text-center align-middle">
-                        경기도 시흥시 동서로 900
-                      </td>
-                      <td class="text-center align-middle">신청안함</td>
-                      <td class="text-center align-middle">
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-primary"
-                        >
-                          선택
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="list-type02 mt-2">
-                <ul class="p-0">
-                  <li>
-                    휴게음식점 기존영업자 교육 대상자가 아닌 경우
-                    <ul>
-                      <li>
-                        영업신고증에 표기 된 업종을 확인해주세요. (일반음식점,
-                        식품자동판매기영업)
-                      </li>
-                      <li>
-                        식품자동판매기영업자는 기존영업자 교육대상이 아닙니다.
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    대표자 및 업소 정보 변경으로 검색이 되지 않는 경우
-                    02-425-6126으로 문의 해주시기 바랍니다.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-dismiss="modal"
-              >
-                닫기
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+			<!-- Modal -->
+			<div class="modal fade" id="modal" tabindex="-1">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalLabel">기존영업자 업소 검색</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<form action="">
+								<div class="form form-sm">
+									<div class="form__item">
+										<label for="companyCeo" class="form-label">대표자명</label>
+										<div class="w-100">
+											<input type="text" class="form-control" id="companyCeo" placeholder="대표자 이름을 입력해 주세요" />
+											<p class="text-danger mt-1">
+												대표자명은 영업신고증 상의 정보로 정하여 입력해 주세요<br />
+												예) 홍길동, 대표이사 홍길동, 홍길동 외 1명
+											</p>
+										</div>
+									</div>
+									<div class="form__item">
+										<label for="companyAddress" class="form-label">주소</label>
+										<div class="w-100">
+											<div id="companyAddress" class="d-flex w-100">
+												<select class="form-select me-2">
+													<option selected>시/도</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+												<select class="form-select">
+													<option selected>군/구</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+											</div>
+											<p class="text-danger mt-1">검색 버튼 클릭 후 업소 소재지 주소를 선택해 주세요</p>
+										</div>
+									</div>
+									<div class="form__button">
+										<button type="button" class="btn btn-primary btn-sm">검색</button>
+									</div>
+								</div>
+							</form>
+							<p class="mt-4 mb-1">아래 검색 된 영업장을 <span class="text-danger">선택</span>해 주세요</p>
+							<div class="pc">
+								<div class="table-wrap">
+									<table class="table table-sm">
+										<thead>
+											<tr>
+												<th class="text-center">인허가번호</th>
+												<th class="text-center">업소명</th>
+												<th class="text-center">대표자</th>
+												<th class="text-center">소재지</th>
+												<th class="text-center">상태</th>
+												<th class="text-center"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center align-middle">1111</td>
+												<td class="text-center align-middle">테스트테스트테스트</td>
+												<td class="text-center align-middle">테스트</td>
+												<td class="text-center align-middle">경기도 시흥시 동서로 900</td>
+												<td class="text-center align-middle">신청안함</td>
+												<td class="text-center align-middle">
+													<button type="button" class="btn btn-sm btn-outline-primary">선택</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="mo">
+								<div class="mobile__table">
+									<div class="mobile__table-item">
+										<dl>
+											<dt></dt>
+											<dd>
+												<ul>
+													<li>
+														<strong>인허가번호</strong>
+														<span>1111</span>
+													</li>
+													<li>
+														<strong>업소명</strong>
+														<span>테스트테스트테스트</span>
+													</li>
+													<li>
+														<strong>대표자</strong>
+														<span>테스트</span>
+													</li>
+													<li>
+														<strong>소재지</strong>
+														<span>경기도 시흥시 동서로 900</span>
+													</li>
+													<li>
+														<strong>상태</strong>
+														<span>신청안함</span>
+													</li>
+													<li class="mt-2">
+														<button type="button" class="btn btn-sm btn-outline-primary w-100">선택</button>
+													</li>
+												</ul>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+							<div class="list-type02 mt-2">
+								<ul class="p-0">
+									<li>
+										휴게음식점 기존영업자 교육 대상자가 아닌 경우
+										<ul>
+											<li>영업신고증에 표기 된 업종을 확인해주세요. (일반음식점, 식품자동판매기영업)</li>
+											<li>식품자동판매기영업자는 기존영업자 교육대상이 아닙니다.</li>
+										</ul>
+									</li>
+									<li>대표자 및 업소 정보 변경으로 검색이 되지 않는 경우 02-425-6126으로 문의 해주시기 바랍니다.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-bs-dismiss="modal">닫기</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <div class="modal fade" id="modal02" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalLabel">
-                식품위생관리책임자 지정 확인서 등록
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <h6>영업자</h6>
-              <div class="table-type01 mt-2">
-                <table>
-                  <colgroup>
-                    <col style="width: 40%" />
-                    <col style="width: 60%" />
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th>성명</th>
-                      <td>홍길동</td>
-                    </tr>
-                    <tr>
-                      <th class="align-middle">생년월일</th>
-                      <td>
-                        <input
-                          type="text"
-                          class="form-control form-control-sm w-100"
-                          placeholder="예)19901010"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>영업소 명칭 또는 상호</th>
-                      <td>테스트테스트</td>
-                    </tr>
-                    <tr>
-                      <th>영업소 소재지</th>
-                      <td>강원도 홍천군 홍천읍 석화로 111</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <h6 class="mt-4">식품위생관리 책임자</h6>
-              <div class="table-type01 mt-2">
-                <table>
-                  <colgroup>
-                    <col style="width: 40%" />
-                    <col style="width: 60%" />
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th>성명</th>
-                      <td>홍길동</td>
-                    </tr>
-                    <tr>
-                      <th class="align-middle">생년월일</th>
-                      <td>19990909</td>
-                    </tr>
-                    <tr>
-                      <th>주소</th>
-                      <td>강원도 홍천군 홍천읍 석화로 111</td>
-                    </tr>
-                    <tr>
-                      <th>직책</th>
-                      <td>위생관리책임자</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="mt-5 text-center">
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="inlineCheckbox1"
-                  />
-                  <label class="form-check-label" for="inlineCheckbox1"
-                    >식품위생관리책임자에 대한 전자 서명 진행에 동의
-                    합니다.</label
-                  >
-                </div>
-              </div>
-              <div class="mt-4 text-center text-secondary">
-                「식품위생법」 제 41조 제 3항에 따른<br />
-                식품위생관리책임자로 지정한 자임을 확인 합니다.
-              </div>
-              <div class="mt-4 text-end">
-                2022년 12월 13일<br />
-                확인자(영업자):홍길동
-              </div>
-              <div class="mt-4 text-center">
-                (사)한국휴게음식업중앙회교육원장 귀하
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-bs-dismiss="modal"
-              >
-                닫기
-              </button>
-              <button type="button" class="btn btn-primary">등록하기</button>
-            </div>
-          </div>
-        </div>
-      </div>
+			<div class="modal fade" id="modal02" tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalLabel">식품위생관리책임자 지정 확인서 등록</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<h6>영업자</h6>
+							<div class="table-type01 mt-2">
+								<table>
+									<colgroup>
+										<col style="width: 40%" />
+										<col style="width: 60%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>성명</th>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<th class="align-middle">생년월일</th>
+											<td>
+												<input type="text" class="form-control form-control-sm w-100" placeholder="예)19901010" />
+											</td>
+										</tr>
+										<tr>
+											<th>영업소 명칭 또는 상호</th>
+											<td>테스트테스트</td>
+										</tr>
+										<tr>
+											<th>영업소 소재지</th>
+											<td>강원도 홍천군 홍천읍 석화로 111</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h6 class="mt-4">식품위생관리 책임자</h6>
+							<div class="table-type01 mt-2">
+								<table>
+									<colgroup>
+										<col style="width: 40%" />
+										<col style="width: 60%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>성명</th>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<th class="align-middle">생년월일</th>
+											<td>19990909</td>
+										</tr>
+										<tr>
+											<th>주소</th>
+											<td>강원도 홍천군 홍천읍 석화로 111</td>
+										</tr>
+										<tr>
+											<th>직책</th>
+											<td>위생관리책임자</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="mt-5 text-center">
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox1" />
+									<label class="form-check-label" for="inlineCheckbox1">식품위생관리책임자에 대한 전자 서명 진행에 동의 합니다.</label>
+								</div>
+							</div>
+							<div class="mt-4 text-center text-secondary">
+								「식품위생법」 제 41조 제 3항에 따른<br />
+								식품위생관리책임자로 지정한 자임을 확인 합니다.
+							</div>
+							<div class="mt-4 text-end">
+								2022년 12월 13일<br />
+								확인자(영업자):홍길동
+							</div>
+							<div class="mt-4 text-center">(사)한국휴게음식업중앙회교육원장 귀하</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
+							<button type="button" class="btn btn-primary">등록하기</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <div class="modal fade" id="modal04" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalLabel">
-                식품위생관리책임자 지정 확인서
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <h6>영업자</h6>
-              <div class="table-type01 mt-2">
-                <table>
-                  <colgroup>
-                    <col style="width: 40%" />
-                    <col style="width: 60%" />
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th>성명</th>
-                      <td>홍길동</td>
-                    </tr>
-                    <tr>
-                      <th class="align-middle">생년월일</th>
-                      <td>19901010</td>
-                    </tr>
-                    <tr>
-                      <th>영업소 명칭 또는 상호</th>
-                      <td>테스트테스트</td>
-                    </tr>
-                    <tr>
-                      <th>영업소 소재지</th>
-                      <td>강원도 홍천군 홍천읍 석화로 111</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <h6 class="mt-4">식품위생관리 책임자</h6>
-              <div class="table-type01 mt-2">
-                <table>
-                  <colgroup>
-                    <col style="width: 40%" />
-                    <col style="width: 60%" />
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th>성명</th>
-                      <td>홍길동</td>
-                    </tr>
-                    <tr>
-                      <th class="align-middle">생년월일</th>
-                      <td>19990909</td>
-                    </tr>
-                    <tr>
-                      <th>주소</th>
-                      <td>강원도 홍천군 홍천읍 석화로 111</td>
-                    </tr>
-                    <tr>
-                      <th>직책</th>
-                      <td>위생관리책임자</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="mt-4 text-center text-secondary">
-                「식품위생법」 제 41조 제 3항에 따른<br />
-                식품위생관리책임자로 지정한 자임을 확인 합니다.
-              </div>
-              <div class="mt-4 text-end">
-                2022년 12월 13일<br />
-                확인자(영업자):홍길동
-              </div>
-              <div class="mt-4 text-center">
-                (사)한국휴게음식업중앙회교육원장 귀하
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-bs-dismiss="modal"
-              >
-                닫기
-              </button>
-              <button type="button" class="btn btn-primary">
-                <i class="bi bi-download"></i> 다운로드
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary print"
-                onclick="printModal('#modal04')"
-              >
-                <i class="bi bi-printer"></i> 프린트
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+			<div class="modal fade" id="modal04" tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalLabel">식품위생관리책임자 지정 확인서</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<h6>영업자</h6>
+							<div class="table-type01 mt-2">
+								<table>
+									<colgroup>
+										<col style="width: 40%" />
+										<col style="width: 60%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>성명</th>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<th class="align-middle">생년월일</th>
+											<td>19901010</td>
+										</tr>
+										<tr>
+											<th>영업소 명칭 또는 상호</th>
+											<td>테스트테스트</td>
+										</tr>
+										<tr>
+											<th>영업소 소재지</th>
+											<td>강원도 홍천군 홍천읍 석화로 111</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h6 class="mt-4">식품위생관리 책임자</h6>
+							<div class="table-type01 mt-2">
+								<table>
+									<colgroup>
+										<col style="width: 40%" />
+										<col style="width: 60%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>성명</th>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<th class="align-middle">생년월일</th>
+											<td>19990909</td>
+										</tr>
+										<tr>
+											<th>주소</th>
+											<td>강원도 홍천군 홍천읍 석화로 111</td>
+										</tr>
+										<tr>
+											<th>직책</th>
+											<td>위생관리책임자</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="mt-4 text-center text-secondary">
+								「식품위생법」 제 41조 제 3항에 따른<br />
+								식품위생관리책임자로 지정한 자임을 확인 합니다.
+							</div>
+							<div class="mt-4 text-end">
+								2022년 12월 13일<br />
+								확인자(영업자):홍길동
+							</div>
+							<div class="mt-4 text-center">(사)한국휴게음식업중앙회교육원장 귀하</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
+							<button type="button" class="btn btn-primary"><i class="bi bi-download"></i> 다운로드</button>
+							<button type="button" class="btn btn-primary print" onclick="printModal('#modal04')"><i class="bi bi-printer"></i> 프린트</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <div class="modal fade" id="modal05" tabindex="-1">
-        <div
-          class="modal-dialog modal-lg modal-dialog-centered certificats-modal"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalLabel">수료증</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="certificats">
-                <div class="certificats__bg-top"></div>
-                <div class="certificats__id">제 2022 - 3493 호</div>
-                <div class="certificats__title">수료증</div>
-                <div class="certificats__table">
-                  <table>
-                    <colgroup>
-                      <col style="width: 20%" />
-                      <col style="width: 40%" />
-                      <col style="width: 15%" />
-                      <col style="width: 25%" />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>교육이수자 성명</th>
-                        <td>김미숙</td>
-                        <th>직책</th>
-                        <td>대표자</td>
-                      </tr>
-                      <tr>
-                        <th>생년월일</th>
-                        <td>1960년 06월 16일</td>
-                        <th>대표자 성명</th>
-                        <td>김미숙</td>
-                      </tr>
-                      <tr>
-                        <th>영업소 명칭</th>
-                        <td colspan="3">씨유(CU)화순만연점</td>
-                      </tr>
-                      <tr>
-                        <th>영업소의 소재지</th>
-                        <td colspan="3">
-                          전남 화순군 화순읍 서양로 470 (신기리) 1층
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>교육일시(시간)</th>
-                        <td colspan="3">2022년 01월 10일(6시간)</td>
-                      </tr>
-                      <tr>
-                        <th>영업의 종류</th>
-                        <td colspan="3">휴게음식업 신규영업자</td>
-                      </tr>
-                      <tr>
-                        <th>교육실시기관명</th>
-                        <td><span>사단법인</span>한국휴게음식업중앙회</td>
-                        <th>교육구분</th>
-                        <td>온라인교육</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="certificats__text">
-                  위 사람은 ⌜식품위생법⌟ 제 41조, 동법 시행령 제 27조 및
-                  시행규칙 제 51조 내지 제 54조에 따라 휴게음식점 신규영업자
-                  위생교육을 이수하였으므로 수료증을 교부합니다.
-                </div>
-                <div class="certificats__sign">
-                  (사) 한국휴게음식업중앙회교육원장
-                </div>
-                <div class="certificats__bg-btm"></div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-bs-dismiss="modal"
-              >
-                닫기
-              </button>
-              <button type="button" class="btn btn-primary">
-                <i class="bi bi-download"></i> 다운로드
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                onclick="printModal('#modal05')"
-              >
-                <i class="bi bi-printer"></i> 프린트
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+			<div class="modal fade" id="modal05" tabindex="-1">
+				<div class="modal-dialog modal-lg modal-dialog-centered certificats-modal">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalLabel">수료증</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="certificats">
+								<div class="certificats__bg-top"></div>
+								<div class="certificats__id">제 2022 - 3493 호</div>
+								<div class="certificats__title">수료증</div>
+								<div class="certificats__table">
+									<table>
+										<colgroup>
+											<col style="width: 20%" />
+											<col style="width: 40%" />
+											<col style="width: 15%" />
+											<col style="width: 25%" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>교육이수자 성명</th>
+												<td>김미숙</td>
+												<th>직책</th>
+												<td>대표자</td>
+											</tr>
+											<tr>
+												<th>생년월일</th>
+												<td>1960년 06월 16일</td>
+												<th>대표자 성명</th>
+												<td>김미숙</td>
+											</tr>
+											<tr>
+												<th>영업소 명칭</th>
+												<td colspan="3">씨유(CU)화순만연점</td>
+											</tr>
+											<tr>
+												<th>영업소의 소재지</th>
+												<td colspan="3">전남 화순군 화순읍 서양로 470 (신기리) 1층</td>
+											</tr>
+											<tr>
+												<th>교육일시(시간)</th>
+												<td colspan="3">2022년 01월 10일(6시간)</td>
+											</tr>
+											<tr>
+												<th>영업의 종류</th>
+												<td colspan="3">휴게음식업 신규영업자</td>
+											</tr>
+											<tr>
+												<th>교육실시기관명</th>
+												<td><span>사단법인</span>한국휴게음식업중앙회</td>
+												<th>교육구분</th>
+												<td>온라인교육</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="certificats__text">
+									위 사람은 ⌜식품위생법⌟ 제 41조, 동법 시행령 제 27조 및 시행규칙 제 51조 내지 제 54조에 따라 휴게음식점 신규영업자 위생교육을 이수하였으므로
+									수료증을 교부합니다.
+								</div>
+								<div class="certificats__sign">(사) 한국휴게음식업중앙회교육원장</div>
+								<div class="certificats__bg-btm"></div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
+							<button type="button" class="btn btn-primary"><i class="bi bi-download"></i> 다운로드</button>
+							<button type="button" class="btn btn-primary" onclick="printModal('#modal05')"><i class="bi bi-printer"></i> 프린트</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <div class="modal fade" id="modal03" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalLabel">도서/벽지 지역 검색</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="list-type01">
-                <ul>
-                  <li class="bullet-none text-danger">
-                    영업장 소재지가 도서(섬),(산간) 벽지 지역에 해당하는 분들만
-                    온라인 교육 신청이 가능합니다.
-                  </li>
-                </ul>
-              </div>
-              <p class="mt-4">영업장 주소지를 차례대로 선택하세요.</p>
-              <div class="table-type01 mt-1">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <select class="form-select me-2">
-                          <option selected>시/도 선택</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                        <p class="fs-3 mt-1 text-center">
-                          <i class="bi bi-arrow-down-circle"></i>
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <select class="form-select me-2">
-                          <option selected>군/구 선택</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                        <p class="fs-3 mt-1 text-center">
-                          <i class="bi bi-arrow-down-circle"></i>
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <select class="form-select me-2">
-                          <option selected>읍/면/동 선택</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                        <p class="fs-3 mt-1 text-center">
-                          <i class="bi bi-arrow-down-circle"></i>
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <select class="form-select me-2">
-                          <option selected>대상 지역 선택</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="mt-2 text-danger fs-8">
-                          본인이 기입하려는 주소지가 나오지 않는 경우,<br />
-                          온라인 신청이 불가하므로 집합 교육으로 신청하시기
-                          바랍니다.
-                        </p>
-                        <p class="mt-2 text-center">
-                          <button type="button" class="btn btn-sm btn-primary">
-                            선택
-                          </button>
-                        </p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="mt-4">영업장 소재지의 상세주소를 입력하세요.</p>
-              <div class="table-type01 mt-1">
-                <table>
-                  <colgroup>
-                    <col style="width: 30%" />
-                    <col style="width: 70%" />
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th>시/도</th>
-                      <td>인천광역시</td>
-                    </tr>
-                    <tr>
-                      <th>군/구</th>
-                      <td>강화군</td>
-                    </tr>
-                    <tr>
-                      <th>읍/면/동</th>
-                      <td>교동면</td>
-                    </tr>
-                    <tr>
-                      <th>대상지역</th>
-                      <td>교동도</td>
-                    </tr>
-                    <tr>
-                      <th class="align-middle">지번/도로명 주소</th>
-                      <td>
-                        <input
-                          type="text"
-                          class="form-control form-control-sm w-100"
-                          placeholder="상세주소를 입력하세요"
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-info"
-                data-bs-dismiss="modal"
-              >
-                닫기
-              </button>
-              <button type="button" class="btn btn-primary">확인</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+			<div class="modal fade" id="modal03" tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalLabel">도서/벽지 지역 검색</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="list-type01">
+								<ul>
+									<li class="bullet-none text-danger">영업장 소재지가 도서(섬),(산간) 벽지 지역에 해당하는 분들만 온라인 교육 신청이 가능합니다.</li>
+								</ul>
+							</div>
+							<p class="mt-4">영업장 주소지를 차례대로 선택하세요.</p>
+							<div class="table-type01 mt-1">
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<select class="form-select me-2">
+													<option selected>시/도 선택</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+												<p class="fs-3 mt-1 text-center">
+													<i class="bi bi-arrow-down-circle"></i>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<select class="form-select me-2">
+													<option selected>군/구 선택</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+												<p class="fs-3 mt-1 text-center">
+													<i class="bi bi-arrow-down-circle"></i>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<select class="form-select me-2">
+													<option selected>읍/면/동 선택</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+												<p class="fs-3 mt-1 text-center">
+													<i class="bi bi-arrow-down-circle"></i>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<select class="form-select me-2">
+													<option selected>대상 지역 선택</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="mt-2 text-danger fs-8">
+													본인이 기입하려는 주소지가 나오지 않는 경우,<br />
+													온라인 신청이 불가하므로 집합 교육으로 신청하시기 바랍니다.
+												</p>
+												<p class="mt-2 text-center">
+													<button type="button" class="btn btn-sm btn-primary">선택</button>
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<p class="mt-4">영업장 소재지의 상세주소를 입력하세요.</p>
+							<div class="table-type01 mt-1">
+								<table>
+									<colgroup>
+										<col style="width: 30%" />
+										<col style="width: 70%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>시/도</th>
+											<td>인천광역시</td>
+										</tr>
+										<tr>
+											<th>군/구</th>
+											<td>강화군</td>
+										</tr>
+										<tr>
+											<th>읍/면/동</th>
+											<td>교동면</td>
+										</tr>
+										<tr>
+											<th>대상지역</th>
+											<td>교동도</td>
+										</tr>
+										<tr>
+											<th class="align-middle">지번/도로명 주소</th>
+											<td>
+												<input type="text" class="form-control form-control-sm w-100" placeholder="상세주소를 입력하세요" />
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-info" data-bs-dismiss="modal">닫기</button>
+							<button type="button" class="btn btn-primary">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

@@ -13189,8 +13189,14 @@ html {
 }
 
 @media (max-width: 991.98px) {
+  .kcraedu header .header__gnb-item {
+    background-color: #f5f5f5;
+  }
   .kcraedu header .header__gnb-item > a {
     font-size: 1.25rem;
+  }
+  .kcraedu header .header__gnb-item > ul {
+    background-color: #fff;
   }
 }
 
@@ -13481,17 +13487,35 @@ html {
   }
   .kcraedu header .header__gnb-item {
     margin: 0;
-    padding: 1.25rem;
   }
   .kcraedu header .header__gnb-item > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 0.125rem;
+    padding: 1.25rem;
     font-weight: 500;
     font-size: 1.5rem;
-    line-height: 2.25rem;
     color: #222222;
+  }
+  .kcraedu header .header__gnb-item > a::after {
+    content: "";
+    display: block;
+    width: 1.625rem;
+    height: 1.625rem;
+    background: url(../images/arrow.svg) no-repeat 50% 50%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .kcraedu header .header__gnb-item > ul {
     display: none;
-    margin-top: 1.25rem;
+    padding: 2rem 1.25rem;
     position: static;
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -13503,6 +13527,8 @@ html {
     margin-top: 0;
   }
   .kcraedu header .header__gnb-item > ul li a {
+    display: inline-block;
+    padding: 0.3rem 0;
     font-weight: 500;
     font-size: 1.125rem;
     color: #666666;
@@ -13512,6 +13538,10 @@ html {
   }
   .kcraedu header .header__gnb-item.active > a {
     color: #4f80ff;
+  }
+  .kcraedu header .header__gnb-item.active > a::after {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
   .kcraedu header .header__gnb-item.active > ul {
     display: block;
@@ -13713,7 +13743,7 @@ html {
   padding: 0;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .kcraedu .content {
     padding: 4.375rem 0 0 0;
   }
@@ -13775,12 +13805,24 @@ html {
   text-align: left;
 }
 
+@media (max-width: 767.98px) {
+  .kcraedu-modal {
+    width: 100%;
+  }
+}
+
 .kcraedu-modal__area {
   position: fixed;
   top: 0;
   left: 0;
   padding: 1.875rem;
   z-index: 300;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu-modal__area {
+    width: 100%;
+  }
 }
 
 .kcraedu-modal__area .container {
@@ -13799,6 +13841,12 @@ html {
   .kcraedu-modal__area .container {
     display: block;
     text-align: right;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu-modal__area .container {
+    padding: 0;
   }
 }
 
@@ -15876,6 +15924,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 1.25rem 0;
+  padding: 0;
 }
 
 .kcraedu .curriculum-detail__list li {
@@ -15888,12 +15938,17 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-width: 8.125rem;
   width: 100%;
-  margin: 0 20px;
+  margin: 0 1.25rem;
+  padding: 1.25rem;
+  border: 0.063rem solid #4f80ff;
+  border-color: #ececec;
+  border-radius: 0.625rem;
 }
 
 .kcraedu .curriculum-detail__list li strong {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .kcraedu .curriculum-detail__list li:after {
@@ -15911,8 +15966,39 @@ html {
   font-size: 1.5rem;
 }
 
+.kcraedu .curriculum-detail__list li:first-child {
+  margin-left: 0;
+}
+
+.kcraedu .curriculum-detail__list li:last-child {
+  margin-right: 0;
+}
+
 .kcraedu .curriculum-detail__list li:last-child:after {
   display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .kcraedu .curriculum-detail__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.625rem;
+  }
+  .kcraedu .curriculum-detail__list li {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .curriculum-detail__list li {
+    min-width: 6.25rem;
+    padding: 0.625;
+  }
+  .kcraedu .curriculum-detail__list li strong {
+    font-size: 1rem;
+  }
 }
 
 .kcraedu .curriculum-detail .schedule__region {
@@ -15928,7 +16014,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   background: #ffffff;
-  gap: 2px;
+  gap: 0.125rem;
 }
 
 .kcraedu .curriculum-detail .schedule__region-tab span {
@@ -16289,7 +16375,7 @@ html {
   background: #fff;
   border: 0.063rem solid #ececec;
   z-index: 10;
-  margin-left: -1px;
+  margin-left: -0.063rem;
 }
 
 .kcraedu .support-faq ul li:first-child {
@@ -16348,7 +16434,7 @@ html {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-    gap: 2px;
+    gap: 0.125rem;
   }
   .kcraedu .support-faq ul li {
     margin: 0;
@@ -16376,12 +16462,74 @@ html {
 }
 
 .kcraedu .education {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100vw;
   height: 100vh;
   overflow: auto;
+  padding: 1rem;
 }
 
-.kcraedu .education__header {
+@media (max-width: 767.98px) {
+  .kcraedu .education {
+    display: block;
+  }
+}
+
+.kcraedu .education-nav {
+  min-width: 25rem;
+  width: 30%;
+  margin-right: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+@media (max-width: 991.98px) {
+  .kcraedu .education-nav {
+    min-width: 18.75rem;
+    width: 20%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .education-nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.kcraedu .education-nav__header {
+  border-radius: 1.875rem 1.875rem 1.875rem 0;
+  padding: 1.25rem;
+  background: #193b92;
+}
+
+.kcraedu .education-nav__close {
+  text-align: right;
+}
+
+.kcraedu .education-nav__close .btn {
+  border-radius: 6.25rem;
+}
+
+.kcraedu .education-nav__close .btn i {
+  margin-left: 0.375rem;
+}
+
+.kcraedu .education-nav__title {
+  margin: 1.875rem 0 1.25rem 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .education-nav__title {
+    margin: 0.625rem 0;
+  }
+}
+
+.kcraedu .education-nav__progress p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16391,129 +16539,46 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 6.25rem;
-  padding: 0 2.5rem;
-  background: #3f5692;
-}
-
-.kcraedu .education__header p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.kcraedu .education__header p strong {
-  margin-right: 0.625rem;
-  font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 2.188rem;
-  color: #ffffff;
-}
-
-.kcraedu .education__header p .btn {
-  border-color: #3766de !important;
-  background: #3766de !important;
-  border-radius: 0.313rem !important;
-}
-
-.kcraedu .education__header > button {
-  border: none;
-  background: none;
   color: #fff;
-  font-size: 1.875rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
 }
 
-@media (max-width: 991.98px) {
-  .kcraedu .education__header {
-    height: 5rem;
-    padding: 0 1.25rem;
-  }
-  .kcraedu .education__header p {
-    padding-top: 0.8rem;
-    display: -webkit-box;
-    overflow: hidden;
-    /* autoprefixer: ignore next */
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    display: block;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .kcraedu .education__header p strong {
-    font-size: 1.25rem;
-    line-height: 1;
-  }
-  .kcraedu .education__header p .btn {
-    position: relative;
-    top: -0.2rem;
-  }
+.kcraedu .education-nav__progress .progress {
+  height: 0.375rem;
 }
 
-.kcraedu .education-contents__head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 4.063rem;
-  padding: 0 2.5rem;
+.kcraedu .education-nav__text {
+  margin-top: 0.625rem;
+  color: #fff;
+  font-size: 0.875rem;
 }
 
-.kcraedu .education-contents__head .progress {
-  width: 100%;
-  height: 0.313rem;
-  background: #e4f2ff;
-}
-
-.kcraedu .education-contents__head .progress-bar {
-  background: #3766de;
-}
-
-.kcraedu .education-contents__head p {
-  margin-left: 1.875rem;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.438rem;
-  color: #999999;
-  white-space: nowrap;
-}
-
-@media (max-width: 991.98px) {
-  .kcraedu .education-contents__head {
-    padding: 0 1.25rem;
-  }
-}
-
-.kcraedu .education-contents__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 0 2.5rem;
-}
-
-@media (max-width: 991.98px) {
-  .kcraedu .education-contents__body {
-    display: block;
-    width: auto;
-    padding: 0 1.25rem;
-  }
-}
-
-.kcraedu .education-contents__nav {
-  min-width: 15.625rem;
-  width: 20%;
-  height: calc(100vh - 12.813rem);
-  margin-right: 0.625rem;
-  padding-right: 0.625rem;
+.kcraedu .education-nav__list {
+  height: calc(100vh - 19rem);
+  margin: 1rem 0;
+  padding: 1rem;
   overflow: auto;
 }
 
-.kcraedu .education-contents__nav ul li {
+@media (max-width: 767.98px) {
+  .kcraedu .education-nav__list {
+    height: 200px;
+  }
+}
+
+.kcraedu .education-nav__list-num {
+  min-width: 1.25rem;
+  width: 1.25rem;
+  color: #000;
+}
+
+.kcraedu .education-nav__list ol {
+  margin: 0;
+  padding: 0;
+}
+
+.kcraedu .education-nav__list ol li {
   margin-bottom: 0.375rem;
   padding: 1.25rem;
   background: #ffffff;
@@ -16523,18 +16588,20 @@ html {
   transition: all 0.1s ease;
 }
 
-.kcraedu .education-contents__nav ul li a {
-  display: block;
+.kcraedu .education-nav__list ol li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: 100%;
 }
 
-.kcraedu .education-contents__nav ul li .badge {
+.kcraedu .education-nav__list ol li .badge {
   padding: 0 0.938em;
   font-size: 0.688rem;
 }
 
-.kcraedu .education-contents__nav ul li p {
+.kcraedu .education-nav__list ol li p {
   margin-top: 0.563rem;
   font-weight: 400;
   font-size: 1rem;
@@ -16550,36 +16617,55 @@ html {
   max-height: 46px;
 }
 
-.kcraedu .education-contents__nav ul li.active, .kcraedu .education-contents__nav ul li:hover {
+.kcraedu .education-nav__list ol li.active, .kcraedu .education-nav__list ol li:hover {
   border-color: #3766de;
 }
 
-.kcraedu .education-contents__nav ul li.active p, .kcraedu .education-contents__nav ul li:hover p {
+.kcraedu .education-nav__list ol li.active p, .kcraedu .education-nav__list ol li:hover p {
   color: #193b92;
 }
 
+.kcraedu .education-contents {
+  width: 100%;
+  padding: 0 2.5rem;
+}
+
 @media (max-width: 991.98px) {
-  .kcraedu .education-contents__nav {
-    width: 100%;
-    height: 9.25rem;
-    margin: 0 0 1.25rem 0;
-    padding: 0;
-    overflow-y: hidden;
-    overflow-x: auto;
+  .kcraedu .education-contents {
+    padding: 0 0;
   }
-  .kcraedu .education-contents__nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+}
+
+.kcraedu .education-contents__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.kcraedu .education-contents__head h3, .kcraedu .education-contents__head .h3 {
+  margin-right: 2rem;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 991.98px) {
+  .kcraedu .education-contents__head h3, .kcraedu .education-contents__head .h3 {
+    font-size: 1rem;
   }
-  .kcraedu .education-contents__nav ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-width: 15em;
-    max-width: 15rem;
-    margin-right: 0.625rem;
-  }
+}
+
+.kcraedu .education-contents__head .btn i {
+  margin-left: 0.375rem;
+}
+
+.kcraedu .education-contents__body {
+  width: 100%;
 }
 
 .kcraedu .education-contents__player {
@@ -16590,7 +16676,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: calc(100vh - 12.813rem);
+  height: calc(100vh - 11rem);
   overflow: hidden;
 }
 
@@ -16601,8 +16687,21 @@ html {
 
 @media (max-width: 991.98px) {
   .kcraedu .education-contents__player {
-    height: calc(100vh - 22rem);
+    height: 36vh;
   }
+}
+
+.kcraedu .education-contents__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .kcraedu .education-contents__certification {
@@ -16610,21 +16709,33 @@ html {
   height: calc(100vh - 12.813rem);
   padding: 1.25rem 3.125rem;
   overflow: auto;
+  background: #ffffff;
+  height: calc(100vh - 2rem);
+  padding: 1.25rem 3.125rem;
+  border: 0.063rem solid #d9d9d9;
+  border-radius: 0.625rem;
 }
 
 @media (max-width: 991.98px) {
   .kcraedu .education-contents__certification {
-    height: calc(100vh - 22rem);
-    padding: 1.25rem 0;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .education-contents__certification {
+    height: 100%;
   }
 }
 
 .kcraedu .education-contents__certification h4, .kcraedu .education-contents__certification .h4 {
   margin-bottom: 1.25rem;
+  padding: 3rem 0;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 2.188rem;
   color: #222222;
+  text-align: center;
 }
 
 .kcraedu .education-contents__certification dl {
@@ -16647,23 +16758,34 @@ html {
 .kcraedu .education-contents__guide {
   width: 100%;
   height: calc(100vh - 12.813rem);
-  padding: 1.25rem 3.125rem;
   overflow: auto;
+  background: #ffffff;
+  height: calc(100vh - 2rem);
+  padding: 1.25rem 3.125rem;
+  border: 0.063rem solid #d9d9d9;
+  border-radius: 0.625rem;
 }
 
 @media (max-width: 991.98px) {
   .kcraedu .education-contents__guide {
-    height: calc(100vh - 22rem);
-    padding: 1.25rem 0;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .education-contents__guide {
+    height: 100%;
   }
 }
 
 .kcraedu .education-contents__guide h4, .kcraedu .education-contents__guide .h4 {
   margin-bottom: 1.25rem;
+  padding: 3rem 0;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 2.188rem;
   color: #222222;
+  text-align: center;
 }
 
 .kcraedu .education-contents__guide p {
@@ -16690,21 +16812,33 @@ html {
   height: calc(100vh - 12.813rem);
   padding: 1.25rem 3.125rem;
   overflow: auto;
+  background: #ffffff;
+  height: calc(100vh - 2rem);
+  padding: 1.25rem 3.125rem;
+  border: 0.063rem solid #d9d9d9;
+  border-radius: 0.625rem;
 }
 
 @media (max-width: 991.98px) {
   .kcraedu .education-contents__question {
-    height: calc(100vh - 22rem);
-    padding: 1.25rem 0;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kcraedu .education-contents__question {
+    height: 100%;
   }
 }
 
 .kcraedu .education-contents__question h4, .kcraedu .education-contents__question .h4 {
   margin-bottom: 1.25rem;
+  padding: 3rem 0;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 2.188rem;
   color: #222222;
+  text-align: center;
 }
 
 .kcraedu .education-contents__question dl dt {
@@ -18261,7 +18395,7 @@ h1, .h1 {
 }
 
 .mobile__table-item dl dd ul li strong {
-  min-width: 4.375rem;
+  min-width: 6rem;
   margin-right: 0.625rem;
   font-weight: 400;
   font-size: 1rem;

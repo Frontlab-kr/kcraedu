@@ -2797,57 +2797,16 @@ html {
 			height: 100%;
 		}
 		&.fold {
-			padding-left: 0;
+			//padding-left: 0;
 			.education-nav {
-				min-width: 0;
-				width: 0;
+				display: none;
 			}
-			.education-nav__inner {
-				width: 0;
-				overflow: hidden;
-			}
-			.education-nav__toggle {
-				display: flex;
-				width: 2.5rem;
+			.btn-toggle-open {
+				display: inline-block;
 			}
 			@include media-breakpoint-down(lg) {
-				padding-left: 1rem;
-				.education-nav {
-					min-width: 100%;
-					width: 100%;
-					margin-bottom: 1rem;
-				}
-				.education-nav__inner {
-					width: 100%;
-				}
-				.education-nav__header {
-					.btn-toggle-open {
-						display: inline-block;
-					}
-					.btn-toggle-close {
-						display: none;
-					}
-				}
-				.education-nav__toggle {
-					display: none;
-				}
-				.education-nav__title {
-					display: none;
-				}
-				.education-nav__progress {
-					display: none;
-				}
-				.education-nav__text {
-					display: none;
-				}
-				.education-nav__list {
-					display: none;
-				}
-				.education-contents {
-					padding: 0;
-				}
 				.education-contents__player {
-					height: calc(100vh - 18rem);
+					height: calc(100vh - 10rem);
 				}
 				.education-contents__question {
 					height: calc(100vh - 8rem);
@@ -2871,7 +2830,12 @@ html {
 				width: 20%;
 			}
 			@include media-breakpoint-down(md) {
-				width: 100%;
+				position: absolute;
+				top: 1rem;
+				left: 1rem;
+				right: 1rem;
+				bottom: 1rem;
+				width: auto;
 			}
 			&__toggle {
 				display: flex;
@@ -2892,14 +2856,13 @@ html {
 				display: none;
 			}
 			&__inner {
+				height: 100%;
+				background: #fff;
 			}
 			&__header {
 				border-radius: 1.875rem 1.875rem 1.875rem 0;
 				padding: 1.25rem;
 				background: #193b92;
-				.btn-toggle-open {
-					display: none;
-				}
 			}
 			&__close {
 				text-align: right;
@@ -2937,17 +2900,21 @@ html {
 				font-size: 0.875rem;
 			}
 			&__list {
-				height: calc(100vh - 19rem);
-				margin: 1rem 0;
+				height: calc(100vh - 18rem);
+				margin: 1rem 0 0 0;
 				padding: 1rem;
 				overflow: auto;
 				@include media-breakpoint-down(md) {
-					height: 200px;
+					height: calc(100vh - 17rem);
 				}
 				&-num {
 					min-width: 1.25rem;
 					width: 1.25rem;
 					color: #000;
+				}
+				&-badge {
+					min-width: 4.375rem;
+					text-align: right;
 				}
 				ol {
 					margin: 0;
@@ -2961,6 +2928,7 @@ html {
 						transition: all 0.1s ease;
 						a {
 							display: flex;
+							justify-content: space-between;
 							width: 100%;
 							height: 100%;
 						}
@@ -2969,7 +2937,6 @@ html {
 							font-size: 0.688rem;
 						}
 						p {
-							margin-top: 0.563rem;
 							font-weight: 400;
 							font-size: 1rem;
 							line-height: 1.438rem;
@@ -2993,7 +2960,7 @@ html {
 			position: relative;
 			z-index: 10;
 			width: 100%;
-			padding: 0 2.5rem 0 4rem;
+			padding: 0 2.5rem;
 			@include media-breakpoint-down(lg) {
 				padding: 0 0 0 1rem;
 			}
@@ -3002,8 +2969,11 @@ html {
 				align-items: center;
 				justify-content: space-between;
 				margin-bottom: 1rem;
+				.btn-toggle-open {
+					display: none;
+				}
 				h3 {
-					margin-right: 2rem;
+					margin: 0;
 					font-size: 1.25rem;
 					@include media-breakpoint-down(lg) {
 						font-size: 1rem;
@@ -3028,23 +2998,22 @@ html {
 					width: 100%;
 					height: 100%;
 				}
-				@include media-breakpoint-down(lg) {
-					height: 36vh;
-				}
+				// @include media-breakpoint-down(lg) {
+				// 	height: 36vh;
+				// }
 			}
 			&__button {
 				display: flex;
 				align-items: center;
-				justify-content: space-between;
+				justify-content: flex-end;
 				margin-top: 1rem;
 			}
 			&__certification {
 				width: 100%;
-				height: calc(100vh - 12.813rem);
+				height: calc(100vh - 6rem);
 				padding: 1.25rem 3.125rem;
 				overflow: auto;
 				background: #ffffff;
-				height: calc(100vh - 2rem);
 				padding: 1.25rem 3.125rem;
 				border: 0.063rem solid #d9d9d9;
 				border-radius: 0.625rem;
@@ -3084,11 +3053,10 @@ html {
 			}
 			&__guide {
 				width: 100%;
-				height: calc(100vh - 12.813rem);
+				height: calc(100vh - 6rem);
 				overflow: auto;
 				//padding: 1.25rem;
 				background: #ffffff;
-				height: calc(100vh - 2rem);
 				padding: 1.25rem 3.125rem;
 				border: 0.063rem solid #d9d9d9;
 				border-radius: 0.625rem;
@@ -3126,11 +3094,11 @@ html {
 			}
 			&__question {
 				width: 100%;
-				height: calc(100vh - 12.813rem);
+				height: calc(100vh - 6rem);
 				padding: 1.25rem 3.125rem;
 				overflow: auto;
 				background: #ffffff;
-				height: calc(100vh - 2rem);
+
 				padding: 1.25rem 3.125rem;
 				border: 0.063rem solid #d9d9d9;
 				border-radius: 0.625rem;

@@ -15909,19 +15909,6 @@ html {
   color: #666666;
 }
 
-@media (max-width: 767.98px) {
-  .kcraedu .curriculum-detail > dl {
-    display: block;
-  }
-  .kcraedu .curriculum-detail > dl > dt {
-    margin-bottom: 0.313rem;
-  }
-  .kcraedu .curriculum-detail > dl > dd > p {
-    margin-left: 0.5rem;
-    padding: 0 !important;
-  }
-}
-
 .kcraedu .curriculum-detail__list {
   width: 100%;
   display: -webkit-box;
@@ -16470,26 +16457,92 @@ html {
   display: flex;
   width: 100vw;
   height: 100vh;
-  overflow: auto;
   padding: 1rem;
 }
 
 @media (max-width: 767.98px) {
   .kcraedu .education {
     display: block;
+    height: 100%;
   }
 }
 
+.kcraedu .education.fold {
+  padding-left: 0;
+}
+
 .kcraedu .education.fold .education-nav {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  min-width: 0;
+  width: 0;
+}
+
+.kcraedu .education.fold .education-nav__inner {
+  width: 0;
+  overflow: hidden;
+}
+
+.kcraedu .education.fold .education-nav__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .kcraedu .education.fold {
+    padding-left: 1rem;
+  }
+  .kcraedu .education.fold .education-nav {
+    min-width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .kcraedu .education.fold .education-nav__inner {
+    width: 100%;
+  }
+  .kcraedu .education.fold .education-nav__header .btn-toggle-open {
+    display: inline-block;
+  }
+  .kcraedu .education.fold .education-nav__header .btn-toggle-close {
+    display: none;
+  }
+  .kcraedu .education.fold .education-nav__toggle {
+    display: none;
+  }
+  .kcraedu .education.fold .education-nav__title {
+    display: none;
+  }
+  .kcraedu .education.fold .education-nav__progress {
+    display: none;
+  }
+  .kcraedu .education.fold .education-nav__text {
+    display: none;
+  }
+  .kcraedu .education.fold .education-nav__list {
+    display: none;
+  }
+  .kcraedu .education.fold .education-contents {
+    padding: 0;
+  }
+  .kcraedu .education.fold .education-contents__player {
+    height: calc(100vh - 18rem);
+  }
+  .kcraedu .education.fold .education-contents__question {
+    height: calc(100vh - 8rem);
+  }
+  .kcraedu .education.fold .education-contents__guide {
+    height: calc(100vh - 8rem);
+  }
+  .kcraedu .education.fold .education-contents__certification {
+    height: calc(100vh - 8rem);
+  }
 }
 
 .kcraedu .education-nav {
+  position: relative;
   min-width: 25rem;
   width: 30%;
-  margin-right: 0.625rem;
-  padding-right: 0.625rem;
+  z-index: 20;
 }
 
 @media (max-width: 991.98px) {
@@ -16502,15 +16555,42 @@ html {
 @media (max-width: 767.98px) {
   .kcraedu .education-nav {
     width: 100%;
-    margin: 0;
-    padding: 0;
   }
+}
+
+.kcraedu .education-nav__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #193b92;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  color: #fff;
+  border-radius: 0 0.625rem 0.625rem 0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: none;
 }
 
 .kcraedu .education-nav__header {
   border-radius: 1.875rem 1.875rem 1.875rem 0;
   padding: 1.25rem;
   background: #193b92;
+}
+
+.kcraedu .education-nav__header .btn-toggle-open {
+  display: none;
 }
 
 .kcraedu .education-nav__close {
@@ -16634,13 +16714,15 @@ html {
 }
 
 .kcraedu .education-contents {
+  position: relative;
+  z-index: 10;
   width: 100%;
-  padding: 0 2.5rem;
+  padding: 0 2.5rem 0 4rem;
 }
 
 @media (max-width: 991.98px) {
   .kcraedu .education-contents {
-    padding: 0 0;
+    padding: 0 0 0 1rem;
   }
 }
 

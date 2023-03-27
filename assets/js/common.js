@@ -49,6 +49,14 @@ $(document).ready(function () {
 			$(".kcraedu-modal__area").remove();
 		}
 	});
+
+	//학습창
+	$(".btn-toggle-close").on("click", function () {
+		$(".education").addClass("fold");
+	});
+	$(".education-nav__toggle, .btn-toggle-open").on("click", function () {
+		$(".education").removeClass("fold");
+	});
 });
 
 //print

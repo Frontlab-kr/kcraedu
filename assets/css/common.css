@@ -13808,6 +13808,8 @@ html {
 @media (max-width: 767.98px) {
   .kcraedu-modal {
     width: 100%;
+    top: 0 !important;
+    left: 0 !important;
   }
 }
 
@@ -13846,6 +13848,7 @@ html {
 
 @media (max-width: 767.98px) {
   .kcraedu-modal__area .container {
+    position: relative;
     padding: 0;
   }
 }
@@ -16475,6 +16478,11 @@ html {
   .kcraedu .education {
     display: block;
   }
+}
+
+.kcraedu .education.fold .education-nav {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .kcraedu .education-nav {

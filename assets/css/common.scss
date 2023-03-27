@@ -654,6 +654,8 @@ html {
 		text-align: left;
 		@include media-breakpoint-down(md) {
 			width: 100%;
+			top: 0 !important;
+			left: 0 !important;
 		}
 		&__area {
 			position: fixed;
@@ -674,6 +676,7 @@ html {
 					text-align: right;
 				}
 				@include media-breakpoint-down(md) {
+					position: relative;
 					padding: 0;
 				}
 			}
@@ -2791,6 +2794,11 @@ html {
 		padding: 1rem;
 		@include media-breakpoint-down(md) {
 			display: block;
+		}
+		&.fold {
+			.education-nav {
+				transform: translateX(-100%);
+			}
 		}
 		&-nav {
 			min-width: 25rem;

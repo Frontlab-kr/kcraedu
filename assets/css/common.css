@@ -13914,7 +13914,7 @@ html {
 .kcraedu .main__head {
   position: relative;
   overflow: hidden;
-  padding: 1.875rem 0 3.125rem 0;
+  padding: 0.938rem 0 1.563rem 0;
   background-color: #e2edfa;
 }
 
@@ -13936,7 +13936,7 @@ html {
 }
 
 .kcraedu .main__contents {
-  padding: 3.125rem 0 0 0;
+  padding: 1.563rem 0 0 0;
 }
 
 .kcraedu .main-menu {
@@ -14385,7 +14385,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 4.375rem 0.625rem 0;
+  margin: 2.188rem 0.625rem 0;
 }
 
 @media (max-width: 991.98px) {

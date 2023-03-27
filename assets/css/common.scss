@@ -731,7 +731,7 @@ html {
 		&__head {
 			position: relative;
 			overflow: hidden;
-			padding: 1.875rem 0 3.125rem 0;
+			padding: 0.938rem 0 1.563rem 0;
 			background-color: #e2edfa;
 			@include media-breakpoint-down(md) {
 				padding: 0 0 2.75rem 0;
@@ -749,7 +749,7 @@ html {
 			}
 		}
 		&__contents {
-			padding: 3.125rem 0 0 0;
+			padding: 1.563rem 0 0 0;
 		}
 		&-menu {
 			display: grid;
@@ -1127,7 +1127,7 @@ html {
 		&-link {
 			display: flex;
 			justify-content: space-between;
-			margin: 4.375rem 0.625rem 0;
+			margin: 2.188rem 0.625rem 0;
 			@include media-breakpoint-down(lg) {
 				display: grid;
 				grid-template-columns: 1fr 1fr 1fr;

@@ -3024,6 +3024,11 @@ html {
 					width: 100%;
 					height: 100%;
 				}
+				&-inner {
+					position: relative;
+					width: 100%;
+					height: 50%;
+				}
 				// @include media-breakpoint-down(lg) {
 				// 	height: 36vh;
 				// }
@@ -3031,7 +3036,7 @@ html {
 			&__button {
 				display: flex;
 				align-items: center;
-				justify-content: flex-end;
+				justify-content: space-between;
 				margin-top: 1rem;
 			}
 			&__certification {
@@ -4534,12 +4539,12 @@ h1 {
 .note-modal-footer .note-btn {
 	float: none !important;
 }
-.my-video-dimensions.vjs-fluid {
-	padding-top: 50% !important;
-	@include media-breakpoint-down(md) {
-		padding-top: 100% !important;
-	}
-}
+// .my-video-dimensions.vjs-fluid {
+// 	padding-top: 44% !important;
+// 	@include media-breakpoint-down(md) {
+// 		padding-top: 100% !important;
+// 	}
+// }
 
 .table.offline-curriculum {
 	/*.table > :not(caption) > * > * {} 다음에 추가*/

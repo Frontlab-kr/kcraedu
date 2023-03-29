@@ -13096,14 +13096,16 @@ html {
 }
 
 .kcraedu header {
+  position: relative;
   border-bottom: 0.063rem solid #d9d9d9;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
+  z-index: 50;
 }
 
 .kcraedu header .header {
   position: relative;
-  padding: 1.25rem 0 2.5rem;
+  padding: 1.25rem 0 1.25rem;
 }
 
 .kcraedu header .header .container {
@@ -13120,6 +13122,9 @@ html {
 }
 
 .kcraedu header .header__bottom {
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
   position: relative;
 }
 
@@ -13158,6 +13163,7 @@ html {
 .kcraedu header .header__gnb-item {
   position: relative;
   margin-left: 2.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .kcraedu header .header__gnb-item:first-child {
@@ -13182,10 +13188,34 @@ html {
 .kcraedu header .header__gnb-item > ul {
   display: none;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+  border-radius: 6px;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.kcraedu header .header__gnb-item > ul li {
+  padding: 5px 20px;
+}
+
+.kcraedu header .header__gnb-item > ul li a {
+  color: #000;
+  white-space: nowrap;
+}
+
+.kcraedu header .header__gnb-item > ul li a:hover {
+  color: #4f80ff;
+}
+
+.kcraedu header .header__gnb-item:hover > a {
+  color: #4f80ff;
+}
+
+.kcraedu header .header__gnb-item:hover > ul {
+  display: block;
 }
 
 @media (max-width: 991.98px) {
@@ -13936,7 +13966,7 @@ html {
 }
 
 .kcraedu .main__contents {
-  padding: 1.563rem 0 0 0;
+  padding: 3.125rem 0 0 0;
 }
 
 .kcraedu .main-menu {

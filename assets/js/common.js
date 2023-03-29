@@ -17,24 +17,24 @@ $(document).ready(function () {
 			return false;
 		}
 	});
-	$(".header__gnb-item").hover(
-		function () {
-			// over
-			$("header").addClass("active");
-		},
-		function () {
-			// out
-		}
-	);
-	$("header").hover(
-		function () {
-			// over
-		},
-		function () {
-			// out
-			$("header").removeClass("active");
-		}
-	);
+	// $(".header__gnb-item").hover(
+	// 	function () {
+	// 		// over
+	// 		$("header").addClass("active");
+	// 	},
+	// 	function () {
+	// 		// out
+	// 	}
+	// );
+	// $("header").hover(
+	// 	function () {
+	// 		// over
+	// 	},
+	// 	function () {
+	// 		// out
+	// 		$("header").removeClass("active");
+	// 	}
+	// );
 
 	//toggle
 	$(document).on("click", ".btn-toggle", function () {

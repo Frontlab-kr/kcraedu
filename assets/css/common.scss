@@ -120,14 +120,14 @@ html {
 					> ul {
 						display: none;
 						position: absolute;
-						bottom: 10px;
+						bottom: 0.5rem;
 						left: 0;
 						transform: translateY(100%);
-						border-radius: 6px;
+						border-radius: 0.375rem;
 						background: #fff;
-						padding: 10px 0;
+						padding: 1rem 0;
 						li {
-							padding: 5px 20px;
+							padding: 0.313rem 1.6rem;
 							a {
 								color: #666;
 								white-space: nowrap;
@@ -146,13 +146,18 @@ html {
 							display: block;
 						}
 					}
-					@include media-breakpoint-down(lg) {
+					@include media-breakpoint-down(md) {
 						background-color: #f5f5f5;
 						> a {
 							font-size: 1.25rem;
 						}
 						> ul {
+							padding: 0;
+							bottom: auto;
 							background-color: #fff;
+							li {
+								padding: 0;
+							}
 						}
 					}
 				}

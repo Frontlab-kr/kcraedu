@@ -17,7 +17,6 @@ $(document).ready(function () {
 			$(".header__gnb-item").removeClass("active");
 			$(this).parents(".header__gnb-item").toggleClass("active");
 		}
-		//$(this).parents(".header__gnb-item.active").sibling(".header__gnb-item").removeClass("active");
 
 		if ($(".header__navbar").css("display") == "flex") {
 			return false;

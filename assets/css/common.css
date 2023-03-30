@@ -5417,6 +5417,12 @@ fieldset:disabled .btn {
   color: #fff;
 }
 
+@media (max-width: 1199.98px) {
+  .breadcrumb {
+    color: #000;
+  }
+}
+
 .breadcrumb-item + .breadcrumb-item {
   padding-left: 0.625rem;
 }
@@ -5429,9 +5435,21 @@ fieldset:disabled .btn {
   content: var(--bs-breadcrumb-divider, ">") /* rtl: var(--bs-breadcrumb-divider, ">") */;
 }
 
+@media (max-width: 1199.98px) {
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: #000;
+  }
+}
+
 .breadcrumb-item.active {
   color: #666;
   color: #fff;
+}
+
+@media (max-width: 1199.98px) {
+  .breadcrumb-item.active {
+    color: #000;
+  }
 }
 
 .pagination {
@@ -13881,6 +13899,7 @@ html {
 @media (max-width: 1199.98px) {
   .kcraedu .content-head nav {
     position: relative;
+    top: auto;
   }
 }
 
@@ -16918,6 +16937,12 @@ html {
   min-width: 5.625rem;
 }
 
+.kcraedu .education-contents__certification-inner {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
 .kcraedu .education-contents__guide {
   width: 100%;
   height: calc(100vh - 6rem);
@@ -17151,7 +17176,10 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  max-width: 40rem;
   height: 9.75rem;
+  margin: 0 auto;
   background: #f8f8f8;
   border-radius: 0.625rem;
 }

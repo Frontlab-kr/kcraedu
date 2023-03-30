@@ -704,6 +704,7 @@ html {
 				right: 0;
 				@include media-breakpoint-down(xl) {
 					position: relative;
+					top: auto;
 				}
 			}
 		}
@@ -3133,6 +3134,11 @@ html {
 						}
 					}
 				}
+				&-inner {
+					width: 100%;
+					max-width: 40rem;
+					margin: 0 auto;
+				}
 			}
 			&__guide {
 				width: 100%;
@@ -3342,7 +3348,10 @@ html {
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					width: 100%;
+					max-width: 40rem;
 					height: 9.75rem;
+					margin: 0 auto;
 					background: #f8f8f8;
 					border-radius: 0.625rem;
 					p {

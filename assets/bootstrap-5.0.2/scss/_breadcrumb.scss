@@ -8,6 +8,9 @@
 	background-color: $breadcrumb-bg;
 	@include border-radius($breadcrumb-border-radius);
 	color: #fff;
+	@include media-breakpoint-down(xl) {
+		color: #000;
+	}
 }
 
 .breadcrumb-item {
@@ -20,6 +23,9 @@
 			padding-right: $breadcrumb-item-padding-x;
 			color: $breadcrumb-divider-color;
 			color: #fff;
+			@include media-breakpoint-down(xl) {
+				color: #000;
+			}
 			content: var(--#{$variable-prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(
 					--#{$variable-prefix}breadcrumb-divider,
 					escape-svg($breadcrumb-divider-flipped)
@@ -30,5 +36,8 @@
 	&.active {
 		color: $breadcrumb-active-color;
 		color: #fff;
+		@include media-breakpoint-down(xl) {
+			color: #000;
+		}
 	}
 }

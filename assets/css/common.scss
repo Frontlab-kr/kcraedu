@@ -18,6 +18,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	min-height: calc(100vh - 2px);
+	overflow: hidden;
 	//reset
 	ul,
 	li {

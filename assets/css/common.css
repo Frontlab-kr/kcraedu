@@ -13052,6 +13052,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: calc(100vh - 2px);
+  overflow: hidden;
 }
 
 .kcraedu ul,

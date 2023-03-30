@@ -16943,6 +16943,18 @@ html {
   margin: 0 auto;
 }
 
+.kcraedu .education-contents__certification-inner > .d-flex {
+  display: block !important;
+}
+
+.kcraedu .education-contents__certification-inner > .d-flex > .w-50 {
+  width: 100% !important;
+}
+
+.kcraedu .education-contents__certification-inner > .d-flex > .ms-1 {
+  margin: 0.625rem 0 0 0 !important;
+}
+
 .kcraedu .education-contents__guide {
   width: 100%;
   height: calc(100vh - 6rem);

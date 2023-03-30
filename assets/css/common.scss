@@ -3138,13 +3138,15 @@ html {
 					width: 100%;
 					max-width: 40rem;
 					margin: 0 auto;
-					> .d-flex {
-						display: block !important;
-						> .w-50 {
-							width: 100% !important;
-						}
-						> .ms-1 {
-							margin: 0.625rem 0 0 0 !important;
+					@include media-breakpoint-down(md) {
+						> .d-flex {
+							display: block !important;
+							> .w-50 {
+								width: 100% !important;
+							}
+							> .ms-1 {
+								margin: 0.625rem 0 0 0 !important;
+							}
 						}
 					}
 				}

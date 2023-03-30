@@ -11,8 +11,14 @@ $(document).ready(function () {
 	});
 
 	$(document).on("click", ".header__gnb-item > a", function () {
-		$(".header__gnb-item").removeClass("active");
-		$(this).parents(".header__gnb-item").addClass("active");
+		if ($(this).parents(".header__gnb-item").hasClass("active")) {
+			$(".header__gnb-item").removeClass("active");
+		} else {
+			$(".header__gnb-item").removeClass("active");
+			$(this).parents(".header__gnb-item").toggleClass("active");
+		}
+		//$(this).parents(".header__gnb-item.active").sibling(".header__gnb-item").removeClass("active");
+
 		if ($(".header__navbar").css("display") == "flex") {
 			return false;
 		}

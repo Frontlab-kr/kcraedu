@@ -13783,6 +13783,7 @@ html {
 
 .kcraedu .snb ul li a:hover {
   color: rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
 
 .kcraedu .snb ul li:last-child:after {

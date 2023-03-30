@@ -13188,6 +13188,12 @@ html {
   color: #4f80ff;
 }
 
+@media (max-width: 767.98px) {
+  .kcraedu header .header__gnb-item > a:hover {
+    color: #000;
+  }
+}
+
 .kcraedu header .header__gnb-item > ul {
   display: none;
   position: absolute;

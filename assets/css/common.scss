@@ -116,6 +116,9 @@ html {
 						}
 						&:hover {
 							color: #4f80ff;
+							@include media-breakpoint-down(md) {
+								color: #000;
+							}
 						}
 					}
 					> ul {

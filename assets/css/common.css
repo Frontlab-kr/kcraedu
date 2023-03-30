@@ -17037,6 +17037,7 @@ html {
   line-height: 2.188rem;
   color: #222222;
   text-align: center;
+  word-break: keep-all;
 }
 
 .kcraedu .education-contents__question dl dt {

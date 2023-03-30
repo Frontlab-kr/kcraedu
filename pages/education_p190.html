@@ -12,19 +12,15 @@
 		<script src="../assets/js/common.js"></script>
 		<link rel="stylesheet" href="http://dev.onesnc.co.kr/static/user_template/css/video-js.css" />
 
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.2.1/video-js.min.css"
-			integrity="sha512-akMT+LKE5CNd8NbHp0x0u6CoUJDZSMBFd5iunyEJReywcV9G10IJdNyCgxK+pnhDpnqsaPQsO3x7mnZZAs0CUA=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.2.1/video.min.js"
-			integrity="sha512-2EuVcspJHnszS4/g4Ed5+6S8+QsC+BKWpq3HnUdu5fQhmJjc/+azAE1oQv/wAFTWGXusmn62LZDXm9oP+S+XTw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
+		<!-- video.js -->
+		<link href="http://dev2.onesnc.co.kr/static/user_template/css/video-js.css" rel="stylesheet" />
+
+		<!-- moment.js -->
+		<script src="http://dev2.onesnc.co.kr/static/global_assets/js/plugins/ui/moment/moment.min.js"></script>
+		<script src="http://dev2.onesnc.co.kr/static/common_js.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
+		<!-- video.js -->
+		<script src="http://dev2.onesnc.co.kr/static/user_template/js/video.min.js"></script>
 	</head>
 	<body>
 		<div class="kcraedu">
@@ -195,9 +191,1391 @@
 		</div>
 
 		<script>
-			var player = videojs("my-video", {
-				fill: true,
+			//document.oncontextmenu = function(){return false;}
+
+			var PLAYER;
+			var MAX_PLAY_AT = 0;
+			var LAST_PLAY_AT = 0;
+			var CURRENT_TIME = 0;
+
+			var CC_CD = "CC_00032";
+			var CC_YEAR = "";
+			var ENROL_NO = "2";
+			var CC_TARGET = ""; //N:신규, O:기존, V:자판기
+			var STUDY_COMPLETE_POP_CONFIRM = "N";
+			var COURSE_PROGRESS_CONFRIM = "N"; //진도가 100%가 되면 뜨는 안내에 대한 확인여부 체크
+			var LAST_PROGRESS_CONFIRIM = "N";
+
+			var PUB_STUDY_STATUS = "";
+
+			//진도 알림 팝업 기능개선으로 추가.
+			var COURSE_PROGRESS_NOTI_USE_YN = "N"; //진도 알림 팝업 사용여부
+			var COURSE_PROGRESS_NOTI_VAL = 0; //진도 알림 팝업 설정 진도율
+			var COURSE_PROGRESS_NOTI_CONFRIM = "N"; //차시별 진도알림 팝업 확인 여부 체크
+			var COURSE_PROGRESS = 0; //현재 진행중인 차시의 courseProgress(목차명 클릭시)
+			//////////////////
+
+			PLAYER = videojs("my-video", {
+				controls: true,
+				playsinline: true,
+				controlBar: { playToggle: true, pictureInPictureToggle: false, remainingTimeDisplay: true, progressControl: true, fullscreenToggle: false },
+				autoplay: false,
+				preload: "none",
+				//fill: true,
 			});
+			//PLAYER.controlBar.progressControl.disable();	//컨트롤바 제어 안되게 막는 옵션
+
+			PLAYER.addClass("vjs-matrix"); //custom class 추가
+
+			var overlayDiv = document.createElement("div"); //custom component 추가
+			overlayDiv.className = "vjs-custom-overlay";
+			PLAYER.el().insertBefore(overlayDiv, PLAYER.el().firstChild.nextSibling);
+
+			//플레이어 키보드 제어
+			window.addEventListener(
+				"keydown",
+				function (event) {
+					switch (event.keyCode) {
+						case 32: //Space
+							if (PLAYER.paused()) {
+								PLAYER.play();
+							} else {
+								PLAYER.pause();
+							}
+							break;
+						case 39: //ArrowRight
+							var cur = PLAYER.currentTime();
+							//PLAYER.currentTime(cur + 5);
+							break;
+						case 37: //ArrowLeft
+							var cur = PLAYER.currentTime();
+							PLAYER.currentTime(cur - 5);
+							break;
+					}
+				},
+				false
+			);
+
+			//PLAYER.poster('/static/global_assets/images/image.png');
+			PLAYER.ready(function () {
+				//PLAYER.muted(true);		//자동재생을 하기 위해선 음소거가 되어있어야만 한다.
+				//PLAYER.currentTime(20);
+
+				// get the current time, should be 120 seconds
+
+				/* 	  PLAYER.controlBar.progressControl.seekBar.on('mouseup', function(event) {
+			 // PLAYER.pause();
+				var seekBarEl = this.el();
+					var seekBarRect = videojs.dom.getBoundingClientRect(seekBarEl);
+					var seekBarPoint = videojs.dom.getPointerPosition(seekBarEl, event).x;
+					var duration = PLAYER.duration();
+					var seekBarClickedTime = videojs.formatTime(seekBarPoint * duration, duration);
+					console.log('Seekbar clicked time: ' +PLAYER.currentTime());
+			
+					console.log("MAX_PLAY_AT = "+MAX_PLAY_AT);
+				if(parseInt(MAX_PLAY_AT) <= parseInt(PLAYER.currentTime())){
+					alert("1");
+					PLAYER.currentTime(MAX_PLAY_AT);
+					
+				}
+				//PLAYER.play();
+			}); */
+
+				PLAYER.on("fullscreenchange", function () {
+					/*
+				$("video").removeAttr("playsinline");
+				$("video").removeAttr("webkit-playsinline");
+				 if(!PLAYER.isFullscreen()){
+					 $("video").attr("playsinline");
+						$("video").attr("webkit-playsinline");
+					 }
+				*/
+				});
+				PLAYER.on("seeking", function (event) {
+					if (PUB_STUDY_STATUS == "C") {
+						return true;
+					} else {
+						PLAYER.controlBar.progressControl.seekBar.disable();
+						if (CURRENT_TIME < PLAYER.currentTime() && PLAYER.currentTime() > MAX_PLAY_AT) {
+							PLAYER.currentTime(CURRENT_TIME);
+						}
+					}
+				});
+				PLAYER.on("seeked", function (event) {
+					/*   if (CURRENT_TIME < PLAYER.currentTime()|| MAX_PLAY_AT < PLAYER.currentTime()) {
+						PLAYER.currentTime(CURRENT_TIME);
+					} */
+				});
+
+				PLAYER.on("timeupdate", function () {
+					if (!PLAYER.seeking()) {
+						CURRENT_TIME = PLAYER.currentTime();
+					}
+				});
+
+				/* PLAYER.controlBar.progressControl.on('mouseup', function(event) {//mouseup
+				if(parseInt(PLAYER.currentTime()) <= LAST_PLAY_AT){			//LAST_PLAY_AT 디비에 마지막 시청정보(이어보기)
+					MAX_PLAY_AT = PLAYER.currentTime();
+					PLAYER.currentTime(PLAYER.currentTime());
+				}else if(parseInt(MAX_PLAY_AT) <= parseInt(PLAYER.currentTime())){		//진도처리 되지 않은 앞으로 감기는 못하도록 방지.
+						PLAYER.currentTime(CURRENT_TIME);
+				}else{
+					//MAX_PLAY_AT = PLAYER.currentTime();			//MAX_PLAY_AT : 컨트롤바로 이동시 직전 시청 정보 저장
+					PLAYER.currentTime(PLAYER.currentTime());
+				}
+		 })
+			
+		PLAYER.controlBar.progressControl.on('touchend', function(event) {
+				if(parseInt(PLAYER.currentTime()) <= LAST_PLAY_AT){			//LAST_PLAY_AT 디비에 마지막 시청정보(이어보기)
+					MAX_PLAY_AT = PLAYER.currentTime();
+					PLAYER.currentTime(PLAYER.currentTime());
+				}else if(parseInt(MAX_PLAY_AT) <= parseInt(PLAYER.currentTime())){		//진도처리 되지 않은 앞으로 감기는 못하도록 방지.
+						PLAYER.currentTime(MAX_PLAY_AT);
+				}else{
+					MAX_PLAY_AT = PLAYER.currentTime();			//MAX_PLAY_AT : 컨트롤바로 이동시 직전 시청 정보 저장
+					PLAYER.currentTime(PLAYER.currentTime());
+				}
+		 })  */
+			});
+
+			PLAYER.on("play", function () {
+				if (isMobile) {
+					//PLAYER.requestFullscreen();	//풀스크린으로 변경
+					$("#my-video").bind("contextmenu", function () {
+						return false;
+					});
+				}
+
+				if (parseInt(COURSE_PROGRESS) >= 100) {
+					MAX_PLAY_AT = PLAYER.duration();
+				}
+				$(".vjs-custom-overlay").addClass("vjs-hidden");
+				$(".vjs-big-play-button").css("display", "none");
+			});
+
+			PLAYER.on("pause", function () {
+				$(".vjs-custom-overlay").removeClass("vjs-hidden");
+				$(".vjs-big-play-button").css("display", "block");
+			});
+
+			//////////////
+			if ("nytest6" == null || "nytest6" == "") {
+				window.open("about:blank", "_self").close();
+			}
+			var isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase());
+			//수료 안내 팝업 닫기 클릭시 다음부턴 안띄움.
+			/* function studyCompletePopClose(){
+		STUDY_COMPLETE_POP_CONFIRM = 'Y';
+		
+	} */
+			//100% 학습완료 안내 팝업
+			/* function courseProgressConfirmClose(){	
+		COURSE_PROGRESS_CONFRIM = 'Y';
+	} */
+
+			//진도 안내 팝업 종료
+			/* function policyProgressNotiClose(){	
+		COURSE_PROGRESS_NOTI_CONFRIM = 'Y';
+		PLAYER.play();
+	} */
+			//이어보기 안내 팝업 종료
+			function lastPlayNotiClose() {
+				PLAYER.play();
+			}
+			function closeStudyroom() {
+				window.open("about:blank", "_self").close();
+				opener.studyList.init();
+			}
+
+			var studyroom = (function () {
+				var COURSE_CD = "";
+				var QUIZ_CD = "";
+				var SITE_SMS_AUTH_USE_YN = ""; //사이트 기본 설정 > 차시별 문자인증 사용여부
+				var INIT_LOAD = true;
+
+				//퀴즈 리스트
+				var QUESTION_LIST = [];
+
+				//응답결과 리스트
+				var ANS_LIST = [];
+				var CURRENT_QUIZ_NO = "";
+				var STUDY_STATUS = "";
+
+				//과정정보 조회
+				var getCurriculumInfo = function () {
+					//ENROL_NO = enrolNo;
+					commonAjaxFunc("/studyroom/curriculum/" + CC_CD, {}, "GET", studyroom.getCurriculumInfoCallback);
+				};
+
+				//과정정보 조회 callback
+				var getCurriculumInfoCallback = function (data) {
+					if (data == null) {
+						window.close();
+					} else {
+						SITE_SMS_AUTH_USE_YN = data.siteSmsAuthUseYn;
+
+						$(".education-nav__title strong").text(data.ccName);
+
+						CC_TARGET = data.ccTarget;
+						CC_YEAR = data.ccYear;
+						COURSE_PROGRESS_NOTI_USE_YN = data.progressNotiUseYn;
+						COURSE_PROGRESS_NOTI_VAL = data.progressNotiVal;
+						COURSE_STUDY_TYPE = data.courseStudyType;
+						getCourseList();
+					}
+				};
+				var getCourseList = function () {
+					commonAjaxFunc("/studyroom/" + CC_CD + "/course", { enrolNo: ENROL_NO }, "GET", function (data) {
+						if (data == null) {
+							window.close();
+						} else {
+							STUDY_STATUS = data.studentInfo.studyStatus;
+							PUB_STUDY_STATUS = data.studentInfo.studyStatus;
+							if (STUDY_STATUS == "C") {
+								if (STUDY_COMPLETE_POP_CONFIRM == "N") {
+									//$("#studentComplNoti").modal('show');
+									Swal.fire({
+										html: "교육을 이수하였습니다.<br/>선택과목 학습시 진도율은 반영되지 않습니다.",
+										confirmButtonText: "수료증 확인",
+										showCancelButton: true,
+										cancelButtonText: "닫기",
+									}).then((result) => {
+										if (result.isConfirmed) {
+											closeStudyroom();
+										} else {
+											STUDY_COMPLETE_POP_CONFIRM = "Y";
+										}
+									});
+									if (CC_TARGET == "O") {
+										$(".choice-course-noti").removeClass("hidden");
+									}
+								}
+								$("#header-certi-btn").removeClass("d-none");
+							}
+							var totalProgress = 0.0;
+							var htmlStr = "";
+							var lastPlayCourseType = "";
+							var lastPlayCourse = "";
+							var requireCourseCompleteYn = "Y";
+							if (data.courseList == null || data.courseList.length == 0) {
+								commonMsgAlert("등록된 과정목차가 없습니다. 관리자에게 문의하세요.");
+								window.close();
+								return false;
+							} else {
+								var courseLink = "#";
+								totalProgress = data.totalProgress.toFixed(0);
+
+								htmlStr += "<p><span>0</span><span>100</span></p>";
+								htmlStr += '	<div class="progress">';
+								htmlStr +=
+									'		<div class="progress-bar" role="progressbar" style="width: ' +
+									totalProgress +
+									'%" aria-valuenow="' +
+									totalProgress +
+									'" aria-valuemin="0" aria-valuemax="100"></div>';
+								htmlStr += "	</div>";
+
+								$(".education-nav__progress").html(htmlStr);
+								var lastPlayDate = "";
+								if (data.lastPlayInfo.modDate != null) {
+									lastPlayDate = "<br/> 마지막 학습일 " + moment(data.lastPlayInfo.modDate, "YYYYMMDD").format("YYYY-MM-DD");
+								}
+								$(".education-nav__text").html("<strong>" + totalProgress + "%</strong> 완료" + lastPlayDate);
+								/* htmlStr +='<li>';
+						htmlStr +='    <div class="progress skill-bar">';
+						htmlStr +='    <div class="progress-bar bg-primary wow slideInLeft" data-wow-duration="1s" role="progressbar" aria-valuenow="'+totalProgress+'" aria-valuemin="0" aria-valuemax="100" style="width: '+totalProgress+'%;animation-duration: 1s; animation-name: slideInLeft;    visibility: visible !important;"> <span class="skill"><span class="val">'+totalProgress+'%</span></span>';
+						htmlStr +='    </div>';
+						htmlStr +='  </div>';
+						htmlStr +='</li>'; */
+								htmlStr = "";
+								for (var i = 0; i < data.courseList.length; i++) {
+									var course = data.courseList[i];
+									var courseRequireYn = course.courseRequireYn;
+									var courseRequireStr = "";
+									var courseProgress = course.courseProgress;
+									var smsAuthUseYn = course.smsAuthUseYn;
+									if (courseRequireYn == "Y") {
+										courseRequireStr = "[필수]";
+									}
+									if (COURSE_STUDY_TYPE == "F") {
+										if (course.courseType == "COURSE") {
+											if (STUDY_STATUS == "C") {
+												//수료된 경우 모든차시를 볼 수 있음.
+												courseLink =
+													"javascript:studyroom.goContents('" +
+													course.courseCd +
+													"','" +
+													course.contentsCd +
+													"','N','" +
+													course.viewTime +
+													"','" +
+													courseProgress +
+													"')";
+											} else {
+												//완료한 차시 OR 이미 진행중인 차시는 인증을 건너뛰도록 파라미터 N으로 지정.
+												if (courseProgress > 0 && courseProgress < 100) {
+													if (courseRequireYn == "Y") {
+														requireCourseCompleteYn = "N";
+													}
+													courseLink =
+														"javascript:studyroom.goContents('" +
+														course.courseCd +
+														"','" +
+														course.contentsCd +
+														"','N','" +
+														course.viewTime +
+														"','" +
+														courseProgress +
+														"')";
+												} else if (courseProgress >= 100) {
+													courseLink =
+														"javascript:studyroom.goContents('" +
+														course.courseCd +
+														"','" +
+														course.contentsCd +
+														"','N','" +
+														course.viewTime +
+														"','" +
+														courseProgress +
+														"')";
+												} else {
+													if (courseRequireYn == "Y") {
+														requireCourseCompleteYn = "N";
+													}
+													courseLink =
+														"javascript:studyroom.goContents('" +
+														course.courseCd +
+														"','" +
+														course.contentsCd +
+														"','" +
+														course.studentSmsAuthYn +
+														"','" +
+														course.viewTime +
+														"','" +
+														courseProgress +
+														"')";
+												}
+											}
+
+											//courseLink = 'javascript:studyroom.goContents(\''+course.courseCd+'\',\''+course.contentsCd+'\',\''+course.smsAuthUseYn+'\')';
+
+											if (COURSE_CD == course.courseCd) {
+												htmlStr += '<li data-id="' + course.courseCd + '" class="active">';
+												htmlStr += '	<a href="' + courseLink + '">';
+											} else {
+												htmlStr += '<li data-id="' + course.courseCd + '">';
+												htmlStr += '	<a href="' + courseLink + '">';
+											}
+											htmlStr += "<p>" + courseRequireStr + course.courseName + "</p>";
+
+											htmlStr += '<div class="education-nav__list-badge">';
+											if (SITE_SMS_AUTH_USE_YN == "Y" && smsAuthUseYn == "Y") {
+												if (course.studentSmsAuthYn == "N") {
+													htmlStr += '	<span class="badge rounded-pill bg-success">인증완료</span>';
+												} else {
+													htmlStr += '	<span class="badge rounded-pill bg-warning">문자인증</span>';
+												}
+											}
+											htmlStr +=
+												'		<span class="badge rounded-pill bg-primary span-progress" data-value="' +
+												course.courseProgress +
+												'" >' +
+												course.courseProgress +
+												"%</span>";
+
+											htmlStr += "</div>";
+
+											htmlStr += "	</a>";
+											htmlStr += "</li>";
+										} else {
+											//quiz
+											courseLink = "javascript:studyroom.goQuiz('" + course.courseCd + "','" + course.quizCd + "');";
+											if (requireCourseCompleteYn == "Y") {
+												courseLink = "javascript:studyroom.goQuiz('" + course.courseCd + "','" + course.quizCd + "');";
+											} else {
+												courseLink = "javascript:commonMsgAlert('필수강의 수강 후 학습평가가 가능합니다.');";
+											}
+
+											if (COURSE_CD == course.courseCd) {
+												htmlStr += '<li data-id="' + course.courseCd + '"  class="active">';
+												htmlStr += '	<a href="' + courseLink + '">';
+											} else {
+												htmlStr += '<li data-id="' + course.courseCd + '">';
+												htmlStr += '	<a href="' + courseLink + '">';
+											}
+											htmlStr += "<p>" + courseRequireStr + course.courseName + "</p>";
+
+											htmlStr += '<div class="education-nav__list-badge">';
+											if (course.courseProgress == 100) {
+												htmlStr += '		<span class="badge rounded-pill bg-success">응시완료</span>';
+											} else {
+												htmlStr += '		<span class="badge rounded-pill bg-danger">응시전</span>';
+											}
+											htmlStr += "</div>";
+											htmlStr += "</a>";
+											htmlStr += "</li>";
+										}
+									} else {
+										//순차적용
+
+										if (course.courseType == "COURSE") {
+											courseLink = "javascript:commonMsgAlert('순차적으로 학습해주시기 바랍니다.');";
+											if (STUDY_STATUS == "C") {
+												courseLink =
+													"javascript:studyroom.goContents('" +
+													course.courseCd +
+													"','" +
+													course.contentsCd +
+													"','N','" +
+													course.viewTime +
+													"','" +
+													courseProgress +
+													"')";
+											} else {
+												//완료한 차시 OR 이미 진행중인 차시는 인증을 건너뛰도록 파라미터 N으로 지정.
+												if (courseProgress > 0 && courseProgress < 100) {
+													if (courseRequireYn == "Y") {
+														requireCourseCompleteYn = "N";
+													}
+													courseLink =
+														"javascript:studyroom.goContents('" +
+														course.courseCd +
+														"','" +
+														course.contentsCd +
+														"','N','" +
+														course.viewTime +
+														"','" +
+														courseProgress +
+														"')";
+												} else if (courseProgress >= 100) {
+													courseLink =
+														"javascript:studyroom.goContents('" +
+														course.courseCd +
+														"','" +
+														course.contentsCd +
+														"','N','" +
+														course.viewTime +
+														"','" +
+														courseProgress +
+														"')";
+												} else {
+													if (courseRequireYn == "Y") {
+														requireCourseCompleteYn = "N";
+													}
+													if (i == 0) {
+														courseLink =
+															"javascript:studyroom.goContents('" +
+															course.courseCd +
+															"','" +
+															course.contentsCd +
+															"','" +
+															course.studentSmsAuthYn +
+															"','" +
+															course.viewTime +
+															"','" +
+															courseProgress +
+															"')";
+													} else {
+														var prevCourseProgress = data.courseList[i - 1].courseProgress;
+														if (prevCourseProgress >= 100) {
+															courseLink =
+																"javascript:studyroom.goContents('" +
+																course.courseCd +
+																"','" +
+																course.contentsCd +
+																"','" +
+																course.studentSmsAuthYn +
+																"','" +
+																course.viewTime +
+																"','" +
+																courseProgress +
+																"')"; //studentSmsAuthYn = 'Y' 문자인증 화면 노출, n : 이미 인증을 한경우 이므로 인증화면 노출 X
+														}
+													}
+												}
+											}
+
+											if (COURSE_CD == course.courseCd) {
+												htmlStr += '<li data-id="' + course.courseCd + '"  class="active">';
+												htmlStr += '	<a href="' + courseLink + '">';
+											} else {
+												htmlStr += '<li data-id="' + course.courseCd + '">';
+												htmlStr += '	<a href="' + courseLink + '">';
+											}
+											htmlStr += "<p>" + courseRequireStr + course.courseName + "</p>";
+
+											htmlStr += '<div class="education-nav__list-badge">';
+											if (SITE_SMS_AUTH_USE_YN == "Y" && smsAuthUseYn == "Y") {
+												if (course.studentSmsAuthYn == "N") {
+													htmlStr += '	<span class="badge rounded-pill bg-success">인증완료</span>';
+												} else {
+													htmlStr += '	<span class="badge rounded-pill bg-warning">문자인증</span>';
+												}
+											}
+											htmlStr +=
+												'			<span class="badge rounded-pill bg-primary span-progress"  data-value="' +
+												course.courseProgress +
+												'" >' +
+												course.courseProgress +
+												"%</span>";
+											htmlStr += "</div>";
+
+											htmlStr += "</a>";
+											htmlStr += "</li>";
+										} else {
+											//quiz
+											var prevCourseProgress = data.courseList[i - 1].courseProgress;
+											if (prevCourseProgress >= 100) {
+												courseLink = "javascript:studyroom.goQuiz('" + course.courseCd + "','" + course.quizCd + "');";
+											} else if (requireCourseCompleteYn == "Y") {
+												courseLink = "javascript:studyroom.goQuiz('" + course.courseCd + "','" + course.quizCd + "');";
+											} else {
+												courseLink = "javascript:commonMsgAlert('필수강의 수강 후 학습평가가 가능합니다.');";
+											}
+
+											if (COURSE_CD == course.courseCd) {
+												htmlStr += '<li data-id="' + course.courseCd + '"  class="active">';
+												htmlStr += '	<a href="' + courseLink + '">';
+											} else {
+												htmlStr += '<li data-id="' + course.courseCd + '">';
+												htmlStr += '	<a href="' + courseLink + '">';
+											}
+											htmlStr += "<p>" + courseRequireStr + course.courseName + "</p>";
+
+											htmlStr += '<div class="education-nav__list-badge">';
+											if (course.courseProgress == 100) {
+												htmlStr += '		<span class="badge rounded-pill bg-success" span-progress"  data-value="' + course.courseProgress + '" >응시완료</span>';
+											} else {
+												htmlStr += '		<span class="badge rounded-pill bg-danger" span-progress"  data-value="' + course.courseProgress + '" >응시전</span>';
+											}
+
+											htmlStr += "</div>";
+											htmlStr += "</a>";
+											htmlStr += "</li>";
+										}
+									}
+								}
+
+								$("#studyroomCourseList").html(htmlStr);
+								//$("#studyRoomModal").modal('show');
+
+								var lastPlayInfo = data.lastPlayInfo;
+								if (INIT_LOAD) {
+									if (lastPlayInfo == null) {
+										goContents(
+											data.courseList[0].courseCd,
+											data.courseList[0].contentsCd,
+											data.courseList[0].studentSmsAuthYn,
+											data.courseList[0].viewTime,
+											courseList[0].courseProgress
+										);
+									} else {
+										if (lastPlayInfo.courseType == "COURSE") {
+											goContents(
+												lastPlayInfo.courseCd,
+												lastPlayInfo.contentsCd,
+												lastPlayInfo.studentSmsAuthYn,
+												lastPlayInfo.viewTime,
+												lastPlayInfo.courseProgress
+											);
+										} else {
+											goQuiz(lastPlayInfo.courseCd, lastPlayInfo.quizCd);
+										}
+									}
+								}
+							}
+						}
+					});
+				};
+				// 	var VIEW_TIME = 0;
+				var INTERVAL_CNT = 0;
+				var PROGRESS_INTERVAL;
+				///진도///
+				var setProgress = function () {
+					if (PROGRESS_INTERVAL != null) {
+						clearInterval(PROGRESS_INTERVAL);
+					}
+					PROGRESS_INTERVAL = setInterval(startProgress, 1000);
+				};
+
+				var startProgress = function () {
+					if (STUDY_STATUS == "C") {
+						if (STUDY_COMPLETE_POP_CONFIRM == "N") {
+							$("#studentComplNoti").modal("show");
+							if (CC_TARGET == "O") {
+								$(".choice-course-noti").removeClass("hidden");
+							}
+						}
+						$("#certiLabel").html('<button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" onclick="closeStudyroom();">수료증 확인</button>');
+						stopProgress();
+					} else {
+						INTERVAL_CNT++;
+						if (INTERVAL_CNT >= 10 && COURSE_CD != "") {
+							//var VIEW_PROGRESS = PLAYER.currentTime().toFixed();
+
+							var VIEW_PROGRESS = Number.parseFloat(CURRENT_TIME).toFixed();
+
+							INTERVAL_CNT = 0;
+							var sendData = { ccCd: CC_CD, ccYear: CC_YEAR, enrolNo: ENROL_NO, courseCd: COURSE_CD, courseType: "COURSE", viewTime: VIEW_PROGRESS };
+
+							commonAjaxFunc("/studyroom/userid/check", {}, "GET", function (data) {
+								//사용자 아이디 체크
+								if (data != null && data != "") {
+									commonAjaxFunc("/studyroom/video/progress", sendData, "POST", function (data) {
+										if (data.result == "success") {
+											if (data.courseInfo != null) {
+												MAX_PLAY_AT = data.courseInfo.viewTime;
+												getCourseList();
+												if (COURSE_PROGRESS_NOTI_USE_YN == "Y" && data.courseInfo.courseProgress < 100) {
+													//진도알림팝업
+													if (data.courseInfo.courseProgress >= COURSE_PROGRESS_NOTI_VAL && COURSE_PROGRESS_NOTI_CONFRIM == "N") {
+														PLAYER.pause();
+														stopProgress();
+														Swal.fire({
+															html: "현재 학습진도 " + COURSE_PROGRESS_NOTI_VAL + "%이상 달성하였습니다.<br/>남은 학습도 진행해볼까요?",
+															confirmButtonText: "확인",
+														}).then((result) => {
+															if (result.isConfirmed) {
+																COURSE_PROGRESS_NOTI_CONFRIM = "Y";
+																setProgress();
+																PLAYER.play();
+															}
+														});
+														/* $("#policyProgressNoti .co-notice-txt").text(COURSE_PROGRESS_NOTI_VAL+"%");
+												$("#policyProgressNoti").modal('show'); */
+													}
+												}
+												if (data.courseInfo.courseProgress == "100" && COURSE_PROGRESS_CONFRIM == "N") {
+													//alert("해당 학습이 완료되었습니다. 학습목차에서 다음 차시를 진행해주세요.")
+													MAX_PLAY_AT = PLAYER.duration();
+													if (!Swal.isVisible()) {
+														Swal.fire({ html: "해당 학습이 완료되었습니다.<br/> 학습목차에서 다음 차시명을 클릭하세요.", confirmButtonText: "확인" }).then(
+															(result) => {
+																if (result.isConfirmed) {
+																	COURSE_PROGRESS_CONFRIM = "Y";
+																}
+															}
+														);
+													}
+												}
+											}
+										} else if (data.result == "LOGIN_USER_IS_NULL") {
+											stopProgress();
+											alert("로그인이 끊겼습니다. 다시 로그인해주세요.");
+											window.open("about:blank", "_self").close();
+											opener.location.href = "/user/login";
+										} else {
+										}
+									});
+								} else {
+									stopProgress();
+									if (confirm("로그인 정보가 만료되었습니다. 다시 로그인해주세요.")) {
+										window.open("about:blank", "_self").close();
+										opener.location.href = "/user/login";
+									}
+								}
+							});
+						}
+					}
+				};
+
+				var stopProgress = function () {
+					if (PROGRESS_INTERVAL != null) {
+						clearInterval(PROGRESS_INTERVAL);
+					}
+				};
+
+				var prevContents = function () {
+					var prevObj = $("#studyroomCourseList li.active").prev();
+					var nowCourseCd = $("#studyroomCourseList li.active").attr("data-id");
+					var targetCourseCd = $(prevObj).attr("data-id");
+					var prevCourseProgress = $("#studyroomCourseList li[data-id='" + nowCourseCd + "']")
+						.find(".span-progress")
+						.attr("data-value");
+
+					if (COURSE_STUDY_TYPE != "F") {
+						//순차학습일경우 이전 차시의 진도율이 무조건 100%이므로 view
+						courseInfo(nowCourseCd, targetCourseCd);
+					}
+				};
+				var nextContents = function () {
+					var prevObj = $("#studyroomCourseList li.active").next();
+					var nowCourseCd = $("#studyroomCourseList li.active").attr("data-id");
+					var targetCourseCd = $(prevObj).attr("data-id");
+
+					var prevCourseProgress = $("#studyroomCourseList li[data-id='" + nowCourseCd + "']")
+						.find(".span-progress")
+						.attr("data-value");
+					if (COURSE_STUDY_TYPE != "F") {
+						//순차학습일경우 이전 차시의 진도율이 100% 가 아니면 alert띄워준다.
+						if (STUDY_STATUS == "C") {
+							courseInfo(nowCourseCd, targetCourseCd);
+						} else {
+							if (prevCourseProgress < 100) {
+								commonMsgAlert("순차적으로 학습해주시기 바랍니다.");
+								return false;
+							} else {
+								courseInfo(nowCourseCd, targetCourseCd);
+							}
+						}
+					}
+				};
+
+				var courseInfo = function (nowCourseCd, targetCourseCd) {
+					//다음 또는 이전 차싯의 정보를 가져온다.
+					commonAjaxFunc("/studyroom/" + CC_CD + "/course/" + targetCourseCd, { enrolNo: ENROL_NO }, "GET", function (data) {
+						var courseProgress = data.courseProgress;
+						var courseRequireYn = data.courseRequireYn;
+						var requireCourseCompleteYn = "Y";
+
+						if (COURSE_STUDY_TYPE == "F") {
+							//자유학습
+							if (data.courseType == "COURSE") {
+								if (courseProgress > 0 && courseProgress < 100) {
+									//이미 진도율이 있는 차시라면 문자 인증 없이 컨텐츠 view
+									goContents(data.courseCd, data.contentsCd, "N", data.viewTime, data.courseProgress);
+								} else if (courseProgress >= 100) {
+									//이미 진도율이 있는 차시라면 문자 인증 없이 컨텐츠 view
+									goContents(data.courseCd, data.contentsCd, "N", data.viewTime, data.courseProgress);
+								} else {
+									//처음 보는 차시일 경우 문자인증 사용여부에 따라 view
+									goContents(data.courseCd, data.contentsCd, data.studentSmsAuthYn, data.viewTime, data.courseProgress);
+								}
+							} else {
+								goQuiz(data.courseCd, data.quizCd);
+							}
+						} else {
+							if (data.courseType == "COURSE") {
+								if (STUDY_STATUS == "C") {
+									goContents(data.courseCd, data.contentsCd, "N", data.viewTime, data.courseProgress);
+								} else {
+									if (courseProgress > 0 && courseProgress < 100) {
+										//이미 진도율이 있는 차시라면 문자 인증 없이 컨텐츠 view
+										goContents(data.courseCd, data.contentsCd, "N", data.viewTime, data.courseProgress);
+									} else if (courseProgress >= 100) {
+										//이미 진도율이 있는 차시라면 문자 인증 없이 컨텐츠 view
+										goContents(data.courseCd, data.contentsCd, "N", data.viewTime, data.courseProgress);
+									} else {
+										//처음 보는 차시일 경우 문자인증 사용여부에 따라 view
+										goContents(data.courseCd, data.contentsCd, data.studentSmsAuthYn, data.viewTime, data.courseProgress);
+									}
+								}
+							} else {
+								goQuiz(data.courseCd, data.quizCd);
+							}
+						}
+					});
+				};
+
+				var goContents = function (courseCd, contentsCd, smsAuthUseYn, viewTime, courseProgress) {
+					if ($(".education").css("display") == "block") {
+						//모바일에서는 목차 선택시 목차 자동으로 닫아줌.
+						$(".education").addClass("fold");
+					}
+					COURSE_PROGRESS = 0;
+					CURRENT_TIME = 0;
+					LAST_PLAY_AT = viewTime;
+					COURSE_PROGRESS = courseProgress;
+
+					clearInterval(PROGRESS_INTERVAL);
+					PLAYER.reset();
+
+					if (SITE_SMS_AUTH_USE_YN == "N") {
+						smsAuthUseYn = "N";
+					}
+
+					commonAjaxFunc("/studyroom/userid/check", {}, "GET", function (data) {
+						//사용자 아이디 체크
+						if (data != null && data != "") {
+							if (isMobile && smsAuthUseYn != "" && !INIT_LOAD) {
+								$("#burger-check").prop("checked", function () {
+									return !$(this).prop("checked");
+								});
+							}
+
+							COURSE_CD = courseCd;
+
+							commonAjaxFunc("/curriculum/" + CC_CD + "/course/" + courseCd, {}, "GET", function (data) {
+								$(".education-contents__head h3").text(data.courseName);
+							});
+							commonAsyncAjaxFunc(
+								"/studyroom/course/viewcnt/update",
+								{ ccCd: CC_CD, enrolNo: ENROL_NO, courseCd: COURSE_CD, courseType: "COURSE" },
+								"POST",
+								function (data) {}
+							);
+							$("#studyroomCourseList li  ").removeClass("active");
+							$("#studyroomCourseList li[data-id='" + courseCd + "'] ").addClass("active");
+
+							//이전버튼 제어
+							if ($("#studyroomCourseList > li.active").index() == 0) {
+								$("#prev-btn").addClass("d-none");
+							} else {
+								$("#prev-btn").removeClass("d-none");
+							}
+							//다음 버튼 제어
+							if ($("#studyroomCourseList > li.active").index() == $("#studyroomCourseList > li").length - 1) {
+								$("#next-btn").addClass("d-none");
+							} else {
+								$("#next-btn").removeClass("d-none");
+							}
+
+							if (smsAuthUseYn == "Y") {
+								smsAuth.fnShow(courseCd, contentsCd);
+							} else {
+								$("#player-area").removeClass("d-none");
+								$("#quiz-area").addClass("d-none");
+								$("#smsAuthDiv, #quiz-contents-area").addClass("d-none");
+								commonAjaxFunc("/contents/" + contentsCd, {}, "GET", studyroom.goContentsCallback);
+							}
+						} else {
+							if (confirm("로그인 정보가 만료되었습니다. 다시 로그인해주세요.")) {
+								window.open("about:blank", "_self").close();
+								opener.location.href = "/user/login";
+							}
+						}
+					});
+				};
+				var goContentsCallback = function (data) {
+					if (data != null) {
+						COURSE_PROGRESS_CONFRIM = "N"; //목차를 누를때마다 컨펌창에 대한 기본 값 초기화
+						COURSE_PROGRESS_NOTI_CONFRIM = "N";
+						LAST_PROGRESS_CONFIRIM = "N";
+
+						$("#quiz-area").removeClass("active");
+						$("#player-area").addClass("active");
+
+						if (COURSE_PROGRESS == 100) {
+							//진도가 100%인경우 이어보기/100%완료 팝업 노출 안함 2022.04.21
+							COURSE_PROGRESS_CONFRIM = "Y";
+							LAST_PROGRESS_CONFIRIM = "Y";
+						}
+						if (COURSE_PROGRESS >= COURSE_PROGRESS_NOTI_VAL) {
+							COURSE_PROGRESS_NOTI_CONFRIM = "Y";
+						}
+						//$("#player").attr("src","/data/sampleContetnts/01/01_01.htm");
+						var contentsPath = data.contentsPath.replace("https://d1r563r0svqb5x.cloudfront.net/", "");
+
+						//$("#player").attr("src","https://kcraedu.hscdn.com/"+contentsPath);
+
+						PLAYER.src({ src: "https://kcraedu.hscdn.com/" + contentsPath, type: "video/mp4" });
+
+						CURRENT_TIME = LAST_PLAY_AT;
+
+						MAX_PLAY_AT = LAST_PLAY_AT;
+
+						PLAYER.currentTime(LAST_PLAY_AT); //마지막 재생시간 셋팅
+
+						if (LAST_PLAY_AT != 0 && INIT_LOAD && LAST_PROGRESS_CONFIRIM != "Y") {
+							var min = 0;
+							if (LAST_PLAY_AT > 60) {
+								var min = parseInt(LAST_PLAY_AT / 60);
+								var sec = LAST_PLAY_AT % 60;
+								$("#lastPlayNoti > .study-room-complete-noti > div").html(
+									min + "분 " + sec + "초까지 시청하셨습니다.<br/>" + min + "분 " + sec + "초부터 학습이 시작됩니다."
+								);
+							} else {
+								$("#lastPlayNoti > .study-room-complete-noti > div").html(
+									LAST_PLAY_AT + "초까지 시청하셨습니다.<br/>" + LAST_PLAY_AT + "초부터 학습이 시작됩니다."
+								);
+							}
+							$("#lastPlayNoti").modal("show");
+						}
+
+						INIT_LOAD = false;
+						$(".vjs-custom-overlay").removeClass("vjs-hidden");
+						$(".vjs-big-play-button").css("display", "block");
+
+						setProgress();
+					}
+				};
+
+				var goQuiz = function (courseCd, quizCd) {
+					clearInterval(PROGRESS_INTERVAL);
+					commonAjaxFunc("/studyroom/userid/check", {}, "GET", function (data) {
+						if (data != null && data != "") {
+							if (isMobile && !INIT_LOAD) {
+								$("#burger-check").prop("checked", function () {
+									return !$(this).prop("checked");
+								});
+							}
+							if (INIT_LOAD) {
+								INIT_LOAD = false;
+							}
+							$("#quiz-area > .education-contents__head h3").empty();
+							$("#quiz-contents-area > .education-contents__head h3").empty();
+							$("#quiz-area > .education-contents__guide").empty();
+							//player 영역 초기화
+							PLAYER.reset();
+
+							$("#studyroomCourseList li").removeClass("active");
+							$("#studyroomCourseList li[data-id='" + courseCd + "'] ").addClass("active");
+
+							COURSE_CD = courseCd;
+							QUIZ_CD = quizCd;
+							//퀴즈 결과 체크
+							commonAjaxFunc("/web/curriculum/" + CC_CD + "/quiz/" + QUIZ_CD, {}, "GET", function (data) {
+								var questionList = data.result;
+								QUESTION_LIST = data.result;
+								commonAjaxFunc("/quiz/ans", { ccCd: CC_CD, courseCd: COURSE_CD, enrolNo: ENROL_NO }, "GET", function (data) {
+									$("#player-area").addClass("d-none");
+									$("#smsAuthDiv").addClass("d-none");
+
+									if (data == null || data.length == 0) {
+										$("#quiz-area .education-contents__guide").empty();
+										$("#quiz-area").removeClass("d-none");
+
+										var htmlStr = "";
+										//htmlStr +='<div class="education-contents__guide">';
+										htmlStr += "<h4>평가 응시 안내</h4>";
+										htmlStr += "<p>";
+										htmlStr += "    (사)한국휴게음식업중앙회 온라인식품위생교육과정을 수강해 주셔서 감사합니다.<br />";
+										htmlStr += '    본 회에서는 <span class="text-danger">식품의약품안전처의 온라인 식품위생교육 조치사항</span>에 따라,<br />';
+										htmlStr +=
+											'    <span class="text-danger">온라인 식품위생교육 효과 제고</span> 확인을 위하여 수강 완료 후 학습평가를 실시하고 있습니다.<br />';
+										htmlStr += '    <span class="text-danger">학습평가에 합격하여야 최종 수료 처리 되어 수료증을 출력</span> 하실 수 있습니다.<br />';
+										htmlStr += "    평가 안내사항을 확인하시어 평가 응시해 주시기 바랍니다.<br />";
+										htmlStr += "</p>";
+										htmlStr += "<p>";
+										htmlStr += "    - 평가 문항 : <strong>10문항</strong>(객관식 사지선다형)<br />";
+										if (CC_TARGET == "N") {
+											htmlStr += "    - 합격 기준 : <strong>7문항</strong> 이상";
+										} else if (CC_TARGET == "O") {
+											htmlStr += "    - 합격 기준 : <strong>7문항</strong> 이상";
+										} else if (CC_TARGET == "V") {
+											htmlStr += "    - 합격 기준 : <strong>3문항</strong> 이상";
+										}
+										htmlStr += "</p>";
+										htmlStr += '<p class="text-14">* 불합격시 재수강 없이 재응시 가능(횟수 제한 없음)</p>';
+										htmlStr += '<div class="text-center">';
+										htmlStr += '<button type="button" class="btn btn-primary" onclick="studyroom.startQuiz();">시험 응시하기</button>';
+										htmlStr += "</div>";
+										//htmlStr +='</div>';
+
+										$("#quiz-area > .education-contents__guide").html(htmlStr);
+									} else {
+										ANS_LIST = data;
+										showResultSummary();
+									}
+								});
+							});
+						} else {
+							stopProgress();
+							if (confirm("로그인 정보가 만료되었습니다. 다시 로그인해주세요.")) {
+								window.open("about:blank", "_self").close();
+								opener.location.href = "/user/login";
+							}
+						}
+					});
+				};
+				var resetQuiz = function () {
+					ANS_LIST = [];
+					var htmlStr = "";
+					$("#quiz-area > .education-contents__guide").empty();
+					$("#quiz-area").removeClass("d-none");
+					$("#quiz-contents-area").addClass("d-none");
+
+					//htmlStr +='<div class="education-contents__guide">';
+					htmlStr += "<h4>평가 응시 안내</h4>";
+					htmlStr += "<p>";
+					htmlStr += "    (사)한국휴게음식업중앙회 온라인식품위생교육과정을 수강해 주셔서 감사합니다.<br />";
+					htmlStr += '    본 회에서는 <span class="text-danger">식품의약품안전처의 온라인 식품위생교육 조치사항</span>에 따라,<br />';
+					htmlStr += '    <span class="text-danger">온라인 식품위생교육 효과 제고</span> 확인을 위하여 수강 완료 후 학습평가를 실시하고 있습니다.<br />';
+					htmlStr += '    <span class="text-danger">학습평가에 합격하여야 최종 수료 처리 되어 수료증을 출력</span> 하실 수 있습니다.<br />';
+					htmlStr += "    평가 안내사항을 확인하시어 평가 응시해 주시기 바랍니다.<br />";
+					htmlStr += "</p>";
+					htmlStr += "<p>";
+					htmlStr += "    - 평가 문항 : <strong>10문항</strong>(객관식 사지선다형)<br />";
+					if (CC_TARGET == "N") {
+						htmlStr += "    - 합격 기준 : <strong>7문항</strong> 이상";
+					} else if (CC_TARGET == "O") {
+						htmlStr += "    - 합격 기준 : <strong>7문항</strong> 이상";
+					} else if (CC_TARGET == "V") {
+						htmlStr += "    - 합격 기준 : <strong>3문항</strong> 이상";
+					}
+					htmlStr += "</p>";
+					htmlStr += '<p class="text-14">* 불합격시 재수강 없이 재응시 가능(횟수 제한 없음)</p>';
+					htmlStr += '<div class="text-center">';
+					htmlStr += '<button type="button" class="btn btn-primary" onclick="studyroom.startQuiz();">시험 응시하기</button>';
+					htmlStr += "</div>";
+					//htmlStr +='</div>';
+
+					$("#quiz-area .education-contents__guide").html(htmlStr);
+				};
+				var startQuiz = function () {
+					$(document).scrollTop(0);
+					if (QUESTION_LIST.length == 0) {
+						commonMsgAlert("등록된 퀴즈가 없습니다.\n 관리자에게 문의하세요.");
+						return false;
+					}
+					commonAsyncAjaxFunc(
+						"/studyroom/course/viewcnt/update",
+						{ ccCd: CC_CD, enrolNo: ENROL_NO, courseCd: COURSE_CD, courseType: "QUIZ" },
+						"POST",
+						function (data) {
+							if (data == "success") {
+								//퀴즈 초기화
+								CURRENT_QUIZ_NO = "";
+								$("#quiz-area").addClass("d-none");
+								$("#quiz-contents-area").removeClass("d-none");
+								//퀴즈 초기화 e
+								makeQuestion();
+							}
+						}
+					);
+				};
+
+				var makeQuestion = function () {
+					var quiz = null;
+					if (CURRENT_QUIZ_NO == "") {
+						question = QUESTION_LIST[0];
+						CURRENT_QUIZ_NO = 0;
+					} else {
+						question = QUESTION_LIST[CURRENT_QUIZ_NO];
+					}
+					var questionIndex = CURRENT_QUIZ_NO;
+					var totalQuizCnt = QUESTION_LIST.length;
+					var quizNo = CURRENT_QUIZ_NO + 1;
+					var htmlStr = "";
+
+					htmlStr += "<h4>문제 " + quizNo + "/" + totalQuizCnt + "</h4>";
+					htmlStr += "<dl>";
+					htmlStr += "    <dt>" + quizNo + "." + question.question + "</dt>";
+					htmlStr += "    <dd>";
+					if (question.questionType == "CHOICE") {
+						htmlStr += "        <ol>";
+						var exampleList = question.exampleList;
+
+						for (var j = 0; j < exampleList.length; j++) {
+							var example = exampleList[j];
+							htmlStr +=
+								"            <li onclick=\"studyroom.checkAnswer('" +
+								questionIndex +
+								"','" +
+								question.questionCd +
+								"','" +
+								example.exampleCd +
+								"')\">" +
+								(j + 1) +
+								". " +
+								example.example +
+								"</li>";
+						}
+						htmlStr += "        </ol>";
+					} else {
+						htmlStr += "<textarea></textarea>";
+					}
+					htmlStr += "    </dd>";
+					htmlStr += "</dl>";
+
+					$("#quiz-contents-area .education-contents__question").html(htmlStr);
+
+					CURRENT_QUIZ_NO++;
+				};
+
+				var checkAnswer = function (questionIndex, questionCd, ansExampleCd) {
+					var passYn = "N";
+					if (_.findWhere(QUESTION_LIST[questionIndex].exampleList, { exampleCd: ansExampleCd, answerYn: "Y" }) != undefined) {
+						passYn = "Y";
+					}
+
+					var exist = _.findWhere(ANS_LIST, { questionCd: questionCd });
+
+					if (exist != undefined) {
+						exist.ansExampleCd = ansExampleCd;
+						exist.passYn = passYn;
+					} else {
+						ANS_LIST.push({ ccCd: CC_CD, enrolNo: ENROL_NO, courseCd: COURSE_CD, questionCd: questionCd, ansExampleCd: ansExampleCd, passYn: passYn });
+					}
+
+					if (CURRENT_QUIZ_NO >= QUESTION_LIST.length) {
+						submitQuiz();
+					} else {
+						makeQuestion();
+					}
+				};
+
+				var submitQuiz = function () {
+					commonAjaxFunc("/studyroom/userid/check", {}, "GET", function (data) {
+						if (data != null && data != "") {
+							var quizScore = checkQuizPassYn();
+							commonAjaxFunc(
+								"/quiz/ans/regist",
+								{ ccCd: CC_CD, ccYear: CC_YEAR, enrolNo: ENROL_NO, courseCd: COURSE_CD, ansList: JSON.stringify(ANS_LIST), viewTime: quizScore },
+								"POST",
+								function (data) {
+									if (data != null && data.totalProgress != undefined) {
+										$("#studyroomCourseList li:last-child")
+											.find(".progress-bar")
+											.css("width", data.totalProgress + "%");
+										$("#studyroomCourseList li:last-child")
+											.find(".val")
+											.text(data.totalProgress + "%");
+									}
+									showResultSummary();
+									getCourseList();
+								}
+							);
+						} else {
+							stopProgress();
+							if (confirm("로그인 정보가 만료되었습니다. 다시 로그인해주세요.")) {
+								window.open("about:blank", "_self").close();
+								opener.location.href = "/user/login";
+							}
+						}
+					});
+				};
+				var checkQuizPassYn = function () {
+					var passCnt = 0;
+					var baseScore = 3;
+					if (CC_TARGET == "N") {
+						baseScore = 7;
+					} else if (CC_TARGET == "O") {
+						baseScore = 7;
+					} else if (CC_TARGET == "V") {
+						baseScore = 3;
+					}
+					for (var i = 0; i < ANS_LIST.length; i++) {
+						if (ANS_LIST[i].passYn == "Y") {
+							passCnt++;
+						}
+					}
+
+					if (passCnt >= baseScore) {
+						$("#studyroomCourseList li[data-id='" + COURSE_CD + "']")
+							.find("span")
+							.removeClass("pull-quiz")
+							.addClass("compl-quiz")
+							.text("응시완료");
+						return 100;
+					} else {
+						return 1;
+					}
+				};
+				var showResultSummary = function () {
+					$("#quiz-area").addClass("d-none");
+					CURRENT_QUIZ_NO = 0; //퀴즈 index 초기화
+					var passCnt = 0;
+					var baseScore = 3;
+					if (CC_TARGET == "N") {
+						baseScore = 7;
+					} else if (CC_TARGET == "O") {
+						baseScore = 7;
+					} else if (CC_TARGET == "V") {
+						baseScore = 3;
+					}
+
+					for (var i = 0; i < ANS_LIST.length; i++) {
+						if (ANS_LIST[i].passYn == "Y") {
+							passCnt++;
+						}
+					}
+					$("#quiz-contents-area .education-contents__question").empty();
+
+					var htmlStr = "";
+
+					htmlStr += '<h4>학습평가는 <span class="text-danger">' + baseScore + "문제 이상</span> 합격을 해야 합니다.</h4>";
+					htmlStr += '<div class="education-contents__question-result">';
+					htmlStr += "    <p>" + passCnt + "개</p>";
+					if (passCnt >= baseScore) {
+						htmlStr += '    <p class="text-primary">합격</p>';
+					} else {
+						htmlStr += '    <p class="text-danger">불합격</p>';
+					}
+					htmlStr += "</div>";
+					htmlStr += '<div class="education-contents__question-btn">';
+					htmlStr += '    <button type="button" class="btn btn-info btn-lg" onclick="studyroom.resetQuiz();">재평가하기</button>';
+					htmlStr += '    <button type="button" class="btn btn-primary btn-lg" onclick="studyroom.showQuizResult()">결과보기</button>';
+					htmlStr += "</div>";
+
+					htmlStr += '<div class="education-contents__question-banner text-center">';
+					htmlStr += "    <p>";
+					htmlStr += "        강사평가 및 온라인 교육 만족도 조사에 참여해 주세요.";
+					htmlStr += "        <span>재응시하는 경우 최초 응시한 점수는 삭제 됩니다.</span>";
+					htmlStr += "    </p>";
+					htmlStr +=
+						'    <button type="button" class="btn btn-outline-primary btn-sm mt-2" onclick="studyroom.goSurvey();">강사평가 및 교육 만족도 조사</button>';
+					htmlStr += "</div>";
+
+					$("#quiz-contents-area .education-contents__question").html(htmlStr);
+					$("#quiz-contents-area").removeClass("d-none");
+				};
+
+				var showPrevQuizResult = function () {
+					CURRENT_QUIZ_NO = CURRENT_QUIZ_NO - 2;
+
+					showQuizResult();
+				};
+				var showQuizResult = function () {
+					var quiz = null;
+					var answer = null;
+					if (CURRENT_QUIZ_NO == "") {
+						question = QUESTION_LIST[0];
+						answer = ANS_LIST[0];
+						CURRENT_QUIZ_NO = 0;
+					} else {
+						question = QUESTION_LIST[CURRENT_QUIZ_NO];
+						answer = ANS_LIST[CURRENT_QUIZ_NO];
+					}
+					var questionIndex = CURRENT_QUIZ_NO;
+					var totalQuizCnt = QUESTION_LIST.length;
+					var quizNo = CURRENT_QUIZ_NO + 1;
+					var htmlStr = "";
+					var answerNo = "";
+
+					htmlStr += "<h4>문제 " + quizNo + "/" + totalQuizCnt + "</h4>";
+					htmlStr += "<dl>";
+					if (answer.passYn == "Y") {
+						htmlStr += '    <dt class="correct">' + quizNo + ". " + question.question + "</dt>";
+					} else {
+						htmlStr += '    <dt class="wrong">' + quizNo + ". " + question.question + "</dt>";
+					}
+					if (question.questionType == "CHOICE") {
+						htmlStr += "    <dd>";
+						htmlStr += "        <ol>";
+						var exampleList = question.exampleList;
+
+						for (var j = 0; j < exampleList.length; j++) {
+							var example = exampleList[j];
+							var exampleCd = example.exampleCd;
+							var answerYn = example.answerYn;
+							if (exampleCd == answer.ansExampleCd) {
+								if (answerYn == "Y") {
+									htmlStr += '            <li class="correct answer">' + (j + 1) + ". " + example.example + "</li>";
+								} else {
+									htmlStr += '            <li class="wrong">' + (j + 1) + ". " + example.example + "</li>";
+								}
+							} else {
+								if (answerYn == "Y") {
+									htmlStr += '            <li class="answer">' + (j + 1) + ". " + example.example + "</li>";
+								} else {
+									htmlStr += "            <li>" + (j + 1) + ". " + example.example + "</li>";
+								}
+							}
+						}
+						htmlStr += "        </ol>";
+						htmlStr += "    </dd>";
+					}
+
+					htmlStr += "</dl>";
+					htmlStr += '<div class="education-contents__question-answer">';
+					htmlStr += '    <strong class="text-danger"> 정답 : ' + question.ansExampleNo + " </strong>";
+					htmlStr += "    <p>" + question.questionComment;
+					htmlStr += "    </p>";
+					htmlStr += "</div>";
+					htmlStr += '<div class="education-contents__question-foot">';
+					htmlStr += "    <p>";
+					if (questionIndex > 0) {
+						htmlStr += '        <button type="button" class="btn btn-primary btn-sm" onclick="studyroom.showPrevQuizResult();">이전</button>';
+					}
+					if (questionIndex < totalQuizCnt - 1) {
+						htmlStr += '        <button type="button" class="btn btn-primary btn-sm" onclick="studyroom.showQuizResult()">다음</button>';
+					}
+					htmlStr += "    </p>";
+					if (questionIndex == totalQuizCnt - 1) {
+						htmlStr += "    <p>";
+						htmlStr += '        <button type="button" class="btn btn-info btn-sm" onclick="closeStudyroom();">나가기</button>';
+						htmlStr += "    </p>";
+					}
+					htmlStr += "</div>";
+
+					$(".education-contents__question").html(htmlStr);
+
+					CURRENT_QUIZ_NO++;
+				};
+				var goSurvey = function () {
+					var url = "";
+					if (CC_TARGET == "N") {
+						//url = "https://docs.google.com/forms/d/e/1FAIpQLSdSMc0PnhWOCpRdUKGUbsUams6IxozEQw4uP0BhT_ew548nSw/viewform"
+						// url = "https://docs.google.com/forms/d/e/1FAIpQLSchG5hS9Tu9xoHBi2qWya0PcsG-krG6o_b2qnbP8IlMux1wrw/viewform?usp=sf_link"
+						url = "https://docs.google.com/forms/d/1nL9DpP_P1oFCq8eUi9Q-lZKwuAatnQFjxIC10yMIlWM/edit";
+					} else if (CC_TARGET == "O") {
+						//url = "https://docs.google.com/forms/d/e/1FAIpQLSdWeVMYUBkpXmRWlRN1zHoRkDo03Bg9brm77qjOlG63XoX5pg/viewform";
+						url = "https://docs.google.com/forms/d/1vKV_vfF3xlYvAsFFkCKa13do5N7YtyiPS9qQdER8XA0/edit";
+					} else if (CC_TARGET == "V") {
+						//url = "https://docs.google.com/forms/d/e/1FAIpQLSfwti401IlAR3xoWv6O0okcNo_PnvbZ3IV_pQUwl5TvXihDqg/viewform";
+						if (CC_CD == "CC_00020") {
+							url = "https://docs.google.com/forms/d/1flOrQIRH76INAojyyOhqbiaxqmxoTmGoHosJWdrb8bU/edit";
+						} else {
+							url = "https://docs.google.com/forms/d/e/1FAIpQLSfjoBCaL8esSh8wo0gbhR764nsvvDR1D_fgCC_yqAUkPwRUHw/viewform?usp=sf_link";
+						}
+					}
+
+					window.open(url, "about:blank");
+				};
+				return {
+					getCurriculumInfo: getCurriculumInfo,
+					getCurriculumInfoCallback: getCurriculumInfoCallback,
+					getCourseList: getCourseList,
+					goContents: goContents,
+					prevContents: prevContents,
+					nextContents: nextContents,
+					goContentsCallback: goContentsCallback,
+					goSurvey: goSurvey,
+					goQuiz: goQuiz,
+					resetQuiz: resetQuiz,
+					startQuiz: startQuiz,
+					checkAnswer: checkAnswer,
+					submitQuiz: submitQuiz,
+					showQuizResult: showQuizResult,
+					showPrevQuizResult: showPrevQuizResult,
+				};
+			})();
+
+			/*SMS 인증*/
+			var smsAuth = (function () {
+				var COURSE_CD = "";
+				var CONTENTS_CD = "";
+
+				var fnShow = function (courseCd, contentsCd) {
+					COURSE_CD = courseCd;
+					CONTENTS_CD = contentsCd;
+					$("#player").attr("src", "");
+					$("#quiz-area").addClass("d-none");
+					$("#player-area").addClass("d-none");
+					$("#smsAuthDiv").removeClass("d-none");
+				};
+				var sendVerifySms = function () {
+					var data = { ccCd: CC_CD, courseCd: COURSE_CD, enrolNo: ENROL_NO };
+					commonAjaxFunc("/studyroom/send/sms/verify", data, "POST", function (data) {
+						if (data != null) {
+							if (data.result == "success") {
+								var tempCode = data.verifyCd;
+								commonMsgAlert("인증번호가 발송되었습니다." + "[" + tempCode + "]");
+							} else if (data.result == "LOGIN_USER_IS_NULL") {
+								Swal.fire({ text: "로그인이 끊겼습니다. 다시 로그인해주세요..", confirmButtonText: "확인" }).then((result) => {
+									if (result.isConfirmed) {
+										window.open("about:blank", "_self").close();
+										opener.location.href = "/user/login";
+									}
+								});
+							}
+						}
+					});
+				};
+				var confirmVerifySms = function () {
+					var data = { verifyCd: $("input[name=confirmMsg]").val(), ccCd: CC_CD, courseCd: COURSE_CD, enrolNo: ENROL_NO };
+					commonAjaxFunc("/studyroom/confirm/sms/verify", data, "GET", function (data) {
+						if (data.result == "success") {
+							Swal.fire({ text: "인증되었습니다.", confirmButtonText: "확인" }).then((result) => {
+								if (result.isConfirmed) {
+									$("#smsAuthDiv").addClass("d-none");
+									$("#player-area").removeClass("d-none");
+									studyroom.getCourseList(); //SMS 인증여부가 UPDATE 됬으므로 목차 리로딩
+
+									commonAjaxFunc("/contents/" + CONTENTS_CD, {}, "GET", studyroom.goContentsCallback); //해당 차시의 콘텐츠 플레이
+								}
+							});
+						} else {
+							commonMsgAlert("인증에 실패했습니다.");
+						}
+						$("input[name=confirmMsg]").val("");
+					});
+				};
+
+				return { fnShow: fnShow, sendVerifySms: sendVerifySms, confirmVerifySms: confirmVerifySms };
+			})();
+			studyroom.getCurriculumInfo();
 		</script>
 	</body>
 </html>

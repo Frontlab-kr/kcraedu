@@ -13231,6 +13231,8 @@ html {
     padding: 0;
     bottom: auto;
     background-color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .kcraedu header .header__gnb-item > ul li {
     padding: 0;

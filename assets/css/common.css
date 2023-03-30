@@ -5414,7 +5414,7 @@ fieldset:disabled .btn {
   margin-bottom: 0;
   font-size: 1rem;
   list-style: none;
-  color: #666;
+  color: #fff;
 }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -5425,11 +5425,13 @@ fieldset:disabled .btn {
   float: left;
   padding-right: 0.625rem;
   color: #6c757d;
+  color: #fff;
   content: var(--bs-breadcrumb-divider, ">") /* rtl: var(--bs-breadcrumb-divider, ">") */;
 }
 
 .breadcrumb-item.active {
   color: #666;
+  color: #fff;
 }
 
 .pagination {
@@ -13706,19 +13708,45 @@ html {
 }
 
 .kcraedu .snb {
+  position: relative;
   width: 13.5rem;
   min-width: 13.5rem;
   width: 100%;
-  margin: 4.375rem 0 0 0;
-  margin: 2.188rem 0 0 0;
-  border-bottom: 0.188rem solid #d9d9d9;
+  padding: 2.188rem 0 1rem 0;
+  background: #3766de;
+}
+
+.kcraedu .snb::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 1000px;
+  background: #3766de;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.kcraedu .snb::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1000px;
+  background: #3766de;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .kcraedu .snb__title {
   font-weight: 700;
   font-size: 1.875rem;
   line-height: 2.75rem;
-  color: #222222;
+  color: #fff;
 }
 
 .kcraedu .snb ul {
@@ -13748,12 +13776,12 @@ html {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.688rem;
-  color: #666666;
+  color: rgba(255, 255, 255, 0.8);
   word-break: keep-all;
 }
 
 .kcraedu .snb ul li a:hover {
-  color: rgba(102, 102, 102, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .kcraedu .snb ul li:last-child:after {
@@ -13764,10 +13792,11 @@ html {
   content: "/";
   display: block;
   margin: 0 1rem;
+  color: #fff;
 }
 
 .kcraedu .snb ul li.active a {
-  color: #3766de;
+  color: #fff;
 }
 
 @media (max-width: 1199.98px) {
@@ -13825,7 +13854,7 @@ html {
 
 .kcraedu .content-head nav {
   position: absolute;
-  top: 0;
+  top: 2.188rem;
   right: 0;
 }
 

@@ -584,17 +584,40 @@ html {
 		//display: flex;
 	}
 	.snb {
+		position: relative;
 		width: 13.5rem;
 		min-width: 13.5rem;
 		width: 100%;
-		margin: 4.375rem 0 0 0;
-		margin: 2.188rem 0 0 0;
-		border-bottom: 0.188rem solid #d9d9d9;
+		padding: 2.188rem 0 1rem 0;
+		//border-bottom: 0.188rem solid #d9d9d9;
+		background: #3766de;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 1000px;
+			background: #3766de;
+			transform: translateX(-100%);
+		}
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 1000px;
+			background: #3766de;
+			transform: translateX(100%);
+		}
 		&__title {
 			font-weight: 700;
 			font-size: 1.875rem;
 			line-height: 2.75rem;
-			color: #222222;
+			color: #fff;
 		}
 		ul {
 			display: flex;
@@ -611,10 +634,10 @@ html {
 					font-weight: 500;
 					font-size: 1.125rem;
 					line-height: 1.688rem;
-					color: #666666;
+					color: transparentize(#fff, 0.2);
 					word-break: keep-all;
 					&:hover {
-						color: transparentize(#666, 0.3);
+						color: transparentize(#fff, 0.4);
 					}
 				}
 				&:last-child {
@@ -626,11 +649,12 @@ html {
 					content: "/";
 					display: block;
 					margin: 0 1rem;
+					color: #fff;
 					// display: none;
 				}
 				&.active {
 					a {
-						color: #3766de;
+						color: #fff;
 					}
 				}
 			}
@@ -665,7 +689,7 @@ html {
 			}
 			nav {
 				position: absolute;
-				top: 0;
+				top: 2.188rem;
 				right: 0;
 				@include media-breakpoint-down(xl) {
 					position: relative;

@@ -112,12 +112,12 @@ html {
 						line-height: 2.063rem;
 						color: #222222;
 						&:hover {
-							color: #000;
+							color: #222;
 						}
 						&:hover {
 							color: #4f80ff;
 							@include media-breakpoint-down(md) {
-								color: #000;
+								color: #222;
 							}
 						}
 					}
@@ -139,6 +139,9 @@ html {
 
 								&:hover {
 									color: #4f80ff;
+									@include media-breakpoint-down(md) {
+										color: #222;
+									}
 								}
 							}
 						}
@@ -146,6 +149,9 @@ html {
 					&:hover {
 						> a {
 							color: #4f80ff;
+							@include media-breakpoint-down(md) {
+								color: #222;
+							}
 						}
 						> ul {
 							display: block;

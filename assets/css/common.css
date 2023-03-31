@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(aos.css);
 /*!
  * Bootstrap v5.0.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -13851,7 +13850,7 @@ html {
 
 @media (max-width: 1199.98px) {
   .kcraedu .content {
-    padding: 4.375rem 0 0 0;
+    padding: 1.375rem 0 0 0;
   }
 }
 
@@ -13993,7 +13992,7 @@ html {
 @media (max-width: 767.98px) {
   .kcraedu-modal__contents img {
     width: 100%;
-    max-width: 18.75rem;
+    max-width: 100%;
   }
 }
 
@@ -16001,7 +16000,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.6rem;
 }
 
 .kcraedu .curriculum-detail > dl > dt {
@@ -16059,6 +16058,7 @@ html {
   border: 0.063rem solid #4f80ff;
   border-color: #ececec;
   border-radius: 0.625rem;
+  background: #f8f8f8;
 }
 
 .kcraedu .curriculum-detail__list li strong {
@@ -16600,9 +16600,6 @@ html {
 }
 
 @media (max-width: 991.98px) {
-  .kcraedu .education.fold .education-contents__player {
-    height: calc(100vh - 10rem);
-  }
   .kcraedu .education.fold .education-contents__question {
     height: calc(100vh - 8rem);
   }
@@ -16731,6 +16728,20 @@ html {
   overflow: auto;
 }
 
+.kcraedu .education-nav__list::-webkit-scrollbar {
+  width: 13px;
+  border: 4px solid #fff;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.kcraedu .education-nav__list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+}
+
 @media (max-width: 767.98px) {
   .kcraedu .education-nav__list {
     height: calc(100vh - 17rem);
@@ -16811,7 +16822,7 @@ html {
 
 @media (max-width: 991.98px) {
   .kcraedu .education-contents {
-    padding: 0 0 0 1rem;
+    padding: 0;
   }
 }
 
@@ -16859,8 +16870,10 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: calc(100vh - 11rem);
-  overflow: hidden;
+  overflow: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .kcraedu .education-contents__player iframe {
@@ -16871,7 +16884,7 @@ html {
 .kcraedu .education-contents__player-inner {
   position: relative;
   width: 100%;
-  height: 50%;
+  max-width: 1035px;
 }
 
 .kcraedu .education-contents__button {
@@ -16885,6 +16898,9 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 1rem;
+  margin-left: auto;
+  max-width: 1035px;
+  margin-right: auto;
 }
 
 .kcraedu .education-contents__certification {

@@ -18222,6 +18222,7 @@ h1, .h1 {
   line-height: 1.5rem;
   color: #222222;
   vertical-align: top;
+  white-space: nowrap;
 }
 
 .table-type02 table tbody td {

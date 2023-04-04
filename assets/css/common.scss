@@ -1015,11 +1015,14 @@ html {
 					}
 				}
 				&-link {
-					position: absolute;
-					bottom: 2.188rem;
-					left: 1.875rem;
-					right: 1.875rem;
+					// position: absolute;
+					// bottom: 2.188rem;
+					// left: 1.875rem;
+					// right: 1.875rem;
+					// z-index: 20;
+					position: relative;
 					z-index: 20;
+					margin-bottom: 2.188rem;
 					span {
 						display: flex;
 						align-items: center;
@@ -1033,15 +1036,10 @@ html {
 						color: #fff;
 					}
 					@include media-breakpoint-down(xl) {
-						position: relative;
-						bottom: auto;
-						left: auto;
-						right: auto;
-						margin-top: 1.563rem;
 					}
 					@include media-breakpoint-down(md) {
+						//margin-bottom: 1rem;
 						span {
-							//height: 2.375rem;
 							font-size: 1rem;
 						}
 					}

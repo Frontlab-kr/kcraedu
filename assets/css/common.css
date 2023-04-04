@@ -14290,11 +14290,9 @@ html {
 }
 
 .kcraedu .main-menu__item-link {
-  position: absolute;
-  bottom: 2.188rem;
-  left: 1.875rem;
-  right: 1.875rem;
+  position: relative;
   z-index: 20;
+  margin-bottom: 2.188rem;
 }
 
 .kcraedu .main-menu__item-link span {
@@ -14314,16 +14312,6 @@ html {
   font-weight: 500;
   font-size: 1.125rem;
   color: #fff;
-}
-
-@media (max-width: 1199.98px) {
-  .kcraedu .main-menu__item-link {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    margin-top: 1.563rem;
-  }
 }
 
 @media (max-width: 767.98px) {
